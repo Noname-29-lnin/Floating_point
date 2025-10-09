@@ -1,0 +1,23 @@
+
+interface fp_inter(
+    input logic i_clk
+);
+
+///////////////////////////////////////////////////////////////////
+// Parameter 
+///////////////////////////////////////////////////////////////////
+parameter SIZE_DATA = 32;
+parameter NUM_OP    = 2 ;
+
+///////////////////////////////////////////////////////////////////
+// Internal Signal
+///////////////////////////////////////////////////////////////////
+logic i_rst_n;
+logic [NUM_OP-1:0]      i_alu_op;
+logic [NUM_OP-1:0]      w_alu_op;
+logic [SIZE_DATA-1:0]   i_data_a, i_data_b;
+logic [SIZE_DATA-1:0]   w_data_a, w_data_b;
+logic [SIZE_DATA-1:0]   o_result;
+
+
+endinterface //fp_inter
