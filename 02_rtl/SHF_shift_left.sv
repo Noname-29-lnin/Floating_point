@@ -13,16 +13,25 @@ module SHF_shift_left #(
 
     assign stage_data[0] = i_data;
 
+    // genvar i;
+    // generate
+    //     for (i = 0; i < SIZE_SHIFT; i = i + 1) begin : GEN_SHIFT_STAGE
+    //         localparam SHIFT_VAL = (1 << i);
+    //         always_comb begin
+    //             if (i_shift_number[i])
+    //                 stage_data[i+1] = {stage_data[i][SIZE_DATA-1-SHIFT_VAL:0], {SHIFT_VAL{1'b0}}};
+    //             else
+    //                 stage_data[i+1] = stage_data[i];
+    //         end
+    //     end
+    // endgenerate
     genvar i;
     generate
         for (i = 0; i < SIZE_SHIFT; i = i + 1) begin : GEN_SHIFT_STAGE
             localparam SHIFT_VAL = (1 << i);
-            always_comb begin
-                if (i_shift_number[i])
-                    stage_data[i+1] = {stage_data[i][SIZE_DATA-1-SHIFT_VAL:0], {SHIFT_VAL{1'b0}}};
-                else
-                    stage_data[i+1] = stage_data[i];
-            end
+            assign stage_data[i+1] = (i_shift_number[i])
+                ? {stage_data[i][SIZE_DATA-1-SHIFT_VAL:0], {SHIFT_VAL{1'b0}}}
+                : stage_data[i];
         end
     endgenerate
 

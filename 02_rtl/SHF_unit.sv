@@ -1,13 +1,12 @@
 module SHF_unit #(
     parameter LEFT_RIGHT = 1, // 0: shift Left, 1: shift right
-    parameter SIZE_DATA = 8
+    parameter SIZE_DATA  = 24,
+	 parameter SIZE_SHIFT = 5
 )(
-    input logic [SIZE_DATA-1:0]     i_shift_number  ,
+    input logic [SIZE_SHIFT-1:0]     i_shift_number  ,
     input logic [SIZE_DATA-1:0]     i_data          ,
     output logic [SIZE_DATA-1:0]    o_data           
 );
-
-localparam SIZE_SHIFT = $clog2(SIZE_DATA);
 
 generate
     if (LEFT_RIGHT == 0) begin : GEN_SHIFT_LEFT

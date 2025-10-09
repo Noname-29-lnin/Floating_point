@@ -1,0 +1,113 @@
+============================================
+>>> TEST SUM UNIT (8-bit) <<<
+============================================
+Test 0: PASS | A=c4 | B=9c | Cin=0 | SUM=60 | Cout=1
+Test 1: PASS | A=e4 | B=78 | Cin=0 | SUM=5c | Cout=1
+Test 2: PASS | A=b6 | B=e4 | Cin=1 | SUM=9b | Cout=1
+Test 3: PASS | A=53 | B=21 | Cin=1 | SUM=75 | Cout=0
+Test 4: PASS | A=c5 | B=82 | Cin=0 | SUM=47 | Cout=1
+Test 5: PASS | A=35 | B=12 | Cin=0 | SUM=47 | Cout=0
+Test 6: PASS | A=fd | B=f4 | Cin=1 | SUM=f2 | Cout=1
+Test 7: PASS | A=58 | B=b2 | Cin=0 | SUM=0a | Cout=1
+Test 8: PASS | A=1e | B=9e | Cin=0 | SUM=bc | Cout=0
+Test 9: PASS | A=ee | B=10 | Cin=0 | SUM=fe | Cout=0
+Test 10: PASS | A=63 | B=c0 | Cin=1 | SUM=24 | Cout=1
+Test 11: PASS | A=22 | B=06 | Cin=1 | SUM=29 | Cout=0
+Test 12: PASS | A=63 | B=78 | Cin=1 | SUM=dc | Cout=0
+Test 13: PASS | A=ce | B=f7 | Cin=1 | SUM=c6 | Cout=1
+Test 14: PASS | A=9e | B=77 | Cin=0 | SUM=15 | Cout=1
+Test 15: PASS | A=a8 | B=4f | Cin=1 | SUM=f8 | Cout=0
+Test 16: PASS | A=94 | B=e2 | Cin=0 | SUM=76 | Cout=1
+Test 17: PASS | A=1f | B=09 | Cin=1 | SUM=29 | Cout=0
+Test 18: PASS | A=1f | B=84 | Cin=1 | SUM=a4 | Cout=0
+Test 19: PASS | A=33 | B=4b | Cin=0 | SUM=7e | Cout=0
+Test 20: PASS | A=f3 | B=c9 | Cin=1 | SUM=bd | Cout=1
+Test 21: PASS | A=ca | B=5d | Cin=1 | SUM=28 | Cout=1
+Test 22: PASS | A=24 | B=ef | Cin=1 | SUM=14 | Cout=1
+Test 23: PASS | A=6d | B=39 | Cin=0 | SUM=a6 | Cout=0
+Test 24: PASS | A=ea | B=c2 | Cin=0 | SUM=ac | Cout=1
+Test 25: PASS | A=54 | B=23 | Cin=1 | SUM=78 | Cout=0
+Test 26: PASS | A=b3 | B=ad | Cin=1 | SUM=61 | Cout=1
+Test 27: PASS | A=2e | B=cf | Cin=1 | SUM=fe | Cout=0
+Test 28: PASS | A=d7 | B=89 | Cin=0 | SUM=60 | Cout=1
+Test 29: PASS | A=af | B=ef | Cin=1 | SUM=9f | Cout=1
+Test 30: PASS | A=3f | B=cf | Cin=0 | SUM=0e | Cout=1
+Test 31: PASS | A=77 | B=9a | Cin=1 | SUM=12 | Cout=1
+Test 32: PASS | A=53 | B=af | Cin=0 | SUM=02 | Cout=1
+Test 33: PASS | A=02 | B=fb | Cin=0 | SUM=fd | Cout=0
+Test 34: PASS | A=c2 | B=dd | Cin=0 | SUM=9f | Cout=1
+Test 35: PASS | A=64 | B=61 | Cin=1 | SUM=c6 | Cout=0
+Test 36: PASS | A=21 | B=f3 | Cin=1 | SUM=15 | Cout=1
+Test 37: PASS | A=f5 | B=bd | Cin=0 | SUM=b2 | Cout=1
+Test 38: PASS | A=62 | B=ca | Cin=0 | SUM=2c | Cout=1
+Test 39: PASS | A=45 | B=58 | Cin=0 | SUM=9d | Cout=0
+Test 40: PASS | A=60 | B=73 | Cin=0 | SUM=d3 | Cout=0
+Test 41: PASS | A=3d | B=6c | Cin=0 | SUM=a9 | Cout=0
+Test 42: PASS | A=e7 | B=37 | Cin=1 | SUM=1f | Cout=1
+Test 43: PASS | A=40 | B=33 | Cin=0 | SUM=73 | Cout=0
+Test 44: PASS | A=b6 | B=d7 | Cin=0 | SUM=8d | Cout=1
+Test 45: PASS | A=67 | B=53 | Cin=0 | SUM=ba | Cout=0
+Test 46: PASS | A=f4 | B=e4 | Cin=0 | SUM=d8 | Cout=1
+Test 47: PASS | A=67 | B=95 | Cin=0 | SUM=fc | Cout=0
+Test 48: PASS | A=64 | B=95 | Cin=0 | SUM=f9 | Cout=0
+Test 49: PASS | A=3d | B=7f | Cin=1 | SUM=bd | Cout=0
+Test 50: PASS | A=dc | B=ec | Cin=0 | SUM=c8 | Cout=1
+Test 51: PASS | A=46 | B=79 | Cin=0 | SUM=bf | Cout=0
+Test 52: PASS | A=d4 | B=34 | Cin=1 | SUM=09 | Cout=1
+Test 53: PASS | A=1b | B=02 | Cin=1 | SUM=1e | Cout=0
+Test 54: PASS | A=53 | B=63 | Cin=0 | SUM=b6 | Cout=0
+Test 55: PASS | A=f0 | B=04 | Cin=1 | SUM=f5 | Cout=0
+Test 56: PASS | A=f8 | B=23 | Cin=0 | SUM=1b | Cout=1
+Test 57: PASS | A=61 | B=61 | Cin=1 | SUM=c3 | Cout=0
+Test 58: PASS | A=d2 | B=fc | Cin=0 | SUM=ce | Cout=1
+Test 59: PASS | A=7b | B=31 | Cin=0 | SUM=ac | Cout=0
+Test 60: PASS | A=ed | B=64 | Cin=0 | SUM=51 | Cout=1
+Test 61: PASS | A=bd | B=14 | Cin=1 | SUM=d2 | Cout=0
+Test 62: PASS | A=cb | B=db | Cin=1 | SUM=a7 | Cout=1
+Test 63: PASS | A=4e | B=24 | Cin=0 | SUM=72 | Cout=0
+Test 64: PASS | A=07 | B=00 | Cin=0 | SUM=07 | Cout=0
+Test 65: PASS | A=3f | B=39 | Cin=1 | SUM=79 | Cout=0
+Test 66: PASS | A=d7 | B=7a | Cin=0 | SUM=51 | Cout=1
+Test 67: PASS | A=7c | B=42 | Cin=0 | SUM=be | Cout=0
+Test 68: PASS | A=76 | B=2b | Cin=1 | SUM=a2 | Cout=0
+Test 69: PASS | A=d2 | B=a2 | Cin=0 | SUM=74 | Cout=1
+Test 70: PASS | A=09 | B=0f | Cin=0 | SUM=18 | Cout=0
+Test 71: PASS | A=e4 | B=59 | Cin=1 | SUM=3e | Cout=1
+Test 72: PASS | A=ac | B=80 | Cin=1 | SUM=2d | Cout=1
+Test 73: PASS | A=ea | B=8d | Cin=1 | SUM=78 | Cout=1
+Test 74: PASS | A=89 | B=10 | Cin=0 | SUM=99 | Cout=0
+Test 75: PASS | A=c6 | B=ab | Cin=0 | SUM=71 | Cout=1
+Test 76: PASS | A=4c | B=f7 | Cin=0 | SUM=43 | Cout=1
+Test 77: PASS | A=54 | B=11 | Cin=1 | SUM=66 | Cout=0
+Test 78: PASS | A=29 | B=10 | Cin=0 | SUM=39 | Cout=0
+Test 79: PASS | A=71 | B=2a | Cin=1 | SUM=9c | Cout=0
+Test 80: PASS | A=8c | B=e6 | Cin=0 | SUM=72 | Cout=1
+Test 81: PASS | A=86 | B=6e | Cin=1 | SUM=f5 | Cout=0
+Test 82: PASS | A=6e | B=8d | Cin=0 | SUM=fb | Cout=0
+Test 83: PASS | A=54 | B=8d | Cin=1 | SUM=e2 | Cout=0
+Test 84: PASS | A=d6 | B=6e | Cin=1 | SUM=45 | Cout=1
+Test 85: PASS | A=b2 | B=57 | Cin=0 | SUM=09 | Cout=1
+Test 86: PASS | A=64 | B=99 | Cin=1 | SUM=fe | Cout=0
+Test 87: PASS | A=40 | B=43 | Cin=0 | SUM=83 | Cout=0
+Test 88: PASS | A=f6 | B=e7 | Cin=1 | SUM=de | Cout=1
+Test 89: PASS | A=22 | B=53 | Cin=0 | SUM=75 | Cout=0
+Test 90: PASS | A=0e | B=e4 | Cin=1 | SUM=f3 | Cout=0
+Test 91: PASS | A=40 | B=49 | Cin=1 | SUM=8a | Cout=0
+Test 92: PASS | A=09 | B=f8 | Cin=1 | SUM=02 | Cout=1
+Test 93: PASS | A=96 | B=10 | Cin=0 | SUM=a6 | Cout=0
+Test 94: PASS | A=6d | B=de | Cin=1 | SUM=4c | Cout=1
+Test 95: PASS | A=80 | B=dd | Cin=1 | SUM=5e | Cout=1
+Test 96: PASS | A=7a | B=9f | Cin=0 | SUM=19 | Cout=1
+Test 97: PASS | A=b8 | B=9c | Cin=1 | SUM=55 | Cout=1
+Test 98: PASS | A=b4 | B=49 | Cin=1 | SUM=fe | Cout=0
+Test 99: PASS | A=dc | B=e9 | Cin=0 | SUM=c5 | Cout=1
+============================================
+Total Tests : 100
+PASS         : 100
+FAIL         : 0
+============================================
+✅ ALL TESTS PASSED!
+- SUM_unit/tb_SUM_unit.sv:77: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.024 2024-04-05
+- Verilator: $finish at 100ns; walltime 0.000 s; speed 0.000 s/s
+- Verilator: cpu 0.000 s on 1 threads; alloced 57 MB
