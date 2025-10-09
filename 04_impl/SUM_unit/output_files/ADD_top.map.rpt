@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ADD_top
-Thu Oct  9 22:35:33 2025
+Fri Oct 10 00:17:04 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -13,15 +13,14 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |ADD_top
- 10. Parameter Settings for User Entity Instance: SUM_unit:SUM_UNIR
- 11. Parameter Settings for User Entity Instance: SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT
- 12. Port Connectivity Checks: "SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gray:PREFIX_STAGE[5].CELL[31].gray_cell"
- 13. Port Connectivity Checks: "SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[4].CELL[31].blk_cell"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |ADD_top
+ 11. Parameter Settings for User Entity Instance: SUM_unit:SUM_UNIR
+ 12. Parameter Settings for User Entity Instance: SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -48,13 +47,13 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct  9 22:35:33 2025           ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 10 00:17:04 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; ADD_top                                         ;
 ; Top-level Entity Name           ; ADD_top                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 98                                              ;
+; Total registers                 ; 97                                              ;
 ; Total pins                      ; 100                                             ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -179,9 +178,6 @@ on the Quartus Prime software download page.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 ; ../../02_rtl/KSA/KSA_unit.sv     ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv      ;         ;
-; ../../02_rtl/KSA/KSA_Gray.sv     ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Gray.sv      ;         ;
-; ../../02_rtl/KSA/KSA_Gen_GP.sv   ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Gen_GP.sv    ;         ;
-; ../../02_rtl/KSA/KSA_Black.sv    ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Black.sv     ;         ;
 ; ../../02_rtl/SUM_unit.sv         ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/SUM_unit.sv          ;         ;
 ; SUM_top.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/04_impl/SUM_unit/SUM_top.sv ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
@@ -192,90 +188,48 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 113         ;
+; Estimate of Logic utilization (ALMs needed) ; 49          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 178         ;
+; Combinational ALUT usage for logic          ; 32          ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 39          ;
-;     -- 5 input functions                    ; 42          ;
-;     -- 4 input functions                    ; 55          ;
-;     -- <=3 input functions                  ; 42          ;
+;     -- 6 input functions                    ; 0           ;
+;     -- 5 input functions                    ; 0           ;
+;     -- 4 input functions                    ; 0           ;
+;     -- <=3 input functions                  ; 32          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 98          ;
+; Dedicated logic registers                   ; 97          ;
 ;                                             ;             ;
 ; I/O pins                                    ; 100         ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_clk~input ;
-; Maximum fan-out                             ; 98          ;
-; Total fan-out                               ; 1192        ;
-; Average fan-out                             ; 2.50        ;
+; Maximum fan-out                             ; 97          ;
+; Total fan-out                               ; 488         ;
+; Average fan-out                             ; 1.48        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                     ;
-+--------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node                             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Entity Name ; Library Name ;
-+--------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+-------------+--------------+
-; |ADD_top                                               ; 178 (0)             ; 98 (98)                   ; 0                 ; 0          ; 100  ; 0            ; |ADD_top                                                                                 ; ADD_top     ; work         ;
-;    |SUM_unit:SUM_UNIR|                                 ; 178 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR                                                               ; SUM_unit    ; work         ;
-;       |KSA_unit:KSA_UNIT|                              ; 178 (77)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT                                             ; KSA_unit    ; work         ;
-;          |KSA_Black:PREFIX_STAGE[1].CELL[3].blk_cell|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[1].CELL[3].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[10].blk_cell| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[10].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[11].blk_cell| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[11].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[12].blk_cell| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[12].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[13].blk_cell| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[13].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[14].blk_cell| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[14].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[15].blk_cell| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[15].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[16].blk_cell| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[16].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[17].blk_cell| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[17].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[18].blk_cell| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[18].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[19].blk_cell| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[19].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[20].blk_cell| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[20].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[21].blk_cell| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[21].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[22].blk_cell| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[22].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[23].blk_cell| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[23].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[24].blk_cell| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[24].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[25].blk_cell| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[25].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[26].blk_cell| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[26].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[2].blk_cell|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[2].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[4].blk_cell|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[4].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[5].blk_cell|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[5].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[6].blk_cell|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[6].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[7].blk_cell|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[7].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[8].blk_cell|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[8].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[2].CELL[9].blk_cell|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[2].CELL[9].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[3].CELL[19].blk_cell| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[3].CELL[19].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[3].CELL[20].blk_cell| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[3].CELL[20].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[3].CELL[21].blk_cell| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[3].CELL[21].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[3].CELL[22].blk_cell| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[3].CELL[22].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[3].CELL[4].blk_cell|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[3].CELL[4].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[3].CELL[5].blk_cell|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[3].CELL[5].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[3].CELL[6].blk_cell|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[3].CELL[6].blk_cell  ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[4].CELL[12].blk_cell| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[4].CELL[12].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[4].CELL[13].blk_cell| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[4].CELL[13].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Black:PREFIX_STAGE[4].CELL[14].blk_cell| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[4].CELL[14].blk_cell ; KSA_Black   ; work         ;
-;          |KSA_Gen_GP:GEN_GP[0].GP_GEN|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[0].GP_GEN                 ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[10].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[10].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[11].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[11].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[12].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[12].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[17].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[17].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[19].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[19].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[1].GP_GEN|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[1].GP_GEN                 ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[22].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[22].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[23].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[23].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[24].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[24].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[26].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[26].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[27].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[27].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[28].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[28].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gen_GP:GEN_GP[29].GP_GEN|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[29].GP_GEN                ; KSA_Gen_GP  ; work         ;
-;          |KSA_Gray:PREFIX_STAGE[1].CELL[1].gray_cell|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gray:PREFIX_STAGE[1].CELL[1].gray_cell  ; KSA_Gray    ; work         ;
-;          |KSA_Gray:PREFIX_STAGE[2].CELL[3].gray_cell|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gray:PREFIX_STAGE[2].CELL[3].gray_cell  ; KSA_Gray    ; work         ;
-;          |KSA_Gray:PREFIX_STAGE[4].CELL[15].gray_cell| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gray:PREFIX_STAGE[4].CELL[15].gray_cell ; KSA_Gray    ; work         ;
-+--------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-------------+--------------+
+; |ADD_top                   ; 32 (0)              ; 97 (97)                   ; 0                 ; 0          ; 100  ; 0            ; |ADD_top                                     ; ADD_top     ; work         ;
+;    |SUM_unit:SUM_UNIR|     ; 32 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR                   ; SUM_unit    ; work         ;
+;       |KSA_unit:KSA_UNIT|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT ; KSA_unit    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; o_carry~reg0                          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -283,10 +237,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 98    ;
+; Total registers                              ; 97    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 98    ;
+; Number of registers using Asynchronous Clear ; 97    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -323,42 +277,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gray:PREFIX_STAGE[5].CELL[31].gray_cell"    ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; o_g  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[4].CELL[31].blk_cell"    ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; o_p  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 98                          ;
-;     CLR               ; 98                          ;
-; arriav_lcell_comb     ; 178                         ;
-;     normal            ; 178                         ;
-;         2 data inputs ; 25                          ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 55                          ;
-;         5 data inputs ; 42                          ;
-;         6 data inputs ; 39                          ;
+; arriav_ff             ; 97                          ;
+;     CLR               ; 97                          ;
+; arriav_lcell_comb     ; 33                          ;
+;     normal            ; 33                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 1                           ;
 ; boundary_port         ; 100                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.71                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.49                        ;
 +-----------------------+-----------------------------+
 
 
@@ -377,12 +311,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Thu Oct  9 22:35:27 2025
+    Info: Processing started: Fri Oct 10 00:16:57 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ADD_top -c ADD_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv
-    Info (12023): Found entity 1: KSA_unit File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv Line: 1
+    Info (12023): Found entity 1: KSA_unit File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv Line: 111
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Gray.sv
     Info (12023): Found entity 1: KSA_Gray File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Gray.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Gen_GP.sv
@@ -396,20 +330,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file SUM_top
 Info (12127): Elaborating entity "ADD_top" for the top level hierarchy
 Info (12128): Elaborating entity "SUM_unit" for hierarchy "SUM_unit:SUM_UNIR" File: /home/noname/Documents/project_tiny/Floating_point/04_impl/SUM_unit/SUM_top.sv Line: 43
 Info (12128): Elaborating entity "KSA_unit" for hierarchy "SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/SUM_unit.sv Line: 19
-Info (12128): Elaborating entity "KSA_Gen_GP" for hierarchy "SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gen_GP:GEN_GP[0].GP_GEN" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv Line: 25
-Info (12128): Elaborating entity "KSA_Gray" for hierarchy "SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Gray:PREFIX_STAGE[1].CELL[1].gray_cell" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv Line: 67
-Info (12128): Elaborating entity "KSA_Black" for hierarchy "SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT|KSA_Black:PREFIX_STAGE[1].CELL[2].blk_cell" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv Line: 78
+Warning (10030): Net "g[5]" at KSA_unit.sv(125) has no driver or initial value, using a default initial value '0' File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv Line: 125
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "o_carry" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/04_impl/SUM_unit/SUM_top.sv Line: 11
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 343 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 197 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 243 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 484 megabytes
-    Info: Processing ended: Thu Oct  9 22:35:33 2025
-    Info: Elapsed time: 00:00:06
+    Info (21061): Implemented 97 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 486 megabytes
+    Info: Processing ended: Fri Oct 10 00:17:04 2025
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:15
 
 

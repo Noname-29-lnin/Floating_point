@@ -130,9 +130,8 @@ module KSA_unit #(
     assign b_padded = {{(PADDED_SIZE-SIZE_DATA){1'b0}}, i_data_b};
     
     // Khởi tạo với carry-in - ĐÃ SỬA
-	 genvar i, j, k, z;
     generate
-        for (i = 0; i < PADDED_SIZE; i++) begin : INIT_BLOCK
+        for (genvar i = 0; i < PADDED_SIZE; i++) begin : INIT_BLOCK
             if (i == 0) begin
                 // Bit 0 cần xét carry-in
                 assign g[0][0] = (a_padded[0] & b_padded[0]) | 
@@ -147,14 +146,14 @@ module KSA_unit #(
     
     // Prefix tree chuẩn trên padded size - ĐÃ SỬA
     generate
-        for (k = 0; k < LOG_N; k++) begin : PREFIX_TREE
-            for ( z = 0; i < PADDED_SIZE; z++) begin : PREFIX_STAGE
-                if (z >= (1 << k)) begin
-                    assign g[k+1][z] = g[k][z] | (p[k][z] & g[k][z - (1<<k)]);
-                    assign p[k+1][z] = p[k][z] & p[k][z - (1<<k)];
+        for (genvar k = 0; k < LOG_N; k++) begin : PREFIX_TREE
+            for (genvar i = 0; i < PADDED_SIZE; i++) begin : PREFIX_STAGE
+                if (i >= (1 << k)) begin
+                    assign g[k+1][i] = g[k][i] | (p[k][i] & g[k][i - (1<<k)]);
+                    assign p[k+1][i] = p[k][i] & p[k][i - (1<<k)];
                 end else begin
-                    assign g[k+1][z] = g[k][z];
-                    assign p[k+1][z] = p[k][z];
+                    assign g[k+1][i] = g[k][i];
+                    assign p[k+1][i] = p[k][i];
                 end
             end
         end
@@ -162,7 +161,7 @@ module KSA_unit #(
     
     // Tính sum - ĐÃ SỬA
     generate
-        for (j = 0; j < SIZE_DATA; j++) begin : SUM_CALC
+        for (genvar j = 0; j < SIZE_DATA; j++) begin : SUM_CALC
             if (j == 0) begin
                 assign o_data_sum[0] = p[0][0] ^ i_carry;
             end else begin

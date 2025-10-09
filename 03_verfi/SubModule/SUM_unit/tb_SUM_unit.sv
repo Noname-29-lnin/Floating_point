@@ -3,8 +3,8 @@
 module tb_SUM_unit();
 
     // ---------------- PARAMETER ----------------
-    parameter SIZE_DATA = 8;
-    parameter NUM_TEST  = 100;
+    parameter SIZE_DATA = 25;
+    parameter NUM_TEST  = 500;
 
     // ---------------- SIGNAL ----------------
     logic                     i_carry;
