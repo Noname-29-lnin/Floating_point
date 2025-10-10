@@ -1,10 +1,10 @@
 module KSA_Black(
-  input  logic  i_pj    ,
-  input  logic  i_gj    ,
-  input  logic  i_pk    ,
-  input  logic  i_gk    ,
-  output logic  o_g     ,
-  output logic  o_p     
+  input  logic  i_pj    , // i_p(j)
+  input  logic  i_gj    , // i_g(j)
+  input  logic  i_pk    , // i_p(k)
+  input  logic  i_gk    , // i_g(k)
+  output logic  o_p     , // o_p(i)(j)
+  output logic  o_g       // o_p(i)(j)
 );
 
 assign o_g = i_gk | (i_gj & i_pk);

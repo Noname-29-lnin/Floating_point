@@ -3,7 +3,7 @@
 module tb_SUM_unit();
 
     // ---------------- PARAMETER ----------------
-    parameter SIZE_DATA = 25;
+    parameter SIZE_DATA = 28;
     parameter NUM_TEST  = 500;
 
     // ---------------- SIGNAL ----------------
@@ -31,6 +31,11 @@ module tb_SUM_unit();
         .o_carry  (o_carry)
     );
 
+    initial begin
+        $dumpfile("tb_SUM_unit.vcd");
+        $dumpvars(0, tb_SUM_unit);
+    end
+
     // ---------------- TEST PROCESS ----------------
     initial begin
         $display("============================================");
@@ -47,7 +52,7 @@ module tb_SUM_unit();
             #1; // wait for combinational logic to settle
 
             // Expected value (mô phỏng phép cộng thật)
-            {expected_carry, expected_sum} = {1'b0,i_data_a} + {1'b0, i_data_b} + i_carry;
+            {expected_carry, expected_sum} = {1'b0, i_data_a} + {1'b0, i_data_b} + {{(SIZE_DATA-1){1'b0}}, i_carry};
 
             // Compare DUT vs expected
             if ((o_sum === expected_sum) && (o_carry === expected_carry)) begin

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ADD_top
-Fri Oct 10 00:17:04 2025
+Fri Oct 10 12:49:14 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -13,14 +13,12 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |ADD_top
- 11. Parameter Settings for User Entity Instance: SUM_unit:SUM_UNIR
- 12. Parameter Settings for User Entity Instance: SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |ADD_top
+ 10. Parameter Settings for User Entity Instance: SUM_unit:SUM_UNIR
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -47,13 +45,13 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct 10 00:17:04 2025           ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 10 12:49:14 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; ADD_top                                         ;
 ; Top-level Entity Name           ; ADD_top                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 97                                              ;
+; Total registers                 ; 98                                              ;
 ; Total pins                      ; 100                                             ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -167,20 +165,28 @@ on the Quartus Prime software download page.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; ../../02_rtl/KSA/KSA_unit.sv     ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv      ;         ;
-; ../../02_rtl/SUM_unit.sv         ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/SUM_unit.sv          ;         ;
-; SUM_top.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/04_impl/SUM_unit/SUM_top.sv ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                ;
++---------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
++---------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; ../../02_rtl/KSA/RTL/KSA_Stage7.v     ; yes             ; User Verilog HDL File        ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage7.v     ;         ;
+; ../../02_rtl/KSA/RTL/KSA_Stage6.v     ; yes             ; User Verilog HDL File        ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage6.v     ;         ;
+; ../../02_rtl/KSA/RTL/KSA_Stage5.v     ; yes             ; User Verilog HDL File        ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage5.v     ;         ;
+; ../../02_rtl/KSA/RTL/KSA_Stage4.v     ; yes             ; User Verilog HDL File        ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage4.v     ;         ;
+; ../../02_rtl/KSA/RTL/KSA_Stage3.v     ; yes             ; User Verilog HDL File        ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage3.v     ;         ;
+; ../../02_rtl/KSA/RTL/KSA_Stage2.v     ; yes             ; User Verilog HDL File        ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage2.v     ;         ;
+; ../../02_rtl/KSA/RTL/KSA_Stage1.v     ; yes             ; User Verilog HDL File        ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage1.v     ;         ;
+; ../../02_rtl/KSA/RTL/KSA__top_level.v ; yes             ; User Verilog HDL File        ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA__top_level.v ;         ;
+; ../../02_rtl/KSA/RTL/gp_window.v      ; yes             ; User Verilog HDL File        ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/gp_window.v      ;         ;
+; ../../02_rtl/KSA/RTL/gp1.v            ; yes             ; User Verilog HDL File        ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/gp1.v            ;         ;
+; ../../02_rtl/SUM_unit.sv              ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/02_rtl/SUM_unit.sv              ;         ;
+; SUM_top.sv                            ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/04_impl/SUM_unit/SUM_top.sv     ;         ;
++---------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -188,48 +194,90 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 49          ;
+; Estimate of Logic utilization (ALMs needed) ; 121         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 32          ;
+; Combinational ALUT usage for logic          ; 194         ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 0           ;
-;     -- 5 input functions                    ; 0           ;
-;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 32          ;
+;     -- 6 input functions                    ; 39          ;
+;     -- 5 input functions                    ; 40          ;
+;     -- 4 input functions                    ; 70          ;
+;     -- <=3 input functions                  ; 45          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 97          ;
+; Dedicated logic registers                   ; 98          ;
 ;                                             ;             ;
 ; I/O pins                                    ; 100         ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_clk~input ;
-; Maximum fan-out                             ; 97          ;
-; Total fan-out                               ; 488         ;
-; Average fan-out                             ; 1.48        ;
+; Maximum fan-out                             ; 98          ;
+; Total fan-out                               ; 1252        ;
+; Average fan-out                             ; 2.54        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-------------+--------------+
-; |ADD_top                   ; 32 (0)              ; 97 (97)                   ; 0                 ; 0          ; 100  ; 0            ; |ADD_top                                     ; ADD_top     ; work         ;
-;    |SUM_unit:SUM_UNIR|     ; 32 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR                   ; SUM_unit    ; work         ;
-;       |KSA_unit:KSA_UNIT|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT ; KSA_unit    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Entity Name   ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+---------------+--------------+
+; |ADD_top                           ; 194 (0)             ; 98 (98)                   ; 0                 ; 0          ; 100  ; 0            ; |ADD_top                                                                                 ; ADD_top       ; work         ;
+;    |SUM_unit:SUM_UNIR|             ; 194 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR                                                               ; SUM_unit      ; work         ;
+;       |KSA_top_level:KSA_unit|     ; 194 (33)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit                                        ; KSA_top_level ; work         ;
+;          |KSA_Stage1:Stage1|       ; 15 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1                      ; KSA_Stage1    ; work         ;
+;             |gp1:gp12|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp12             ; gp1           ; work         ;
+;             |gp1:gp13|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp13             ; gp1           ; work         ;
+;             |gp1:gp14|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp14             ; gp1           ; work         ;
+;             |gp1:gp17|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp17             ; gp1           ; work         ;
+;             |gp1:gp25|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp25             ; gp1           ; work         ;
+;             |gp1:gp26|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp26             ; gp1           ; work         ;
+;             |gp1:gp28|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp28             ; gp1           ; work         ;
+;             |gp1:gp29|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp29             ; gp1           ; work         ;
+;             |gp1:gp2|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp2              ; gp1           ; work         ;
+;             |gp1:gp30|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp30             ; gp1           ; work         ;
+;             |gp1:gp31|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp31             ; gp1           ; work         ;
+;             |gp1:gp3|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp3              ; gp1           ; work         ;
+;             |gp1:gp4|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp4              ; gp1           ; work         ;
+;             |gp1:gp5|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp5              ; gp1           ; work         ;
+;          |KSA_Stage2:Stage2|       ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage2:Stage2                      ; KSA_Stage2    ; work         ;
+;             |gp_window:gp1_to_0|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage2:Stage2|gp_window:gp1_to_0   ; gp_window     ; work         ;
+;             |gp_window:gp26_to_25| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage2:Stage2|gp_window:gp26_to_25 ; gp_window     ; work         ;
+;             |gp_window:gp28_to_27| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage2:Stage2|gp_window:gp28_to_27 ; gp_window     ; work         ;
+;             |gp_window:gp29_to_28| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage2:Stage2|gp_window:gp29_to_28 ; gp_window     ; work         ;
+;          |KSA_Stage3:Stage3|       ; 77 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3                      ; KSA_Stage3    ; work         ;
+;             |gp_window:gp10_to_7|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp10_to_7  ; gp_window     ; work         ;
+;             |gp_window:gp11_to_8|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp11_to_8  ; gp_window     ; work         ;
+;             |gp_window:gp12_to_9|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp12_to_9  ; gp_window     ; work         ;
+;             |gp_window:gp13_to_10| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp13_to_10 ; gp_window     ; work         ;
+;             |gp_window:gp14_to_11| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp14_to_11 ; gp_window     ; work         ;
+;             |gp_window:gp15_to_12| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp15_to_12 ; gp_window     ; work         ;
+;             |gp_window:gp16_to_13| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp16_to_13 ; gp_window     ; work         ;
+;             |gp_window:gp17_to_14| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp17_to_14 ; gp_window     ; work         ;
+;             |gp_window:gp18_to_15| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp18_to_15 ; gp_window     ; work         ;
+;             |gp_window:gp19_to_16| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp19_to_16 ; gp_window     ; work         ;
+;             |gp_window:gp20_to_17| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp20_to_17 ; gp_window     ; work         ;
+;             |gp_window:gp21_to_18| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp21_to_18 ; gp_window     ; work         ;
+;             |gp_window:gp22_to_19| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp22_to_19 ; gp_window     ; work         ;
+;             |gp_window:gp23_to_20| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp23_to_20 ; gp_window     ; work         ;
+;             |gp_window:gp24_to_21| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp24_to_21 ; gp_window     ; work         ;
+;             |gp_window:gp25_to_22| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp25_to_22 ; gp_window     ; work         ;
+;             |gp_window:gp26_to_23| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp26_to_23 ; gp_window     ; work         ;
+;             |gp_window:gp27_to_24| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp27_to_24 ; gp_window     ; work         ;
+;             |gp_window:gp3_to_0|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp3_to_0   ; gp_window     ; work         ;
+;             |gp_window:gp4_to_1|   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp4_to_1   ; gp_window     ; work         ;
+;             |gp_window:gp5_to_2|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp5_to_2   ; gp_window     ; work         ;
+;             |gp_window:gp6_to_3|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp6_to_3   ; gp_window     ; work         ;
+;             |gp_window:gp7_to_4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp7_to_4   ; gp_window     ; work         ;
+;             |gp_window:gp8_to_5|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp8_to_5   ; gp_window     ; work         ;
+;             |gp_window:gp9_to_6|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3|gp_window:gp9_to_6   ; gp_window     ; work         ;
+;          |KSA_Stage4:Stage4|       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage4:Stage4                      ; KSA_Stage4    ; work         ;
+;             |gp_window:gp20_to_13| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage4:Stage4|gp_window:gp20_to_13 ; gp_window     ; work         ;
+;             |gp_window:gp21_to_14| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage4:Stage4|gp_window:gp21_to_14 ; gp_window     ; work         ;
+;             |gp_window:gp22_to_15| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage4:Stage4|gp_window:gp22_to_15 ; gp_window     ; work         ;
+;             |gp_window:gp23_to_16| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage4:Stage4|gp_window:gp23_to_16 ; gp_window     ; work         ;
+;          |KSA_Stage7:Stage7|       ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ADD_top|SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage7:Stage7                      ; KSA_Stage7    ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; o_carry~reg0                          ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -237,10 +285,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 97    ;
+; Total registers                              ; 98    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 97    ;
+; Number of registers using Asynchronous Clear ; 98    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -267,32 +315,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT ;
-+----------------+-------+---------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                    ;
-+----------------+-------+---------------------------------------------------------+
-; SIZE_DATA      ; 32    ; Signed Integer                                          ;
-+----------------+-------+---------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 97                          ;
-;     CLR               ; 97                          ;
-; arriav_lcell_comb     ; 33                          ;
-;     normal            ; 33                          ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 31                          ;
-;         3 data inputs ; 1                           ;
+; arriav_ff             ; 98                          ;
+;     CLR               ; 98                          ;
+; arriav_lcell_comb     ; 194                         ;
+;     normal            ; 194                         ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 70                          ;
+;         5 data inputs ; 40                          ;
+;         6 data inputs ; 39                          ;
 ; boundary_port         ; 100                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.49                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -311,39 +351,57 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Fri Oct 10 00:16:57 2025
+    Info: Processing started: Fri Oct 10 12:49:08 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ADD_top -c ADD_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv
-    Info (12023): Found entity 1: KSA_unit File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv Line: 111
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Gray.sv
-    Info (12023): Found entity 1: KSA_Gray File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Gray.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Gen_GP.sv
-    Info (12023): Found entity 1: KSA_Gen_GP File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Gen_GP.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Black.sv
-    Info (12023): Found entity 1: KSA_Black File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_Black.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage7.v
+    Info (12023): Found entity 1: KSA_Stage7 File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage7.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage6.v
+    Info (12023): Found entity 1: KSA_Stage6 File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage6.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage5.v
+    Info (12023): Found entity 1: KSA_Stage5 File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage5.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage4.v
+    Info (12023): Found entity 1: KSA_Stage4 File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage4.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage3.v
+    Info (12023): Found entity 1: KSA_Stage3 File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage3.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage2.v
+    Info (12023): Found entity 1: KSA_Stage2 File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage2.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage1.v
+    Info (12023): Found entity 1: KSA_Stage1 File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage1.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA__top_level.v
+    Info (12023): Found entity 1: KSA_top_level File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA__top_level.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/gp_window.v
+    Info (12023): Found entity 1: gp_window File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/gp_window.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/gp1.v
+    Info (12023): Found entity 1: gp1 File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/gp1.v Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/02_rtl/SUM_unit.sv
     Info (12023): Found entity 1: SUM_unit File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/SUM_unit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file SUM_top.sv
     Info (12023): Found entity 1: ADD_top File: /home/noname/Documents/project_tiny/Floating_point/04_impl/SUM_unit/SUM_top.sv Line: 1
 Info (12127): Elaborating entity "ADD_top" for the top level hierarchy
 Info (12128): Elaborating entity "SUM_unit" for hierarchy "SUM_unit:SUM_UNIR" File: /home/noname/Documents/project_tiny/Floating_point/04_impl/SUM_unit/SUM_top.sv Line: 43
-Info (12128): Elaborating entity "KSA_unit" for hierarchy "SUM_unit:SUM_UNIR|KSA_unit:KSA_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/SUM_unit.sv Line: 19
-Warning (10030): Net "g[5]" at KSA_unit.sv(125) has no driver or initial value, using a default initial value '0' File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/KSA_unit.sv Line: 125
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "o_carry" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/04_impl/SUM_unit/SUM_top.sv Line: 11
+Info (12128): Elaborating entity "KSA_top_level" for hierarchy "SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/SUM_unit.sv Line: 28
+Info (12128): Elaborating entity "KSA_Stage1" for hierarchy "SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA__top_level.v Line: 7
+Info (12128): Elaborating entity "gp1" for hierarchy "SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage1:Stage1|gp1:gp0" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage1.v Line: 25
+Info (12128): Elaborating entity "KSA_Stage2" for hierarchy "SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage2:Stage2" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA__top_level.v Line: 9
+Info (12128): Elaborating entity "gp_window" for hierarchy "SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage2:Stage2|gp_window:gp1_to_0" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA_Stage2.v Line: 28
+Info (12128): Elaborating entity "KSA_Stage3" for hierarchy "SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage3:Stage3" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA__top_level.v Line: 11
+Info (12128): Elaborating entity "KSA_Stage4" for hierarchy "SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage4:Stage4" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA__top_level.v Line: 13
+Info (12128): Elaborating entity "KSA_Stage5" for hierarchy "SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage5:Stage5" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA__top_level.v Line: 15
+Info (12128): Elaborating entity "KSA_Stage6" for hierarchy "SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage6:Stage6" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA__top_level.v Line: 17
+Info (12128): Elaborating entity "KSA_Stage7" for hierarchy "SUM_unit:SUM_UNIR|KSA_top_level:KSA_unit|KSA_Stage7:Stage7" File: /home/noname/Documents/project_tiny/Floating_point/02_rtl/KSA/RTL/KSA__top_level.v Line: 19
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 197 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 359 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 97 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 486 megabytes
-    Info: Processing ended: Fri Oct 10 00:17:04 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info (21061): Implemented 259 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 470 megabytes
+    Info: Processing ended: Fri Oct 10 12:49:14 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:16
 
 

@@ -59,10 +59,16 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE ../../02_rtl/KSA/KSA_unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../02_rtl/KSA/KSA_Gray.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../02_rtl/KSA/KSA_Gen_GP.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../02_rtl/KSA/KSA_Black.sv
+set_global_assignment -name VERILOG_FILE ../../02_rtl/KSA/RTL/KSA_Stage7.v
+set_global_assignment -name VERILOG_FILE ../../02_rtl/KSA/RTL/KSA_Stage6.v
+set_global_assignment -name VERILOG_FILE ../../02_rtl/KSA/RTL/KSA_Stage5.v
+set_global_assignment -name VERILOG_FILE ../../02_rtl/KSA/RTL/KSA_Stage4.v
+set_global_assignment -name VERILOG_FILE ../../02_rtl/KSA/RTL/KSA_Stage3.v
+set_global_assignment -name VERILOG_FILE ../../02_rtl/KSA/RTL/KSA_Stage2.v
+set_global_assignment -name VERILOG_FILE ../../02_rtl/KSA/RTL/KSA_Stage1.v
+set_global_assignment -name VERILOG_FILE ../../02_rtl/KSA/RTL/KSA__top_level.v
+set_global_assignment -name VERILOG_FILE ../../02_rtl/KSA/RTL/gp_window.v
+set_global_assignment -name VERILOG_FILE ../../02_rtl/KSA/RTL/gp1.v
 set_global_assignment -name SYSTEMVERILOG_FILE ../../02_rtl/SUM_unit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE SUM_top.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

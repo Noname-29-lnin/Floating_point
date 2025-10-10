@@ -23,14 +23,10 @@ EXP_swap #(
 assign o_exp_greater = w_greater_exp;
 
 // Greater - Less
-SUM_unit #(
-    .SIZE_DATA  (SIZE_EXP)
-) EXP_SUM_UNIT (
-    .i_carry        (1'b1),
+EXP_sub EXP_SUB_UNIT(
     .i_data_a       (w_greater_exp),
-    .i_data_b       (~(w_less_exp)),
-    .o_sum          (o_diff_value),
-    .o_carry        ()
+    .i_data_b       (w_less_exp),
+    .o_sub          (o_diff_value)    
 );
 
 endmodule

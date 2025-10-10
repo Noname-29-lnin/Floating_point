@@ -1,28 +1,34 @@
 module ALU_unit #(
-    parameter NUM_OP    = 0     ,   // 0: ADD | 1: SUB | 2: MUL | 3: DIV
-    parameter SIZE_DATA = 24
+    parameter NUM_OP    = 1 ,
+    parameter SIZE_DATA = 28
 )(
-    input  logic [SIZE_DATA-1:0] i_data_a,
-    input  logic [SIZE_DATA-1:0] i_data_b,
-    output logic [SIZE_DATA-1:0] o_result
+    input logic [NUM_OP-1:0]        i_op_alu            ,
+    input logic                     i_sign_a            ,   // Greater
+    input logic                     i_sign_b            ,   // Less
+    input logic [SIZE_DATA-1:0]     i_mantissa_a        ,   // Greater
+    input logic [SIZE_DATA-1:0]     i_mantissa_b        ,   // Less
+
+    output logic                    o_overflow          ,
+    output logic                    o_sign_result       ,   
+    output logic [SIZE_DATA-1:0]    o_mantissa_result      
 );
 
-generate
-    if (NUM_OP == 0) begin : GEN_ADD
-        assign o_result = i_data_a + i_data_b;
-    end
-    else if (NUM_OP == 1) begin : GEN_SUB
-        assign o_result = i_data_a - i_data_b;
-    end
-    else if (NUM_OP == 2) begin : GEN_MUL
-        assign o_result = i_data_a * i_data_b;
-    end
-    else if (NUM_OP == 3) begin : GEN_DIV
-        assign o_result = i_data_a / i_data_b;
-    end
-    else begin : GEN_DEFAULT
-        assign o_result = i_data_a + i_data_b;
-    end
-endgenerate
+logic w_carry_in;
+logic w_n_mantissa_b, w_i_mantissa_b;
+
+assign w_carry_in = i_op_alu ? (i_sign_a ^ i_sign_b) : ~(i_sign_a ^ i_sign_b); 
+assign w_n_mantissa_b = ~(i_mantissa_b);
+assign w_i_mantissa_b = w_carry_in ? w_n_mantissa_b : i_mantissa_b;
+
+SUM_unit #(
+    .SIZE_DATA  (SIZE_DATA)
+) ALU_COMM_UNIT  (
+    .i_carry        (w_carry_in),
+    .i_data_a       (i_mantissa_a),
+    .i_data_b       (w_i_mantissa_b),
+    .o_sum          (o_mantissa_result),
+    .o_carry        (o_overflow)
+);
+assign o_sign_result = i_sign_a;
 
 endmodule

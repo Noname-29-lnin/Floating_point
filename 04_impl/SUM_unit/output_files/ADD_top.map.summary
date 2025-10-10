@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Oct 10 00:17:04 2025
+Analysis & Synthesis Status : Successful - Fri Oct 10 12:49:14 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : ADD_top
 Top-level Entity Name : ADD_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 97
+Total registers : 98
 Total pins : 100
 Total virtual pins : 0
 Total block memory bits : 0
