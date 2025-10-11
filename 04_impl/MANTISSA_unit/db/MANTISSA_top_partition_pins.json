@@ -1,0 +1,373 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_sign_result",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[0]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[1]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[2]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[3]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[4]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[5]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[6]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[7]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[8]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[9]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[10]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[11]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[12]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[13]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[14]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[15]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[16]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[17]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[18]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[19]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[20]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[21]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[22]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[23]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[24]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[25]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[26]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mantissa[27]",
+					"strict" : false
+				},
+				{
+					"name" : "o_overflow",
+					"strict" : false
+				},
+				{
+					"name" : "i_clk",
+					"strict" : false
+				},
+				{
+					"name" : "i_rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "i_sign_B",
+					"strict" : false
+				},
+				{
+					"name" : "i_diff_signal",
+					"strict" : false
+				},
+				{
+					"name" : "i_sign_A",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[7]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[8]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[8]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[9]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[9]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[10]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[10]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[11]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[11]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[12]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[12]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[13]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[13]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[14]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[14]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[15]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[15]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[16]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[16]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[17]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[17]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[18]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[18]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[19]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[19]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[20]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[20]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[21]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[21]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[22]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[22]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[23]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[23]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[24]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[24]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[25]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[25]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[26]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[26]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_B[27]",
+					"strict" : false
+				},
+				{
+					"name" : "i_mantissa_A[27]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
