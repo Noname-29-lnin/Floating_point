@@ -1,12 +1,10 @@
 module FPU_32bit #(
     parameter NUM_OP    = 1 ,   // 0: ADD | 1: SUB
-    parameter SIZE_DATA = 32
 )(
     input logic [NUM_OP-1:0]        i_op_alu    ,
-    input logic [SIZE_DATA-1:0]     i_data_a    ,
-    input logic [SIZE_DATA-1:0]     i_data_b    ,
-
-    output logic [SIZE_DATA-1:0]    o_result     
+    input logic [31:0]              i_data_a    ,
+    input logic [31:0]              i_data_b    ,
+    output logic [31:0]             o_result     
 );
 
 ////////////////////////////////////////////////////////////////

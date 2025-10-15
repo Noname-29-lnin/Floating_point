@@ -1,10 +1,12 @@
-module EXP_sub (
-    input logic [7:0]   i_data_a,
-    input logic [7:0]   i_data_b,
-    output logic [7:0]  o_sub        
+module EXP_sub #(
+    parameter SIZE_EXP_SUB  = 8
+)(
+    input logic [SIZE_EXP_SUB-1:0]   i_data_a,
+    input logic [SIZE_EXP_SUB-1:0]   i_data_b,
+    output logic [SIZE_EXP_SUB-1:0]  o_sub        
 );
 
-logic [7:0] w_data_b;
+logic [SIZE_EXP_SUB-1:0] w_data_b;
 assign w_data_b = ~(i_data_b);
 
 CLA_8bit CLA_8BIT_UNIT (

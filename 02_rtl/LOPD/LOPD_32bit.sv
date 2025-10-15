@@ -30,9 +30,9 @@ LOPD_16bit LOPD_16bit_unit_1(
 ////////////////////////////////////////////////////////////
 assign o_zero_flag = w_zero_flag_0 & w_zero_flag_1;
 assign o_pos_one[4] = ~(w_zero_flag_1);
-assign o_pos_one[3] = w_zero_flag_1 ? w_pos_one_1[3] : w_pos_one_0[3];
-assign o_pos_one[2] = w_zero_flag_1 ? w_pos_one_1[2] : w_pos_one_0[2];
-assign o_pos_one[1] = w_zero_flag_1 ? w_pos_one_1[1] : w_pos_one_0[1];
-assign o_pos_one[0] = w_zero_flag_1 ? w_pos_one_1[0] : w_pos_one_0[0];
+assign o_pos_one[3] = w_zero_flag_1 ? w_pos_one_0[3] : w_pos_one_1[3];
+assign o_pos_one[2] = w_zero_flag_1 ? w_pos_one_0[2] : w_pos_one_1[2];
+assign o_pos_one[1] = w_zero_flag_1 ? w_pos_one_0[1] : w_pos_one_1[1];
+assign o_pos_one[0] = w_zero_flag_1 ? w_pos_one_0[0] : w_pos_one_1[0];
 
 endmodule
