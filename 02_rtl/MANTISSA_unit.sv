@@ -26,8 +26,8 @@ assign w_mantiss_greater_0  = i_diff_signal ? {i_sign_B, i_mantissa_B} : {i_sign
 logic [31:0] w_i_shift, w_o_shift;
 assign w_i_shift = {4'b0, {w_mantiss_less_0[SIZE_MANTISSA-1:0]}};
 MANTISSA_shf_right #(
-    .SIZE_SHIFT     (5),
-    .SIZE_DATA      (32)
+    .SIZE_SHIFT         (5),
+    .SIZE_MANTISSA      (28)
 ) MANTISSA_UNIT (
     .i_diff_value       (i_diff_value[4:0]),
     .i_data_shift       (w_i_shift),
@@ -37,7 +37,7 @@ assign w_o_shift = w_o_shift[SIZE_MANTISSA:0];
 assign w_mantiss_less_1[SIZE_MANTISSA] = w_mantiss_less_0[SIZE_MANTISSA];
 
 MANTISSA_swap #(
-    .SIZE_DATA (SIZE_MANTISSA)
+    .SIZE_MANTISSA (SIZE_MANTISSA)
 ) MANTISSA_swap_UNIT (
     .i_sign_A            (w_mantiss_greater_0[SIZE_MANTISSA]),
     .i_mantissa_A        (w_mantiss_greater_0[SIZE_MANTISSA-1:0]),
@@ -52,7 +52,7 @@ MANTISSA_swap #(
 
 ALU_unit #(
     .NUM_OP    (NUM_OP),
-    .SIZE_DATA (SIZE_MANTISSA)
+    .SIZE_MANTISSA (SIZE_MANTISSA)
 ) ALU_UNIT (
     .i_op_alu            (i_alu_op),
     .i_sign_a            (w_mantiss_greater_1[SIZE_MANTISSA]),   // Greater

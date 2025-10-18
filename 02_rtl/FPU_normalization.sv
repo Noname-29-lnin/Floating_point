@@ -5,7 +5,8 @@ module FPU_normalization #(
     input logic                     i_overflow   ,
     input logic [SIZE_DATA-1:0]     i_mantissa  ,
     output logic [SIZE_LOPD-1:0]    o_lopd      ,
-    output logic [SIZE_DATA-1:0]    o_mantissa   
+    output logic [SIZE_DATA-1:0]    o_mantissa  ,
+    output logic                    o_zero_flag 
 );
 
 logic w_zero_flag;
@@ -14,6 +15,8 @@ LOPD_32bit LOPD_unit (
     .o_pos_one   (o_lopd),
     .o_zero_flag (w_zero_flag) 
 );
+
+assign o_zero_flag = w_zero_flag;
 logic [31:0] w_o_data_shift;
 SHF_shift_right #(
     .SIZE_SHIFT     (5),
