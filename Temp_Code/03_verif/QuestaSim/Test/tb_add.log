@@ -1,0 +1,39 @@
+# vsim -coverage -lib ./Test/work -l ./Test/tb_add.log -voptargs="+cover=bcesft" -assertdebug -c tb_add -wlf ./Test/tb_add.wlf -do "coverage save -onexit ./Test/tb_add.ucdb; log -r /*;run -all;" 
+# Start time: 16:49:51 on Oct 23,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_add(fast)
+# coverage save -onexit ./Test/tb_add.ucdb
+#  log -r /*
+# run -all
+# ===== Start Simulation =====
+#  a  b  c_i | s  c_o 
+# ----------------------------
+# PASS: a=0 b=0 c_i=0 -> s=0 c_o=0
+# PASS: a=0 b=0 c_i=1 -> s=1 c_o=0
+# PASS: a=0 b=1 c_i=0 -> s=1 c_o=0
+# PASS: a=0 b=1 c_i=1 -> s=0 c_o=1
+# PASS: a=1 b=0 c_i=0 -> s=1 c_o=0
+# PASS: a=1 b=0 c_i=1 -> s=0 c_o=1
+# PASS: a=1 b=1 c_i=0 -> s=0 c_o=1
+# PASS: a=1 b=1 c_i=1 -> s=1 c_o=1
+# ===== Simulation Finished =====
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/QuestaSim/Test/tb_add.sv(51)
+#    Time: 8 ns  Iteration: 0  Instance: /tb_add
+# Saving coverage database on exit...
+# End time: 16:49:51 on Oct 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

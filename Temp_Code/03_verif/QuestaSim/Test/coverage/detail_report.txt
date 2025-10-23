@@ -1,0 +1,93 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb_add
+=== Design Unit: work.tb_add
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         1         1    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /tb_add
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File /home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/QuestaSim/Test/tb_add.sv
+------------------------------------IF Branch------------------------------------
+    28                                         8     Count coming in to IF
+    28              1                          8                 if ((s === exp_s) && (c_o === exp_c_o))
+    31              1                    ***0***                 else
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         0         2     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /tb_add --
+
+  File /home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/QuestaSim/Test/tb_add.sv
+----------------Focused Condition View-------------------
+Line       28 Item    1  ((s === exp_s) && (c_o === exp_c_o))
+Condition totals: 0 of 2 input terms covered = 0.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+      (s === exp_s)         N  '_0' not hit             Hit '_0'
+  (c_o === exp_c_o)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (s === exp_s)_0       -                             
+  Row   2:          1  (s === exp_s)_1       (c_o === exp_c_o)             
+  Row   3:    ***0***  (c_o === exp_c_o)_0   (s === exp_s)                 
+  Row   4:          1  (c_o === exp_c_o)_1   (s === exp_s)                 
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      14        13         1    92.85%
+
+================================Statement Details================================
+
+Statement Coverage for instance /tb_add --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File /home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/QuestaSim/Test/tb_add.sv
+    32              1                     $display("FAIL: a=%0b b=%0b c_i=%0b -> s=%0b (exp=%0b) c_o=%0b (exp=%0b)",
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         14        13         1    92.85%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /tb_add --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                                 a           0           1       50.00 
+                                                 b           1           1      100.00 
+                                               c_i           1           1      100.00 
+                                               c_o           1           1      100.00 
+                                           exp_c_o           1           1      100.00 
+                                             exp_s           1           1      100.00 
+                                                 s           1           1      100.00 
+
+Total Node Count     =          7 
+Toggled Node Count   =          6 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      92.85% (13 of 14 bins)
+
+
+Total Coverage By Instance (filtered view): 58.92%
+

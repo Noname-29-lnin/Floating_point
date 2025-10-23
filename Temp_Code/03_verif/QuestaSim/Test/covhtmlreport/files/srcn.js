@@ -1,0 +1,2 @@
+var g_data = ["","/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/QuestaSim/Test/tb_add.sv","/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/QuestaSim/Test/add.sv"];
+processSrcNamesData(g_data);

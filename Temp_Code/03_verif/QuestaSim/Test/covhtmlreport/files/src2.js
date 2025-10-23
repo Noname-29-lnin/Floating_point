@@ -1,0 +1,2 @@
+var g_data = {"name":"/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/QuestaSim/Test/add.sv","src":"module add(\n    input logic a,\n    input logic b,\n    input logic c_i,\n    output logic s,\n    output logic c_o\n);\n\nassign s=a^b^c_i;\nassign c_o = (a&b) | (a&c_i) | (b&c_i);\n\nendmodule\n","lang":"verilog"};
+processSrcData(g_data);

@@ -15,8 +15,8 @@ RADIX           ?= decimal
 # Default target
 #------------------------------
 all: compile run
-all_wave: compile run sim
-all_cov: compile_cover run_cover
+all_wave: compile run wave
+all_cov: compile_cover run_cover gen_cov gen_html
 
 #------------------------------
 # Compile
@@ -29,7 +29,7 @@ compile:
 	@echo "-> compile..."
 	@vlib $(INC_DIR)/work > /dev/null 2>&1
 	@vmap work $(INC_DIR)/work > /dev/null 2>&1
-	@vlog -f $(INC_DIR)/compile.f | tee $(INC_DIR)/compile.log \
+	@vlog -f $(INC_DIR)/flist.f | tee $(INC_DIR)/compile.log \
 		&& echo "<Pass> compile $(TOPMODULE)" \
 		|| echo "<False> compile $(TOPMODULE)"
 
@@ -52,12 +52,15 @@ run:
 	@echo "-> run..."
 	@vsim -lib $(INC_DIR)/work -debugDB -l $(INC_DIR)/$(TB_NAME).log \
 		-voptargs=+acc -assertdebug -c $(TB_NAME) \
+		-wlf $(INC_DIR)/$(TB_NAME).wlf \
 		-do "log -r /*;run -all;"
+
 
 run_cover:
 	@echo "-> run_cover..."
 	@vsim -coverage -lib $(INC_DIR)/work -l $(INC_DIR)/$(TB_NAME).log \
 		-voptargs='+cover=bcesft' -assertdebug -c $(TB_NAME) \
+		-wlf $(INC_DIR)/$(TB_NAME).wlf \
 		-do "coverage save -onexit $(INC_DIR)/$(TB_NAME).ucdb; log -r /*;run -all;"
 
 #------------------------------
@@ -96,13 +99,7 @@ gen_html:
 
 gen_view:
 	@echo "-> open HTML coverage report..."
-	@if [ -d "$(INC_DIR)/coverage/htmlreport" ]; then \
-		echo "<Pass> found HTML report, opening..."; \
-		xdg-open $(INC_DIR)/coverage/htmlreport/index.html > /dev/null 2>&1 & \
-		&& echo "<Pass> open HTML coverage report"; \
-	else \
-		echo "<False> HTML report not found. Run 'make gen_html' first."; \
-	fi
+	xdg-open "$(INC_DIR)/covhtmlreport/index.html" >/dev/null 2>&1 
 
 #------------------------------
 # Clean
