@@ -9,7 +9,7 @@ module EXP_swap #(
 );
 
 // assign o_compare = (i_data_a < i_data_b);
-COMP_less #(
+COMP_8bit #(
     .SIZE_DATA      (SIZE_DATA)
 ) COMP_LESS_UNIT (
     .i_data_a       (i_data_a),

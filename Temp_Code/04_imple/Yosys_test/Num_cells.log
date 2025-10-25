@@ -1,0 +1,2507 @@
+
+26. Executing SYNTH pass.
+
+26.1. Executing HIERARCHY pass (managing design hierarchy).
+
+26.1.1. Analyzing design hierarchy..
+Top module:  \FPU_unit
+Used module:     $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust
+Used module:         \CLA_8bit
+Used module:             \CLA_4bit
+Used module:     $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000
+Used module:     $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000
+Used module:         $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000
+Used module:             \COMP_4bit
+Used module:                 \COMP_2bit
+Used module:     $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit
+Used module:         \LOPD_16bit
+Used module:             \LOPD_8bit
+Used module:                 \LOPD_4bit
+Used module:     $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU
+Used module:         \CLA_28bit
+Used module:     $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100
+Used module:     $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000
+Used module:     $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100
+Used module:     $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit
+Used module:         $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit
+Used module:     $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit
+
+26.1.2. Analyzing design hierarchy..
+Top module:  \FPU_unit
+Used module:     $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust
+Used module:         \CLA_8bit
+Used module:             \CLA_4bit
+Used module:     $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000
+Used module:     $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000
+Used module:         $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000
+Used module:             \COMP_4bit
+Used module:                 \COMP_2bit
+Used module:     $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit
+Used module:         \LOPD_16bit
+Used module:             \LOPD_8bit
+Used module:                 \LOPD_4bit
+Used module:     $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU
+Used module:         \CLA_28bit
+Used module:     $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100
+Used module:     $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000
+Used module:     $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100
+Used module:     $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit
+Used module:         $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit
+Used module:     $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit
+Removed 0 unused modules.
+
+26.2. Executing PROC pass (convert processes to netlists).
+
+26.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+26.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+26.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+26.2.4. Executing PROC_INIT pass (extract init attributes).
+
+26.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+26.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+26.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+26.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+26.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+26.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+26.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+26.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.5. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit...
+Checking module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit...
+Checking module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit...
+Checking module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU...
+Checking module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit...
+Checking module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust...
+Checking module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100...
+Checking module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000...
+Checking module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000...
+Checking module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000...
+Checking module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000...
+Checking module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100...
+Checking module CLA_28bit...
+Checking module CLA_4bit...
+Checking module CLA_8bit...
+Checking module COMP_2bit...
+Checking module COMP_4bit...
+Checking module FPU_unit...
+Checking module LOPD_16bit...
+Checking module LOPD_4bit...
+Checking module LOPD_8bit...
+Found and reported 0 problems.
+
+26.6. Executing OPT pass (performing simple optimizations).
+
+26.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_8bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \COMP_2bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \COMP_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \FPU_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_8bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+26.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+  Optimizing cells in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+  Optimizing cells in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+  Optimizing cells in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+  Optimizing cells in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+  Optimizing cells in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+  Optimizing cells in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+  Optimizing cells in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+  Optimizing cells in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+  Optimizing cells in module \CLA_28bit.
+  Optimizing cells in module \CLA_4bit.
+  Optimizing cells in module \CLA_8bit.
+  Optimizing cells in module \COMP_2bit.
+  Optimizing cells in module \COMP_4bit.
+  Optimizing cells in module \FPU_unit.
+  Optimizing cells in module \LOPD_16bit.
+  Optimizing cells in module \LOPD_4bit.
+  Optimizing cells in module \LOPD_8bit.
+Performed a total of 0 changes.
+
+26.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+26.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.6.9. Finished fast OPT passes. (There is nothing left to do.)
+
+26.7. Executing FSM pass (extract and optimize FSM).
+
+26.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+26.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+26.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+26.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+26.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+26.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+26.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+26.8. Executing OPT pass (performing simple optimizations).
+
+26.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_8bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \COMP_2bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \COMP_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \FPU_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_8bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+26.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+  Optimizing cells in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+  Optimizing cells in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+  Optimizing cells in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+  Optimizing cells in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+  Optimizing cells in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+  Optimizing cells in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+  Optimizing cells in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+  Optimizing cells in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+  Optimizing cells in module \CLA_28bit.
+  Optimizing cells in module \CLA_4bit.
+  Optimizing cells in module \CLA_8bit.
+  Optimizing cells in module \COMP_2bit.
+  Optimizing cells in module \COMP_4bit.
+  Optimizing cells in module \FPU_unit.
+  Optimizing cells in module \LOPD_16bit.
+  Optimizing cells in module \LOPD_4bit.
+  Optimizing cells in module \LOPD_8bit.
+Performed a total of 0 changes.
+
+26.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+26.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+26.9. Executing WREDUCE pass (reducing word size of cells).
+
+26.10. Executing PEEPOPT pass (run peephole optimizers).
+
+26.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module CLA_28bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module CLA_4bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module CLA_8bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module COMP_2bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module COMP_4bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module FPU_unit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module LOPD_16bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module LOPD_4bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module LOPD_8bit:
+  created 0 $alu and 0 $macc cells.
+
+26.13. Executing SHARE pass (SAT-based resource sharing).
+
+26.14. Executing OPT pass (performing simple optimizations).
+
+26.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_8bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \COMP_2bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \COMP_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \FPU_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_8bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+26.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+  Optimizing cells in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+  Optimizing cells in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+  Optimizing cells in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+  Optimizing cells in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+  Optimizing cells in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+  Optimizing cells in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+  Optimizing cells in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+  Optimizing cells in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+  Optimizing cells in module \CLA_28bit.
+  Optimizing cells in module \CLA_4bit.
+  Optimizing cells in module \CLA_8bit.
+  Optimizing cells in module \COMP_2bit.
+  Optimizing cells in module \COMP_4bit.
+  Optimizing cells in module \FPU_unit.
+  Optimizing cells in module \LOPD_16bit.
+  Optimizing cells in module \LOPD_4bit.
+  Optimizing cells in module \LOPD_8bit.
+Performed a total of 0 changes.
+
+26.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+26.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+26.15. Executing MEMORY pass.
+
+26.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+26.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+26.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+26.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+26.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+26.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+26.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+26.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+26.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.17. Executing OPT pass (performing simple optimizations).
+
+26.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+<suppressed ~3 debug messages>
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+<suppressed ~3 debug messages>
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+26.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.17.5. Finished fast OPT passes.
+
+26.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+26.19. Executing OPT pass (performing simple optimizations).
+
+26.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_28bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CLA_8bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \COMP_2bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \COMP_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \FPU_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \LOPD_8bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+26.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+  Optimizing cells in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+  Optimizing cells in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+  Optimizing cells in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+  Optimizing cells in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+  Optimizing cells in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+  Optimizing cells in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+  Optimizing cells in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+  Optimizing cells in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+  Optimizing cells in module \CLA_28bit.
+  Optimizing cells in module \CLA_4bit.
+  Optimizing cells in module \CLA_8bit.
+  Optimizing cells in module \COMP_2bit.
+  Optimizing cells in module \COMP_4bit.
+  Optimizing cells in module \FPU_unit.
+  Optimizing cells in module \LOPD_16bit.
+  Optimizing cells in module \LOPD_4bit.
+  Optimizing cells in module \LOPD_8bit.
+Performed a total of 0 changes.
+
+26.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.19.6. Executing OPT_SHARE pass.
+
+26.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+26.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.19.10. Finished fast OPT passes. (There is nothing left to do.)
+
+26.20. Executing TECHMAP pass (map to technology primitives).
+
+26.20.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+verilog frontend filename /usr/local/bin/../share/yosys/techmap.v
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `\$connect'.
+Generating RTLIL representation for module `\$input_port'.
+Successfully finished Verilog frontend.
+
+26.20.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~77 debug messages>
+
+26.21. Executing OPT pass (performing simple optimizations).
+
+26.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+26.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+
+26.21.5. Finished fast OPT passes.
+
+26.22. Executing ABC pass (technology mapping using ABC).
+
+26.22.1. Extracting gate netlist of module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.1.1. Executed ABC.
+Extracted 145 gates and 178 wires to a netlist network with 33 inputs and 28 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.1.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:       31
+ABC RESULTS:               MUX cells:      109
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:        internal signals:      117
+ABC RESULTS:           input signals:       33
+ABC RESULTS:          output signals:       28
+Removing temp directory.
+
+26.22.2. Extracting gate netlist of module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.2.1. Executed ABC.
+Extracted 145 gates and 178 wires to a netlist network with 33 inputs and 28 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.2.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:       31
+ABC RESULTS:               MUX cells:      109
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOT cells:        4
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:        internal signals:      117
+ABC RESULTS:           input signals:       33
+ABC RESULTS:          output signals:       28
+Removing temp directory.
+
+26.22.3. Extracting gate netlist of module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit' to `<abc-temp-dir>/input.blif'..
+
+26.22.3.1. Executed ABC.
+Extracted 111 gates and 169 wires to a netlist network with 58 inputs and 28 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.3.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:       32
+ABC RESULTS:               MUX cells:       55
+ABC RESULTS:              NAND cells:       13
+ABC RESULTS:                OR cells:       10
+ABC RESULTS:        internal signals:       83
+ABC RESULTS:           input signals:       58
+ABC RESULTS:          output signals:       28
+Removing temp directory.
+
+26.22.4. Extracting gate netlist of module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU' to `<abc-temp-dir>/input.blif'..
+
+26.22.4.1. Executed ABC.
+Extracted 30 gates and 61 wires to a netlist network with 31 inputs and 29 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.4.2. Re-integrating ABC results.
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:       29
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       31
+ABC RESULTS:          output signals:       29
+Removing temp directory.
+
+26.22.5. Extracting gate netlist of module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.5.1. Executed ABC.
+Extracted 6 gates and 15 wires to a netlist network with 9 inputs and 6 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.5.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:               MUX cells:        3
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        9
+ABC RESULTS:          output signals:        6
+Removing temp directory.
+
+26.22.6. Extracting gate netlist of module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust' to `<abc-temp-dir>/input.blif'..
+
+26.22.6.1. Executed ABC.
+Extracted 24 gates and 43 wires to a netlist network with 19 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.6.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:       17
+ABC RESULTS:                OR cells:        7
+ABC RESULTS:        internal signals:        8
+ABC RESULTS:           input signals:       19
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+26.22.7. Extracting gate netlist of module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100' to `<abc-temp-dir>/input.blif'..
+
+26.22.7.1. Executed ABC.
+Extracted 22 gates and 36 wires to a netlist network with 14 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.7.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:        7
+ABC RESULTS:              NAND cells:        2
+ABC RESULTS:               NOT cells:        4
+ABC RESULTS:                OR cells:        9
+ABC RESULTS:        internal signals:       20
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+26.22.8. Extracting gate netlist of module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000' to `<abc-temp-dir>/input.blif'..
+
+26.22.8.1. Executed ABC.
+Extracted 2 gates and 5 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.8.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+26.22.9. Extracting gate netlist of module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000' to `<abc-temp-dir>/input.blif'..
+
+26.22.9.1. Executed ABC.
+Extracted 8 gates and 16 wires to a netlist network with 8 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.9.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:        8
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        8
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+
+26.22.10. Extracting gate netlist of module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000' to `<abc-temp-dir>/input.blif'..
+
+26.22.10.1. Executed ABC.
+Extracted 16 gates and 33 wires to a netlist network with 17 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.10.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       17
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+26.22.11. Extracting gate netlist of module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000' to `<abc-temp-dir>/input.blif'..
+
+26.22.11.1. Executed ABC.
+Extracted 50 gates and 101 wires to a netlist network with 51 inputs and 50 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.11.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:       50
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       51
+ABC RESULTS:          output signals:       50
+Removing temp directory.
+
+26.22.12. Extracting gate netlist of module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100' to `<abc-temp-dir>/input.blif'..
+
+26.22.12.1. Executed ABC.
+Extracted 58 gates and 117 wires to a netlist network with 59 inputs and 58 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.12.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:       58
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       59
+ABC RESULTS:          output signals:       58
+Removing temp directory.
+
+26.22.13. Extracting gate netlist of module `\CLA_28bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.13.1. Executed ABC.
+Extracted 18 gates and 33 wires to a netlist network with 15 inputs and 7 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.13.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        3
+ABC RESULTS:            ANDNOT cells:        4
+ABC RESULTS:               NOR cells:        4
+ABC RESULTS:               NOT cells:        4
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:        internal signals:       11
+ABC RESULTS:           input signals:       15
+ABC RESULTS:          output signals:        7
+Removing temp directory.
+
+26.22.14. Extracting gate netlist of module `\CLA_4bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.14.1. Executed ABC.
+Extracted 36 gates and 45 wires to a netlist network with 9 inputs and 6 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.14.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        5
+ABC RESULTS:            ANDNOT cells:       10
+ABC RESULTS:               NOR cells:        3
+ABC RESULTS:                OR cells:       10
+ABC RESULTS:              XNOR cells:        4
+ABC RESULTS:               XOR cells:        5
+ABC RESULTS:        internal signals:       30
+ABC RESULTS:           input signals:        9
+ABC RESULTS:          output signals:        6
+Removing temp directory.
+
+26.22.15. Extracting gate netlist of module `\CLA_8bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.15.1. Executed ABC.
+Extracted 4 gates and 9 wires to a netlist network with 5 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.15.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+26.22.16. Extracting gate netlist of module `\COMP_2bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.16.1. Executed ABC.
+Extracted 10 gates and 14 wires to a netlist network with 4 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.16.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:        4
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:        8
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+26.22.17. Extracting gate netlist of module `\COMP_4bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.17.1. Executed ABC.
+Extracted 3 gates and 7 wires to a netlist network with 4 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.17.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+26.22.18. Extracting gate netlist of module `\FPU_unit' to `<abc-temp-dir>/input.blif'..
+
+26.22.18.1. Executed ABC.
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.18.2. Re-integrating ABC results.
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+26.22.19. Extracting gate netlist of module `\LOPD_16bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.19.1. Executed ABC.
+Extracted 5 gates and 13 wires to a netlist network with 8 inputs and 5 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.19.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        3
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        8
+ABC RESULTS:          output signals:        5
+Removing temp directory.
+
+26.22.20. Extracting gate netlist of module `\LOPD_4bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.20.1. Executed ABC.
+Extracted 5 gates and 9 wires to a netlist network with 4 inputs and 3 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.20.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        3
+Removing temp directory.
+
+26.22.21. Extracting gate netlist of module `\LOPD_8bit' to `<abc-temp-dir>/input.blif'..
+
+26.22.21.1. Executed ABC.
+Extracted 4 gates and 10 wires to a netlist network with 6 inputs and 4 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 24 2025 23:55:48)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library /tmp/yosys-abc-X07Ofz/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+26.22.21.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        2
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        6
+ABC RESULTS:          output signals:        4
+Removing temp directory.
+Removing global temp directory.
+
+26.23. Executing OPT pass (performing simple optimizations).
+
+26.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit.
+Optimizing module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit.
+<suppressed ~82 debug messages>
+Optimizing module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit.
+Optimizing module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU.
+Optimizing module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit.
+Optimizing module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust.
+Optimizing module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100.
+Optimizing module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000.
+Optimizing module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000.
+Optimizing module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100.
+Optimizing module CLA_28bit.
+Optimizing module CLA_4bit.
+Optimizing module CLA_8bit.
+Optimizing module COMP_2bit.
+Optimizing module COMP_4bit.
+Optimizing module FPU_unit.
+Optimizing module LOPD_16bit.
+Optimizing module LOPD_4bit.
+Optimizing module LOPD_8bit.
+
+26.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit'.
+Finding identical cells in module `$paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit'.
+Finding identical cells in module `$paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit'.
+Finding identical cells in module `$paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU'.
+Finding identical cells in module `$paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit'.
+Finding identical cells in module `$paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust'.
+Finding identical cells in module `$paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100'.
+Finding identical cells in module `$paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000'.
+Finding identical cells in module `$paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100'.
+Finding identical cells in module `\CLA_28bit'.
+Finding identical cells in module `\CLA_4bit'.
+Finding identical cells in module `\CLA_8bit'.
+Finding identical cells in module `\COMP_2bit'.
+Finding identical cells in module `\COMP_4bit'.
+Finding identical cells in module `\FPU_unit'.
+Finding identical cells in module `\LOPD_16bit'.
+Finding identical cells in module `\LOPD_4bit'.
+Finding identical cells in module `\LOPD_8bit'.
+Removed a total of 0 cells.
+
+26.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+26.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit..
+Finding unused cells or wires in module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit..
+Finding unused cells or wires in module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit..
+Finding unused cells or wires in module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU..
+Finding unused cells or wires in module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit..
+Finding unused cells or wires in module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust..
+Finding unused cells or wires in module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000..
+Finding unused cells or wires in module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100..
+Finding unused cells or wires in module \CLA_28bit..
+Finding unused cells or wires in module \CLA_4bit..
+Finding unused cells or wires in module \CLA_8bit..
+Finding unused cells or wires in module \COMP_2bit..
+Finding unused cells or wires in module \COMP_4bit..
+Finding unused cells or wires in module \FPU_unit..
+Finding unused cells or wires in module \LOPD_16bit..
+Finding unused cells or wires in module \LOPD_4bit..
+Finding unused cells or wires in module \LOPD_8bit..
+Removed 2 unused cells and 1097 unused wires.
+<suppressed ~23 debug messages>
+
+26.23.5. Finished fast OPT passes.
+
+26.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `FPU_unit'. Setting top module to FPU_unit.
+
+26.24.1. Analyzing design hierarchy..
+Top module:  \FPU_unit
+Used module:     $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust
+Used module:         \CLA_8bit
+Used module:             \CLA_4bit
+Used module:     $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000
+Used module:     $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000
+Used module:         $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000
+Used module:             \COMP_4bit
+Used module:                 \COMP_2bit
+Used module:     $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit
+Used module:         \LOPD_16bit
+Used module:             \LOPD_8bit
+Used module:                 \LOPD_4bit
+Used module:     $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU
+Used module:         \CLA_28bit
+Used module:     $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100
+Used module:     $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000
+Used module:     $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100
+Used module:     $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit
+Used module:         $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit
+Used module:     $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit
+
+26.24.2. Analyzing design hierarchy..
+Top module:  \FPU_unit
+Used module:     $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust
+Used module:         \CLA_8bit
+Used module:             \CLA_4bit
+Used module:     $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000
+Used module:     $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000
+Used module:         $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000
+Used module:             \COMP_4bit
+Used module:                 \COMP_2bit
+Used module:     $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit
+Used module:         \LOPD_16bit
+Used module:             \LOPD_8bit
+Used module:                 \LOPD_4bit
+Used module:     $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU
+Used module:         \CLA_28bit
+Used module:     $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100
+Used module:     $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000
+Used module:     $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100
+Used module:     $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit
+Used module:         $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit
+Used module:     $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit
+Removed 0 unused modules.
+
+26.25. Printing statistics.
+
+=== $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      122 wires
+      234 wire bits
+        5 public wires
+      117 public wire bits
+        3 ports
+       61 port bits
+      145 cells
+       31   $_ANDNOT_
+      109   $_MUX_
+        1   $_NAND_
+        2   $_NOT_
+        1   $_ORNOT_
+        1   $_OR_
+
+=== $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      122 wires
+      234 wire bits
+        5 public wires
+      117 public wire bits
+        3 ports
+       61 port bits
+      145 cells
+       31   $_ANDNOT_
+      109   $_MUX_
+        1   $_NAND_
+        2   $_NOT_
+        1   $_ORNOT_
+        1   $_OR_
+
+=== $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       89 wires
+      174 wire bits
+        6 public wires
+       91 public wire bits
+        5 ports
+       63 port bits
+      111 cells
+       32   $_ANDNOT_
+        1   $_AND_
+       55   $_MUX_
+       13   $_NAND_
+       10   $_OR_
+        1 submodules
+        1   $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit
+
+=== $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+      118 wire bits
+        9 public wires
+      117 public wire bits
+        7 ports
+       88 port bits
+       30 cells
+        1   $_XNOR_
+       29   $_XOR_
+        1 submodules
+        1   CLA_28bit
+
+=== $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        9 wires
+       63 wire bits
+        9 public wires
+       63 public wire bits
+        3 ports
+       30 port bits
+        6 cells
+        2   $_AND_
+        3   $_MUX_
+        1   $_NOT_
+        2 submodules
+        1   LOPD_16bit
+        1   LOPD_8bit
+
+=== $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       17 wires
+       59 wire bits
+        9 public wires
+       51 public wire bits
+        6 ports
+       27 port bits
+       24 cells
+       17   $_ANDNOT_
+        7   $_OR_
+        1 submodules
+        1   CLA_8bit
+
+=== $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       28 wires
+      105 wire bits
+        8 public wires
+       85 public wire bits
+        4 ports
+       58 port bits
+       22 cells
+        7   $_ANDNOT_
+        2   $_NAND_
+        4   $_NOT_
+        9   $_OR_
+        7 submodules
+        7   COMP_4bit
+
+=== $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        8 wires
+       22 wire bits
+        7 public wires
+       21 public wire bits
+        3 ports
+       17 port bits
+        2 cells
+        1   $_AND_
+        1   $_OR_
+        2 submodules
+        2   COMP_4bit
+
+=== $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        4 wires
+       32 wire bits
+        4 public wires
+       32 public wire bits
+        3 ports
+       24 port bits
+        8 cells
+        8   $_NOT_
+        1 submodules
+        1   CLA_8bit
+
+=== $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+       33 wire bits
+        5 public wires
+       33 public wire bits
+        5 ports
+       33 port bits
+       16 cells
+       16   $_MUX_
+        1 submodules
+        1   $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000
+
+=== $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       13 wires
+      201 wire bits
+       13 public wires
+      201 public wire bits
+        9 ports
+      101 port bits
+       50 cells
+       50   $_MUX_
+
+=== $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       13 wires
+      233 wire bits
+       13 public wires
+      233 public wire bits
+        9 ports
+      117 port bits
+       58 cells
+       58   $_MUX_
+
+=== CLA_28bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       19 wires
+      119 wire bits
+        8 public wires
+      108 public wire bits
+        5 ports
+       86 port bits
+       18 cells
+        4   $_ANDNOT_
+        3   $_AND_
+        4   $_NOR_
+        4   $_NOT_
+        3   $_OR_
+        7 submodules
+        7   CLA_4bit
+
+=== CLA_4bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       38 wires
+       50 wire bits
+        7 public wires
+       19 public wire bits
+        6 ports
+       15 port bits
+       37 cells
+       10   $_ANDNOT_
+        5   $_AND_
+        3   $_NOR_
+       10   $_OR_
+        4   $_XNOR_
+        5   $_XOR_
+
+=== CLA_8bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       33 wire bits
+        8 public wires
+       31 public wire bits
+        5 ports
+       26 port bits
+        4 cells
+        2   $_AND_
+        2   $_OR_
+        2 submodules
+        2   CLA_4bit
+
+=== COMP_2bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       12 wires
+       14 wire bits
+        4 public wires
+        6 public wire bits
+        4 ports
+        6 port bits
+       10 cells
+        4   $_ANDNOT_
+        1   $_AND_
+        3   $_OR_
+        1   $_XNOR_
+        1   $_XOR_
+
+=== COMP_4bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        9 wires
+       15 wire bits
+        8 public wires
+       14 public wire bits
+        4 ports
+       10 port bits
+        3 cells
+        2   $_AND_
+        1   $_OR_
+        2 submodules
+        2   COMP_2bit
+
+=== FPU_unit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       35 wires
+      449 wire bits
+       35 public wires
+      449 public wire bits
+        4 ports
+       97 port bits
+        1 cells
+        1   $_OR_
+       10 submodules
+        1   $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit
+        1   $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit
+        1   $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU
+        1   $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit
+        1   $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust
+        1   $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100
+        1   $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000
+        1   $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000
+        1   $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000
+        1   $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100
+
+=== LOPD_16bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+       29 wire bits
+        7 public wires
+       29 public wire bits
+        3 ports
+       21 port bits
+        5 cells
+        1   $_AND_
+        3   $_MUX_
+        1   $_NOT_
+        2 submodules
+        2   LOPD_8bit
+
+=== LOPD_4bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+        9 wire bits
+        3 public wires
+        7 public wire bits
+        3 ports
+        7 port bits
+        5 cells
+        2   $_ANDNOT_
+        1   $_NOR_
+        2   $_OR_
+
+=== LOPD_8bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+       18 wire bits
+        7 public wires
+       18 public wire bits
+        3 ports
+       12 port bits
+        4 cells
+        1   $_AND_
+        2   $_MUX_
+        1   $_NOT_
+        2 submodules
+        2   LOPD_4bit
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+     1305 FPU_unit
+      145 $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit
+      111 $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit
+      145   $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit
+       30 $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU
+       18   CLA_28bit
+       37     CLA_4bit
+        6 $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit
+        5   LOPD_16bit
+        4     LOPD_8bit
+        5       LOPD_4bit
+        4   LOPD_8bit
+        5     LOPD_4bit
+       24 $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust
+        4   CLA_8bit
+       37     CLA_4bit
+       22 $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100
+        3   COMP_4bit
+       10     COMP_2bit
+        8 $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000
+        4   CLA_8bit
+       37     CLA_4bit
+       16 $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000
+        2   $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000
+        3     COMP_4bit
+       10       COMP_2bit
+       50 $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000
+       58 $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100
+
+        +----------Count including submodules.
+        | 
+     1287 wires
+     3216 wire bits
+      419 public wires
+     2348 public wire bits
+      283 ports
+     1377 port bits
+        - memories
+        - memory bits
+        - processes
+     1305 cells
+      316   $_ANDNOT_
+      106   $_AND_
+      409   $_MUX_
+       17   $_NAND_
+       43   $_NOR_
+       25   $_NOT_
+        2   $_ORNOT_
+      222   $_OR_
+       63   $_XNOR_
+      102   $_XOR_
+       10 submodules
+        1   $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit
+        1   $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit
+        1   $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU
+        1   $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit
+        1   $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust
+        1   $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100
+        1   $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000
+        1   $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000
+        1   $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000
+        1   $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100
+
+26.26. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_left_28bit...
+Checking module $paramod$838eca7e11edbbe4133b9d4b805df76569a77db5\SHF_right_28bit...
+Checking module $paramod$86e2ecc188db999b02eea494903b0b71b5611749\NORMALIZATION_unit...
+Checking module $paramod$c4a789d13c6a51d42abff3e6c08b9ac15000ef29\MAN_ALU...
+Checking module $paramod$ddb12a396591830656c1cd6f172018da8b53bbff\LOPD_24bit...
+Checking module $paramod$e3033cb942ab349c2c8c9f2494da147b64d93cde\EXP_adjust...
+Checking module $paramod\COMP_28bit\SIZE_DATA=s32'00000000000000000000000000011100...
+Checking module $paramod\COMP_8bit\SIZE_DATA=s32'00000000000000000000000000001000...
+Checking module $paramod\EXP_sub\SIZE_EXP_SUB=s32'00000000000000000000000000001000...
+Checking module $paramod\EXP_swap\SIZE_DATA=s32'00000000000000000000000000001000...
+Checking module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011000...
+Checking module $paramod\MAN_swap\SIZE_MAN=s32'00000000000000000000000000011100...
+Checking module CLA_28bit...
+Checking module CLA_4bit...
+Checking module CLA_8bit...
+Checking module COMP_2bit...
+Checking module COMP_4bit...
+Checking module FPU_unit...
+Checking module LOPD_16bit...
+Checking module LOPD_4bit...
+Checking module LOPD_8bit...
+Found and reported 0 problems.

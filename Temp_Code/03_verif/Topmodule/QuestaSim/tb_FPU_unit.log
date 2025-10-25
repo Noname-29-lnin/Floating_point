@@ -1,0 +1,57 @@
+# vsim -lib ./../Topmodule/QuestaSim/work -debugDB -l ./../Topmodule/QuestaSim/tb_FPU_unit.log -voptargs="+acc" -assertdebug -c tb_FPU_unit -wlf ./../Topmodule/QuestaSim/tb_FPU_unit.wlf -do "cd ./../Topmodule/QuestaSim; log -r /*; run -all;" 
+# Start time: 00:52:34 on Oct 26,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_FPU_unit(fast)
+# Loading work.FPU_unit(fast)
+# Loading work.EXP_swap(fast)
+# Loading work.COMP_8bit(fast)
+# Loading work.COMP_4bit(fast)
+# Loading work.COMP_2bit(fast)
+# Loading work.EXP_sub(fast)
+# Loading work.CLA_8bit(fast)
+# Loading work.CLA_4bit(fast)
+# Loading work.MAN_swap(fast)
+# Loading work.SHF_right_28bit(fast)
+# Loading work.COMP_28bit(fast)
+# Loading work.MAN_swap(fast__1)
+# Loading work.MAN_ALU(fast)
+# Loading work.CLA_28bit(fast)
+# Loading work.LOPD_24bit(fast)
+# Loading work.LOPD_16bit(fast)
+# Loading work.LOPD_8bit(fast)
+# Loading work.LOPD_4bit(fast)
+# Loading work.EXP_adjust(fast)
+# Loading work.NORMALIZATION_unit(fast)
+# Loading work.SHF_left_28bit(fast)
+# ** Note: (vsim-8900) Creating design debug database ./../Topmodule/QuestaSim/tb_FPU_unit.dbg.
+# cd ./../Topmodule/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# [35000] ADD: 5.5 + 2.2 = 0.000000 (00800000)
+# [55000] SUB: 10.0 - 3.5 = 0.000000
+# [75000] ADD: -4.5 + 2.25 = 0.000000
+# [95000] SUB: 0.125 - 0.0625 = 0.000000
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv(84)
+#    Time: 115 ns  Iteration: 0  Instance: /tb_FPU_unit
+# End time: 00:52:35 on Oct 26,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

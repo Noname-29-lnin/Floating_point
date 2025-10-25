@@ -21,7 +21,7 @@ assign w_mantissa_a = {1'b1, i_floating_a[22:0]};
 assign w_mantissa_b = {1'b1, i_floating_b[22:0]};
 
 logic w_sign_result;
-logic w_exponent_result;
+logic [7:0] w_exponent_result;
 logic [23:0] w_mantissa_result;
 
 ////////////////////////////////////////////////////////////////
@@ -111,10 +111,10 @@ assign w_MAN_PRE_SWAP_BY_MAN_compara = w_EXPSWAP_compare | w_MAN_COMP_28BIT_less
  MAN_swap #(
     .SIZE_MAN       (28)
 ) MAN_PRE_SWAP_BY_MAN_UNIT (
-    .i_sign_a           (w_MAN_SWAP1_sign_min),
-    .i_sign_b           (w_MAN_SWAP1_sign_max),
-    .i_man_a            (w_MAN_SHF_RIGHT_min),
-    .i_man_b            (w_MAN_SHF_RIGHT_max),
+    .i_sign_a           (w_MAN_SWAP1_sign_max), // w_MAN_SWAP1_sign_min
+    .i_sign_b           (w_MAN_SWAP1_sign_min), // w_MAN_SWAP1_sign_max
+    .i_man_a            (w_MAN_SHF_RIGHT_max), // w_MAN_SHF_RIGHT_min
+    .i_man_b            (w_MAN_SHF_RIGHT_min), // w_MAN_SHF_RIGHT_max
     // i_compare = 1 -> a < b
     .i_compare          (w_MAN_PRE_SWAP_BY_MAN_compara),
 

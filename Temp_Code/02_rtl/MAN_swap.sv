@@ -7,7 +7,7 @@ module MAN_swap #(
     input logic [SIZE_MAN-1:0]      i_man_b     ,
 
     // i_compare = 1 -> a < b
-    input logic [SIZE_MAN-1:0]      i_compare   ,
+    input logic                     i_compare   ,
 
     output logic                    o_sign_max  ,
     output logic                    o_sign_min  ,
