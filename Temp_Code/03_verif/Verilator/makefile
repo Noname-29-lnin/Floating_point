@@ -20,9 +20,9 @@ COVERAGE_ANNOT  := $(COVERAGE_DIR)/annotated_src
 
 all: clean compile run
 
-all_wave: clean compile run sim
+all_wave: clean compile run wave
 
-all_cover: clean_cover compile_cover run_cover report_cover
+all_cov: clean_cover compile_cover run_cover report_cover
 
 compile:
 	@echo "-> mkdir..."
@@ -42,7 +42,7 @@ run:
 	    echo "<False> mv file tb_$(TOPMODULE).vcd to $(INC_WORK)"; \
 	fi
 
-sim:
+wave:
 	@echo "-> sim..."
 	@gtkwave $(INC_WORK)/tb_$(TOPMODULE).vcd &> /dev/null \
 		&& echo "<Pass> sim $(TOPMODULE)" || echo "<False> sim $(TOPMODULE)"
@@ -96,14 +96,14 @@ help:
 	@echo "Makefile targets:"
 	@echo "  all       		: Clean, compile, and run (default)"
 	@echo "  all_wave  		: Clean, compile, run, and open waveform viewer"
-	@echo "  all_cover 		: Clean, compile with coverage, run, and generate coverage report"
+	@echo "  all_cov 		: Clean, compile with coverage, run, and generate coverage report"
 	@echo "  compile   		: Compile the design with Verilator"
 	@echo "  run       		: Run the simulation"
-	@echo "  sim       		: Open waveform viewer"
+	@echo "  wave       		: Open waveform viewer"
 	@echo "  clean     		: Remove generated files"
 	@echo "  compile_cover 	: Compile the design with coverage enabled"
 	@echo "  run_cover 		: Run the simulation with coverage"
 	@echo "  report_cover 	: Generate coverage report"
 	@echo "  help      		: Show this help message"
 
-.PHONY: all all_wave compile run sim clean help
+.PHONY: all all_wave compile run wave clean help

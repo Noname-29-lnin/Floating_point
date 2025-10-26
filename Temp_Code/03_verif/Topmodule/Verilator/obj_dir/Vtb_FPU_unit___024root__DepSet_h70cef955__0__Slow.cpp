@@ -34,18 +34,14 @@ VL_ATTR_COLD void Vtb_FPU_unit___024root___eval_triggers__stl(Vtb_FPU_unit___024
     vlSelf->__VstlTriggered.set(0U, (IData)(vlSelf->__VstlFirstIteration));
     vlSelf->__VstlTriggered.set(1U, ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c) 
                                      != (IData)(vlSelf->__Vtrigprevexpr___TOP__tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c__0)));
-    vlSelf->__VstlTriggered.set(2U, vlSelf->SHF_left__DOT__stage_data.neq(vlSelf->__Vtrigprevexpr___TOP__SHF_left__DOT__stage_data__0));
-    vlSelf->__VstlTriggered.set(3U, vlSelf->SHF_right__DOT__stage_data.neq(vlSelf->__Vtrigprevexpr___TOP__SHF_right__DOT__stage_data__0));
-    vlSelf->__VstlTriggered.set(4U, ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__less_chain) 
+    vlSelf->__VstlTriggered.set(2U, ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__less_chain) 
                                      != (IData)(vlSelf->__Vtrigprevexpr___TOP__tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__less_chain__0)));
-    vlSelf->__VstlTriggered.set(5U, vlSelf->tb_FPU_unit__DOT__dut__DOT__SHF_RIGHT_28BIT_UNIT__DOT__stage.neq(vlSelf->__Vtrigprevexpr___TOP__tb_FPU_unit__DOT__dut__DOT__SHF_RIGHT_28BIT_UNIT__DOT__stage__0));
-    vlSelf->__VstlTriggered.set(6U, vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage.neq(vlSelf->__Vtrigprevexpr___TOP__tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage__0));
-    vlSelf->__VstlTriggered.set(7U, ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__equal_chain) 
+    vlSelf->__VstlTriggered.set(3U, vlSelf->tb_FPU_unit__DOT__dut__DOT__SHF_RIGHT_28BIT_UNIT__DOT__stage.neq(vlSelf->__Vtrigprevexpr___TOP__tb_FPU_unit__DOT__dut__DOT__SHF_RIGHT_28BIT_UNIT__DOT__stage__0));
+    vlSelf->__VstlTriggered.set(4U, vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage.neq(vlSelf->__Vtrigprevexpr___TOP__tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage__0));
+    vlSelf->__VstlTriggered.set(5U, ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__equal_chain) 
                                      != (IData)(vlSelf->__Vtrigprevexpr___TOP__tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__equal_chain__0)));
     vlSelf->__Vtrigprevexpr___TOP__tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c__0 
         = vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c;
-    vlSelf->__Vtrigprevexpr___TOP__SHF_left__DOT__stage_data__0.assign(vlSelf->SHF_left__DOT__stage_data);
-    vlSelf->__Vtrigprevexpr___TOP__SHF_right__DOT__stage_data__0.assign(vlSelf->SHF_right__DOT__stage_data);
     vlSelf->__Vtrigprevexpr___TOP__tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__less_chain__0 
         = vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__less_chain;
     vlSelf->__Vtrigprevexpr___TOP__tb_FPU_unit__DOT__dut__DOT__SHF_RIGHT_28BIT_UNIT__DOT__stage__0.assign(vlSelf->tb_FPU_unit__DOT__dut__DOT__SHF_RIGHT_28BIT_UNIT__DOT__stage);
@@ -59,8 +55,6 @@ VL_ATTR_COLD void Vtb_FPU_unit___024root___eval_triggers__stl(Vtb_FPU_unit___024
         vlSelf->__VstlTriggered.set(3U, 1U);
         vlSelf->__VstlTriggered.set(4U, 1U);
         vlSelf->__VstlTriggered.set(5U, 1U);
-        vlSelf->__VstlTriggered.set(6U, 1U);
-        vlSelf->__VstlTriggered.set(7U, 1U);
     }
 #ifdef VL_DEBUG
     if (VL_UNLIKELY(vlSymsp->_vm_contextp__->debug())) {

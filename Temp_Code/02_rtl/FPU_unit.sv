@@ -51,6 +51,7 @@ logic       w_LOPD_24BIT_zero_flag;
 logic [7:0] w_EXP_ADJUST_result;
 
 logic [27:0] w_NORMALIZATION_man;
+logic [23:0] w_ROUNDING_man;
 ////////////////////////////////////////////////////////////////
 // Tim gia tri khac nnau cua 2 exponent
 ////////////////////////////////////////////////////////////////
@@ -170,12 +171,20 @@ NORMALIZATION_unit #(
     .o_mantissa         (w_NORMALIZATION_man) 
 );
 
+ROUNDING_unit #(
+    .SIZE_MAN       (28),
+    .SIZE_MAN_RESULT(24)
+) ROUNDING_UNIT (
+    .i_man              (w_NORMALIZATION_man),
+    .o_man_result       (w_ROUNDING_man)
+);
+
 ////////////////////////////////////////////////////////////////
 // Output 
 ////////////////////////////////////////////////////////////////
 assign w_sign_result        = w_MAN_PRE_SWAP_BY_MAN_sign_max;
 assign w_exponent_result    = w_EXP_ADJUST_result;
-assign w_mantissa_result    = w_NORMALIZATION_man[27:4];
+assign w_mantissa_result    = w_ROUNDING_man;
 
 assign o_floating_result = {w_sign_result, w_exponent_result, w_mantissa_result[22:0]};
 

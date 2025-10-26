@@ -25,12 +25,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit VL_NOT_FINAL : public VerilatedM
     // PORTS
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
-    VL_IN8(&SHF_left__02Ei_shift_number,2,0);
-    VL_IN8(&SHF_left__02Ei_data,7,0);
-    VL_OUT8(&SHF_left__02Eo_data,7,0);
-    VL_IN8(&SHF_right__02Ei_shift_number,2,0);
-    VL_IN8(&SHF_right__02Ei_data,7,0);
-    VL_OUT8(&SHF_right__02Eo_data,7,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

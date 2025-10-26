@@ -17,7 +17,6 @@
 /home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_ALU.sv
 /home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_swap.sv
 /home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/NORMALIZATION_unit.sv
+/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/ROUNDING_unit.sv
 /home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left_28bit.sv
-/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left.sv
 /home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right_28bit.sv
-/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right.sv

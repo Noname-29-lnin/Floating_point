@@ -1202,22 +1202,22 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
         bufp->chgCData(oldp+242,(((8U & ((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)) 
                                          << 3U)) | 
                                   ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)
-                                      ? (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6)
-                                      : (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9)) 
+                                      ? (IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_6)
+                                      : (IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_9)) 
                                     << 2U) | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)
                                                  ? 
-                                                ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6)
+                                                ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_6)
                                                   ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
                                                   : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2))
                                                  : 
-                                                ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9)
+                                                ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_9)
                                                   ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
                                                   : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2))) 
                                                << 1U) 
                                               | (1U 
                                                  & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)
                                                      ? 
-                                                    ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6)
+                                                    ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_6)
                                                       ? 
                                                      (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
                                                        & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
@@ -1231,7 +1231,7 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
                                                       | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
                                                          >> 3U)))
                                                      : 
-                                                    ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9)
+                                                    ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_9)
                                                       ? 
                                                      (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
                                                        & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
@@ -1247,17 +1247,17 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
         bufp->chgBit(oldp+243,((((~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2) 
                                      | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
                                          >> 1U) | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum)))) 
-                                 & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6))) 
+                                 & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_6))) 
                                 & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1))));
         bufp->chgCData(oldp+244,((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
                                    << 4U) | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum))),8);
-        bufp->chgCData(oldp+245,((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_12) 
-                                   << 2U) | ((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_12)
+        bufp->chgCData(oldp+245,((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_12) 
+                                   << 2U) | ((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_12)
                                                 ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
                                                 : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)) 
                                               << 1U) 
                                              | (1U 
-                                                & ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_12)
+                                                & ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_12)
                                                     ? 
                                                    (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
                                                      & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
@@ -1280,13 +1280,13 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
                                   | (0xfU & (7U ^ (
                                                    (~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position)) 
                                                    ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c)))))),8);
-        bufp->chgCData(oldp+249,((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6) 
-                                   << 2U) | ((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6)
+        bufp->chgCData(oldp+249,((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_6) 
+                                   << 2U) | ((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_6)
                                                 ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
                                                 : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)) 
                                               << 1U) 
                                              | (1U 
-                                                & ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6)
+                                                & ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_6)
                                                     ? 
                                                    (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
                                                      & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
@@ -1303,14 +1303,14 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
                                           | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
                                               >> 1U) 
                                              | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum)))) 
-                                      & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6))))));
-        bufp->chgCData(oldp+251,((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9) 
-                                   << 2U) | ((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9)
+                                      & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_6))))));
+        bufp->chgCData(oldp+251,((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_9) 
+                                   << 2U) | ((((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_9)
                                                 ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
                                                 : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)) 
                                               << 1U) 
                                              | (1U 
-                                                & ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9)
+                                                & ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_9)
                                                     ? 
                                                    (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
                                                      & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
@@ -1337,7 +1337,7 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
                                                        >> 1U)) 
                                                    | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
                                                       >> 3U))))),2);
-        bufp->chgBit(oldp+256,((1U & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6)))));
+        bufp->chgBit(oldp+256,((1U & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_6)))));
         bufp->chgCData(oldp+257,((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2) 
                                    << 1U) | (1U & (
                                                    ((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
@@ -1360,7 +1360,7 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
                                                        >> 1U)) 
                                                    | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
                                                       >> 3U))))),2);
-        bufp->chgBit(oldp+263,((1U & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9)))));
+        bufp->chgBit(oldp+263,((1U & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_9)))));
         bufp->chgCData(oldp+264,((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2) 
                                    << 1U) | (1U & (
                                                    ((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
@@ -1381,7 +1381,7 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
                                                        >> 1U)) 
                                                    | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
                                                       >> 3U))))),2);
-        bufp->chgBit(oldp+269,((1U & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_12)))));
+        bufp->chgBit(oldp+269,((1U & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_0_12)))));
         bufp->chgCData(oldp+270,((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2) 
                                    << 1U) | (1U & (
                                                    ((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
@@ -1524,22 +1524,8 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
         bufp->chgIData(oldp+316,(vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage[4]),28);
         bufp->chgIData(oldp+317,(vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage[5]),28);
     }
-    bufp->chgCData(oldp+318,(vlSelf->SHF_left__02Ei_shift_number),3);
-    bufp->chgCData(oldp+319,(vlSelf->SHF_left__02Ei_data),8);
-    bufp->chgCData(oldp+320,(vlSelf->SHF_left__02Eo_data),8);
-    bufp->chgCData(oldp+321,(vlSelf->SHF_right__02Ei_shift_number),3);
-    bufp->chgCData(oldp+322,(vlSelf->SHF_right__02Ei_data),8);
-    bufp->chgCData(oldp+323,(vlSelf->SHF_right__02Eo_data),8);
-    bufp->chgCData(oldp+324,(vlSelf->SHF_left__DOT__stage_data[0]),8);
-    bufp->chgCData(oldp+325,(vlSelf->SHF_left__DOT__stage_data[1]),8);
-    bufp->chgCData(oldp+326,(vlSelf->SHF_left__DOT__stage_data[2]),8);
-    bufp->chgCData(oldp+327,(vlSelf->SHF_left__DOT__stage_data[3]),8);
-    bufp->chgCData(oldp+328,(vlSelf->SHF_right__DOT__stage_data[0]),8);
-    bufp->chgCData(oldp+329,(vlSelf->SHF_right__DOT__stage_data[1]),8);
-    bufp->chgCData(oldp+330,(vlSelf->SHF_right__DOT__stage_data[2]),8);
-    bufp->chgCData(oldp+331,(vlSelf->SHF_right__DOT__stage_data[3]),8);
-    bufp->chgBit(oldp+332,(vlSelf->tb_FPU_unit__DOT__i_clk));
-    bufp->chgIData(oldp+333,(((0x80000000U & (vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
+    bufp->chgBit(oldp+318,(vlSelf->tb_FPU_unit__DOT__i_clk));
+    bufp->chgIData(oldp+319,(((0x80000000U & (vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
                                               << 3U)) 
                               | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
                                     ? 0U : ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
@@ -1576,8 +1562,8 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
                                                         vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
                                                         [5U])) 
                                                       >> 4U)))))),32);
-    bufp->chgBit(oldp+334,(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_PRE_SWAP_BY_MAN_compara));
-    bufp->chgBit(oldp+335,((1U & ((((~ (IData)((0U 
+    bufp->chgBit(oldp+320,(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_PRE_SWAP_BY_MAN_compara));
+    bufp->chgBit(oldp+321,((1U & ((((~ (IData)((0U 
                                                 != 
                                                 (0x60000000U 
                                                  & vlSelf->tb_FPU_unit__DOT__i_floating_a)))) 
@@ -1612,13 +1598,13 @@ void Vtb_FPU_unit___024root__trace_chg_0_sub_0(Vtb_FPU_unit___024root* vlSelf, V
                                                   >> 0x1cU)) 
                                               & (vlSelf->tb_FPU_unit__DOT__i_floating_b 
                                                  >> 0x1cU)))))))));
-    bufp->chgBit(oldp+336,(((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_SWAP_UNIT__DOT__COMP_LESS_UNIT__DOT__u_high__DOT__w_equal_high) 
+    bufp->chgBit(oldp+322,(((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_SWAP_UNIT__DOT__COMP_LESS_UNIT__DOT__u_high__DOT__w_equal_high) 
                             & (~ (IData)((0U != (3U 
                                                  & ((vlSelf->tb_FPU_unit__DOT__i_floating_a 
                                                      ^ vlSelf->tb_FPU_unit__DOT__i_floating_b) 
                                                     >> 0x1bU))))))));
-    bufp->chgBit(oldp+337,((1U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__equal_chain))));
-    bufp->chgCData(oldp+338,(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__equal_chain),8);
+    bufp->chgBit(oldp+323,((1U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__equal_chain))));
+    bufp->chgCData(oldp+324,(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__equal_chain),8);
 }
 
 void Vtb_FPU_unit___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {

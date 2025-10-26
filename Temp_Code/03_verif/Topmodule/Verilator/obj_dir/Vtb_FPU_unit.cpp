@@ -10,12 +10,6 @@
 Vtb_FPU_unit::Vtb_FPU_unit(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new Vtb_FPU_unit__Syms(contextp(), _vcname__, this)}
-    , SHF_left__02Ei_shift_number{vlSymsp->TOP.SHF_left__02Ei_shift_number}
-    , SHF_left__02Ei_data{vlSymsp->TOP.SHF_left__02Ei_data}
-    , SHF_left__02Eo_data{vlSymsp->TOP.SHF_left__02Eo_data}
-    , SHF_right__02Ei_shift_number{vlSymsp->TOP.SHF_right__02Ei_shift_number}
-    , SHF_right__02Ei_data{vlSymsp->TOP.SHF_right__02Ei_data}
-    , SHF_right__02Eo_data{vlSymsp->TOP.SHF_right__02Eo_data}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

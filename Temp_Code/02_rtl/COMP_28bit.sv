@@ -13,9 +13,6 @@ module COMP_28bit #(
     logic [NUM_BLOCK:0]   less_chain;
     logic [NUM_BLOCK:0]   equal_chain;
 
-    assign less_chain[NUM_BLOCK]  = 1'b0;
-    assign equal_chain[NUM_BLOCK] = 1'b1;
-
     genvar i;
     generate
         for (i = 0; i < NUM_BLOCK; i++) begin : GEN_COMP_4BIT
@@ -29,12 +26,14 @@ module COMP_28bit #(
     endgenerate
 
     generate
+        assign less_chain[NUM_BLOCK]  = 1'b0;
+        assign equal_chain[NUM_BLOCK] = 1'b1;
         for (i = NUM_BLOCK-1; i >= 0; i--) begin : GEN_CHAIN
             assign less_chain[i]  = w_less[i]  | (w_equal[i] & less_chain[i+1]);
             assign equal_chain[i] = w_equal[i] & equal_chain[i+1];
         end
+        assign o_less  = less_chain[0];
+        assign o_equal = equal_chain[0];
     endgenerate
 
-    assign o_less  = less_chain[0];
-    assign o_equal = equal_chain[0];
 endmodule
