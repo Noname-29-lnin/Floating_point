@@ -63,42 +63,18 @@ VL_INLINE_OPT VlCoroutine Vtb_FPU_unit___024root___eval_initial__TOP__Vtiming__0
     __Vfunc_tb_FPU_unit__DOT__float_to_real__0__Vfuncout = 0;
     IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__float_to_real__0__f;
     __Vfunc_tb_FPU_unit__DOT__float_to_real__0__f = 0;
-    IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__real_to_float__1__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__1__Vfuncout = 0;
-    double __Vfunc_tb_FPU_unit__DOT__real_to_float__1__r;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__1__r = 0;
-    IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__real_to_float__2__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__2__Vfuncout = 0;
-    double __Vfunc_tb_FPU_unit__DOT__real_to_float__2__r;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__2__r = 0;
+    double __Vfunc_tb_FPU_unit__DOT__float_to_real__1__Vfuncout;
+    __Vfunc_tb_FPU_unit__DOT__float_to_real__1__Vfuncout = 0;
+    IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__float_to_real__1__f;
+    __Vfunc_tb_FPU_unit__DOT__float_to_real__1__f = 0;
+    double __Vfunc_tb_FPU_unit__DOT__float_to_real__2__Vfuncout;
+    __Vfunc_tb_FPU_unit__DOT__float_to_real__2__Vfuncout = 0;
+    IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__float_to_real__2__f;
+    __Vfunc_tb_FPU_unit__DOT__float_to_real__2__f = 0;
     double __Vfunc_tb_FPU_unit__DOT__float_to_real__3__Vfuncout;
     __Vfunc_tb_FPU_unit__DOT__float_to_real__3__Vfuncout = 0;
     IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__float_to_real__3__f;
     __Vfunc_tb_FPU_unit__DOT__float_to_real__3__f = 0;
-    IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__real_to_float__4__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__4__Vfuncout = 0;
-    double __Vfunc_tb_FPU_unit__DOT__real_to_float__4__r;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__4__r = 0;
-    IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__real_to_float__5__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__5__Vfuncout = 0;
-    double __Vfunc_tb_FPU_unit__DOT__real_to_float__5__r;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__5__r = 0;
-    double __Vfunc_tb_FPU_unit__DOT__float_to_real__6__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__float_to_real__6__Vfuncout = 0;
-    IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__float_to_real__6__f;
-    __Vfunc_tb_FPU_unit__DOT__float_to_real__6__f = 0;
-    IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__real_to_float__7__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__7__Vfuncout = 0;
-    double __Vfunc_tb_FPU_unit__DOT__real_to_float__7__r;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__7__r = 0;
-    IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__real_to_float__8__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__8__Vfuncout = 0;
-    double __Vfunc_tb_FPU_unit__DOT__real_to_float__8__r;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__8__r = 0;
-    double __Vfunc_tb_FPU_unit__DOT__float_to_real__9__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__float_to_real__9__Vfuncout = 0;
-    IData/*31:0*/ __Vfunc_tb_FPU_unit__DOT__float_to_real__9__f;
-    __Vfunc_tb_FPU_unit__DOT__float_to_real__9__f = 0;
     // Body
     vlSelf->tb_FPU_unit__DOT__i_rst_n = 0U;
     vlSelf->tb_FPU_unit__DOT__i_fpu_op = 0U;
@@ -117,7 +93,7 @@ VL_INLINE_OPT VlCoroutine Vtb_FPU_unit___024root___eval_initial__TOP__Vtiming__0
     vlSelf->__Vm_traceActivity[2U] = 1U;
     vlSelf->tb_FPU_unit__DOT__i_fpu_op = 0U;
     vlSelf->tb_FPU_unit__DOT__i_floating_a = 0x40b00000U;
-    vlSelf->tb_FPU_unit__DOT__i_floating_b = 0x4019999aU;
+    vlSelf->tb_FPU_unit__DOT__i_floating_b = 0x400ccccdU;
     co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
                                                        nullptr, 
                                                        "@(posedge tb_FPU_unit.i_clk)", 
@@ -138,8 +114,7 @@ VL_INLINE_OPT VlCoroutine Vtb_FPU_unit___024root___eval_initial__TOP__Vtiming__0
                                << 0x17U) | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
                                              ? 0U : 
                                             (0x7fffffU 
-                                             & (((0x80U 
-                                                  & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c))
+                                             & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow)
                                                   ? 
                                                  (0x8000000U 
                                                   | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
@@ -158,14 +133,12 @@ VL_INLINE_OPT VlCoroutine Vtb_FPU_unit___024root___eval_initial__TOP__Vtiming__0
                                                                        & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum) 
                                                                           >> 1U)))))))))
                                                   : 
-                                                 ((0U 
-                                                   != 
-                                                   (0xfffffffU 
-                                                    & (~ vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man)))
-                                                   ? 
+                                                 ((8U 
+                                                   & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum))
+                                                   ? vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man
+                                                   : 
                                                   vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
-                                                  [5U]
-                                                   : vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man)) 
+                                                  [5U])) 
                                                 >> 4U)))));
                     __Vfunc_tb_FPU_unit__DOT__float_to_real__0__Vfuncout 
                         = VL_CVT_D_Q((QData)((IData)(__Vfunc_tb_FPU_unit__DOT__float_to_real__0__f)));
@@ -184,8 +157,7 @@ VL_INLINE_OPT VlCoroutine Vtb_FPU_unit___024root___eval_initial__TOP__Vtiming__0
                                                     ? 0U
                                                     : 
                                                    (0x7fffffU 
-                                                    & (((0x80U 
-                                                         & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c))
+                                                    & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow)
                                                          ? 
                                                         (0x8000000U 
                                                          | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
@@ -204,14 +176,12 @@ VL_INLINE_OPT VlCoroutine Vtb_FPU_unit___024root___eval_initial__TOP__Vtiming__0
                                                                               & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum) 
                                                                                 >> 1U)))))))))
                                                          : 
-                                                        ((0U 
-                                                          != 
-                                                          (0xfffffffU 
-                                                           & (~ vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man)))
-                                                          ? 
+                                                        ((8U 
+                                                          & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum))
+                                                          ? vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man
+                                                          : 
                                                          vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
-                                                         [5U]
-                                                          : vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man)) 
+                                                         [5U])) 
                                                        >> 4U))))));
     co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
                                                        nullptr, 
@@ -220,22 +190,212 @@ VL_INLINE_OPT VlCoroutine Vtb_FPU_unit___024root___eval_initial__TOP__Vtiming__0
                                                        62);
     vlSelf->__Vm_traceActivity[2U] = 1U;
     vlSelf->tb_FPU_unit__DOT__i_fpu_op = 1U;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__1__r = 10.0;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__1__Vfuncout 
-        = (IData)(VL_CVT_Q_D(__Vfunc_tb_FPU_unit__DOT__real_to_float__1__r));
-    vlSelf->tb_FPU_unit__DOT__i_floating_a = __Vfunc_tb_FPU_unit__DOT__real_to_float__1__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__2__r = 3.50000000000000000e+00;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__2__Vfuncout 
-        = (IData)(VL_CVT_Q_D(__Vfunc_tb_FPU_unit__DOT__real_to_float__2__r));
-    vlSelf->tb_FPU_unit__DOT__i_floating_b = __Vfunc_tb_FPU_unit__DOT__real_to_float__2__Vfuncout;
+    vlSelf->tb_FPU_unit__DOT__i_floating_a = 0x40b00000U;
+    vlSelf->tb_FPU_unit__DOT__i_floating_b = 0x400ccccdU;
     co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
                                                        nullptr, 
                                                        "@(posedge tb_FPU_unit.i_clk)", 
                                                        "/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv", 
                                                        67);
     vlSelf->__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("[%0t] SUB: 10.0 - 3.5 = %f\n",0,64,
-                 VL_TIME_UNITED_Q(1000),-9,64,([&]() {
+    VL_WRITEF_NX("[%0t] ADD: 5.5 - 2.2 = %f (%x)\n",0,
+                 64,VL_TIME_UNITED_Q(1000),-9,64,([&]() {
+                    __Vfunc_tb_FPU_unit__DOT__float_to_real__1__f 
+                        = ((0x80000000U & (vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
+                                           << 3U)) 
+                           | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
+                                 ? 0U : ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
+                                           ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
+                                          << 4U) | 
+                                         ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p) 
+                                          ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c)))) 
+                               << 0x17U) | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
+                                             ? 0U : 
+                                            (0x7fffffU 
+                                             & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow)
+                                                  ? 
+                                                 (0x8000000U 
+                                                  | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                      << 0x17U) 
+                                                     | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                         << 0x13U) 
+                                                        | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                            << 0xfU) 
+                                                           | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                               << 0xbU) 
+                                                              | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                  << 7U) 
+                                                                 | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                     << 3U) 
+                                                                    | (7U 
+                                                                       & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum) 
+                                                                          >> 1U)))))))))
+                                                  : 
+                                                 ((8U 
+                                                   & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum))
+                                                   ? vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man
+                                                   : 
+                                                  vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
+                                                  [5U])) 
+                                                >> 4U)))));
+                    __Vfunc_tb_FPU_unit__DOT__float_to_real__1__Vfuncout 
+                        = VL_CVT_D_Q((QData)((IData)(__Vfunc_tb_FPU_unit__DOT__float_to_real__1__f)));
+                }(), __Vfunc_tb_FPU_unit__DOT__float_to_real__1__Vfuncout),
+                 32,((0x80000000U & (vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
+                                     << 3U)) | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
+                                                   ? 0U
+                                                   : 
+                                                  ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
+                                                     ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
+                                                    << 4U) 
+                                                   | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p) 
+                                                      ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c)))) 
+                                                 << 0x17U) 
+                                                | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
+                                                    ? 0U
+                                                    : 
+                                                   (0x7fffffU 
+                                                    & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow)
+                                                         ? 
+                                                        (0x8000000U 
+                                                         | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                             << 0x17U) 
+                                                            | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                << 0x13U) 
+                                                               | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                   << 0xfU) 
+                                                                  | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                      << 0xbU) 
+                                                                     | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                         << 7U) 
+                                                                        | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                            << 3U) 
+                                                                           | (7U 
+                                                                              & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum) 
+                                                                                >> 1U)))))))))
+                                                         : 
+                                                        ((8U 
+                                                          & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum))
+                                                          ? vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man
+                                                          : 
+                                                         vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
+                                                         [5U])) 
+                                                       >> 4U))))));
+    co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge tb_FPU_unit.i_clk)", 
+                                                       "/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv", 
+                                                       71);
+    vlSelf->__Vm_traceActivity[2U] = 1U;
+    vlSelf->tb_FPU_unit__DOT__i_fpu_op = 0U;
+    vlSelf->tb_FPU_unit__DOT__i_floating_a = 0x40b00000U;
+    vlSelf->tb_FPU_unit__DOT__i_floating_b = 0xc00ccccdU;
+    co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge tb_FPU_unit.i_clk)", 
+                                                       "/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv", 
+                                                       76);
+    vlSelf->__Vm_traceActivity[2U] = 1U;
+    VL_WRITEF_NX("[%0t] ADD: 5.5 + -2.2 = %f (%x)\n",0,
+                 64,VL_TIME_UNITED_Q(1000),-9,64,([&]() {
+                    __Vfunc_tb_FPU_unit__DOT__float_to_real__2__f 
+                        = ((0x80000000U & (vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
+                                           << 3U)) 
+                           | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
+                                 ? 0U : ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
+                                           ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
+                                          << 4U) | 
+                                         ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p) 
+                                          ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c)))) 
+                               << 0x17U) | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
+                                             ? 0U : 
+                                            (0x7fffffU 
+                                             & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow)
+                                                  ? 
+                                                 (0x8000000U 
+                                                  | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                      << 0x17U) 
+                                                     | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                         << 0x13U) 
+                                                        | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                            << 0xfU) 
+                                                           | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                               << 0xbU) 
+                                                              | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                  << 7U) 
+                                                                 | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                     << 3U) 
+                                                                    | (7U 
+                                                                       & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum) 
+                                                                          >> 1U)))))))))
+                                                  : 
+                                                 ((8U 
+                                                   & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum))
+                                                   ? vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man
+                                                   : 
+                                                  vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
+                                                  [5U])) 
+                                                >> 4U)))));
+                    __Vfunc_tb_FPU_unit__DOT__float_to_real__2__Vfuncout 
+                        = VL_CVT_D_Q((QData)((IData)(__Vfunc_tb_FPU_unit__DOT__float_to_real__2__f)));
+                }(), __Vfunc_tb_FPU_unit__DOT__float_to_real__2__Vfuncout),
+                 32,((0x80000000U & (vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
+                                     << 3U)) | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
+                                                   ? 0U
+                                                   : 
+                                                  ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
+                                                     ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
+                                                    << 4U) 
+                                                   | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p) 
+                                                      ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c)))) 
+                                                 << 0x17U) 
+                                                | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
+                                                    ? 0U
+                                                    : 
+                                                   (0x7fffffU 
+                                                    & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow)
+                                                         ? 
+                                                        (0x8000000U 
+                                                         | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                             << 0x17U) 
+                                                            | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                << 0x13U) 
+                                                               | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                   << 0xfU) 
+                                                                  | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                      << 0xbU) 
+                                                                     | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                         << 7U) 
+                                                                        | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                            << 3U) 
+                                                                           | (7U 
+                                                                              & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum) 
+                                                                                >> 1U)))))))))
+                                                         : 
+                                                        ((8U 
+                                                          & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum))
+                                                          ? vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man
+                                                          : 
+                                                         vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
+                                                         [5U])) 
+                                                       >> 4U))))));
+    co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge tb_FPU_unit.i_clk)", 
+                                                       "/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv", 
+                                                       80);
+    vlSelf->__Vm_traceActivity[2U] = 1U;
+    vlSelf->tb_FPU_unit__DOT__i_fpu_op = 1U;
+    vlSelf->tb_FPU_unit__DOT__i_floating_a = 0x40b00000U;
+    vlSelf->tb_FPU_unit__DOT__i_floating_b = 0xc00ccccdU;
+    co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge tb_FPU_unit.i_clk)", 
+                                                       "/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv", 
+                                                       85);
+    vlSelf->__Vm_traceActivity[2U] = 1U;
+    VL_WRITEF_NX("[%0t] ADD: 5.5 - -2.2 = %f (%x)\n",0,
+                 64,VL_TIME_UNITED_Q(1000),-9,64,([&]() {
                     __Vfunc_tb_FPU_unit__DOT__float_to_real__3__f 
                         = ((0x80000000U & (vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
                                            << 3U)) 
@@ -248,8 +408,7 @@ VL_INLINE_OPT VlCoroutine Vtb_FPU_unit___024root___eval_initial__TOP__Vtiming__0
                                << 0x17U) | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
                                              ? 0U : 
                                             (0x7fffffU 
-                                             & (((0x80U 
-                                                  & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c))
+                                             & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow)
                                                   ? 
                                                  (0x8000000U 
                                                   | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
@@ -268,152 +427,56 @@ VL_INLINE_OPT VlCoroutine Vtb_FPU_unit___024root___eval_initial__TOP__Vtiming__0
                                                                        & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum) 
                                                                           >> 1U)))))))))
                                                   : 
-                                                 ((0U 
-                                                   != 
-                                                   (0xfffffffU 
-                                                    & (~ vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man)))
-                                                   ? 
+                                                 ((8U 
+                                                   & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum))
+                                                   ? vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man
+                                                   : 
                                                   vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
-                                                  [5U]
-                                                   : vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man)) 
+                                                  [5U])) 
                                                 >> 4U)))));
                     __Vfunc_tb_FPU_unit__DOT__float_to_real__3__Vfuncout 
                         = VL_CVT_D_Q((QData)((IData)(__Vfunc_tb_FPU_unit__DOT__float_to_real__3__f)));
-                }(), __Vfunc_tb_FPU_unit__DOT__float_to_real__3__Vfuncout));
-    co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
-                                                       nullptr, 
-                                                       "@(posedge tb_FPU_unit.i_clk)", 
-                                                       "/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv", 
-                                                       71);
-    vlSelf->__Vm_traceActivity[2U] = 1U;
-    vlSelf->tb_FPU_unit__DOT__i_fpu_op = 0U;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__4__r = -4.50000000000000000e+00;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__4__Vfuncout 
-        = (IData)(VL_CVT_Q_D(__Vfunc_tb_FPU_unit__DOT__real_to_float__4__r));
-    vlSelf->tb_FPU_unit__DOT__i_floating_a = __Vfunc_tb_FPU_unit__DOT__real_to_float__4__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__5__r = 2.25000000000000000e+00;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__5__Vfuncout 
-        = (IData)(VL_CVT_Q_D(__Vfunc_tb_FPU_unit__DOT__real_to_float__5__r));
-    vlSelf->tb_FPU_unit__DOT__i_floating_b = __Vfunc_tb_FPU_unit__DOT__real_to_float__5__Vfuncout;
-    co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
-                                                       nullptr, 
-                                                       "@(posedge tb_FPU_unit.i_clk)", 
-                                                       "/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv", 
-                                                       76);
-    vlSelf->__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("[%0t] ADD: -4.5 + 2.25 = %f\n",0,
-                 64,VL_TIME_UNITED_Q(1000),-9,64,([&]() {
-                    __Vfunc_tb_FPU_unit__DOT__float_to_real__6__f 
-                        = ((0x80000000U & (vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
-                                           << 3U)) 
-                           | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
-                                 ? 0U : ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
-                                           ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
-                                          << 4U) | 
-                                         ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p) 
-                                          ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c)))) 
-                               << 0x17U) | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
-                                             ? 0U : 
-                                            (0x7fffffU 
-                                             & (((0x80U 
-                                                  & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c))
-                                                  ? 
-                                                 (0x8000000U 
-                                                  | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                      << 0x17U) 
-                                                     | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                         << 0x13U) 
-                                                        | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                            << 0xfU) 
-                                                           | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                               << 0xbU) 
-                                                              | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                  << 7U) 
-                                                                 | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                     << 3U) 
-                                                                    | (7U 
-                                                                       & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum) 
-                                                                          >> 1U)))))))))
-                                                  : 
-                                                 ((0U 
-                                                   != 
-                                                   (0xfffffffU 
-                                                    & (~ vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man)))
-                                                   ? 
-                                                  vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
-                                                  [5U]
-                                                   : vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man)) 
-                                                >> 4U)))));
-                    __Vfunc_tb_FPU_unit__DOT__float_to_real__6__Vfuncout 
-                        = VL_CVT_D_Q((QData)((IData)(__Vfunc_tb_FPU_unit__DOT__float_to_real__6__f)));
-                }(), __Vfunc_tb_FPU_unit__DOT__float_to_real__6__Vfuncout));
-    co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
-                                                       nullptr, 
-                                                       "@(posedge tb_FPU_unit.i_clk)", 
-                                                       "/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv", 
-                                                       80);
-    vlSelf->__Vm_traceActivity[2U] = 1U;
-    vlSelf->tb_FPU_unit__DOT__i_fpu_op = 1U;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__7__r = 1.25000000000000000e-01;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__7__Vfuncout 
-        = (IData)(VL_CVT_Q_D(__Vfunc_tb_FPU_unit__DOT__real_to_float__7__r));
-    vlSelf->tb_FPU_unit__DOT__i_floating_a = __Vfunc_tb_FPU_unit__DOT__real_to_float__7__Vfuncout;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__8__r = 6.25000000000000000e-02;
-    __Vfunc_tb_FPU_unit__DOT__real_to_float__8__Vfuncout 
-        = (IData)(VL_CVT_Q_D(__Vfunc_tb_FPU_unit__DOT__real_to_float__8__r));
-    vlSelf->tb_FPU_unit__DOT__i_floating_b = __Vfunc_tb_FPU_unit__DOT__real_to_float__8__Vfuncout;
-    co_await vlSelf->__VtrigSched_hef0ac919__0.trigger(0U, 
-                                                       nullptr, 
-                                                       "@(posedge tb_FPU_unit.i_clk)", 
-                                                       "/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv", 
-                                                       85);
-    vlSelf->__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("[%0t] SUB: 0.125 - 0.0625 = %f\n",0,
-                 64,VL_TIME_UNITED_Q(1000),-9,64,([&]() {
-                    __Vfunc_tb_FPU_unit__DOT__float_to_real__9__f 
-                        = ((0x80000000U & (vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
-                                           << 3U)) 
-                           | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
-                                 ? 0U : ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
-                                           ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
-                                          << 4U) | 
-                                         ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p) 
-                                          ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c)))) 
-                               << 0x17U) | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
-                                             ? 0U : 
-                                            (0x7fffffU 
-                                             & (((0x80U 
-                                                  & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c))
-                                                  ? 
-                                                 (0x8000000U 
-                                                  | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                      << 0x17U) 
-                                                     | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                         << 0x13U) 
-                                                        | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                            << 0xfU) 
-                                                           | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                               << 0xbU) 
-                                                              | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                  << 7U) 
-                                                                 | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                     << 3U) 
-                                                                    | (7U 
-                                                                       & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum) 
-                                                                          >> 1U)))))))))
-                                                  : 
-                                                 ((0U 
-                                                   != 
-                                                   (0xfffffffU 
-                                                    & (~ vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man)))
-                                                   ? 
-                                                  vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
-                                                  [5U]
-                                                   : vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man)) 
-                                                >> 4U)))));
-                    __Vfunc_tb_FPU_unit__DOT__float_to_real__9__Vfuncout 
-                        = VL_CVT_D_Q((QData)((IData)(__Vfunc_tb_FPU_unit__DOT__float_to_real__9__f)));
-                }(), __Vfunc_tb_FPU_unit__DOT__float_to_real__9__Vfuncout));
+                }(), __Vfunc_tb_FPU_unit__DOT__float_to_real__3__Vfuncout),
+                 32,((0x80000000U & (vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
+                                     << 3U)) | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
+                                                   ? 0U
+                                                   : 
+                                                  ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
+                                                     ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
+                                                    << 4U) 
+                                                   | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p) 
+                                                      ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c)))) 
+                                                 << 0x17U) 
+                                                | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag)
+                                                    ? 0U
+                                                    : 
+                                                   (0x7fffffU 
+                                                    & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow)
+                                                         ? 
+                                                        (0x8000000U 
+                                                         | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                             << 0x17U) 
+                                                            | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                << 0x13U) 
+                                                               | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                   << 0xfU) 
+                                                                  | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                      << 0xbU) 
+                                                                     | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                         << 7U) 
+                                                                        | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                                            << 3U) 
+                                                                           | (7U 
+                                                                              & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum) 
+                                                                                >> 1U)))))))))
+                                                         : 
+                                                        ((8U 
+                                                          & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum))
+                                                          ? vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man
+                                                          : 
+                                                         vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage
+                                                         [5U])) 
+                                                       >> 4U))))));
     co_await vlSelf->__VdlySched.delay(0x4e20ULL, nullptr, 
                                        "/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv", 
                                        88);
@@ -1288,8 +1351,8 @@ VL_INLINE_OPT void Vtb_FPU_unit___024root___act_comb__TOP__3(Vtb_FPU_unit___024r
                  >> 0x1cU));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__w_i_carry 
         = (1U & ((IData)(vlSelf->tb_FPU_unit__DOT__i_fpu_op)
-                  ? (IData)(tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT____VdfgRegularize_h455b4bc6_0_0)
-                  : (~ (IData)(tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT____VdfgRegularize_h455b4bc6_0_0))));
+                  ? (~ (IData)(tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT____VdfgRegularize_h455b4bc6_0_0))
+                  : (IData)(tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT____VdfgRegularize_h455b4bc6_0_0)));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__w_i_man_b 
         = (0xfffffffU & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__w_i_carry)
                           ? (~ vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_min)
@@ -1312,14 +1375,14 @@ VL_INLINE_OPT void Vtb_FPU_unit___024root___act_comb__TOP__3(Vtb_FPU_unit___024r
         = (0xfU & ((vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
                     & vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__w_i_man_b) 
                    >> 0xcU));
-    vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_p 
-        = (0xfU & ((vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
-                    ^ vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__w_i_man_b) 
-                   >> 4U));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_g 
         = (0xfU & ((vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
                     & vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__w_i_man_b) 
                    >> 0x14U));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_p 
+        = (0xfU & ((vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
+                    ^ vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__w_i_man_b) 
+                   >> 4U));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_g 
         = (0xfU & ((vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_PRE_SWAP_BY_MAN_UNIT__DOT__w_max 
                     & vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__w_i_man_b) 
@@ -1492,8 +1555,6 @@ VL_INLINE_OPT void Vtb_FPU_unit___024root___act_comb__TOP__5(Vtb_FPU_unit___024r
     Vtb_FPU_unit__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtb_FPU_unit___024root___act_comb__TOP__5\n"); );
     // Init
-    CData/*3:0*/ __VdfgRegularize_hd87f99a1_2_15;
-    __VdfgRegularize_hd87f99a1_2_15 = 0;
     CData/*31:0*/ __Vtemp_22;
     // Body
     vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c 
@@ -1782,6 +1843,10 @@ VL_INLINE_OPT void Vtb_FPU_unit___024root___act_comb__TOP__5(Vtb_FPU_unit___024r
     vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum 
         = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
            ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_c));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow 
+        = ((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__w_i_carry)) 
+           & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c) 
+              >> 7U));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2 
         = (IData)((0U != (0xcU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum))));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2 
@@ -1805,19 +1870,23 @@ VL_INLINE_OPT void Vtb_FPU_unit___024root___act_comb__TOP__5(Vtb_FPU_unit___024r
                                            << 4U) | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__sum)))))));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2 
         = (IData)((0U != (0xcU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum))));
-    vlSelf->__VdfgRegularize_hd87f99a1_2_7 = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2) 
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__w_i_carry 
+        = (1U & (~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow) 
+                    | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                       >> 3U))));
+    vlSelf->__VdfgRegularize_hd87f99a1_2_6 = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2) 
                                               | (0U 
                                                  != 
                                                  (3U 
                                                   & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum))));
-    vlSelf->__VdfgRegularize_hd87f99a1_2_10 = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2) 
-                                               | (0U 
-                                                  != 
-                                                  (3U 
-                                                   & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum))));
+    vlSelf->__VdfgRegularize_hd87f99a1_2_9 = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2) 
+                                              | (0U 
+                                                 != 
+                                                 (3U 
+                                                  & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum))));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage[0U] 
         = vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_man;
-    vlSelf->__VdfgRegularize_hd87f99a1_2_13 = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2) 
+    vlSelf->__VdfgRegularize_hd87f99a1_2_12 = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2) 
                                                | (0U 
                                                   != 
                                                   (3U 
@@ -1826,102 +1895,177 @@ VL_INLINE_OPT void Vtb_FPU_unit___024root___act_comb__TOP__5(Vtb_FPU_unit___024r
         = (1U & ((~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2) 
                      | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
                          >> 1U) | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum)))) 
-                 & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_10))));
+                 & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9))));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag 
         = (1U & ((~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2) 
                      | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
                          >> 1U) | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum)))) 
-                 & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_13))));
+                 & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_12))));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_zero_flag 
         = ((((~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2) 
                  | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
                      >> 1U) | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum)))) 
-             & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_7))) 
+             & (~ (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6))) 
             & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)) 
            & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag));
-    __VdfgRegularize_hd87f99a1_2_15 = ((((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)) 
-                                         & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)) 
-                                        << 3U) | ((
-                                                   ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position 
+        = ((0x10U & ((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)) 
+                     << 4U)) | ((((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)) 
+                                  & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)) 
+                                 << 3U) | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)
+                                              ? ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)
+                                                  ? (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6)
+                                                  : (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9))
+                                              : (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_12)) 
+                                            << 2U) 
+                                           | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)
+                                                 ? 
+                                                ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)
+                                                  ? 
+                                                 ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6)
+                                                   ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
+                                                   : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2))
+                                                  : 
+                                                 ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9)
+                                                   ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
+                                                   : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)))
+                                                 : 
+                                                ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_12)
+                                                  ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
+                                                  : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2))) 
+                                               << 1U) 
+                                              | (1U 
+                                                 & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)
                                                      ? 
                                                     ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)
-                                                      ? (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_7)
-                                                      : (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_10))
-                                                     : (IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_13)) 
-                                                   << 2U) 
-                                                  | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)
-                                                        ? 
-                                                       ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)
-                                                         ? 
-                                                        ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_7)
-                                                          ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
-                                                          : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2))
-                                                         : 
-                                                        ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_10)
-                                                          ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
-                                                          : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)))
-                                                        : 
-                                                       ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_13)
-                                                         ? (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)
-                                                         : (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2))) 
-                                                      << 1U) 
-                                                     | (1U 
-                                                        & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)
-                                                            ? 
-                                                           ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__w_zero_flag_1)
-                                                             ? 
-                                                            ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_7)
-                                                              ? 
-                                                             (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
-                                                               & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                  >> 1U)) 
-                                                              | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                 >> 3U))
-                                                              : 
-                                                             (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)) 
-                                                               & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                  >> 1U)) 
-                                                              | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                 >> 3U)))
-                                                             : 
-                                                            ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_10)
-                                                              ? 
-                                                             (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
-                                                               & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                  >> 1U)) 
-                                                              | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                 >> 3U))
-                                                              : 
-                                                             (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)) 
-                                                               & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                  >> 1U)) 
-                                                              | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                 >> 3U))))
-                                                            : 
-                                                           ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_13)
-                                                             ? 
-                                                            (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
-                                                              & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                 >> 1U)) 
-                                                             | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                >> 3U))
-                                                             : 
-                                                            (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)) 
-                                                              & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                 >> 1U)) 
-                                                             | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
-                                                                >> 3U))))))));
-    if ((0x80U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c))) {
-        vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_1__b = 0xfU;
-        vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_0__b = 0xeU;
+                                                      ? 
+                                                     ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_6)
+                                                       ? 
+                                                      (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
+                                                        & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                           >> 1U)) 
+                                                       | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                          >> 3U))
+                                                       : 
+                                                      (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_0__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)) 
+                                                        & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                           >> 1U)) 
+                                                       | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                          >> 3U)))
+                                                      : 
+                                                     ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_9)
+                                                       ? 
+                                                      (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
+                                                        & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                           >> 1U)) 
+                                                       | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                          >> 3U))
+                                                       : 
+                                                      (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_16bit_UNIT_LSB__DOT__LOPD_8bit_unit_1__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)) 
+                                                        & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                           >> 1U)) 
+                                                       | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                          >> 3U))))
+                                                     : 
+                                                    ((IData)(vlSelf->__VdfgRegularize_hd87f99a1_2_12)
+                                                      ? 
+                                                     (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_1__DOT____VdfgRegularize_h3423ccb7_0_2)) 
+                                                       & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                          >> 1U)) 
+                                                      | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                         >> 3U))
+                                                      : 
+                                                     (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_8bit_UNIT_MSB__DOT__LOPD_4bit_unit_0__DOT____VdfgRegularize_h3423ccb7_0_2)) 
+                                                       & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                          >> 1U)) 
+                                                      | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__sum) 
+                                                         >> 3U)))))))));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT____Vcellout__CLA_4BIT_UNIT_1__o_g 
+        = (1U & (((~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                      >> 7U)) & (~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                                    >> 6U))) & (~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                                                   >> 4U))));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c 
+        = (1U | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c 
+        = ((0xdU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c)) 
+           | (2U & (((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position)) 
+                     | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                        & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c))) 
+                    << 1U)));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c 
+        = ((0xbU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c)) 
+           | (4U & ((((~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                          >> 1U)) | (IData)((2U == 
+                                             (3U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position))))) 
+                     << 2U) | (0xfffffffcU & ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                                                << 1U) 
+                                               & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                                                  << 2U)) 
+                                              & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c) 
+                                                 << 2U))))));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c 
+        = ((7U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c)) 
+           | (8U & (((((~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                           >> 2U)) | (IData)((4U == 
+                                              (6U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position))))) 
+                      | (IData)((6U == (7U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position))))) 
+                     | ((IData)((7U == (7U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position)))) 
+                        & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c))) 
+                    << 3U)));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT____Vcellout__CLA_4BIT_UNIT_0__o_g 
+        = (1U & ((IData)((0U == (0xcU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position)))) 
+                 | ((IData)((4U == (0xcU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position)))) 
+                    & ((~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                           >> 1U)) | (IData)((2U == 
+                                              (3U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position))))))));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__w_C 
+        = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT____Vcellout__CLA_4BIT_UNIT_0__o_g) 
+           | (0xfU == (0xfU & (7U ^ (~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position))))));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c 
+        = ((0xeU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
+           | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__w_C));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c 
+        = ((0xdU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
+           | (2U & (((~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                         >> 4U)) << 1U) | (0x1ffffffeU 
+                                           & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                                               >> 3U) 
+                                              & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c) 
+                                                 << 1U))))));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c 
+        = ((0xbU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
+           | (4U & (((1U & (~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                               >> 4U))) | ((IData)(
+                                                   ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                                                    >> 4U)) 
+                                           & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c))) 
+                    << 2U)));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c 
+        = ((7U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
+           | (8U & (((1U & (~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                               >> 4U))) | ((IData)(
+                                                   ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                                                    >> 4U)) 
+                                           & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c))) 
+                    << 3U)));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_one_position 
+        = ((0x10U & ((~ ((~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position) 
+                             >> 4U)) ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1__DOT__w_c))) 
+                     << 4U)) | (0xfU & (7U ^ ((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__w_o_one_position)) 
+                                              ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0__DOT__w_c)))));
+    if (vlSelf->tb_FPU_unit__DOT__dut__DOT__w_MAN_ALU_overflow) {
+        vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_1__b = 0U;
+        vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_0__b = 1U;
     } else if ((8U & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT____Vcellout__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__sum))) {
         vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_1__b = 0U;
         vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_0__b = 0U;
     } else {
         vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_1__b 
-            = (1U & (~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)));
+            = (0xfU & (~ ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_one_position) 
+                          >> 4U)));
         vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_0__b 
-            = __VdfgRegularize_hd87f99a1_2_15;
+            = (0xfU & (~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_one_position)));
     }
     vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_g 
         = (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_EXPSWAP_max) 
@@ -1929,9 +2073,12 @@ VL_INLINE_OPT void Vtb_FPU_unit___024root___act_comb__TOP__5(Vtb_FPU_unit___024r
     vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p 
         = (0xfU & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_EXPSWAP_max) 
                     >> 4U) ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_1__b)));
-    vlSelf->tb_FPU_unit__DOT__dut__DOT__w_LOPD_24BIT_one_position 
-        = ((0x10U & ((~ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD8_o_zero_flag)) 
-                     << 4U)) | (IData)(__VdfgRegularize_hd87f99a1_2_15));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_g 
+        = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_EXPSWAP_max) 
+           & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_0__b));
+    vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p 
+        = (0xfU & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_EXPSWAP_max) 
+                   ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_0__b)));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_1__o_g 
         = (1U & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_g) 
                   >> 3U) | ((((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
@@ -1946,16 +2093,9 @@ VL_INLINE_OPT void Vtb_FPU_unit___024root___act_comb__TOP__5(Vtb_FPU_unit___024r
                                                       | (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_p) 
                                                           >> 1U) 
                                                          & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_g)))))));
-    vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_g 
-        = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_EXPSWAP_max) 
-           & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_0__b));
-    vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p 
-        = (0xfU & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__w_EXPSWAP_max) 
-                   ^ (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellinp__CLA_4BIT_UNIT_0__b)));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c 
         = ((0xeU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c)) 
-           | (1U & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c) 
-                    >> 7U)));
+           | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__w_i_carry));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c 
         = ((0xdU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_c)) 
            | (2U & (((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_g) 
@@ -2001,9 +2141,8 @@ VL_INLINE_OPT void Vtb_FPU_unit___024root___act_comb__TOP__5(Vtb_FPU_unit___024r
                                                          & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_g)))))));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__w_C 
         = ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT____Vcellout__CLA_4BIT_UNIT_0__o_g) 
-           | ((0xfU == (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p)) 
-              & ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c) 
-                 >> 7U)));
+           | ((IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__w_i_carry) 
+              & (0xfU == (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0__DOT__w_p))));
     vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_c 
         = ((0xeU & (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_c)) 
            | (IData)(vlSelf->tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__w_C));

@@ -14,22 +14,18 @@ module EXP_adjust #(
 // Internal Signal
 //////////////////////////////////////////////////////////////////////////////////
 logic [SIZE_EXP-1:0] w_exp_result;
-logic [SIZE_EXP-1:0] w_underflow_exp;
-logic [SIZE_EXP-1:0] w_overflow_exp;
-localparam SIZE_PADDING = (SIZE_EXP > SIZE_LOPD) ? (SIZE_EXP - SIZE_LOPD) : 0;
-logic [SIZE_EXP-1:0] w_lopd_value;
-assign w_lopd_value = {{(SIZE_PADDING){1'b0}}, i_lopd_value[SIZE_LOPD-1 -: (SIZE_EXP - SIZE_PADDING)]};
+logic w_i_carry;
+assign w_i_carry = ~(i_overflow | i_underflow);
 
-assign w_underflow_exp = i_underflow ? '0 : w_lopd_value;
-assign w_overflow_exp  = i_overflow  ? {SIZE_EXP{1'b1}} - 1'b1 : w_underflow_exp; 
-
+logic [SIZE_EXP-1:0] w_data_b;
+assign w_data_b = i_overflow ? 8'b0000_0001 : (i_underflow ? '0 : ~(i_lopd_value));
 //////////////////////////////////////////////////////////////////////////////////
 // Submodule
 //////////////////////////////////////////////////////////////////////////////////
 CLA_8bit CLA_8BIT_UNIT (
-    .i_carry    (i_overflow),
+    .i_carry    (w_i_carry),
     .i_data_a   (i_exp_value),
-    .i_data_b   (w_overflow_exp),
+    .i_data_b   (w_data_b),
     .o_sum      (w_exp_result),
     .o_carry    ()
 );

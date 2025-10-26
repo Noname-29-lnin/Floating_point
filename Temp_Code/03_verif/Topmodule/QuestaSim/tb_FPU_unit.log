@@ -1,5 +1,5 @@
 # vsim -lib ./../Topmodule/QuestaSim/work -debugDB -l ./../Topmodule/QuestaSim/tb_FPU_unit.log -voptargs="+acc" -assertdebug -c tb_FPU_unit -wlf ./../Topmodule/QuestaSim/tb_FPU_unit.wlf -do "cd ./../Topmodule/QuestaSim; log -r /*; run -all;" 
-# Start time: 00:52:34 on Oct 26,2025
+# Start time: 11:22:25 on Oct 26,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
@@ -47,11 +47,13 @@
 # Use the "quit -sim" command to unload the design first.
 #  log -r /*
 #  run -all
-# [35000] ADD: 5.5 + 2.2 = 0.000000 (00800000)
-# [55000] SUB: 10.0 - 3.5 = 0.000000
-# [75000] ADD: -4.5 + 2.25 = 0.000000
-# [95000] SUB: 0.125 - 0.0625 = 0.000000
-# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv(84)
-#    Time: 115 ns  Iteration: 0  Instance: /tb_FPU_unit
-# End time: 00:52:35 on Oct 26,2025, Elapsed time: 0:00:01
+# [35000] ADD: 5.5 + 2.2 = 0.000000 (40f66666)
+# [55000] ADD: 5.5 - 2.2 = 0.000000 (40533333)
+# [75000] ADD: 5.5 + -2.2 = 0.000000 (40533333)
+# [95000] ADD: 5.5 - -2.2 = 0.000000 (40f66666)
+# [115000] ADD: -5.5 + -2.2 = 0.000000 (c0f66666)
+# [135000] ADD: -5.5 - -2.2 = 0.000000 (c0533333)
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv(107)
+#    Time: 155 ns  Iteration: 0  Instance: /tb_FPU_unit
+# End time: 11:22:26 on Oct 26,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1

@@ -53,7 +53,7 @@ module tb_FPU_unit();
         @(posedge i_clk);
         i_fpu_op = 0;  // Add
         i_floating_a = 32'b01000000101100000000000000000000;
-        i_floating_b = 32'b01000000000110011001100110011010;
+        i_floating_b = 32'b01000000000011001100110011001101;
 
         @(posedge i_clk);
         $display("[%0t] ADD: 5.5 + 2.2 = %f (%h)", $time, float_to_real(o_floating_result),o_floating_result);
@@ -61,29 +61,47 @@ module tb_FPU_unit();
         // === Test 2: Trừ ===
         @(posedge i_clk);
         i_fpu_op = 1;  // Sub
-        i_floating_a = real_to_float(10.0);
-        i_floating_b = real_to_float(3.5);
+        i_floating_a = 32'b01000000101100000000000000000000;
+        i_floating_b = 32'b01000000000011001100110011001101;
 
         @(posedge i_clk);
-        $display("[%0t] SUB: 10.0 - 3.5 = %f", $time, float_to_real(o_floating_result));
+        $display("[%0t] ADD: 5.5 - 2.2 = %f (%h)", $time, float_to_real(o_floating_result),o_floating_result);
 
-        // === Test 3: Số âm ===
+       // === Test 1: Cộng ===
         @(posedge i_clk);
-        i_fpu_op = 0;
-        i_floating_a = real_to_float(-4.5);
-        i_floating_b = real_to_float(2.25);
-
-        @(posedge i_clk);
-        $display("[%0t] ADD: -4.5 + 2.25 = %f", $time, float_to_real(o_floating_result));
-
-        // === Test 4: Trừ với số nhỏ ===
-        @(posedge i_clk);
-        i_fpu_op = 1;
-        i_floating_a = real_to_float(0.125);
-        i_floating_b = real_to_float(0.0625);
+        i_fpu_op = 0;  // Add
+        i_floating_a = 32'b01000000101100000000000000000000;
+        i_floating_b = 32'b11000000000011001100110011001101;
 
         @(posedge i_clk);
-        $display("[%0t] SUB: 0.125 - 0.0625 = %f", $time, float_to_real(o_floating_result));
+        $display("[%0t] ADD: 5.5 + -2.2 = %f (%h)", $time, float_to_real(o_floating_result),o_floating_result);
+
+        // === Test 2: Trừ ===
+        @(posedge i_clk);
+        i_fpu_op = 1;  // Sub
+        i_floating_a = 32'b01000000101100000000000000000000;
+        i_floating_b = 32'b11000000000011001100110011001101;
+
+        @(posedge i_clk);
+        $display("[%0t] ADD: 5.5 - -2.2 = %f (%h)", $time, float_to_real(o_floating_result),o_floating_result);
+
+        // === Test 2: Trừ ===
+        @(posedge i_clk);
+        i_fpu_op = 0;  // Sub
+        i_floating_a = 32'b11000000101100000000000000000000;
+        i_floating_b = 32'b11000000000011001100110011001101;
+
+        @(posedge i_clk);
+        $display("[%0t] ADD: -5.5 + -2.2 = %f (%h)", $time, float_to_real(o_floating_result),o_floating_result);
+
+        // === Test 2: Trừ ===
+        @(posedge i_clk);
+        i_fpu_op = 1;  // Sub
+        i_floating_a = 32'b11000000101100000000000000000000;
+        i_floating_b = 32'b11000000000011001100110011001101;
+
+        @(posedge i_clk);
+        $display("[%0t] ADD: -5.5 - -2.2 = %f (%h)", $time, float_to_real(o_floating_result),o_floating_result);
 
         #20;
         $finish;

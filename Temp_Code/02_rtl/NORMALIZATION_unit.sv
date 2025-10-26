@@ -20,6 +20,6 @@ SHF_left_28bit #(
     .o_data             (w_shift_left)
 );
 
-assign o_mantissa = i_zero_flag ? '0 : (i_overflow ? {1'b1, i_mantissa[SIZE_DATA-1:1]} : (~i_mantissa ? w_shift_left : i_mantissa) );
+assign o_mantissa = i_zero_flag ? '0 : (i_overflow ? {1'b1, i_mantissa[SIZE_DATA-1:1]} : (~i_mantissa[SIZE_DATA-1] ? w_shift_left : i_mantissa) );
 
 endmodule

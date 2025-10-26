@@ -30,6 +30,41 @@ void Div_floating_point(
     unsigned int mantissa_a, unsigned int mantissa_b,
     bool &sign_res, unsigned int &exponent_res, unsigned int &mantissa_res);
 
+void Trans_hex_float(uint32_t data_in, float &data_float) {
+    // copy bit pattern của data_in vào biến float mà không thay đổi bit
+    static_assert(sizeof(float) == 4, "float must be 32-bit");
+    std::memcpy(&data_float, &data_in, sizeof(float));
+}
+
+// helper: giải nén các thành phần IEEE-754 single
+void DecodeIEEE754(uint32_t bits) {
+    uint32_t sign = (bits >> 31) & 0x1;
+    uint32_t exp  = (bits >> 23) & 0xff;
+    uint32_t frac = bits & 0x7fffff;
+
+    std::cout << "  Raw bits : 0x" << std::hex << std::setw(8) << std::setfill('0') << bits << std::dec << "\n";
+    std::cout << "  Sign     : " << sign << "\n";
+    std::cout << "  Exponent : " << exp << " (raw)\n";
+    std::cout << "  Mantissa : 0x" << std::hex << frac << std::dec << " (" << frac << ")\n";
+
+    if (exp == 0) {
+        if (frac == 0) {
+            std::cout << "  Value    : Zero (" << (sign ? "-" : "+") << "0.0)\n";
+        } else {
+            std::cout << "  Value    : Denormalized (subnormal) number\n";
+        }
+    } else if (exp == 0xff) {
+        if (frac == 0) {
+            std::cout << "  Value    : Infinity (" << (sign ? "-" : "+") << "inf)\n";
+        } else {
+            std::cout << "  Value    : NaN (Not a Number)\n";
+        }
+    } else {
+        int unbiased = static_cast<int>(exp) - 127;
+        std::cout << "  Value    : Normalized, exponent (unbiased) = " << unbiased << "\n";
+    }
+}
+
 // IEEE 754 Single precision
 int main(int argc, char** argv) {
     // Input data
@@ -76,6 +111,34 @@ int main(int argc, char** argv) {
     Div_floating_point(sign_a, sign_b, exponent_a, exponent_b, mantissa_a, mantissa_b, sign_div, exponent_div, mantissa_div);
     Trans_float(sign_div, exponent_div, mantissa_div, div);
     Display_floating_point('/', div, sign_div, exponent_div, mantissa_div);
+
+    std::string hexstr;
+    std::cout << "Nhập mã HEX 32-bit (ví dụ: 3f800000): ";
+    if (!(std::cin >> hexstr)) return 0;
+
+    // loại bỏ "0x" hoặc "0X" nếu có
+    if (hexstr.size() > 1 && hexstr[0] == '0' && (hexstr[1] == 'x' || hexstr[1] == 'X')) {
+        hexstr = hexstr.substr(2);
+    }
+    // đảm bảo đúng 8 hex digit (không bắt buộc nhưng in đẹp)
+    while (hexstr.size() < 8) hexstr = std::string("0") + hexstr;
+
+    // parse
+    uint32_t bits = 0;
+    std::stringstream ss;
+    ss << std::hex << hexstr;
+    ss >> bits;
+
+    float value = 0.0f;
+    Trans_hex_float(bits, value);
+
+    std::cout << std::fixed << std::setprecision(9);
+    std::cout << "Kết quả float: " << value << "\n";
+    DecodeIEEE754(bits);
+
+    // in theo dạng khoa học / hex float (nếu compiler hỗ trợ printf %a)
+    std::cout << "As hex float (printf style) : ";
+    std::printf("%a\n", value); // in dạng hex-float (C99 style), hữu ích để debug
 
     return 0;
 }

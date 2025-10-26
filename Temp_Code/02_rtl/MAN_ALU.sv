@@ -14,8 +14,9 @@ module MAN_ALU #(
 logic w_i_carry;
 logic [SIZE_MAN-1:0] w_n_man_b;
 logic [SIZE_MAN-1:0] w_i_man_b;
+logic w_overflow;
 
-assign w_i_carry = i_fpu_op ? (i_sign_max ^ i_sign_min) : ~(i_sign_max ^ i_sign_min);
+assign w_i_carry = i_fpu_op ? ~(i_sign_max ^ i_sign_min) : (i_sign_max ^ i_sign_min);
 assign w_n_man_b = ~(i_man_min);
 assign w_i_man_b = w_i_carry ? w_n_man_b : i_man_min;
 
@@ -24,7 +25,9 @@ CLA_28bit ALU_SUB_UNIT (
     .i_data_a       (i_man_max),
     .i_data_b       (w_i_man_b),
     .o_sum          (o_man_alu),
-    .o_carry        (o_overflow)
+    .o_carry        (w_overflow)
 );
+
+assign o_overflow = w_i_carry ? 1'b0 : w_overflow;
 
 endmodule

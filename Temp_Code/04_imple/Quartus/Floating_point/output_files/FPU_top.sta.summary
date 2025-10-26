@@ -3,83 +3,83 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLK_50MHZ'
-Slack : 1.342
+Slack : 1.553
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLK_50MHZ'
-Slack : 0.263
+Slack : 0.603
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'CLK_50MHZ'
-Slack : 16.394
+Slack : 16.108
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'CLK_50MHZ'
-Slack : 0.845
+Slack : 0.785
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLK_50MHZ'
-Slack : 9.390
+Slack : 9.386
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'CLK_50MHZ'
-Slack : 1.402
+Slack : 1.670
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLK_50MHZ'
-Slack : 1.228
+Slack : 0.572
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'CLK_50MHZ'
-Slack : 13.750
+Slack : 13.492
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'CLK_50MHZ'
-Slack : 3.296
+Slack : 3.232
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLK_50MHZ'
-Slack : 9.315
+Slack : 9.293
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLK_50MHZ'
-Slack : 9.230
+Slack : 9.584
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLK_50MHZ'
-Slack : 0.753
+Slack : 0.352
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'CLK_50MHZ'
-Slack : 15.072
+Slack : 14.896
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'CLK_50MHZ'
-Slack : 2.521
+Slack : 2.446
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLK_50MHZ'
-Slack : 9.413
+Slack : 9.414
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLK_50MHZ'
-Slack : 10.207
+Slack : 10.499
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLK_50MHZ'
-Slack : 0.364
+Slack : 0.322
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'CLK_50MHZ'
-Slack : 17.182
+Slack : 17.042
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'CLK_50MHZ'
-Slack : 0.762
+Slack : 0.680
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLK_50MHZ'
-Slack : 9.413
+Slack : 9.415
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -382,14 +382,14 @@ o_floating_result[20] <= NORMALIZATION_unit:NORMALIZATION_UNIT.o_mantissa
 o_floating_result[21] <= NORMALIZATION_unit:NORMALIZATION_UNIT.o_mantissa
 o_floating_result[22] <= NORMALIZATION_unit:NORMALIZATION_UNIT.o_mantissa
 o_floating_result[23] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
-o_floating_result[24] <= w_MAN_PRE_SWAP_BY_MAN_sign_max.DB_MAX_OUTPUT_PORT_TYPE
-o_floating_result[25] <= <GND>
-o_floating_result[26] <= <GND>
-o_floating_result[27] <= <GND>
-o_floating_result[28] <= <GND>
-o_floating_result[29] <= <GND>
-o_floating_result[30] <= <GND>
-o_floating_result[31] <= <GND>
+o_floating_result[24] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
+o_floating_result[25] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
+o_floating_result[26] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
+o_floating_result[27] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
+o_floating_result[28] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
+o_floating_result[29] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
+o_floating_result[30] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
+o_floating_result[31] <= w_MAN_PRE_SWAP_BY_MAN_sign_max.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FPU_top|FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP_UNIT
@@ -1713,8 +1713,6 @@ o_man_min[27] <= w_min.DB_MAX_OUTPUT_PORT_TYPE
 |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT
 i_fpu_op[0] => w_i_carry.OUTPUTSELECT
 i_sign_max => w_i_carry.IN0
-i_sign_max => w_i_carry.IN0
-i_sign_min => w_i_carry.IN1
 i_sign_min => w_i_carry.IN1
 i_man_max[0] => i_man_max[0].IN1
 i_man_max[1] => i_man_max[1].IN1
@@ -1828,7 +1826,7 @@ o_man_alu[24] <= CLA_28bit:ALU_SUB_UNIT.o_sum
 o_man_alu[25] <= CLA_28bit:ALU_SUB_UNIT.o_sum
 o_man_alu[26] <= CLA_28bit:ALU_SUB_UNIT.o_sum
 o_man_alu[27] <= CLA_28bit:ALU_SUB_UNIT.o_sum
-o_overflow <= CLA_28bit:ALU_SUB_UNIT.o_carry
+o_overflow <= o_overflow.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT
@@ -2148,11 +2146,11 @@ i_data[20] => LOPD8_i_data[4].IN1
 i_data[21] => LOPD8_i_data[5].IN1
 i_data[22] => LOPD8_i_data[6].IN1
 i_data[23] => LOPD8_i_data[7].IN1
-o_one_position[0] <= o_one_position.DB_MAX_OUTPUT_PORT_TYPE
-o_one_position[1] <= o_one_position.DB_MAX_OUTPUT_PORT_TYPE
-o_one_position[2] <= o_one_position.DB_MAX_OUTPUT_PORT_TYPE
-o_one_position[3] <= o_one_position.DB_MAX_OUTPUT_PORT_TYPE
-o_one_position[4] <= LOPD_8bit:LOPD_8bit_UNIT_MSB.o_zero_flag
+o_one_position[0] <= CLA_8bit:LOPD_SUB.o_sum
+o_one_position[1] <= CLA_8bit:LOPD_SUB.o_sum
+o_one_position[2] <= CLA_8bit:LOPD_SUB.o_sum
+o_one_position[3] <= CLA_8bit:LOPD_SUB.o_sum
+o_one_position[4] <= CLA_8bit:LOPD_SUB.o_sum
 o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -2297,16 +2295,112 @@ o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
 o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|CLA_8bit:LOPD_SUB
+i_carry => i_carry.IN1
+i_data_a[0] => i_data_a[0].IN1
+i_data_a[1] => i_data_a[1].IN1
+i_data_a[2] => i_data_a[2].IN1
+i_data_a[3] => i_data_a[3].IN1
+i_data_a[4] => i_data_a[4].IN1
+i_data_a[5] => i_data_a[5].IN1
+i_data_a[6] => i_data_a[6].IN1
+i_data_a[7] => i_data_a[7].IN1
+i_data_b[0] => i_data_b[0].IN1
+i_data_b[1] => i_data_b[1].IN1
+i_data_b[2] => i_data_b[2].IN1
+i_data_b[3] => i_data_b[3].IN1
+i_data_b[4] => i_data_b[4].IN1
+i_data_b[5] => i_data_b[5].IN1
+i_data_b[6] => i_data_b[6].IN1
+i_data_b[7] => i_data_b[7].IN1
+o_sum[0] <= CLA_4bit:CLA_4BIT_UNIT_0.sum
+o_sum[1] <= CLA_4bit:CLA_4BIT_UNIT_0.sum
+o_sum[2] <= CLA_4bit:CLA_4BIT_UNIT_0.sum
+o_sum[3] <= CLA_4bit:CLA_4BIT_UNIT_0.sum
+o_sum[4] <= CLA_4bit:CLA_4BIT_UNIT_1.sum
+o_sum[5] <= CLA_4bit:CLA_4BIT_UNIT_1.sum
+o_sum[6] <= CLA_4bit:CLA_4BIT_UNIT_1.sum
+o_sum[7] <= CLA_4bit:CLA_4BIT_UNIT_1.sum
+o_carry <= o_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|CLA_8bit:LOPD_SUB|CLA_4bit:CLA_4BIT_UNIT_0
+a[0] => w_g[0].IN0
+a[0] => w_p[0].IN0
+a[1] => w_g[1].IN0
+a[1] => w_p[1].IN0
+a[2] => w_g[2].IN0
+a[2] => w_p[2].IN0
+a[3] => w_g[3].IN0
+a[3] => w_p[3].IN0
+b[0] => w_g[0].IN1
+b[0] => w_p[0].IN1
+b[1] => w_g[1].IN1
+b[1] => w_p[1].IN1
+b[2] => w_g[2].IN1
+b[2] => w_p[2].IN1
+b[3] => w_g[3].IN1
+b[3] => w_p[3].IN1
+cin => w_c.IN1
+cin => w_c.IN1
+cin => w_c.IN1
+cin => sum.IN1
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+o_p <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+o_g <= o_g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|CLA_8bit:LOPD_SUB|CLA_4bit:CLA_4BIT_UNIT_1
+a[0] => w_g[0].IN0
+a[0] => w_p[0].IN0
+a[1] => w_g[1].IN0
+a[1] => w_p[1].IN0
+a[2] => w_g[2].IN0
+a[2] => w_p[2].IN0
+a[3] => w_g[3].IN0
+a[3] => w_p[3].IN0
+b[0] => w_g[0].IN1
+b[0] => w_p[0].IN1
+b[1] => w_g[1].IN1
+b[1] => w_p[1].IN1
+b[2] => w_g[2].IN1
+b[2] => w_p[2].IN1
+b[3] => w_g[3].IN1
+b[3] => w_p[3].IN1
+cin => w_c.IN1
+cin => w_c.IN1
+cin => w_c.IN1
+cin => sum.IN1
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+o_p <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+o_g <= o_g.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT
-i_overflow => i_overflow.IN1
-i_underflow => w_underflow_exp[7].OUTPUTSELECT
-i_underflow => w_underflow_exp[6].OUTPUTSELECT
-i_underflow => w_underflow_exp[5].OUTPUTSELECT
-i_underflow => w_underflow_exp[4].OUTPUTSELECT
-i_underflow => w_underflow_exp[3].OUTPUTSELECT
-i_underflow => w_underflow_exp[2].OUTPUTSELECT
-i_underflow => w_underflow_exp[1].OUTPUTSELECT
-i_underflow => w_underflow_exp[0].OUTPUTSELECT
+i_overflow => w_i_carry.IN0
+i_overflow => w_data_b.OUTPUTSELECT
+i_overflow => w_data_b.OUTPUTSELECT
+i_overflow => w_data_b.OUTPUTSELECT
+i_overflow => w_data_b.OUTPUTSELECT
+i_overflow => w_data_b.OUTPUTSELECT
+i_overflow => w_data_b.OUTPUTSELECT
+i_overflow => w_data_b.OUTPUTSELECT
+i_overflow => w_data_b.OUTPUTSELECT
+i_underflow => w_i_carry.IN1
+i_underflow => w_data_b.OUTPUTSELECT
+i_underflow => w_data_b.OUTPUTSELECT
+i_underflow => w_data_b.OUTPUTSELECT
+i_underflow => w_data_b.OUTPUTSELECT
+i_underflow => w_data_b.OUTPUTSELECT
+i_underflow => w_data_b.OUTPUTSELECT
+i_underflow => w_data_b.OUTPUTSELECT
+i_underflow => w_data_b.OUTPUTSELECT
 i_zero_flag => o_exp_result.OUTPUTSELECT
 i_zero_flag => o_exp_result.OUTPUTSELECT
 i_zero_flag => o_exp_result.OUTPUTSELECT
@@ -2315,14 +2409,14 @@ i_zero_flag => o_exp_result.OUTPUTSELECT
 i_zero_flag => o_exp_result.OUTPUTSELECT
 i_zero_flag => o_exp_result.OUTPUTSELECT
 i_zero_flag => o_exp_result.OUTPUTSELECT
-i_lopd_value[0] => w_underflow_exp[0].DATAA
-i_lopd_value[1] => w_underflow_exp[1].DATAA
-i_lopd_value[2] => w_underflow_exp[2].DATAA
-i_lopd_value[3] => w_underflow_exp[3].DATAA
-i_lopd_value[4] => w_underflow_exp[4].DATAA
-i_lopd_value[5] => w_underflow_exp[5].DATAA
-i_lopd_value[6] => w_underflow_exp[6].DATAA
-i_lopd_value[7] => w_underflow_exp[7].DATAA
+i_lopd_value[0] => w_data_b.DATAA
+i_lopd_value[1] => w_data_b.DATAA
+i_lopd_value[2] => w_data_b.DATAA
+i_lopd_value[3] => w_data_b.DATAA
+i_lopd_value[4] => w_data_b.DATAA
+i_lopd_value[5] => w_data_b.DATAA
+i_lopd_value[6] => w_data_b.DATAA
+i_lopd_value[7] => w_data_b.DATAA
 i_exp_value[0] => i_exp_value[0].IN1
 i_exp_value[1] => i_exp_value[1].IN1
 i_exp_value[2] => i_exp_value[2].IN1

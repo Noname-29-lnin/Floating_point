@@ -27,11 +27,22 @@ LOPD_8bit LOPD_8bit_UNIT_MSB (
     .o_zero_flag        (LOPD8_o_zero_flag)
 );
 
+logic [SIZE_LOPD-1:0]    w_o_one_position;
 assign o_zero_flag = LOPD16_o_zero_flag & LOPD8_o_zero_flag;
-assign o_one_position[0] = LOPD8_o_zero_flag ? LOPD16_o_pos_one[0] : LOPD8_o_pos_one[0];
-assign o_one_position[1] = LOPD8_o_zero_flag ? LOPD16_o_pos_one[1] : LOPD8_o_pos_one[1];
-assign o_one_position[2] = LOPD8_o_zero_flag ? LOPD16_o_pos_one[2] : LOPD8_o_pos_one[2];
-assign o_one_position[3] = LOPD8_o_zero_flag ? LOPD16_o_pos_one[3] : 1'b0;
-assign o_one_position[4] = ~LOPD8_o_zero_flag;
+assign w_o_one_position[0] = LOPD8_o_zero_flag ? LOPD16_o_pos_one[0] : LOPD8_o_pos_one[0];
+assign w_o_one_position[1] = LOPD8_o_zero_flag ? LOPD16_o_pos_one[1] : LOPD8_o_pos_one[1];
+assign w_o_one_position[2] = LOPD8_o_zero_flag ? LOPD16_o_pos_one[2] : LOPD8_o_pos_one[2];
+assign w_o_one_position[3] = LOPD8_o_zero_flag ? LOPD16_o_pos_one[3] : 1'b0;
+assign w_o_one_position[4] = ~LOPD8_o_zero_flag;
+
+logic [7:0] w_sub;
+CLA_8bit LOPD_SUB(
+    .i_carry        (1'b1),
+    .i_data_a       (8'd23),
+    .i_data_b       (~{3'b0, w_o_one_position}),
+    .o_sum          (w_sub),
+    .o_carry        ()
+);
+assign o_one_position = w_sub[SIZE_LOPD-1:0];
 
 endmodule
