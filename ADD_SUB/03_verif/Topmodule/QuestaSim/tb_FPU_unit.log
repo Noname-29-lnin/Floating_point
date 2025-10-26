@@ -1,0 +1,36 @@
+# vsim -coverage -lib ./../Topmodule/QuestaSim/work -l ./../Topmodule/QuestaSim/tb_FPU_unit.log -voptargs="+cover=bcesft" -assertdebug -c tb_FPU_unit -wlf ./../Topmodule/QuestaSim/tb_FPU_unit.wlf -do "coverage save -onexit ./../Topmodule/QuestaSim/tb_FPU_unit.ucdb; cd ./../Topmodule/QuestaSim; log -r /*; run -all;" 
+# Start time: 13:20:50 on Oct 26,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_FPU_unit(fast)
+# coverage save -onexit ./../Topmodule/QuestaSim/tb_FPU_unit.ucdb
+#  cd ./../Topmodule/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# [35000] ADD: 5.5 + 2.2 = 0.000000 (40f66666)
+# [55000] ADD: 5.5 - 2.2 = 0.000000 (40533333)
+# [75000] ADD: 5.5 + -2.2 = 0.000000 (40533333)
+# [95000] ADD: 5.5 - -2.2 = 0.000000 (40f66666)
+# [115000] ADD: -5.5 + -2.2 = 0.000000 (c0f66666)
+# [135000] ADD: -5.5 - -2.2 = 0.000000 (c0533333)
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv(107)
+#    Time: 155 ns  Iteration: 0  Instance: /tb_FPU_unit
+# Saving coverage database on exit...
+# End time: 13:20:51 on Oct 26,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

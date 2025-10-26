@@ -1,0 +1,2 @@
+Total coverage (30/239) 12.00%
+See lines with '%00' in ./../Topmodule/Verilator/coverage/annotated_src

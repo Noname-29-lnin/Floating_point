@@ -1,0 +1,111 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Primary model header
+//
+// This header should be included by all source files instantiating the design.
+// The class here is then constructed to instantiate the design.
+// See the Verilator manual for examples.
+
+#ifndef VERILATED_VTB_FPU_UNIT_H_
+#define VERILATED_VTB_FPU_UNIT_H_  // guard
+
+#include "verilated.h"
+#include "verilated_cov.h"
+
+class Vtb_FPU_unit__Syms;
+class Vtb_FPU_unit___024root;
+class VerilatedVcdC;
+class Vtb_FPU_unit_CLA_4bit;
+class Vtb_FPU_unit_COMP_4bit;
+
+
+// This class is the main interface to the Verilated model
+class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit VL_NOT_FINAL : public VerilatedModel {
+  private:
+    // Symbol table holding complete model state (owned by this class)
+    Vtb_FPU_unit__Syms* const vlSymsp;
+
+  public:
+
+    // PORTS
+    // The application code writes and reads these signals to
+    // propagate new values into/out from the Verilated model.
+
+    // CELLS
+    // Public to allow access to /* verilator public */ items.
+    // Otherwise the application code can consider these internals.
+    Vtb_FPU_unit_COMP_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__EXP_SWAP_UNIT__DOT__COMP_LESS_UNIT__DOT__u_low;
+    Vtb_FPU_unit_COMP_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__EXP_SWAP_UNIT__DOT__COMP_LESS_UNIT__DOT__u_high;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__EXP_SUB_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__EXP_SUB_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1;
+    Vtb_FPU_unit_COMP_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__GEN_COMP_4BIT__BRA__0__KET____DOT__u_comp4;
+    Vtb_FPU_unit_COMP_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__GEN_COMP_4BIT__BRA__1__KET____DOT__u_comp4;
+    Vtb_FPU_unit_COMP_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__GEN_COMP_4BIT__BRA__2__KET____DOT__u_comp4;
+    Vtb_FPU_unit_COMP_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__GEN_COMP_4BIT__BRA__3__KET____DOT__u_comp4;
+    Vtb_FPU_unit_COMP_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__GEN_COMP_4BIT__BRA__4__KET____DOT__u_comp4;
+    Vtb_FPU_unit_COMP_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__GEN_COMP_4BIT__BRA__5__KET____DOT__u_comp4;
+    Vtb_FPU_unit_COMP_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_COMP_28BIT_UNIT__DOT__GEN_COMP_4BIT__BRA__6__KET____DOT__u_comp4;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_4BIT_UNIT_0;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__1__KET____DOT__CLA_4BIT_UNIT_1;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__2__KET____DOT__CLA_4BIT_UNIT_1;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_0;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__LOPD_24BIT_UNIT__DOT__LOPD_SUB__DOT__CLA_4BIT_UNIT_1;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_0;
+    Vtb_FPU_unit_CLA_4bit* const __PVT__tb_FPU_unit__DOT__dut__DOT__EXP_ADJUST_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1;
+
+    // Root instance pointer to allow access to model internals,
+    // including inlined /* verilator public_flat_* */ items.
+    Vtb_FPU_unit___024root* const rootp;
+
+    // CONSTRUCTORS
+    /// Construct the model; called by application code
+    /// If contextp is null, then the model will use the default global context
+    /// If name is "", then makes a wrapper with a
+    /// single model invisible with respect to DPI scope names.
+    explicit Vtb_FPU_unit(VerilatedContext* contextp, const char* name = "TOP");
+    explicit Vtb_FPU_unit(const char* name = "TOP");
+    /// Destroy the model; called (often implicitly) by application code
+    virtual ~Vtb_FPU_unit();
+  private:
+    VL_UNCOPYABLE(Vtb_FPU_unit);  ///< Copying not allowed
+
+  public:
+    // API METHODS
+    /// Evaluate the model.  Application must call when inputs change.
+    void eval() { eval_step(); eval_end_step(); }
+    /// Evaluate when calling multiple units/models per time step.
+    void eval_step();
+    /// Evaluate at end of a timestep for tracing, when using eval_step().
+    /// Application must call after all eval() and before time changes.
+    void eval_end_step();
+    /// Simulation complete, run final blocks.  Application must call on completion.
+    void final();
+    /// Are there scheduled events to handle?
+    bool eventsPending();
+    /// Returns time at next time slot. Aborts if !eventsPending()
+    uint64_t nextTimeSlot();
+    /// Trace signals in the model; called by application code
+    void trace(VerilatedTraceBaseC* tfp, int levels, int options = 0) { contextp()->trace(tfp, levels, options); }
+    /// Retrieve name of this model instance (as passed to constructor).
+    const char* name() const;
+
+    // Abstract methods from VerilatedModel
+    const char* hierName() const override final;
+    const char* modelName() const override final;
+    unsigned threads() const override final;
+    /// Prepare for cloning the model at the process level (e.g. fork in Linux)
+    /// Release necessary resources. Called before cloning.
+    void prepareClone() const;
+    /// Re-init after cloning the model at the process level (e.g. fork in Linux)
+    /// Re-allocate necessary resources. Called after cloning.
+    void atClone() const;
+    std::unique_ptr<VerilatedTraceConfig> traceConfig() const override final;
+  private:
+    // Internal functions - trace registration
+    void traceBaseModel(VerilatedTraceBaseC* tfp, int levels, int options);
+};
+
+#endif  // guard

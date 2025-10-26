@@ -1,0 +1,701 @@
+m255
+K4
+z2
+!s12c _opt2
+Z0 !s99 nomlopt
+Z1 !s12c _opt1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Questasim
+T_opt1
+!s110 1761459444
+VbebCNQ:3OGeSUWjdfWCd72
+Z3 04 11 4 work tb_FPU_unit fast 0
+=1-000ae431a4f1-68fdbcf4-b0c66-5f32
+R0
+Z4 !s12f OEM100
+Z5 !s12b OEM100
+Z6 !s124 OEM10U69 
+Z7 !s135 nogc
+o-quiet -auto_acc_if_foreign -work ./../Topmodule/QuestaSim/work -debugdb +acc
+Z8 tCvgOpt 0
+n@_opt1
+Z9 OL;O;2024.3;79
+R2
+T_opt2
+Z10 !s110 1761459650
+V_44`K=E2NC]W292kM9d0M0
+R3
+=1-000ae431a4f1-68fdbdc2-b7535-67e4
+Z11 !s102 +cover=bcesft
+R0
+R4
+R5
+R6
+R7
+o-quiet -auto_acc_if_foreign -work ./../Topmodule/QuestaSim/work +cover=bcesft
+R8
+n@_opt2
+R9
+vCLA_28bit
+Z12 2/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_adjust.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_sub.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_24bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_ALU.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/NORMALIZATION_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/ROUNDING_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right_28bit.sv
+Z13 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R10
+!i10b 1
+!s100 E2Jn^;;8;EhfmzFc0DBFg3
+I3fVLJ6`NXB[LeHz7^KALl2
+S1
+R2
+w1761458104
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_28bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_28bit.sv
+!i122 7
+L0 1 42
+Z14 VDg1SIo80bB@j0V0VzS_@n1
+Z15 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z16 !s108 1761459650.000000
+Z17 !s107 /home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/ROUNDING_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/NORMALIZATION_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_ALU.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_24bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_sub.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_adjust.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv|
+Z18 !s90 +cover=bcesft|-f|./../Topmodule/flist.f|
+!i113 0
+R11
+Z19 o+cover=bcesft -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+n@c@l@a_28bit
+vCLA_4bit
+R12
+R13
+R10
+!i10b 1
+!s100 >Aa<Sn5e@Nj:N^NU[Aeho1
+IoV]OAKWIEaDeaUFfW@VW:2
+S1
+R2
+Z20 w1761392121
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_4bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_4bit.sv
+!i122 7
+L0 1 30
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@c@l@a_4bit
+vCLA_8bit
+R12
+R13
+R10
+!i10b 1
+!s100 kbngJDczAnlATC@`QY@Ek1
+INgWJlEBF=DzE0Pj@ZmB[b2
+S1
+R2
+R20
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_8bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_8bit.sv
+!i122 7
+L0 45 38
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@c@l@a_8bit
+vCOMP_28bit
+R12
+R13
+R10
+!i10b 1
+!s100 CN;JBZ0Jd0R08RK?mMLCa2
+I6]G=CzZA0n`G6LUf]nYKM0
+S1
+R2
+w1761458302
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_28bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_28bit.sv
+!i122 7
+L0 1 39
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@c@o@m@p_28bit
+vCOMP_2bit
+R12
+R13
+R10
+!i10b 1
+!s100 d4iFLO4YodoMWf;_G@:982
+I9bQGCZ:SE54fh`U7DQNe[2
+S1
+R2
+Z21 w1761391731
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_2bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_2bit.sv
+!i122 7
+L0 1 11
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@c@o@m@p_2bit
+vCOMP_4bit
+R12
+R13
+R10
+!i10b 1
+!s100 dj@NkHh87k3Z2>3iEJ^Ai3
+IR3DToMm81cF`z^iMn`YK63
+S1
+R2
+R21
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_4bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_4bit.sv
+!i122 7
+Z22 L0 1 26
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@c@o@m@p_4bit
+vCOMP_8bit
+R12
+R13
+R10
+!i10b 1
+!s100 e@Ji`hT;WR=PgJ8N>_mX`1
+I8<27m0YM6j>n@2NQ7YR0A3
+S1
+R2
+w1761405781
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_8bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_8bit.sv
+!i122 7
+R22
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@c@o@m@p_8bit
+vEXP_adjust
+R12
+R13
+R10
+!i10b 1
+!s100 7R]l0lV1Wzm2^65CVL6OX2
+IT[3gnioG2VlfJVFE1RSng3
+S1
+R2
+w1761451416
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_adjust.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_adjust.sv
+!i122 7
+L0 1 35
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@e@x@p_adjust
+vEXP_sub
+R12
+R13
+R10
+!i10b 1
+!s100 7ijcX_oX;8VR`n0BGFCL72
+I2OS<mX8C]`oY`C>::eFnd0
+S1
+R2
+w1761391627
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_sub.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_sub.sv
+!i122 7
+L0 1 20
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@e@x@p_sub
+vEXP_swap
+R12
+R13
+R10
+!i10b 1
+!s100 SR?gcl3_9dBR;g_0BdlZj1
+I>eC;S<08e6?YPGDBCHRg=2
+S1
+R2
+w1761413125
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_swap.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_swap.sv
+!i122 7
+Z23 L0 1 25
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@e@x@p_swap
+vFPU_unit
+R12
+R13
+R10
+!i10b 1
+!s100 j`JT@6eaJDm1WO^E]PSYV3
+If7e<0gnVYS1S=RTXBHPeU3
+S1
+R2
+w1761457739
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/FPU_unit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/FPU_unit.sv
+!i122 7
+L0 1 191
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@f@p@u_unit
+vLOPD_16bit
+R12
+R13
+R10
+!i10b 1
+!s100 ;EWB8SkUjG;dE8Rine7ZK1
+IjU@YDOj<eWTZcQ=_S47[[0
+S1
+R2
+Z24 w1761392476
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_16bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_16bit.sv
+!i122 7
+L0 1 108
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@l@o@p@d_16bit
+vLOPD_24bit
+R12
+R13
+R10
+!i10b 1
+!s100 LcY23lH;cbd`QlLSOheln0
+IbOmlYRKe:G8Mz>cY^hjSC0
+S1
+R2
+w1761452460
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_24bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_24bit.sv
+!i122 7
+L0 1 48
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@l@o@p@d_24bit
+vLOPD_4bit
+R12
+R13
+R10
+!i10b 1
+!s100 WHh_Y4?ebfb[UiiFOj0:k1
+IhZfGZNSW`TSj8QK[:mRK40
+S1
+R2
+R24
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_4bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_4bit.sv
+!i122 7
+R22
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@l@o@p@d_4bit
+vLOPD_8bit
+R12
+R13
+R10
+!i10b 1
+!s100 Tz2b_og`MYbTP>8ZT?[XH0
+I=g84@WBkiC]he>5mjWk5o2
+S1
+R2
+R24
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_8bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_8bit.sv
+!i122 7
+L0 1 37
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@l@o@p@d_8bit
+vMAN_ALU
+R12
+R13
+R10
+!i10b 1
+!s100 7?9?dCUX4@Jggj_ZcQn_00
+IWAZXe?fR6CO8Igo@LS[K63
+S1
+R2
+w1761449812
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_ALU.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_ALU.sv
+!i122 7
+L0 1 33
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@m@a@n_@a@l@u
+vMAN_swap
+R12
+R13
+R10
+!i10b 1
+!s100 o=9nY[RUzoF]Xj:mX>HU60
+I=Rc9UFna?>>HX]]H@A:R83
+S1
+R2
+w1761413270
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_swap.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_swap.sv
+!i122 7
+L0 1 31
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@m@a@n_swap
+vNORMALIZATION_unit
+R12
+R13
+R10
+!i10b 1
+!s100 0^dW?<ihG3HGO`4lc>`0f1
+I30iVY^9]6:SWCL<O7bF;A2
+S1
+R2
+w1761447180
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/NORMALIZATION_unit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/NORMALIZATION_unit.sv
+!i122 7
+R23
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@n@o@r@m@a@l@i@z@a@t@i@o@n_unit
+vROUNDING_unit
+R12
+R13
+R10
+!i10b 1
+!s100 :[f`JZA4g9m8oT0RfW:Tc0
+IgYg61BE4_YJb9]:G:9G>H1
+S1
+R2
+w1761457604
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/ROUNDING_unit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/ROUNDING_unit.sv
+!i122 7
+L0 1 15
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@r@o@u@n@d@i@n@g_unit
+vSHF_left
+Z25 2/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_adjust.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_sub.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_24bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_ALU.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/NORMALIZATION_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right.sv
+R13
+Z26 !s110 1761452545
+!i10b 1
+!s100 6]7m<JH`HlFi1_[G8k?a30
+Io97Qj?fGV83AlJCS4b][j3
+S1
+R2
+w1761392410
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left.sv
+!i122 5
+L0 1 23
+R14
+R15
+r1
+!s85 0
+31
+Z27 !s108 1761452545.000000
+Z28 !s107 /home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/NORMALIZATION_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/MAN_ALU.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_24bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_sub.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/EXP_adjust.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv|
+Z29 !s90 -f|./../Topmodule/flist.f|
+!i113 0
+Z30 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+n@s@h@f_left
+vSHF_left_28bit
+R12
+R13
+R10
+!i10b 1
+!s100 iF_I^6Y0Jf1SAjOBXGPb23
+INiOe0?7FT^<OFSafAh6A;2
+S1
+R2
+w1761412161
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left_28bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_left_28bit.sv
+!i122 7
+Z31 L0 1 27
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@s@h@f_left_28bit
+vSHF_right
+R25
+R13
+R26
+!i10b 1
+!s100 ^YL<VS`K0RcCR_6KU[Bf`3
+I9RY@o7;dam=O?Q[`5]j?21
+S1
+R2
+w1761392396
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right.sv
+!i122 5
+L0 1 28
+R14
+R15
+r1
+!s85 0
+31
+R27
+R28
+R29
+!i113 0
+R30
+R8
+n@s@h@f_right
+vSHF_right_28bit
+R12
+R13
+R10
+!i10b 1
+!s100 CDYBZ@3UH=@XfOE6PG15Z0
+IAlL1jn2n^95i^`HbNQjmh1
+S1
+R2
+w1761408213
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right_28bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/02_rtl/SHF_right_28bit.sv
+!i122 7
+R31
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+n@s@h@f_right_28bit
+vtb_FPU_unit
+R12
+R13
+R10
+!i10b 1
+!s100 0Hn5z=ULcnG6a:dC70X?_1
+IM06[5@^7BCN3m42cf;>8k0
+S1
+R2
+w1761452543
+8/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Temp_Code/03_verif/Topmodule/tb_FPU_unit.sv
+!i122 7
+L0 3 108
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R11
+R19
+R8
+ntb_@f@p@u_unit
