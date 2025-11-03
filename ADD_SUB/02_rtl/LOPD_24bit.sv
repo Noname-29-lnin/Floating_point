@@ -44,5 +44,6 @@ CLA_8bit LOPD_SUB(
     .o_carry        ()
 );
 assign o_one_position = w_sub[SIZE_LOPD-1:0];
+// assign o_one_position = ~w_o_one_position;
 
 endmodule

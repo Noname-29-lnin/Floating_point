@@ -19,12 +19,18 @@
 # decimal
 # 
 # stdin: <EOF>
+add wave -position insertpoint tb_FPU_unit:/tb_FPU_unit/dut/ROUNDING_UNIT/*
 add wave -position insertpoint  \
 tb_FPU_unit:/tb_FPU_unit/dut/i_fpu_op \
 tb_FPU_unit:/tb_FPU_unit/dut/i_floating_a \
 tb_FPU_unit:/tb_FPU_unit/dut/i_floating_b \
 tb_FPU_unit:/tb_FPU_unit/dut/o_floating_result
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/dut/EXP_SUB_UNIT/i_data_a \
-tb_FPU_unit:/tb_FPU_unit/dut/EXP_SUB_UNIT/i_data_b \
-tb_FPU_unit:/tb_FPU_unit/dut/EXP_SUB_UNIT/o_sub
+find drivers -source -time {90.473 ns} -cause tb_FPU_unit:/tb_FPU_unit/dut/ROUNDING_UNIT/i_man
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.

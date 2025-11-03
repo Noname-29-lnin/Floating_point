@@ -1,0 +1,5 @@
+BEGIN 1:ROUNDING_unit:fast:./../Topmodule/QuestaSim/work
+    w_round_bit :  1:tb_FPU_unit:fast:./../Topmodule/QuestaSim/work
+    w_guard_bit :  1:tb_FPU_unit:fast:./../Topmodule/QuestaSim/work
+    w_sticky_bit :  1:tb_FPU_unit:fast:./../Topmodule/QuestaSim/work
+END 
