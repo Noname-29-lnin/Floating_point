@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module tb_LOPD_unit();
+module tb_LOPD_24bit();
 
     // ====== Parameters ======
     parameter SIZE_DATA = 24;

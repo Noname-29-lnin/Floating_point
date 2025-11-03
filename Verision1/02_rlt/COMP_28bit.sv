@@ -3,37 +3,71 @@ module COMP_28bit #(
 )(
     input  logic [SIZE_DATA-1:0] i_data_a,
     input  logic [SIZE_DATA-1:0] i_data_b,
-    output logic                 o_less,
-    output logic                 o_equal
+    output logic                 o_less //,
+    // output logic                 o_equal
 );
-    localparam NUM_BLOCK = SIZE_DATA / 4;
 
-    logic [NUM_BLOCK-1:0] w_less;
-    logic [NUM_BLOCK-1:0] w_equal;
-    logic [NUM_BLOCK:0]   less_chain;
-    logic [NUM_BLOCK:0]   equal_chain;
+    logic w_less_0_0, w_less_0_1, w_less_0_2, w_less_0_3, w_less_0_4, w_less_0_5, w_less_0_6;
+    logic w_equal_0_0, w_equal_0_1, w_equal_0_2, w_equal_0_3, w_equal_0_4, w_equal_0_5, w_equal_0_6;
 
-    genvar i;
-    generate
-        for (i = 0; i < NUM_BLOCK; i++) begin : GEN_COMP_4BIT
-            COMP_4bit u_comp4 (
-                .i_data_a (i_data_a[i*4 +: 4]),
-                .i_data_b (i_data_b[i*4 +: 4]),
-                .o_less   (w_less[i]),
-                .o_equal  (w_equal[i])
-            );
-        end
-    endgenerate
+    COMP_4bit u_i_data_0 (
+        .i_data_a (i_data_a[3:0]),
+        .i_data_b (i_data_b[3:0]),
+        .o_less   (w_less_0_0),
+        .o_equal  (w_equal_0_0)
+    );
 
-    generate
-        assign less_chain[NUM_BLOCK]  = 1'b0;
-        assign equal_chain[NUM_BLOCK] = 1'b1;
-        for (i = NUM_BLOCK-1; i >= 0; i--) begin : GEN_CHAIN
-            assign less_chain[i]  = w_less[i]  | (w_equal[i] & less_chain[i+1]);
-            assign equal_chain[i] = w_equal[i] & equal_chain[i+1];
-        end
-        assign o_less  = less_chain[0];
-        assign o_equal = equal_chain[0];
-    endgenerate
+    COMP_4bit u_i_data_1 (
+        .i_data_a (i_data_a[7:4]),
+        .i_data_b (i_data_b[7:4]),
+        .o_less   (w_less_0_1),
+        .o_equal  (w_equal_0_1)
+    );
+
+    COMP_4bit u_i_data_2 (
+        .i_data_a (i_data_a[11:8]),
+        .i_data_b (i_data_b[11:8]),
+        .o_less   (w_less_0_2),
+        .o_equal  (w_equal_0_2)
+    );
+
+    COMP_4bit u_i_data_3 (
+        .i_data_a (i_data_a[15:12]),
+        .i_data_b (i_data_b[15:12]),
+        .o_less   (w_less_0_3),
+        .o_equal  (w_equal_0_3)
+    );
+
+    COMP_4bit u_i_data_4 (
+        .i_data_a (i_data_a[19:16]),
+        .i_data_b (i_data_b[19:16]),
+        .o_less   (w_less_0_4),
+        .o_equal  (w_equal_0_4)
+    );
+
+    COMP_4bit u_i_data_5 (
+        .i_data_a (i_data_a[23:20]),
+        .i_data_b (i_data_b[23:20]),
+        .o_less   (w_less_0_5),
+        .o_equal  (w_equal_0_5)
+    );
+
+    COMP_4bit u_i_data_6 (
+        .i_data_a (i_data_a[27:24]),
+        .i_data_b (i_data_b[27:24]),
+        .o_less   (w_less_0_6),
+        .o_equal  (w_equal_0_6)
+    );
+
+    assign o_less = w_less_0_6
+                  | (w_equal_0_6 & w_less_0_5)
+                  | (w_equal_0_6 & w_equal_0_5 & w_less_0_4)
+                  | (w_equal_0_6 & w_equal_0_5 & w_equal_0_4 & w_less_0_3)
+                  | (w_equal_0_6 & w_equal_0_5 & w_equal_0_4 & w_equal_0_3 & w_less_0_2)
+                  | (w_equal_0_6 & w_equal_0_5 & w_equal_0_4 & w_equal_0_3 & w_equal_0_2 & w_less_0_1)
+                  | (w_equal_0_6 & w_equal_0_5 & w_equal_0_4 & w_equal_0_3 & w_equal_0_2 & w_equal_0_1 & w_less_0_0);
+
+    // assign o_equal = w_equal_0_6 & w_equal_0_5 & w_equal_0_4 &
+                    //  w_equal_0_3 & w_equal_0_2 & w_equal_0_1 & w_equal_0_0;
 
 endmodule

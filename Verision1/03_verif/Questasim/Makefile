@@ -62,7 +62,7 @@ run:
 	@echo "-> Copy modelsim.ini..."
 	@cp ./modelsim.ini $(INC_WORK)
 	@if ls ./*.vcd > /dev/null 2>&1; then \
-		mv ./*.vcd $(INC_DIR)/ 2>/dev/null; \
+		mv ./tb_$(TOPMODULE).vcd $(INC_DIR)/ 2>/dev/null; \
 		echo "<Pass> moved .vcd files to $(INC_DIR)"; \
 	else \
 		echo "<Info> no .vcd files found in current directory"; \
@@ -78,7 +78,7 @@ run_cover:
 	@cp ./modelsim.ini $(INC_WORK)
 		@echo "-> Move .vcd..."
 	@if ls ./*.vcd > /dev/null 2>&1; then \
-		mv ./*.vcd $(INC_DIR)/ 2>/dev/null; \
+		mv ./tb_$(TOPMODULE).vcd $(INC_DIR)/ 2>/dev/null; \
 		echo "<Pass> moved .vcd files to $(INC_DIR)"; \
 	else \
 		echo "<Info> no .vcd files found in current directory"; \

@@ -1,0 +1,7 @@
+$display("\n==================================");
+        $display("========== TEST SUMMARY ==========");
+        $display("Total test cases: %6d", test_count);
+        $display("Passed          : %6d", test_pass);
+        $display("Failed          : %6d", test_count - test_pass);
+        $display("Pass rate       : %0.2f%%", (test_pass * 100.0) / test_count);
+        $display("==================================\n");

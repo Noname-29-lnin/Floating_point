@@ -1,0 +1,248 @@
+# vsim -coverage -lib ./../SubModule/CLA/CLA_28BIT/QuestaSim/work -l ./../SubModule/CLA/CLA_28BIT/QuestaSim/tb_CLA_28bit.log -voptargs="+cover=bcesft" -assertdebug -c tb_CLA_28bit -wlf ./../SubModule/CLA/CLA_28BIT/QuestaSim/tb_CLA_28bit.wlf -do "coverage save -onexit ./../SubModule/CLA/CLA_28BIT/QuestaSim/tb_CLA_28bit.ucdb; cd ./../SubModule/CLA/CLA_28BIT/QuestaSim; log -r /*; run -all;" 
+# Start time: 19:01:01 on Nov 03,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_CLA_28bit(fast)
+# coverage save -onexit ./../SubModule/CLA/CLA_28BIT/QuestaSim/tb_CLA_28bit.ucdb
+#  cd ./../SubModule/CLA/CLA_28BIT/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# 
+# === START CLA 28-bit TEST ===
+# 
+# [Direct] a=0000000, b=0000000, cin=1 => sum=0000001, cout=0
+# => PASS: expect=00000000000000000000000000001, dut={cout,sum}=00000000000000000000000000001
+# [Direct] a=0ffffff, b=0000001, cin=0 => sum=1000000, cout=0
+# => PASS: expect=00001000000000000000000000000, dut={cout,sum}=00001000000000000000000000000
+# [Direct] a=fffffff, b=fffffff, cin=1 => sum=fffffff, cout=1
+# => PASS: expect=11111111111111111111111111111, dut={cout,sum}=11111111111111111111111111111
+# [Random] a=3337da4, b=684c7c6, cin=0 => sum=9b8456a, cout=0
+# => PASS: expect=01001101110000100010101101010, dut={cout,sum}=01001101110000100010101101010
+# [Random] a=7de9ebe, b=961c811, cin=1 => sum=14066d0, cout=1
+# => PASS: expect=10001010000000110011011010000, dut={cout,sum}=10001010000000110011011010000
+# [Random] a=dcde5b1, b=38f6b79, cin=0 => sum=15d512a, cout=1
+# => PASS: expect=10001010111010101000100101010, dut={cout,sum}=10001010111010101000100101010
+# [Random] a=d44042b, b=aa7dd00, cin=1 => sum=7ebe12c, cout=1
+# => PASS: expect=10111111010111110000100101100, dut={cout,sum}=10111111010111110000100101100
+# [Random] a=22d601a, b=919a0f7, cin=0 => sum=b470111, cout=0
+# => PASS: expect=01011010001110000000100010001, dut={cout,sum}=01011010001110000000100010001
+# [Random] a=8d81d38, b=0580699, cin=1 => sum=93023d2, cout=0
+# => PASS: expect=01001001100000010001111010010, dut={cout,sum}=01001001100000010001111010010
+# [Random] a=6355055, b=45e7c0b, cin=1 => sum=a93cc61, cout=0
+# => PASS: expect=01010100100111100110001100001, dut={cout,sum}=01010100100111100110001100001
+# [Random] a=17e09e9, b=5f92eaa, cin=1 => sum=7773894, cout=0
+# => PASS: expect=00111011101110011100010010100, dut={cout,sum}=00111011101110011100010010100
+# [Random] a=a53cf8f, b=819bc57, cin=0 => sum=26d8be6, cout=1
+# => PASS: expect=10010011011011000101111100110, dut={cout,sum}=10010011011011000101111100110
+# [Random] a=2bd8a92, b=162701c, cin=1 => sum=41ffaaf, cout=0
+# => PASS: expect=00100000111111111101010101111, dut={cout,sum}=00100000111111111101010101111
+# [Random] a=4d2a3ae, b=a751216, cin=0 => sum=f47b5c4, cout=0
+# => PASS: expect=01111010001111011010111000100, dut={cout,sum}=01111010001111011010111000100
+# [Random] a=60a981c, b=d15f6d7, cin=0 => sum=3208ef3, cout=1
+# => PASS: expect=10011001000001000111011110011, dut={cout,sum}=10011001000001000111011110011
+# [Random] a=9a32e18, b=024b248, cin=1 => sum=9c7e061, cout=0
+# => PASS: expect=01001110001111110000001100001, dut={cout,sum}=01001110001111110000001100001
+# [Random] a=0d55921, b=a439259, cin=1 => sum=b18eb7b, cout=0
+# => PASS: expect=01011000110001110101101111011, dut={cout,sum}=01011000110001110101101111011
+# [Random] a=8b76dea, b=173633b, cin=1 => sum=a2ad126, cout=0
+# => PASS: expect=01010001010101101000100100110, dut={cout,sum}=01010001010101101000100100110
+# [Random] a=eeb0107, b=545b2bd, cin=0 => sum=430b3c4, cout=1
+# => PASS: expect=10100001100001011001111000100, dut={cout,sum}=10100001100001011001111000100
+# [Random] a=fd77266, b=50a2a9c, cin=1 => sum=4e19d03, cout=1
+# => PASS: expect=10100111000011001110100000011, dut={cout,sum}=10100111000011001110100000011
+# [Random] a=f96609d, b=d314ce6, cin=1 => sum=cc7ad84, cout=1
+# => PASS: expect=11100110001111010110110000100, dut={cout,sum}=11100110001111010110110000100
+# [Random] a=27a3928, b=63edd00, cin=0 => sum=8b91628, cout=0
+# => PASS: expect=01000101110010001011000101000, dut={cout,sum}=01000101110010001011000101000
+# [Random] a=4f96969, b=e128c69, cin=0 => sum=30bf5d2, cout=1
+# => PASS: expect=10011000010111111010111010010, dut={cout,sum}=10011000010111111010111010010
+# [Random] a=4a4740c, b=de2f59f, cin=1 => sum=28769ac, cout=1
+# => PASS: expect=10010100001110110100110101100, dut={cout,sum}=10010100001110110100110101100
+# [Random] a=98761be, b=3f82215, cin=1 => sum=d7f83d4, cout=0
+# => PASS: expect=01101011111111000001111010100, dut={cout,sum}=01101011111111000001111010100
+# [Random] a=3d2d37f, b=b24df84, cin=0 => sum=ef7b303, cout=0
+# => PASS: expect=01110111101111011001100000011, dut={cout,sum}=01110111101111011001100000011
+# [Random] a=280d868, b=b64024f, cin=0 => sum=de4dab7, cout=0
+# => PASS: expect=01101111001001101101010110111, dut={cout,sum}=01101111001001101101010110111
+# [Random] a=4101111, b=04371b4, cin=0 => sum=45382c5, cout=0
+# => PASS: expect=00100010100111000001011000101, dut={cout,sum}=00100010100111000001011000101
+# [Random] a=b652717, b=a9b8777, cin=1 => sum=600ae8f, cout=1
+# => PASS: expect=10110000000001010111010001111, dut={cout,sum}=10110000000001010111010001111
+# [Random] a=dcf31b2, b=b65179d, cin=0 => sum=934494f, cout=1
+# => PASS: expect=11001001101000100100101001111, dut={cout,sum}=11001001101000100100101001111
+# [Random] a=3ca86a1, b=03a7d05, cin=1 => sum=40503a7, cout=0
+# => PASS: expect=00100000001010000001110100111, dut={cout,sum}=00100000001010000001110100111
+# [Random] a=d77cfa9, b=44b122a, cin=0 => sum=1c2e1d3, cout=1
+# => PASS: expect=10001110000101110000111010011, dut={cout,sum}=10001110000101110000111010011
+# [Random] a=936163b, b=40474de, cin=1 => sum=d3a8b1a, cout=0
+# => PASS: expect=01101001110101000101100011010, dut={cout,sum}=01101001110101000101100011010
+# [Random] a=a0017e1, b=cacf6b6, cin=0 => sum=6ad0e97, cout=1
+# => PASS: expect=10110101011010000111010010111, dut={cout,sum}=10110101011010000111010010111
+# [Random] a=863e169, b=a9ef65f, cin=0 => sum=302d7c8, cout=1
+# => PASS: expect=10011000000101101011111001000, dut={cout,sum}=10011000000101101011111001000
+# [Random] a=e2b42dc, b=48f8c00, cin=1 => sum=2bacedd, cout=1
+# => PASS: expect=10010101110101100111011011101, dut={cout,sum}=10010101110101100111011011101
+# [Random] a=7e4e353, b=3915bc6, cin=0 => sum=b763f19, cout=0
+# => PASS: expect=01011011101100011111100011001, dut={cout,sum}=01011011101100011111100011001
+# [Random] a=9415570, b=1e630f8, cin=0 => sum=b278668, cout=0
+# => PASS: expect=01011001001111000011001101000, dut={cout,sum}=01011001001111000011001101000
+# [Random] a=63a11d5, b=ff46209, cin=0 => sum=62e73de, cout=1
+# => PASS: expect=10110001011100111001111011110, dut={cout,sum}=10110001011100111001111011110
+# [Random] a=72b4619, b=aff73dc, cin=1 => sum=22ab9f6, cout=1
+# => PASS: expect=10010001010101011100111110110, dut={cout,sum}=10010001010101011100111110110
+# [Random] a=37a4ac7, b=afed41d, cin=0 => sum=e791ee4, cout=0
+# => PASS: expect=01110011110010001111011100100, dut={cout,sum}=01110011110010001111011100100
+# [Random] a=90147f2, b=2ce0b63, cin=0 => sum=bcf5355, cout=0
+# => PASS: expect=01011110011110101001101010101, dut={cout,sum}=01011110011110101001101010101
+# [Random] a=58613c5, b=b8151d2, cin=1 => sum=1076598, cout=1
+# => PASS: expect=10001000001110110010110011000, dut={cout,sum}=10001000001110110010110011000
+# [Random] a=ccad008, b=c70685e, cin=1 => sum=93b3867, cout=1
+# => PASS: expect=11001001110110011100001100111, dut={cout,sum}=11001001110110011100001100111
+# [Random] a=cbca280, b=f1e3196, cin=1 => sum=bdad417, cout=1
+# => PASS: expect=11011110110101101010000010111, dut={cout,sum}=11011110110101101010000010111
+# [Random] a=04a943c, b=3572c50, cin=0 => sum=3a1c08c, cout=0
+# => PASS: expect=00011101000011100000010001100, dut={cout,sum}=00011101000011100000010001100
+# [Random] a=8098709, b=fb19125, cin=1 => sum=7bb182f, cout=1
+# => PASS: expect=10111101110110001100000101111, dut={cout,sum}=10111101110110001100000101111
+# [Random] a=cb94f25, b=bc5c16f, cin=1 => sum=87f1095, cout=1
+# => PASS: expect=11000011111110001000010010101, dut={cout,sum}=11000011111110001000010010101
+# [Random] a=3727db3, b=a04c24e, cin=0 => sum=d774001, cout=0
+# => PASS: expect=01101011101110100000000000001, dut={cout,sum}=01101011101110100000000000001
+# [Random] a=ac53d65, b=073a520, cin=1 => sum=b38e286, cout=0
+# => PASS: expect=01011001110001110001010000110, dut={cout,sum}=01011001110001110001010000110
+# [Random] a=01f3937, b=fadf473, cin=0 => sum=fcd2daa, cout=0
+# => PASS: expect=01111110011010010110110101010, dut={cout,sum}=01111110011010010110110101010
+# [Random] a=26c886f, b=45133fc, cin=1 => sum=6bdbc6c, cout=0
+# => PASS: expect=00110101111011011110001101100, dut={cout,sum}=00110101111011011110001101100
+# [Random] a=97124bb, b=9437975, cin=0 => sum=2b49e30, cout=1
+# => PASS: expect=10010101101001001111000110000, dut={cout,sum}=10010101101001001111000110000
+# [Random] a=4594d1c, b=1b6bf58, cin=1 => sum=6100c75, cout=0
+# => PASS: expect=00110000100000000110001110101, dut={cout,sum}=00110000100000000110001110101
+# [Random] a=60f23fa, b=d7374dc, cin=0 => sum=38298d6, cout=1
+# => PASS: expect=10011100000101001100011010110, dut={cout,sum}=10011100000101001100011010110
+# [Random] a=d2a38bd, b=ca34ba8, cin=1 => sum=9cd8466, cout=1
+# => PASS: expect=11001110011011000010001100110, dut={cout,sum}=11001110011011000010001100110
+# [Random] a=5a2ac69, b=98767c6, cin=1 => sum=f2a1430, cout=0
+# => PASS: expect=01111001010100001010000110000, dut={cout,sum}=01111001010100001010000110000
+# [Random] a=41bf2f7, b=1d2d25d, cin=0 => sum=5eec554, cout=0
+# => PASS: expect=00101111011101100010101010100, dut={cout,sum}=00101111011101100010101010100
+# [Random] a=16fb0c2, b=2e9dd3d, cin=0 => sum=4598dff, cout=0
+# => PASS: expect=00100010110011000110111111111, dut={cout,sum}=00100010110011000110111111111
+# [Random] a=12dcea1, b=6f9340b, cin=0 => sum=82702ac, cout=0
+# => PASS: expect=01000001001110000001010101100, dut={cout,sum}=01000001001110000001010101100
+# [Random] a=dc32c68, b=be5f97f, cin=1 => sum=9a925e8, cout=1
+# => PASS: expect=11001101010010010010111101000, dut={cout,sum}=11001101010010010010111101000
+# [Random] a=8051fc6, b=5872daf, cin=0 => sum=d8c4d75, cout=0
+# => PASS: expect=01101100011000100110101110101, dut={cout,sum}=01101100011000100110101110101
+# [Random] a=6cc0dd8, b=1238abe, cin=0 => sum=7ef9896, cout=0
+# => PASS: expect=00111111011111001100010010110, dut={cout,sum}=00111111011111001100010010110
+# [Random] a=64576c8, b=fab8d9e, cin=1 => sum=5f10467, cout=1
+# => PASS: expect=10101111100010000010001100111, dut={cout,sum}=10101111100010000010001100111
+# [Random] a=fa769d6, b=c452d10, cin=1 => sum=bec96e7, cout=1
+# => PASS: expect=11011111011001001011011100111, dut={cout,sum}=11011111011001001011011100111
+# [Random] a=8ce88a2, b=de42705, cin=1 => sum=6b2afa8, cout=1
+# => PASS: expect=10110101100101010111110101000, dut={cout,sum}=10110101100101010111110101000
+# [Random] a=a57be50, b=1600fe7, cin=0 => sum=bb7ce37, cout=0
+# => PASS: expect=01011101101111100111000110111, dut={cout,sum}=01011101101111100111000110111
+# [Random] a=b7b1e1c, b=2c840a2, cin=1 => sum=e435ebf, cout=0
+# => PASS: expect=01110010000110101111010111111, dut={cout,sum}=01110010000110101111010111111
+# [Random] a=2946f4c, b=2091532, cin=0 => sum=49d847e, cout=0
+# => PASS: expect=00100100111011000010001111110, dut={cout,sum}=00100100111011000010001111110
+# [Random] a=c82065b, b=132ebf6, cin=0 => sum=db4f251, cout=0
+# => PASS: expect=01101101101001111001001010001, dut={cout,sum}=01101101101001111001001010001
+# [Random] a=ca58110, b=cb39560, cin=0 => sum=9591670, cout=1
+# => PASS: expect=11001010110010001011001110000, dut={cout,sum}=11001010110010001011001110000
+# [Random] a=99fccb3, b=df27220, cin=1 => sum=7923ed4, cout=1
+# => PASS: expect=10111100100100011111011010100, dut={cout,sum}=10111100100100011111011010100
+# [Random] a=d266dc1, b=af6bc46, cin=0 => sum=81d2a07, cout=1
+# => PASS: expect=11000000111010010101000000111, dut={cout,sum}=11000000111010010101000000111
+# [Random] a=83db5d9, b=a4c3067, cin=1 => sum=289e641, cout=1
+# => PASS: expect=10010100010011110011001000001, dut={cout,sum}=10010100010011110011001000001
+# [Random] a=d4515d5, b=b0120cc, cin=1 => sum=84636a2, cout=1
+# => PASS: expect=11000010001100011011010100010, dut={cout,sum}=11000010001100011011010100010
+# [Random] a=50723db, b=c3cef18, cin=0 => sum=14412f3, cout=1
+# => PASS: expect=10001010001000001001011110011, dut={cout,sum}=10001010001000001001011110011
+# [Random] a=0063151, b=fd0a0ed, cin=0 => sum=fd6d23e, cout=0
+# => PASS: expect=01111110101101101001000111110, dut={cout,sum}=01111110101101101001000111110
+# [Random] a=8a8e452, b=e3a156a, cin=0 => sum=6e2f9bc, cout=1
+# => PASS: expect=10110111000101111100110111100, dut={cout,sum}=10110111000101111100110111100
+# [Random] a=c128221, b=599d0aa, cin=0 => sum=1ac52cb, cout=1
+# => PASS: expect=10001101011000101001011001011, dut={cout,sum}=10001101011000101001011001011
+# [Random] a=605920f, b=330461b, cin=1 => sum=935d82b, cout=0
+# => PASS: expect=01001001101011101100000101011, dut={cout,sum}=01001001101011101100000101011
+# [Random] a=d0cc654, b=4b9144d, cin=1 => sum=1c5daa2, cout=1
+# => PASS: expect=10001110001011101101010100010, dut={cout,sum}=10001110001011101101010100010
+# [Random] a=81b4736, b=3a39e35, cin=1 => sum=bbee56c, cout=0
+# => PASS: expect=01011101111101110010101101100, dut={cout,sum}=01011101111101110010101101100
+# [Random] a=0fe37c9, b=d911644, cin=1 => sum=e8f4e0e, cout=0
+# => PASS: expect=01110100011110100111000001110, dut={cout,sum}=01110100011110100111000001110
+# [Random] a=af648c2, b=27bed01, cin=0 => sum=d7235c3, cout=0
+# => PASS: expect=01101011100100011010111000011, dut={cout,sum}=01101011100100011010111000011
+# [Random] a=59f2f1a, b=e193b2b, cin=1 => sum=3b86a46, cout=1
+# => PASS: expect=10011101110000110101001000110, dut={cout,sum}=10011101110000110101001000110
+# [Random] a=ba1e97a, b=4c66801, cin=0 => sum=068517b, cout=1
+# => PASS: expect=10000011010000101000101111011, dut={cout,sum}=10000011010000101000101111011
+# [Random] a=938fdda, b=cc18ffe, cin=0 => sum=5fa8dd8, cout=1
+# => PASS: expect=10101111110101000110111011000, dut={cout,sum}=10101111110101000110111011000
+# [Random] a=8c49f0e, b=a8a9c41, cin=0 => sum=34f3b4f, cout=1
+# => PASS: expect=10011010011110011101101001111, dut={cout,sum}=10011010011110011101101001111
+# [Random] a=beea074, b=2eb2891, cin=0 => sum=ed9c905, cout=0
+# => PASS: expect=01110110110011100100100000101, dut={cout,sum}=01110110110011100100100000101
+# [Random] a=d93d5b6, b=35168f7, cin=0 => sum=0e53ead, cout=1
+# => PASS: expect=10000111001010011111010101101, dut={cout,sum}=10000111001010011111010101101
+# [Random] a=e49481d, b=a785ab1, cin=0 => sum=8c1a2ce, cout=1
+# => PASS: expect=11000110000011010001011001110, dut={cout,sum}=11000110000011010001011001110
+# [Random] a=744d91c, b=52159dd, cin=1 => sum=c6632fa, cout=0
+# => PASS: expect=01100011001100011001011111010, dut={cout,sum}=01100011001100011001011111010
+# [Random] a=2c95fa0, b=2bd6095, cin=1 => sum=586c036, cout=0
+# => PASS: expect=00101100001101100000000110110, dut={cout,sum}=00101100001101100000000110110
+# [Random] a=a101400, b=fb869f5, cin=1 => sum=9c87df6, cout=1
+# => PASS: expect=11001110010000111110111110110, dut={cout,sum}=11001110010000111110111110110
+# [Random] a=fd9c6f2, b=b572170, cin=0 => sum=b30e862, cout=1
+# => PASS: expect=11011001100001110100001100010, dut={cout,sum}=11011001100001110100001100010
+# [Random] a=22ca3c9, b=b6f291e, cin=0 => sum=d9bcce7, cout=0
+# => PASS: expect=01101100110111100110011100111, dut={cout,sum}=01101100110111100110011100111
+# [Random] a=352392e, b=2591d71, cin=1 => sum=5ab56a0, cout=0
+# => PASS: expect=00101101010110101011010100000, dut={cout,sum}=00101101010110101011010100000
+# [Random] a=d7151c4, b=d379be7, cin=0 => sum=aa8edab, cout=1
+# => PASS: expect=11010101010001110110110101011, dut={cout,sum}=11010101010001110110110101011
+# [Random] a=5f0e72c, b=633e98e, cin=1 => sum=c24d0bb, cout=0
+# => PASS: expect=01100001001001101000010111011, dut={cout,sum}=01100001001001101000010111011
+# [Random] a=1cb6d4d, b=02fa08f, cin=0 => sum=1fb0ddc, cout=0
+# => PASS: expect=00001111110110000110111011100, dut={cout,sum}=00001111110110000110111011100
+# [Random] a=a011dd1, b=05b4322, cin=1 => sum=a5c60f4, cout=0
+# => PASS: expect=01010010111000110000011110100, dut={cout,sum}=01010010111000110000011110100
+# [Random] a=e7e5984, b=a6342a6, cin=0 => sum=8e19c2a, cout=1
+# => PASS: expect=11000111000011001110000101010, dut={cout,sum}=11000111000011001110000101010
+# [Random] a=4e1de41, b=a3cf768, cin=0 => sum=f1ed5a9, cout=0
+# => PASS: expect=01111000111101101010110101001, dut={cout,sum}=01111000111101101010110101001
+# 
+# ================================
+# ========== TEST SUMMARY ==========
+# Total test cases:    103
+# Passed          :    103
+# Failed          :      0
+# Pass rate       : 100.00%
+# ================================
+# 
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_28BIT/tb_CLA_28bit.sv(144)
+#    Time: 1116 ns  Iteration: 0  Instance: /tb_CLA_28bit
+# Saving coverage database on exit...
+# End time: 19:01:01 on Nov 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

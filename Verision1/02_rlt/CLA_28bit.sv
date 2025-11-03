@@ -22,7 +22,6 @@ generate
         .o_p    (w_p[0]),
         .o_g    (w_g[0])
     );
-    
     assign w_c[1] = w_g[0] | (w_p[0] & w_c[0]);
     for (i = 1; i < 7; i = i + 1) begin : CLA_BLOCK_GEN
         CLA_4bit CLA_4BIT_UNIT_1 (

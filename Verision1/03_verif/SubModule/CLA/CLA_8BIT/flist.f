@@ -1,0 +1,3 @@
+/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_8BIT/tb_CLA_8bit.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv

@@ -1,0 +1,2 @@
+var g_data = ["","/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_28BIT/tb_CLA_28bit.sv","/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv","/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv"];
+processSrcNamesData(g_data);

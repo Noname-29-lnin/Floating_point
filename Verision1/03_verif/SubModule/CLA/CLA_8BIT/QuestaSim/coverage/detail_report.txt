@@ -1,0 +1,254 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb_CLA_8bit/DUT/CLA_4BIT_UNIT_1
+=== Design Unit: work.CLA_4bit
+=================================================================================
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        10        14    41.66%
+
+================================Expression Details================================
+
+Expression Coverage for instance /tb_CLA_8bit/DUT/CLA_4BIT_UNIT_1 --
+
+  File /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
+
+----------------Focused Expression View-----------------
+Line       18 Item    1  ((w_g[1] | (w_p[1] & w_g[0])) | ((w_p[1] & w_p[0]) & w_c[0]))
+Expression totals: 3 of 5 input terms covered = 60.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+      w_g[0]         N  '_1' not hit             Hit '_1'
+      w_p[0]         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          7  w_g[1]_0              (~((w_p[1] & w_p[0]) & w_c[0]) && ~(w_p[1] & w_g[0]))
+  Row   2:          3  w_g[1]_1              (~((w_p[1] & w_p[0]) & w_c[0]) && ~(w_p[1] & w_g[0]))
+  Row   3:          5  w_p[1]_0              (~w_g[1] && w_g[0]), (~(w_g[1] | (w_p[1] & w_g[0])) && w_c[0] && w_p[0])
+  Row   4:          3  w_p[1]_1              (~((w_p[1] & w_p[0]) & w_c[0]) && ~w_g[1] && w_g[0]), (~(w_g[1] | (w_p[1] & w_g[0])) && w_c[0] && w_p[0])
+  Row   5:          3  w_g[0]_0              (~((w_p[1] & w_p[0]) & w_c[0]) && ~w_g[1] && w_p[1])
+  Row   6:    ***0***  w_g[0]_1              (~((w_p[1] & w_p[0]) & w_c[0]) && ~w_g[1] && w_p[1])
+  Row   7:    ***0***  w_p[0]_0              (~(w_g[1] | (w_p[1] & w_g[0])) && w_c[0] && w_p[1])
+  Row   8:          3  w_p[0]_1              (~(w_g[1] | (w_p[1] & w_g[0])) && w_c[0] && w_p[1])
+  Row   9:          3  w_c[0]_0              (~(w_g[1] | (w_p[1] & w_g[0])) && (w_p[1] & w_p[0]))
+ Row   10:          3  w_c[0]_1              (~(w_g[1] | (w_p[1] & w_g[0])) && (w_p[1] & w_p[0]))
+
+----------------Focused Expression View-----------------
+Line       19 Item    1  (((w_g[2] | (w_p[2] & w_g[1])) | ((w_p[2] & w_p[1]) & w_g[0])) | (((w_p[2] & w_p[1]) & w_p[0]) & w_c[0]))
+Expression totals: 2 of 7 input terms covered = 28.57%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+      w_p[2]         N  '_0' not hit             Hit '_0'
+      w_g[1]         N  '_1' not hit             Hit '_1'
+      w_p[1]         N  '_0' not hit             Hit '_0'
+      w_g[0]         N  '_1' not hit             Hit '_1'
+      w_p[0]         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          7  w_g[2]_0              (~(((w_p[2] & w_p[1]) & w_p[0]) & w_c[0]) && ~((w_p[2] & w_p[1]) & w_g[0]) && ~(w_p[2] & w_g[1]))
+  Row   2:          3  w_g[2]_1              (~(((w_p[2] & w_p[1]) & w_p[0]) & w_c[0]) && ~((w_p[2] & w_p[1]) & w_g[0]) && ~(w_p[2] & w_g[1]))
+  Row   3:    ***0***  w_p[2]_0              (~w_g[2] && w_g[1]), (~(w_g[2] | (w_p[2] & w_g[1])) && w_g[0] && w_p[1]), (~((w_g[2] | (w_p[2] & w_g[1])) | ((w_p[2] & w_p[1]) & w_g[0])) && w_c[0] && w_p[0] && w_p[1])
+  Row   4:          3  w_p[2]_1              (~(((w_p[2] & w_p[1]) & w_p[0]) & w_c[0]) && ~((w_p[2] & w_p[1]) & w_g[0]) && ~w_g[2] && w_g[1]), (~(((w_p[2] & w_p[1]) & w_p[0]) & w_c[0]) && ~(w_g[2] | (w_p[2] & w_g[1])) && w_g[0] && w_p[1]), (~((w_g[2] | (w_p[2] & w_g[1])) | ((w_p[2] & w_p[1]) & w_g[0])) && w_c[0] && w_p[0] && w_p[1])
+  Row   5:          3  w_g[1]_0              (~(((w_p[2] & w_p[1]) & w_p[0]) & w_c[0]) && ~((w_p[2] & w_p[1]) & w_g[0]) && ~w_g[2] && w_p[2])
+  Row   6:    ***0***  w_g[1]_1              (~(((w_p[2] & w_p[1]) & w_p[0]) & w_c[0]) && ~((w_p[2] & w_p[1]) & w_g[0]) && ~w_g[2] && w_p[2])
+  Row   7:    ***0***  w_p[1]_0              (~(w_g[2] | (w_p[2] & w_g[1])) && w_g[0] && w_p[2]), (~((w_g[2] | (w_p[2] & w_g[1])) | ((w_p[2] & w_p[1]) & w_g[0])) && w_c[0] && w_p[0] && w_p[2])
+  Row   8:          3  w_p[1]_1              (~(((w_p[2] & w_p[1]) & w_p[0]) & w_c[0]) && ~(w_g[2] | (w_p[2] & w_g[1])) && w_g[0] && w_p[2]), (~((w_g[2] | (w_p[2] & w_g[1])) | ((w_p[2] & w_p[1]) & w_g[0])) && w_c[0] && w_p[0] && w_p[2])
+  Row   9:          3  w_g[0]_0              (~(((w_p[2] & w_p[1]) & w_p[0]) & w_c[0]) && ~(w_g[2] | (w_p[2] & w_g[1])) && (w_p[2] & w_p[1]))
+ Row   10:    ***0***  w_g[0]_1              (~(((w_p[2] & w_p[1]) & w_p[0]) & w_c[0]) && ~(w_g[2] | (w_p[2] & w_g[1])) && (w_p[2] & w_p[1]))
+ Row   11:    ***0***  w_p[0]_0              (~((w_g[2] | (w_p[2] & w_g[1])) | ((w_p[2] & w_p[1]) & w_g[0])) && w_c[0] && (w_p[2] & w_p[1]))
+ Row   12:          3  w_p[0]_1              (~((w_g[2] | (w_p[2] & w_g[1])) | ((w_p[2] & w_p[1]) & w_g[0])) && w_c[0] && (w_p[2] & w_p[1]))
+ Row   13:          3  w_c[0]_0              (~((w_g[2] | (w_p[2] & w_g[1])) | ((w_p[2] & w_p[1]) & w_g[0])) && ((w_p[2] & w_p[1]) & w_p[0]))
+ Row   14:          3  w_c[0]_1              (~((w_g[2] | (w_p[2] & w_g[1])) | ((w_p[2] & w_p[1]) & w_g[0])) && ((w_p[2] & w_p[1]) & w_p[0]))
+
+----------------Focused Expression View-----------------
+Line       24 Item    1  ((((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) | ((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]))
+Expression totals: 2 of 9 input terms covered = 22.22%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+      w_p[3]         N  '_0' not hit             Hit '_0'
+      w_g[2]         N  '_1' not hit             Hit '_1'
+      w_p[2]         N  '_0' not hit             Hit '_0'
+      w_g[1]         N  '_1' not hit             Hit '_1'
+      w_p[1]         N  '_0' not hit             Hit '_0'
+      w_g[0]         N  '_1' not hit             Hit '_1'
+      w_p[0]         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          7  w_g[3]_0              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~(((w_p[3] & w_p[2]) & w_p[1]) & w_g[0]) && ~((w_p[3] & w_p[2]) & w_g[1]) && ~(w_p[3] & w_g[2]))
+  Row   2:          3  w_g[3]_1              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~(((w_p[3] & w_p[2]) & w_p[1]) & w_g[0]) && ~((w_p[3] & w_p[2]) & w_g[1]) && ~(w_p[3] & w_g[2]))
+  Row   3:    ***0***  w_p[3]_0              (~w_g[3] && w_g[2]), (~(w_g[3] | (w_p[3] & w_g[2])) && w_g[1] && w_p[2]), (~((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) && w_g[0] && w_p[1] && w_p[2]), (~(((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) && w_c[0] && w_p[0] && w_p[1] && w_p[2])
+  Row   4:          3  w_p[3]_1              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~(((w_p[3] & w_p[2]) & w_p[1]) & w_g[0]) && ~((w_p[3] & w_p[2]) & w_g[1]) && ~w_g[3] && w_g[2]), (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~(((w_p[3] & w_p[2]) & w_p[1]) & w_g[0]) && ~(w_g[3] | (w_p[3] & w_g[2])) && w_g[1] && w_p[2]), (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) && w_g[0] && w_p[1] && w_p[2]), (~(((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) && w_c[0] && w_p[0] && w_p[1] && w_p[2])
+  Row   5:          3  w_g[2]_0              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~(((w_p[3] & w_p[2]) & w_p[1]) & w_g[0]) && ~((w_p[3] & w_p[2]) & w_g[1]) && ~w_g[3] && w_p[3])
+  Row   6:    ***0***  w_g[2]_1              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~(((w_p[3] & w_p[2]) & w_p[1]) & w_g[0]) && ~((w_p[3] & w_p[2]) & w_g[1]) && ~w_g[3] && w_p[3])
+  Row   7:    ***0***  w_p[2]_0              (~(w_g[3] | (w_p[3] & w_g[2])) && w_g[1] && w_p[3]), (~((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) && w_g[0] && w_p[1] && w_p[3]), (~(((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) && w_c[0] && w_p[0] && w_p[1] && w_p[3])
+  Row   8:          3  w_p[2]_1              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~(((w_p[3] & w_p[2]) & w_p[1]) & w_g[0]) && ~(w_g[3] | (w_p[3] & w_g[2])) && w_g[1] && w_p[3]), (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) && w_g[0] && w_p[1] && w_p[3]), (~(((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) && w_c[0] && w_p[0] && w_p[1] && w_p[3])
+  Row   9:          3  w_g[1]_0              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~(((w_p[3] & w_p[2]) & w_p[1]) & w_g[0]) && ~(w_g[3] | (w_p[3] & w_g[2])) && (w_p[3] & w_p[2]))
+ Row   10:    ***0***  w_g[1]_1              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~(((w_p[3] & w_p[2]) & w_p[1]) & w_g[0]) && ~(w_g[3] | (w_p[3] & w_g[2])) && (w_p[3] & w_p[2]))
+ Row   11:    ***0***  w_p[1]_0              (~((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) && w_g[0] && (w_p[3] & w_p[2])), (~(((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) && w_c[0] && w_p[0] && (w_p[3] & w_p[2]))
+ Row   12:          3  w_p[1]_1              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) && w_g[0] && (w_p[3] & w_p[2])), (~(((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) && w_c[0] && w_p[0] && (w_p[3] & w_p[2]))
+ Row   13:          3  w_g[0]_0              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) && ((w_p[3] & w_p[2]) & w_p[1]))
+ Row   14:    ***0***  w_g[0]_1              (~((((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]) & w_c[0]) && ~((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) && ((w_p[3] & w_p[2]) & w_p[1]))
+ Row   15:    ***0***  w_p[0]_0              (~(((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) && w_c[0] && ((w_p[3] & w_p[2]) & w_p[1]))
+ Row   16:          3  w_p[0]_1              (~(((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) && w_c[0] && ((w_p[3] & w_p[2]) & w_p[1]))
+ Row   17:          3  w_c[0]_0              (~(((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) && (((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]))
+ Row   18:          3  w_c[0]_1              (~(((w_g[3] | (w_p[3] & w_g[2])) | ((w_p[3] & w_p[2]) & w_g[1])) | (((w_p[3] & w_p[2]) & w_p[1]) & w_g[0])) && (((w_p[3] & w_p[2]) & w_p[1]) & w_p[0]))
+
+
+
+=================================================================================
+=== Instance: /tb_CLA_8bit/DUT
+=== Design Unit: work.CLA_8bit
+=================================================================================
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         5         3    62.50%
+
+================================Expression Details================================
+
+Expression Coverage for instance /tb_CLA_8bit/DUT --
+
+  File /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv
+
+----------------Focused Expression View-----------------
+Line       33 Item    1  (w_G[1] | (w_P[1] & (w_G[0] | (w_P[0] & i_carry))))
+Expression totals: 2 of 5 input terms covered = 40.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+      w_G[0]         N  No hits                  Hit '_0' and '_1'
+      w_P[0]         N  No hits                  Hit '_0' and '_1'
+     i_carry         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          7  w_G[1]_0              ~(w_P[1] & (w_G[0] | (w_P[0] & i_carry)))
+  Row   2:          3  w_G[1]_1              ~(w_P[1] & (w_G[0] | (w_P[0] & i_carry)))
+  Row   3:          7  w_P[1]_0              (~w_G[1] && (w_G[0] | (w_P[0] & i_carry)))
+  Row   4:          3  w_P[1]_1              (~w_G[1] && (w_G[0] | (w_P[0] & i_carry)))
+  Row   5:    ***0***  w_G[0]_0              (~w_G[1] && w_P[1] && ~(w_P[0] & i_carry))
+  Row   6:    ***0***  w_G[0]_1              (~w_G[1] && w_P[1] && ~(w_P[0] & i_carry))
+  Row   7:    ***0***  w_P[0]_0              (~w_G[1] && w_P[1] && ~w_G[0] && i_carry)
+  Row   8:    ***0***  w_P[0]_1              (~w_G[1] && w_P[1] && ~w_G[0] && i_carry)
+  Row   9:    ***0***  i_carry_0             (~w_G[1] && w_P[1] && ~w_G[0] && w_P[0])
+ Row   10:    ***0***  i_carry_1             (~w_G[1] && w_P[1] && ~w_G[0] && w_P[0])
+
+
+
+=================================================================================
+=== Instance: /tb_CLA_8bit
+=== Design Unit: work.tb_CLA_8bit
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         2         2    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /tb_CLA_8bit
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_8BIT/tb_CLA_8bit.sv
+------------------------------------IF Branch------------------------------------
+    84                                       200     Count coming in to IF
+    84              1                        200                 if (w_expect == {o_carry, o_sum}) test_pass++;
+    84              2                    ***0***                 if (w_expect == {o_carry, o_sum}) test_pass++;
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    86                                       200     Count coming in to IF
+    86              1                        200         @(posedge i_clk);
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         0         2     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /tb_CLA_8bit --
+
+  File /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_8BIT/tb_CLA_8bit.sv
+----------------Focused Condition View-------------------
+Line       84 Item    1  (w_expect == {o_carry,o_sum})
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                     Input Term   Covered  Reason for no coverage   Hint
+                    -----------  --------  -----------------------  --------------
+  (w_expect == {o_carry,o_sum})         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                       Non-masking condition(s)      
+ ---------  ---------  --------------------             -------------------------     
+  Row   1:    ***0***  (w_expect == {o_carry,o_sum})_0  -                             
+  Row   2:          2  (w_expect == {o_carry,o_sum})_1  -                             
+
+----------------Focused Condition View-------------------
+Line       86 Item    1  (w_expect == {o_carry,o_sum})
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                     Input Term   Covered  Reason for no coverage   Hint
+                    -----------  --------  -----------------------  --------------
+  (w_expect == {o_carry,o_sum})         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                       Non-masking condition(s)      
+ ---------  ---------  --------------------             -------------------------     
+  Row   1:    ***0***  (w_expect == {o_carry,o_sum})_0  -                             
+  Row   2:          2  (w_expect == {o_carry,o_sum})_1  -                             
+
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        202        99       103    49.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /tb_CLA_8bit --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                           i_carry           7           7      100.00 
+                                             i_clk           7           7      100.00 
+                                     i_data_a[0-3]           7           7      100.00 
+                                       i_data_a[4]           5           5      100.00 
+                                     i_data_a[5-7]           3           3      100.00 
+                                     i_data_b[0-3]           7           7      100.00 
+                                       i_data_b[4]           5           5      100.00 
+                                     i_data_b[5-7]           3           3      100.00 
+                                           i_rst_n           0           7       50.00 
+                                           o_carry           3           3      100.00 
+                                        o_sum[0-4]           7           7      100.00 
+                                          o_sum[5]           5           5      100.00 
+                                        o_sum[6-7]           3           3      100.00 
+                                   test_count[0-5]           7           7      100.00 
+                                     test_count[6]           0           7       50.00 
+                                  test_count[7-31]           0           0        0.00 
+                                    test_pass[0-5]           7           7      100.00 
+                                      test_pass[6]           0           7       50.00 
+                                   test_pass[7-31]           0           0        0.00 
+                                     w_expect[0-4]           7           7      100.00 
+                                       w_expect[5]           5           5      100.00 
+                                     w_expect[6-8]           1           1      100.00 
+
+Total Node Count     =        101 
+Toggled Node Count   =         48 
+Untoggled Node Count =         53 
+
+Toggle Coverage      =      49.00% (99 of 202 bins)
+
+
+Total Coverage By Instance (filtered view): 36.47%
+

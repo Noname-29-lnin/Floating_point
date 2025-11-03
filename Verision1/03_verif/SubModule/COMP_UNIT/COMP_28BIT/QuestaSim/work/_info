@@ -1,0 +1,169 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/Questasim
+T_opt
+!s110 1762172855
+VWnLXiIkVgC4mEd]P@lZmi2
+04 13 4 work tb_COMP_28bit fast 0
+=1-000ae431a4f1-69089fb7-44afe-b623
+Z3 !s102 +cover=bcesft
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U23 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work ./../SubModule/COMP_UNIT/COMP_28BIT/QuestaSim/work +cover=bcesft
+Z4 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vCOMP_28bit
+Z5 2/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/COMP_UNIT/COMP_28BIT/tb_COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv
+Z6 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z7 !s110 1762172854
+!i10b 1
+!s100 a`@f31h@LCDIVo5QTii9I3
+I@L<aQFGe<zY_2H0U>MmH?0
+S1
+R2
+w1762172847
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv
+!i122 3
+L0 1 72
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z10 !s108 1762172854.000000
+Z11 !s107 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/COMP_UNIT/COMP_28BIT/tb_COMP_28bit.sv|
+Z12 !s90 +cover=bcesft|-f|./../SubModule/COMP_UNIT/COMP_28BIT/flist.f|
+!i113 0
+R3
+Z13 o+cover=bcesft -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@c@o@m@p_28bit
+vCOMP_2bit
+R5
+R6
+R7
+!i10b 1
+!s100 d4iFLO4YodoMWf;_G@:982
+IVKG`0Y88X_ZMJJg?c240S0
+S1
+R2
+Z14 w1761871637
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv
+!i122 3
+L0 1 11
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R3
+R13
+R4
+n@c@o@m@p_2bit
+vCOMP_4bit
+R5
+R6
+R7
+!i10b 1
+!s100 dj@NkHh87k3Z2>3iEJ^Ai3
+IgQa2>]i5UP]CKGba93CM]3
+S1
+R2
+R14
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv
+!i122 3
+Z15 L0 1 26
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R3
+R13
+R4
+n@c@o@m@p_4bit
+vCOMP_8bit
+2/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/COMP_UNIT/COMP_28BIT/tb_COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv
+R6
+!s110 1762172087
+!i10b 1
+!s100 e@Ji`hT;WR=PgJ8N>_mX`1
+I@HcoISjb_BB3@;N;BlgNn3
+S1
+R2
+R14
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv
+!i122 1
+R15
+R8
+R9
+r1
+!s85 0
+31
+!s108 1762172087.000000
+!s107 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/COMP_UNIT/COMP_28BIT/tb_COMP_28bit.sv|
+R12
+!i113 0
+R3
+R13
+R4
+n@c@o@m@p_8bit
+vtb_COMP_28bit
+R5
+R6
+R7
+!i10b 1
+!s100 Uf2L4]5UX:n:iVNFWF3Na1
+I3nTH:TnQ38gbGHTFSY]@n2
+S1
+R2
+w1762172082
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/COMP_UNIT/COMP_28BIT/tb_COMP_28bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/COMP_UNIT/COMP_28BIT/tb_COMP_28bit.sv
+!i122 3
+L0 3 90
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R3
+R13
+R4
+ntb_@c@o@m@p_28bit

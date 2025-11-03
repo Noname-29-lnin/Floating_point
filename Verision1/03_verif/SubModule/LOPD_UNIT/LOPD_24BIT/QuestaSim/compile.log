@@ -1,0 +1,13 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 22:39:36 on Nov 03,2025
+vlog -f ./../SubModule/LOPD_UNIT/LOPD_24BIT/flist.f 
+-- Compiling module tb_LOPD_24bit
+-- Compiling module LOPD_4bit
+-- Compiling module LOPD_8bit
+-- Compiling module LOPD_16bit
+-- Compiling module LOPD_24bit
+
+Top level modules:
+	tb_LOPD_24bit
+End time: 22:39:36 on Nov 03,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

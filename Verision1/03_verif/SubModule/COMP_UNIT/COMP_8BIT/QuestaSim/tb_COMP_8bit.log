@@ -1,0 +1,242 @@
+# vsim -coverage -lib ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/work -l ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.log -voptargs="+cover=bcesft" -assertdebug -c tb_COMP_8bit -wlf ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.wlf -do "coverage save -onexit ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.ucdb; cd ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim; log -r /*; run -all;" 
+# Start time: 19:09:49 on Nov 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_COMP_8bit(fast)
+# coverage save -onexit ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.ucdb
+#  cd ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# 
+# === START 8-bit COMPARATOR TEST ===
+# 
+# [Random] a=164 (10100100), b=198 (11000110) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=158 (10011110), b=190 (10111110) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=17 (00010001), b=69 (01000101) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=177 (10110001), b=121 (01111001) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=56 (00111000), b=43 (00101011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=0 (00000000), b=139 (10001011) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=26 (00011010), b=247 (11110111) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=46 (00101110), b=56 (00111000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=153 (10011001), b=247 (11110111) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=85 (01010101), b=11 (00001011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=201 (11001001), b=233 (11101001) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=170 (10101010), b=13 (00001101) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=143 (10001111), b=87 (01010111) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=132 (10000100), b=146 (10010010) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=28 (00011100), b=81 (01010001) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=174 (10101110), b=22 (00010110) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=52 (00110100), b=28 (00011100) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=215 (11010111), b=234 (11101010) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=24 (00011000), b=72 (01001000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=127 (01111111), b=33 (00100001) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=89 (01011001), b=199 (11000111) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=234 (11101010), b=59 (00111011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=121 (01111001), b=7 (00000111) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=189 (10111101), b=224 (11100000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=102 (01100110), b=156 (10011100) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=57 (00111001), b=157 (10011101) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=230 (11100110), b=75 (01001011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=40 (00101000), b=0 (00000000) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=78 (01001110), b=105 (01101001) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=105 (01101001), b=112 (01110000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=12 (00001100), b=159 (10011111) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=73 (01001001), b=190 (10111110) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=21 (00010101), b=109 (01101101) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=127 (01111111), b=132 (10000100) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=30 (00011110), b=104 (01101000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=79 (01001111), b=142 (10001110) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=17 (00010001), b=180 (10110100) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=40 (00101000), b=23 (00010111) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=119 (01110111), b=67 (01000011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=178 (10110010), b=157 (10011101) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=0 (00000000), b=161 (10100001) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=5 (00000101), b=165 (10100101) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=169 (10101001), b=42 (00101010) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=220 (11011100), b=59 (00111011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=222 (11011110), b=191 (10111111) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=225 (11100001), b=182 (10110110) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=102 (01100110), b=105 (01101001) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=95 (01011111), b=76 (01001100) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=220 (11011100), b=0 (00000000) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=167 (10100111), b=83 (01010011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=198 (11000110), b=118 (01110110) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=112 (01110000), b=248 (11111000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=50 (00110010), b=213 (11010101) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=9 (00001001), b=104 (01101000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=25 (00011001), b=220 (11011100) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=143 (10001111), b=199 (11000111) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=29 (00011101), b=238 (11101110) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=242 (11110010), b=99 (01100011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=32 (00100000), b=197 (11000101) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=210 (11010010), b=107 (01101011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=8 (00001000), b=94 (01011110) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=47 (00101111), b=128 (10000000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=150 (10010110), b=191 (10111111) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=60 (00111100), b=80 (01010000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=56 (00111000), b=9 (00001001) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=37 (00100101), b=33 (00100001) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=37 (00100101), b=111 (01101111) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=69 (01000101), b=179 (10110011) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=78 (01001110), b=216 (11011000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=101 (01100101), b=32 (00100000) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=29 (00011101), b=55 (00110111) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=115 (01110011), b=30 (00011110) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=111 (01101111), b=252 (11111100) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=75 (01001011), b=187 (10111011) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=117 (01110101), b=66 (01000010) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=28 (00011100), b=88 (01011000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=33 (00100001), b=250 (11111010) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=220 (11011100), b=52 (00110100) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=189 (10111101), b=168 (10101000) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=55 (00110111), b=105 (01101001) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=198 (11000110), b=163 (10100011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=247 (11110111), b=93 (01011101) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=106 (01101010), b=194 (11000010) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=61 (00111101), b=244 (11110100) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=161 (10100001), b=11 (00001011) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=254 (11111110), b=104 (01101000) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=127 (01111111), b=7 (00000111) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=198 (11000110), b=175 (10101111) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=4 (00000100), b=216 (11011000) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=190 (10111110), b=58 (00111010) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=200 (11001000), b=158 (10011110) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=7 (00000111), b=214 (11010110) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=16 (00010000), b=219 (11011011) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=162 (10100010), b=5 (00000101) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=227 (11100011), b=80 (01010000) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=231 (11100111), b=152 (10011000) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=28 (00011100), b=162 (10100010) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=79 (01001111), b=76 (01001100) => o_less=0 
+# => PASS: expect=0, dut=0
+# [Random] a=50 (00110010), b=226 (11100010) => o_less=1 
+# => PASS: expect=1, dut=1
+# [Random] a=91 (01011011), b=246 (11110110) => o_less=1 
+# => PASS: expect=1, dut=1
+# 
+# ================================
+# ========== TEST SUMMARY ==========
+# Total test cases:    100
+# Passed          :    100
+# Failed          :      0
+# Pass rate       : 100.00%
+# ================================
+# 
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/COMP_UNIT/COMP_8BIT/tb_COMP_8bit.sv(90)
+#    Time: 1006 ns  Iteration: 0  Instance: /tb_COMP_8bit
+# Saving coverage database on exit...
+# End time: 19:09:50 on Nov 03,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

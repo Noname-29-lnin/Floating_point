@@ -12,19 +12,15 @@ module CLA_4bit (
     assign w_g = a & b;
     assign w_p = a ^ b;
 
-    always_comb begin
-        w_c[0] = cin;
-        w_c[1] = w_g[0] | (w_p[0] & w_c[0]);
-        w_c[2] = w_g[1] | (w_p[1] & w_g[0]) | (w_p[1] & w_p[0] & w_c[0]);
-        w_c[3] = w_g[2] | (w_p[2] & w_g[1]) | (w_p[2] & w_p[1] & w_g[0])
-                           | (w_p[2] & w_p[1] & w_p[0] & w_c[0]);
-    end
-
+    // always_comb begin
+        assign w_c[0] = cin;
+        assign w_c[1] = w_g[0] | (w_p[0] & w_c[0]);
+        assign w_c[2] = w_g[1] | (w_p[1] & w_g[0]) | (w_p[1] & w_p[0] & w_c[0]);
+        assign w_c[3] = w_g[2] | (w_p[2] & w_g[1]) | (w_p[2] & w_p[1] & w_g[0]) | (w_p[2] & w_p[1] & w_p[0] & w_c[0]);
+    // end
+    
     assign sum = w_p ^ w_c;
-
     assign o_p = &w_p;
-    assign o_g = w_g[3] | (w_p[3] & w_g[2])
-                        | (w_p[3] & w_p[2] & w_g[1])
-                        | (w_p[3] & w_p[2] & w_p[1] & w_g[0]);
+    assign o_g = w_g[3] | (w_p[3] & w_g[2]) | (w_p[3] & w_p[2] & w_g[1]) | (w_p[3] & w_p[2] & w_p[1] & w_g[0]) | (w_p[3] & w_p[2] & w_p[1] & w_p[0] & w_c[0]);
 
 endmodule

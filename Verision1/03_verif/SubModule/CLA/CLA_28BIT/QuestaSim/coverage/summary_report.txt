@@ -1,0 +1,96 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /tb_CLA_28bit/DUT/CLA_BLOCK_GEN[6]/CLA_4BIT_UNIT_1
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       8         8         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_CLA_28bit/DUT/CLA_BLOCK_GEN[5]/CLA_4BIT_UNIT_1
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       8         8         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_CLA_28bit/DUT/CLA_BLOCK_GEN[4]/CLA_4BIT_UNIT_1
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       8         8         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_CLA_28bit/DUT/CLA_BLOCK_GEN[3]/CLA_4BIT_UNIT_1
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       8         8         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_CLA_28bit/DUT/CLA_BLOCK_GEN[2]/CLA_4BIT_UNIT_1
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       8         8         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_CLA_28bit/DUT/CLA_BLOCK_GEN[1]/CLA_4BIT_UNIT_1
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        23         1    95.83%
+    Statements                       8         8         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_CLA_28bit/DUT/CLA_4BIT_UNIT_0
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       8         8         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_CLA_28bit/DUT
+=== Design Unit: work.CLA_28bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     21        21         0   100.00%
+    Statements                       7         7         0   100.00%
+    Toggles                        102       102         0   100.00%
+
+=================================================================================
+=== Instance: /tb_CLA_28bit
+=== Design Unit: work.tb_CLA_28bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        16         8         8    50.00%
+    Conditions                       8         0         8     0.00%
+    Statements                      67        67         0   100.00%
+    Toggles                        362       259       103    71.54%
+
+
+Total Coverage By Instance (filtered view): 67.01%
+

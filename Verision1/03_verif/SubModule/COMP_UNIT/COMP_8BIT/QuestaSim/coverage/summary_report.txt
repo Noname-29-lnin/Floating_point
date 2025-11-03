@@ -1,0 +1,87 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /tb_COMP_8bit/DUT/u_low/u_low
+=== Design Unit: work.COMP_2bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      4         4         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_COMP_8bit/DUT/u_low/u_high
+=== Design Unit: work.COMP_2bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      4         4         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_COMP_8bit/DUT/u_low
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      5         5         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                         12        12         0   100.00%
+
+=================================================================================
+=== Instance: /tb_COMP_8bit/DUT/u_high/u_low
+=== Design Unit: work.COMP_2bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      4         4         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_COMP_8bit/DUT/u_high/u_high
+=== Design Unit: work.COMP_2bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      4         4         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_COMP_8bit/DUT/u_high
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      5         5         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                         12        12         0   100.00%
+
+=================================================================================
+=== Instance: /tb_COMP_8bit/DUT
+=== Design Unit: work.COMP_8bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      3         3         0   100.00%
+    Statements                       1         1         0   100.00%
+    Toggles                         10        10         0   100.00%
+
+=================================================================================
+=== Instance: /tb_COMP_8bit
+=== Design Unit: work.tb_COMP_8bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         2         2    50.00%
+    Conditions                       2         0         2     0.00%
+    Expressions                      1         1         0   100.00%
+    Statements                      28        28         0   100.00%
+    Toggles                        166        64       102    38.55%
+
+
+Total Coverage By Instance (filtered view): 60.55%
+

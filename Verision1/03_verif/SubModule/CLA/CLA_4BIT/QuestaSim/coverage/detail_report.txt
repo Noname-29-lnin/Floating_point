@@ -1,0 +1,104 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb_CLA_4bit
+=== Design Unit: work.tb_CLA_4bit
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         2         2    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /tb_CLA_4bit
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_4BIT/tb_CLA_4bit.sv
+------------------------------------IF Branch------------------------------------
+    87                                       100     Count coming in to IF
+    87              1                        100                 $display("=> %s: expect=%05b, dut={o_g,sum}=%05b", (w_expect == {o_g,sum}) ? "PASS" : "FAIL", w_expect, {o_g,sum});
+    87              2                    ***0***                 $display("=> %s: expect=%05b, dut={o_g,sum}=%05b", (w_expect == {o_g,sum}) ? "PASS" : "FAIL", w_expect, {o_g,sum});
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    89                                       100     Count coming in to IF
+    89              1                        100                 if (w_expect == {o_g,sum}) test_pass++;
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         0         2     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /tb_CLA_4bit --
+
+  File /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_4BIT/tb_CLA_4bit.sv
+----------------Focused Condition View-------------------
+Line       87 Item    1  (w_expect == {o_g,sum})
+Condition totals: 0 of 1 input term covered = 0.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+  (w_expect == {o_g,sum})         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:    ***0***  (w_expect == {o_g,sum})_0  -                             
+  Row   2:          1  (w_expect == {o_g,sum})_1  -                             
+
+----------------Focused Condition View-------------------
+Line       89 Item    1  (w_expect == {o_g,sum})
+Condition totals: 0 of 1 input term covered = 0.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+  (w_expect == {o_g,sum})         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:    ***0***  (w_expect == {o_g,sum})_0  -                             
+  Row   2:          1  (w_expect == {o_g,sum})_1  -                             
+
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        172        69       103    40.11%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /tb_CLA_4bit --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                            a[0-3]           1           1      100.00 
+                                            b[0-3]           1           1      100.00 
+                                               cin           1           1      100.00 
+                                             i_clk           1           1      100.00 
+                                           i_rst_n           0           1       50.00 
+                                               o_g           1           1      100.00 
+                                               o_p           1           1      100.00 
+                                          sum[0-3]           1           1      100.00 
+                                   test_count[0-5]           1           1      100.00 
+                                     test_count[6]           0           1       50.00 
+                                  test_count[7-31]           0           0        0.00 
+                                    test_pass[0-5]           1           1      100.00 
+                                      test_pass[6]           0           1       50.00 
+                                   test_pass[7-31]           0           0        0.00 
+                                     w_expect[0-4]           1           1      100.00 
+
+Total Node Count     =         86 
+Toggled Node Count   =         33 
+Untoggled Node Count =         53 
+
+Toggle Coverage      =      40.11% (69 of 172 bins)
+
+
+Total Coverage By Instance (filtered view): 30.03%
+
