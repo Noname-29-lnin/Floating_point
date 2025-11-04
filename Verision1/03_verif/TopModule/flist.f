@@ -17,6 +17,7 @@
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SIGN_unit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv

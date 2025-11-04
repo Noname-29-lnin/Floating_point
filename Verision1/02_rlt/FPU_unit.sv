@@ -55,6 +55,7 @@ logic [7:0] w_EXP_ADJUST_result;
 
 logic [27:0] w_NORMALIZATION_man;
 logic [23:0] w_ROUNDING_man;
+logic        w_ROUNDING_ov_flow;
 ////////////////////////////////////////////////////////////////
 // Tim gia tri khac nnau cua 2 exponent
 ////////////////////////////////////////////////////////////////
@@ -127,6 +128,13 @@ MAN_swap #(
     .o_man_max          (w_MAN_PRE_SWAP_BY_MAN_max),
     .o_man_min          (w_MAN_PRE_SWAP_BY_MAN_min)
 );
+SIGN_unit SIGN_OUT(
+    .i_add_sub       (i_add_sub),
+    .i_comp_man      (w_MAN_COMP_28BIT_less),
+    .i_sign_man_a    (w_MAN_PRE_SWAP_BY_MAN_sign_max),
+    .i_sign_man_b    (w_MAN_PRE_SWAP_BY_MAN_sign_min),
+    .o_sign_s        (w_sign_result) 
+);
 
 MAN_ALU #(
     .NUM_OP         (NUM_OP),
@@ -154,7 +162,7 @@ EXP_adjust #(
     .SIZE_EXP       (8),
     .SIZE_LOPD      (8)      
 ) EXP_ADJUST_UNIT (
-    .i_overflow         (w_MAN_ALU_overflow),
+    .i_overflow         (w_MAN_ALU_overflow | w_ROUNDING_ov_flow),
     .i_underflow        (w_MAN_ALU_man[27]),
     .i_zero_flag        (w_LOPD_24BIT_zero_flag),
     .i_lopd_value       ({3'b0, w_LOPD_24BIT_one_position}),
@@ -178,18 +186,19 @@ ROUNDING_unit #(
     .SIZE_MAN_RESULT(24)
 ) ROUNDING_UNIT (
     .i_man              (w_NORMALIZATION_man),
-    .o_man_result       (w_ROUNDING_man)
+    .o_man_result       (w_ROUNDING_man),
+    .o_ov_flow          (w_ROUNDING_ov_flow)
 );
 
 ////////////////////////////////////////////////////////////////
 // Output 
 ////////////////////////////////////////////////////////////////
-assign w_sign_result        = w_MAN_PRE_SWAP_BY_MAN_sign_max;
+// assign w_sign_result        = w_MAN_PRE_SWAP_BY_MAN_sign_max;
 assign w_exponent_result    = w_EXP_ADJUST_result;
 assign w_mantissa_result    = w_ROUNDING_man;
 
 assign o_32_s = {w_sign_result, w_exponent_result, w_mantissa_result[22:0]};
-assign o_ov_flag = w_MAN_ALU_overflow;
+assign o_ov_flag = w_MAN_ALU_overflow | w_ROUNDING_ov_flow;
 assign o_un_flag = w_MAN_ALU_man[27];
 
 endmodule

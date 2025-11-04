@@ -139,7 +139,8 @@ initial begin
     TestCase_Display_result("INT", "INT (int & -inf)", 32'h7f800000, 32'hff800000);
     TestCase_Display_result("DIRECLY", "NORMAL (5.5 & 2.2)", 32'h40b00000, 32'h400ccccd);
     TestCase_Display_result("DIRECLY", "NORMAL (-5.5 & 2.2)", 32'hc0b00000, 32'h400ccccd);
-    TestCase_Display_result("DIRECLY", "NORMAL (5.5 & -2.2)", 32'h40b00000, 32'hc00ccccd);
+    TestCase_Display_result("DIRECLY", "NORMAL (-5.5 & -5.5)", 32'hc0b00000, 32'hc0b00000);
+    TestCase_Display_result("DIRECLY", "ROUNDING SPECITIAL", 32'hc07fffff, 32'hc1f00000);
     repeat(2**SIZE_ADDR) begin
         TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
         @(posedge i_clk);

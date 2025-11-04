@@ -27,21 +27,8 @@ tb_FPU_unit:/tb_FPU_unit/i_32_a \
 tb_FPU_unit:/tb_FPU_unit/i_32_b \
 tb_FPU_unit:/tb_FPU_unit/o_32_s \
 tb_FPU_unit:/tb_FPU_unit/o_ov_flow \
-tb_FPU_unit:/tb_FPU_unit/o_un_flow \
-tb_FPU_unit:/tb_FPU_unit/w_i_addr \
-tb_FPU_unit:/tb_FPU_unit/w_o_data_rom_a \
-tb_FPU_unit:/tb_FPU_unit/w_o_data_rom_b
+tb_FPU_unit:/tb_FPU_unit/o_un_flow
 add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_overflow \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_underflow \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_zero_flag \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_lopd_value \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_exp_value \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/o_exp_result
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/o_man_alu \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/o_overflow
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/LOPD_24BIT_UNIT/i_data \
-tb_FPU_unit:/tb_FPU_unit/DUT/LOPD_24BIT_UNIT/o_one_position \
-tb_FPU_unit:/tb_FPU_unit/DUT/LOPD_24BIT_UNIT/o_zero_flag
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/i_man \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/o_man_result \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/o_ov_flow
