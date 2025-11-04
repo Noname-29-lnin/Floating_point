@@ -1,0 +1,93 @@
+# vsim -lib ./../TopModule/QuestaSim/work -debugDB -l ./../TopModule/QuestaSim/tb_FPU_unit.log -voptargs="+acc" -assertdebug -c tb_FPU_unit -wlf ./../TopModule/QuestaSim/tb_FPU_unit.wlf -do "cd ./../TopModule/QuestaSim; log -r /*; run -all;" 
+# Start time: 10:44:58 on Nov 04,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_FPU_unit(fast)
+# Loading work.FPU_unit(fast)
+# Loading work.EXP_swap(fast)
+# Loading work.COMP_8bit(fast)
+# Loading work.COMP_4bit(fast)
+# Loading work.COMP_2bit(fast)
+# Loading work.EXP_sub(fast)
+# Loading work.CLA_8bit(fast)
+# Loading work.CLA_4bit(fast)
+# Loading work.MAN_swap(fast)
+# Loading work.SHF_right_28bit(fast)
+# Loading work.COMP_28bit(fast)
+# Loading work.MAN_swap(fast__1)
+# Loading work.MAN_ALU(fast)
+# Loading work.CLA_28bit(fast)
+# Loading work.LOPD_24bit(fast)
+# Loading work.LOPD_16bit(fast)
+# Loading work.LOPD_8bit(fast)
+# Loading work.LOPD_4bit(fast)
+# Loading work.EXP_adjust(fast)
+# Loading work.NORMALIZATION_unit(fast)
+# Loading work.SHF_left_28bit(fast)
+# Loading work.ROUNDING_unit(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (24) for port 'i_data_a'. The port definition is at: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_FPU_unit/DUT/ROUNDING_UNIT/INCREASE_ROUNDING File: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (24) for port 'o_sum'. The port definition is at: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_FPU_unit/DUT/ROUNDING_UNIT/INCREASE_ROUNDING File: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv Line: 19
+# ** Note: (vsim-8900) Creating design debug database ./../TopModule/QuestaSim/tb_FPU_unit.dbg.
+# cd ./../TopModule/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# ==========[ Zero (0.0 & 0.0) ]==========
+# [ZERO][ADD]i_32_a=00000000 (0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# [ZERO][ADD]i_32_a=00000000 (0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# [ZERO][SUB]i_32_a=00000000 (0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# [ZERO][SUB]i_32_a=00000000 (0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# ==========[ Zero (0.0 & -0.0) ]==========
+# [ZERO][ADD]i_32_a=00000000 (0.0000) + i_32_b=80000000 (-0.0000) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# [ZERO][ADD]i_32_a=80000000 (-0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=ff800000 (-inf) 	| o_ov_flow=x, o_un_flow=0
+# [ZERO][SUB]i_32_a=00000000 (0.0000) - i_32_b=80000000 (-0.0000) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# [ZERO][SUB]i_32_a=80000000 (-0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=ff800000 (-inf) 	| o_ov_flow=x, o_un_flow=0
+# ==========[ INF (inf & inf) ]==========
+# [INT][ADD]i_32_a=7f800000 (inf) + i_32_b=7f800000 (inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# [INT][ADD]i_32_a=7f800000 (inf) + i_32_b=7f800000 (inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# [INT][SUB]i_32_a=7f800000 (inf) - i_32_b=7f800000 (inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# [INT][SUB]i_32_a=7f800000 (inf) - i_32_b=7f800000 (inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# ==========[ INT (int & -inf) ]==========
+# [INT][ADD]i_32_a=7f800000 (inf) + i_32_b=ff800000 (-inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# [INT][ADD]i_32_a=ff800000 (-inf) + i_32_b=7f800000 (inf) 	| o_32_s=ff800000 (-inf) 	| o_ov_flow=x, o_un_flow=0
+# [INT][SUB]i_32_a=7f800000 (inf) - i_32_b=ff800000 (-inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=x, o_un_flow=0
+# [INT][SUB]i_32_a=ff800000 (-inf) - i_32_b=7f800000 (inf) 	| o_32_s=ff800000 (-inf) 	| o_ov_flow=x, o_un_flow=0
+# ==========[ NORMAL (5.5 & 2.2) ]==========
+# [DIRECLY][ADD]i_32_a=40b00000 (5.5000) + i_32_b=400ccccd (2.2000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=x, o_un_flow=1
+# [DIRECLY][ADD]i_32_a=400ccccd (2.2000) + i_32_b=40b00000 (5.5000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=x, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=40b00000 (5.5000) - i_32_b=400ccccd (2.2000) 	| o_32_s=40533333 (3.3000) 	| o_ov_flow=x, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=400ccccd (2.2000) - i_32_b=40b00000 (5.5000) 	| o_32_s=40533333 (3.3000) 	| o_ov_flow=x, o_un_flow=0
+# ==========[ NORMAL (-5.5 & 2.2) ]==========
+# [DIRECLY][ADD]i_32_a=c0b00000 (-5.5000) + i_32_b=400ccccd (2.2000) 	| o_32_s=c0533333 (-3.3000) 	| o_ov_flow=x, o_un_flow=0
+# [DIRECLY][ADD]i_32_a=400ccccd (2.2000) + i_32_b=c0b00000 (-5.5000) 	| o_32_s=c0533333 (-3.3000) 	| o_ov_flow=x, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=c0b00000 (-5.5000) - i_32_b=400ccccd (2.2000) 	| o_32_s=c0f66666 (-7.7000) 	| o_ov_flow=x, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=400ccccd (2.2000) - i_32_b=c0b00000 (-5.5000) 	| o_32_s=c0f66666 (-7.7000) 	| o_ov_flow=x, o_un_flow=1
+# ==========[ NORMAL (5.5 & -2.2) ]==========
+# [DIRECLY][ADD]i_32_a=40b00000 (5.5000) + i_32_b=c00ccccd (-2.2000) 	| o_32_s=40533333 (3.3000) 	| o_ov_flow=x, o_un_flow=0
+# [DIRECLY][ADD]i_32_a=c00ccccd (-2.2000) + i_32_b=40b00000 (5.5000) 	| o_32_s=40533333 (3.3000) 	| o_ov_flow=x, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=40b00000 (5.5000) - i_32_b=c00ccccd (-2.2000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=x, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=c00ccccd (-2.2000) - i_32_b=40b00000 (5.5000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=x, o_un_flow=1
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv(127)
+#    Time: 391 ns  Iteration: 0  Instance: /tb_FPU_unit
+# End time: 10:44:59 on Nov 04,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 3

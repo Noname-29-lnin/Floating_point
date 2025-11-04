@@ -106,13 +106,13 @@ SHF_right_28bit #(
 COMP_28bit #(
     .SIZE_DATA      (28)
 ) MAN_COMP_28BIT_UNIT (
-    .i_data_a           (w_MAN_SHF_RIGHT_min),
-    .i_data_b           (w_MAN_SHF_RIGHT_max),
-    .o_less             (w_MAN_COMP_28BIT_less),
-    .o_equal            ()
+    .i_data_a           (w_MAN_SHF_RIGHT_max),
+    .i_data_b           (w_MAN_SHF_RIGHT_min),
+    .o_less             (w_MAN_COMP_28BIT_less)
 );
-assign w_MAN_PRE_SWAP_BY_MAN_compara = w_EXPSWAP_compare | w_MAN_COMP_28BIT_less;
- MAN_swap #(
+// assign w_MAN_PRE_SWAP_BY_MAN_compara = w_EXPSWAP_compare | w_MAN_COMP_28BIT_less;
+assign w_MAN_PRE_SWAP_BY_MAN_compara = w_MAN_COMP_28BIT_less;
+MAN_swap #(
     .SIZE_MAN       (28)
 ) MAN_PRE_SWAP_BY_MAN_UNIT (
     .i_sign_a           (w_MAN_SWAP1_sign_max), // w_MAN_SWAP1_sign_min
@@ -161,7 +161,6 @@ EXP_adjust #(
     .i_exp_value        (w_EXPSWAP_max),
     .o_exp_result       (w_EXP_ADJUST_result)
 );
-
 
 NORMALIZATION_unit #(
     .SIZE_LOPD      (5),

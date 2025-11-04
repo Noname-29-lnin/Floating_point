@@ -1,0 +1,617 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/Questasim
+T_opt
+!s110 1762227899
+VPBDkO62Y?YO>fd^>:`B2[2
+04 11 4 work tb_FPU_unit fast 0
+=1-000ae431a4f1-690976bb-15efd-9c79
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U74 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work ./../TopModule/QuestaSim/work -debugdb +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vCLA_28bit
+Z4 2/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_right_28bit.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1762227898
+!i10b 1
+!s100 lKWWHQj;a96V[1BJHGUn^0
+If7Dz=;Dg5fbR]=HZ<AO=g3
+S1
+R2
+w1762167762
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv
+!i122 9
+L0 1 41
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z9 !s108 1762227898.000000
+Z10 !s107 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_right_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv|
+Z11 !s90 -f|./../TopModule/flist.f|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@c@l@a_28bit
+vCLA_4bit
+R4
+R5
+R6
+!i10b 1
+!s100 K4nQ9>NEU5ZKo<Q?QE:531
+I[4^`>`^6GgD=O@LCo2D^k2
+S1
+R2
+w1762167578
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
+!i122 9
+Z13 L0 1 26
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@l@a_4bit
+vCLA_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 hg?]T;mmS2_:;_6@miKH=3
+InCYhO8_n2LdRC?Y7ZL7S41
+S1
+R2
+w1762170121
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv
+!i122 9
+Z14 L0 1 35
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@l@a_8bit
+vCOMP_28bit
+R4
+R5
+R6
+!i10b 1
+!s100 164`kl[O9=9g0mHP44Dk02
+I_DKdaF8SUd1Qhf6NzcGzO1
+S1
+R2
+w1762172879
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv
+!i122 9
+L0 1 73
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@o@m@p_28bit
+vCOMP_2bit
+R4
+R5
+R6
+!i10b 1
+!s100 d4iFLO4YodoMWf;_G@:982
+ISHB3CQ:R9SLUg2`hB>A:d1
+S1
+R2
+Z15 w1761871637
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv
+!i122 9
+L0 1 11
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@o@m@p_2bit
+vCOMP_4bit
+R4
+R5
+R6
+!i10b 1
+!s100 dj@NkHh87k3Z2>3iEJ^Ai3
+I9`:kYST4J9m`LAZ^iSma33
+S1
+R2
+R15
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv
+!i122 9
+R13
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@o@m@p_4bit
+vCOMP_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 e@Ji`hT;WR=PgJ8N>_mX`1
+I13[cnPeBR;d^XZnl?T3PI1
+S1
+R2
+w1762185202
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv
+!i122 9
+R13
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@o@m@p_8bit
+vEXP_adjust
+R4
+R5
+R6
+!i10b 1
+!s100 ^Dm=_Y1QTjS]=Ei]FfQ[G2
+IA6MF;kTOgn0^lgGOkkiC81
+S1
+R2
+w1762226116
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv
+!i122 9
+R14
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@e@x@p_adjust
+vEXP_sub
+R4
+R5
+R6
+!i10b 1
+!s100 7ijcX_oX;8VR`n0BGFCL72
+IMh;LR^[;SH<dV9O6o;S3d0
+S1
+R2
+Z16 w1762184587
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv
+!i122 9
+L0 1 20
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@e@x@p_sub
+vEXP_swap
+R4
+R5
+R6
+!i10b 1
+!s100 SR?gcl3_9dBR;g_0BdlZj1
+IY5TKgcUVe9NlFXGj:>?f_0
+S1
+R2
+w1761871656
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv
+!i122 9
+Z17 L0 1 25
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@e@x@p_swap
+vFPU_unit
+R4
+R5
+R6
+!i10b 1
+!s100 @i[VCFLPiF;dTYPKmSkW51
+IYR5VMA`1W80_SbiHzQ]QW3
+S1
+R2
+w1762227893
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv
+!i122 9
+L0 1 195
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@f@p@u_unit
+vLOPD_16bit
+R4
+R5
+R6
+!i10b 1
+!s100 =B`0jke^QJI_PGh^dfS053
+I0K7KJKMOlM;=9Ie0KDU@82
+S1
+R2
+w1762177867
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv
+!i122 9
+Z18 L0 1 39
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@l@o@p@d_16bit
+vLOPD_24bit
+R4
+R5
+R6
+!i10b 1
+!s100 ]6jCVAf@cDLH^1Rc5cecz3
+IPL8a<:F24QXoCZ>@]S2^70
+S1
+R2
+w1762184295
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv
+!i122 9
+L0 1 38
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@l@o@p@d_24bit
+vLOPD_4bit
+R4
+R5
+R6
+!i10b 1
+!s100 Idi^z5a[AUI]`TTXnkA8S0
+IJh>gJFM2?5C:a=gn]7nD60
+S1
+R2
+w1762176641
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv
+!i122 9
+L0 1 19
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@l@o@p@d_4bit
+vLOPD_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 ZVU8M>5UaMX0TGkL=ASX90
+IX48EGDAgf5YJGFg<QfH_:3
+S1
+R2
+w1762177803
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv
+!i122 9
+R18
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@l@o@p@d_8bit
+vMAN_ALU
+R4
+R5
+R6
+!i10b 1
+!s100 7?9?dCUX4@Jggj_ZcQn_00
+IC<nAAC7ZnkY9^chLIDmJR1
+S1
+R2
+R16
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv
+!i122 9
+L0 1 33
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@m@a@n_@a@l@u
+vMAN_swap
+R4
+R5
+R6
+!i10b 1
+!s100 o=9nY[RUzoF]Xj:mX>HU60
+Ic<G_YgU9lKeDkJZcBgaLA3
+S1
+R2
+R16
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv
+!i122 9
+L0 1 31
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@m@a@n_swap
+vNORMALIZATION_unit
+R4
+R5
+R6
+!i10b 1
+!s100 0^dW?<ihG3HGO`4lc>`0f1
+I:FC>MgYn9:_^zi=55KRfG0
+S1
+R2
+R16
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv
+!i122 9
+R17
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@n@o@r@m@a@l@i@z@a@t@i@o@n_unit
+vROUNDING_unit
+R4
+R5
+R6
+!i10b 1
+!s100 <eH0LZo6z[@SOTT8jE>@E0
+IT6RZYnF<D;UR=;CB>N3dl1
+S1
+R2
+R16
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv
+!i122 9
+L0 1 28
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@r@o@u@n@d@i@n@g_unit
+vSHF_left_28bit
+R4
+R5
+R6
+!i10b 1
+!s100 iF_I^6Y0Jf1SAjOBXGPb23
+IbC@_2_ohaNLLDP2E_@NQb0
+S1
+R2
+R16
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv
+!i122 9
+Z19 L0 1 27
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@h@f_left_28bit
+vSHF_right_28bit
+R4
+R5
+R6
+!i10b 1
+!s100 CDYBZ@3UH=@XfOE6PG15Z0
+I;]zV3h:Pbm]z;ObZB^m>f2
+S1
+R2
+R16
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_right_28bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_right_28bit.sv
+!i122 9
+R19
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@h@f_right_28bit
+vtb_FPU_unit
+R4
+R5
+R6
+!i10b 1
+!s100 e:O6Y]JVAGFHFN9^jAlV<2
+IDIE1dWbS<^;>00^^GRS612
+S1
+R2
+w1762227464
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv
+!i122 9
+L0 3 128
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+ntb_@f@p@u_unit

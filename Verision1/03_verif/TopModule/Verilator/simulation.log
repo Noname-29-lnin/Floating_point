@@ -1,0 +1,16 @@
+[Zero][ADD]i_32_a=00000000 (0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+[Zero][ADD]i_32_a=00000000 (0.0000) + i_32_b=80000000 (0.0000) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+[Zero][ADD]i_32_a=80000000 (0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=80000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+[Zero][ADD]i_32_a=80000000 (0.0000) + i_32_b=80000000 (0.0000) 	| o_32_s=80000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+[Zero][SUB]i_32_a=00000000 (0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+[Zero][SUB]i_32_a=00000000 (0.0000) - i_32_b=80000000 (0.0000) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+[Zero][SUB]i_32_a=80000000 (0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=80000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+[Zero][SUB]i_32_a=80000000 (0.0000) - i_32_b=80000000 (0.0000) 	| o_32_s=80000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+[Normal (+)][ADD]i_32_a=40b00000 (0.0000) + i_32_b=400ccccd (0.0000) 	| o_32_s=40f66666 (0.0000) 	| o_ov_flow=0, o_un_flow=1
+[Normal (+)][ADD]i_32_a=400ccccd (0.0000) + i_32_b=40b00000 (0.0000) 	| o_32_s=40f66666 (0.0000) 	| o_ov_flow=0, o_un_flow=1
+[Normal (-)][SUB]i_32_a=40b00000 (0.0000) - i_32_b=400ccccd (0.0000) 	| o_32_s=40966666 (0.0000) 	| o_ov_flow=0, o_un_flow=1
+[Normal (-)][SUB]i_32_a=400ccccd (0.0000) - i_32_b=40b00000 (0.0000) 	| o_32_s=40966666 (0.0000) 	| o_ov_flow=0, o_un_flow=1
+- /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv:181: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.024 2024-04-05
+- Verilator: $finish at 235ns; walltime 0.002 s; speed 0.000 s/s
+- Verilator: cpu 0.000 s on 1 threads; alloced 57 MB
