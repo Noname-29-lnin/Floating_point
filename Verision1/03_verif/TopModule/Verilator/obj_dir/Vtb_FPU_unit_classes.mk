@@ -12,7 +12,7 @@ VM_TIMING = 1
 # Coverage output mode?  0/1 (from --coverage)
 VM_COVERAGE = 0
 # Parallel builds?  0/1 (from --output-split)
-VM_PARALLEL_BUILDS = 0
+VM_PARALLEL_BUILDS = 1
 # Tracing output mode?  0/1 (from --trace/--trace-fst)
 VM_TRACE = 1
 # Tracing output mode in VCD format?  0/1 (from --trace)
@@ -26,10 +26,12 @@ VM_CLASSES_FAST += \
 	Vtb_FPU_unit \
 	Vtb_FPU_unit___024root__DepSet_h70cef955__0 \
 	Vtb_FPU_unit___024root__DepSet_h69e43522__0 \
+	Vtb_FPU_unit___024root__DepSet_h69e43522__1 \
 	Vtb_FPU_unit__main \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
+	Vtb_FPU_unit__ConstPool_0 \
 	Vtb_FPU_unit___024root__Slow \
 	Vtb_FPU_unit___024root__DepSet_h70cef955__0__Slow \
 	Vtb_FPU_unit___024root__DepSet_h69e43522__0__Slow \

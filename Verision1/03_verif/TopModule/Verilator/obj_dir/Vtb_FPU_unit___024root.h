@@ -21,11 +21,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit___024root final : public Verilat
         CData/*0:0*/ tb_FPU_unit__DOT__i_rst_n;
         CData/*0:0*/ tb_FPU_unit__DOT__i_add_sub;
         CData/*0:0*/ tb_FPU_unit__DOT__o_ov_flow;
+        CData/*3:0*/ tb_FPU_unit__DOT__w_i_addr;
         CData/*0:0*/ tb_FPU_unit__DOT__o_ov_flag;
         CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__w_EXPSWAP_compare;
         CData/*7:0*/ tb_FPU_unit__DOT__DUT__DOT__w_EXPSWAP_max;
         CData/*7:0*/ tb_FPU_unit__DOT__DUT__DOT__w_EXPSWAP_min;
-        CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__w_MAN_PRE_SWAP_BY_MAN_compara;
+        CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__w_MAN_COMP_28BIT_less;
         CData/*4:0*/ tb_FPU_unit__DOT__DUT__DOT__w_LOPD_24BIT_one_position;
         CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__w_LOPD_24BIT_zero_flag;
         CData/*4:0*/ tb_FPU_unit__DOT__DUT__DOT____Vcellinp__SHF_RIGHT_28BIT_UNIT__i_shift_number;
@@ -42,9 +43,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit___024root final : public Verilat
         CData/*3:0*/ tb_FPU_unit__DOT__DUT__DOT__EXP_SUB_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT__w_c;
         CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__EXP_SUB_UNIT__DOT__CLA_8BIT_UNIT__DOT__CLA_4BIT_UNIT_1__DOT____VdfgRegularize_h7e120794_0_1;
         CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_COMP_28BIT_UNIT__DOT__w_equal_0_6;
-        CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_COMP_28BIT_UNIT__DOT____VdfgRegularize_h70f6fa5f_2_0;
-        CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_COMP_28BIT_UNIT__DOT____VdfgRegularize_h70f6fa5f_2_1;
-        CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_COMP_28BIT_UNIT__DOT____VdfgRegularize_h70f6fa5f_2_3;
+        CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_COMP_28BIT_UNIT__DOT__u_i_data_1__DOT__w_equal_high;
         CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_COMP_28BIT_UNIT__DOT__u_i_data_2__DOT__w_equal_high;
         CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_COMP_28BIT_UNIT__DOT__u_i_data_3__DOT__w_equal_high;
         CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_COMP_28BIT_UNIT__DOT__u_i_data_4__DOT__w_equal_high;
@@ -81,9 +80,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit___024root final : public Verilat
         CData/*3:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_p;
         CData/*3:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_c;
         CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__DOT____VdfgRegularize_h7e120794_0_1;
+        CData/*3:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_g;
     };
     struct {
-        CData/*3:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_g;
         CData/*3:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_p;
         CData/*3:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_c;
         CData/*0:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__DOT____VdfgRegularize_h7e120794_0_1;
@@ -147,9 +146,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit___024root final : public Verilat
         CData/*3:0*/ __Vtrigprevexpr___TOP__tb_FPU_unit__DOT__DUT__DOT__ROUNDING_UNIT__DOT__INCREASE_ROUNDING__DOT__CLA_BLOCK_GEN__BRA__3__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_c__0;
         CData/*3:0*/ __Vtrigprevexpr___TOP__tb_FPU_unit__DOT__DUT__DOT__ROUNDING_UNIT__DOT__INCREASE_ROUNDING__DOT__CLA_BLOCK_GEN__BRA__4__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_c__0;
         CData/*3:0*/ __Vtrigprevexpr___TOP__tb_FPU_unit__DOT__DUT__DOT__ROUNDING_UNIT__DOT__INCREASE_ROUNDING__DOT__CLA_BLOCK_GEN__BRA__5__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_c__0;
+        CData/*3:0*/ __Vtrigprevexpr___TOP__tb_FPU_unit__DOT__DUT__DOT__ROUNDING_UNIT__DOT__INCREASE_ROUNDING__DOT__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_c__0;
     };
     struct {
-        CData/*3:0*/ __Vtrigprevexpr___TOP__tb_FPU_unit__DOT__DUT__DOT__ROUNDING_UNIT__DOT__INCREASE_ROUNDING__DOT__CLA_BLOCK_GEN__BRA__6__KET____DOT__CLA_4BIT_UNIT_1__DOT__w_c__0;
         CData/*0:0*/ __VstlDidInit;
         CData/*0:0*/ __VstlFirstIteration;
         CData/*7:0*/ __Vtrigprevexpr___TOP__tb_FPU_unit__DOT__DUT__DOT__MAN_ALU_UNIT__DOT__ALU_SUB_UNIT__DOT__w_c__1;
@@ -177,6 +176,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit___024root final : public Verilat
         CData/*0:0*/ __VactContinue;
         IData/*31:0*/ tb_FPU_unit__DOT__i_32_a;
         IData/*31:0*/ tb_FPU_unit__DOT__i_32_b;
+        IData/*31:0*/ tb_FPU_unit__DOT__w_o_data_rom_a;
+        IData/*31:0*/ tb_FPU_unit__DOT__w_o_data_rom_b;
         IData/*27:0*/ tb_FPU_unit__DOT__DUT__DOT__w_MAN_ALU_man;
         IData/*27:0*/ tb_FPU_unit__DOT__DUT__DOT__w_NORMALIZATION_man;
         IData/*24:0*/ tb_FPU_unit__DOT__DUT__DOT__MAN_PRE_SWAP_BY_EXPONENT_UNIT__DOT__w_a;
@@ -191,6 +192,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit___024root final : public Verilat
         IData/*31:0*/ __VactIterCount;
         VlUnpacked<IData/*27:0*/, 6> tb_FPU_unit__DOT__DUT__DOT__SHF_RIGHT_28BIT_UNIT__DOT__stage;
         VlUnpacked<IData/*27:0*/, 6> tb_FPU_unit__DOT__DUT__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage;
+        VlUnpacked<IData/*31:0*/, 16> tb_FPU_unit__DOT__ROM_UNIT_A__DOT__rom;
+        VlUnpacked<IData/*31:0*/, 16> tb_FPU_unit__DOT__ROM_UNIT_B__DOT__rom;
         VlUnpacked<IData/*27:0*/, 6> __Vtrigprevexpr___TOP__tb_FPU_unit__DOT__DUT__DOT__SHF_RIGHT_28BIT_UNIT__DOT__stage__0;
         VlUnpacked<IData/*27:0*/, 6> __Vtrigprevexpr___TOP__tb_FPU_unit__DOT__DUT__DOT__NORMALIZATION_UNIT__DOT__SHF_left_28bit_unit__DOT__stage__0;
         VlUnpacked<IData/*27:0*/, 6> __Vtrigprevexpr___TOP__tb_FPU_unit__DOT__DUT__DOT__SHF_RIGHT_28BIT_UNIT__DOT__stage__1;

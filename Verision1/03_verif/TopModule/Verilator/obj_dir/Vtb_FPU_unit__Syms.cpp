@@ -43,7 +43,7 @@ Vtb_FPU_unit__Syms::Vtb_FPU_unit__Syms(VerilatedContext* contextp, const char* n
     , TOP{this, namep}
 {
         // Check resources
-        Verilated::stackCheck(1112);
+        Verilated::stackCheck(2736);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-9);
     _vm_contextp__->timeprecision(-12);

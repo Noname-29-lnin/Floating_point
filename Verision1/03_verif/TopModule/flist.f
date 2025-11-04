@@ -1,4 +1,5 @@
 /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/single_port_rom.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv

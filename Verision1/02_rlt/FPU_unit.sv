@@ -117,8 +117,8 @@ MAN_swap #(
 ) MAN_PRE_SWAP_BY_MAN_UNIT (
     .i_sign_a           (w_MAN_SWAP1_sign_max), // w_MAN_SWAP1_sign_min
     .i_sign_b           (w_MAN_SWAP1_sign_min), // w_MAN_SWAP1_sign_max
-    .i_man_a            (w_MAN_SHF_RIGHT_max), // w_MAN_SHF_RIGHT_min
-    .i_man_b            (w_MAN_SHF_RIGHT_min), // w_MAN_SHF_RIGHT_max
+    .i_man_a            (w_MAN_SHF_RIGHT_max),  // w_MAN_SHF_RIGHT_min
+    .i_man_b            (w_MAN_SHF_RIGHT_min),  // w_MAN_SHF_RIGHT_max
     // i_compare = 1 -> a < b
     .i_compare          (w_MAN_PRE_SWAP_BY_MAN_compara),
 

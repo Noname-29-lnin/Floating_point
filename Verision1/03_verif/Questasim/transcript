@@ -20,32 +20,17 @@
 # 
 # stdin: <EOF>
 add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/i_add_sub \
-tb_FPU_unit:/tb_FPU_unit/DUT/i_32_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/i_32_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/o_32_s
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/w_sign_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/w_exponent_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/w_mantissa_a
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/w_sign_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/w_exponent_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/w_mantissa_b
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/w_sign_result \
-tb_FPU_unit:/tb_FPU_unit/DUT/w_exponent_result \
-tb_FPU_unit:/tb_FPU_unit/DUT/w_mantissa_result
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_SWAP_UNIT/i_data_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_SWAP_UNIT/i_data_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_SWAP_UNIT/o_compare
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_SUB_UNIT/i_data_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_SUB_UNIT/i_data_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_SUB_UNIT/o_sub
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/EXP_SWAP_UNIT/o_greater_data
+tb_FPU_unit:/tb_FPU_unit/i_clk \
+tb_FPU_unit:/tb_FPU_unit/i_rst_n \
+tb_FPU_unit:/tb_FPU_unit/i_add_sub \
+tb_FPU_unit:/tb_FPU_unit/i_32_a \
+tb_FPU_unit:/tb_FPU_unit/i_32_b \
+tb_FPU_unit:/tb_FPU_unit/o_32_s \
+tb_FPU_unit:/tb_FPU_unit/o_ov_flow \
+tb_FPU_unit:/tb_FPU_unit/o_un_flow \
+tb_FPU_unit:/tb_FPU_unit/w_i_addr \
+tb_FPU_unit:/tb_FPU_unit/w_o_data_rom_a \
+tb_FPU_unit:/tb_FPU_unit/w_o_data_rom_b
 add wave -position insertpoint  \
 tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_overflow \
 tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_underflow \
@@ -54,56 +39,9 @@ tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_lopd_value \
 tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_exp_value \
 tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/o_exp_result
 add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_EXPONENT_UNIT/i_sign_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_EXPONENT_UNIT/i_sign_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_EXPONENT_UNIT/i_man_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_EXPONENT_UNIT/i_man_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_EXPONENT_UNIT/i_compare \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_EXPONENT_UNIT/o_sign_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_EXPONENT_UNIT/o_sign_min \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_EXPONENT_UNIT/o_man_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_EXPONENT_UNIT/o_man_min
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/SHF_RIGHT_28BIT_UNIT/i_shift_number \
-tb_FPU_unit:/tb_FPU_unit/DUT/SHF_RIGHT_28BIT_UNIT/i_data \
-tb_FPU_unit:/tb_FPU_unit/DUT/SHF_RIGHT_28BIT_UNIT/o_data
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT/i_data_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT/i_data_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT/o_less
-view -new wave
-# .main_pane.wave1.interior.cs.body.pw.wf
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_sign_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_sign_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_compare \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_sign_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_sign_min \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_man_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_man_min
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_sign_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_sign_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_compare \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_sign_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_sign_min \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_man_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_man_min
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/i_fpu_op \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/i_sign_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/i_sign_min \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/i_man_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/i_man_min \
 tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/o_man_alu \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/o_overflow \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/w_i_carry \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/w_n_man_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/w_i_man_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/w_overflow
-add wave -position 14  tb_FPU_unit:/tb_FPU_unit/DUT/o_ov_flag
-add wave -position 11  tb_FPU_unit:/tb_FPU_unit/DUT/o_un_flag
+tb_FPU_unit:/tb_FPU_unit/DUT/MAN_ALU_UNIT/o_overflow
+add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/DUT/LOPD_24BIT_UNIT/i_data \
+tb_FPU_unit:/tb_FPU_unit/DUT/LOPD_24BIT_UNIT/o_one_position \
+tb_FPU_unit:/tb_FPU_unit/DUT/LOPD_24BIT_UNIT/o_zero_flag
