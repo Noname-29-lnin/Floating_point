@@ -34,5 +34,6 @@ assign w_o_one_position[3] = LOPD16_o_zero_flag ? 1'b0               : LOPD16_o_
 assign w_o_one_position[2] = LOPD16_o_zero_flag ? LOPD8_o_pos_one[2] : LOPD16_o_pos_one[2];
 assign w_o_one_position[1] = LOPD16_o_zero_flag ? LOPD8_o_pos_one[1] : LOPD16_o_pos_one[1];
 assign w_o_one_position[0] = LOPD16_o_zero_flag ? LOPD8_o_pos_one[0] : LOPD16_o_pos_one[0];
-assign o_one_position = o_zero_flag ? '0 : w_o_one_position;
+assign o_one_position = o_zero_flag ? 5'b11111 : w_o_one_position;
+
 endmodule

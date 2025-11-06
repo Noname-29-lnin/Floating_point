@@ -56,6 +56,9 @@ logic [7:0] w_EXP_ADJUST_result;
 logic [27:0] w_NORMALIZATION_man;
 logic [23:0] w_ROUNDING_man;
 logic        w_ROUNDING_ov_flow;
+
+logic                    PSC_o_sel_exp;
+logic [1:0]              PSC_o_sel_man;
 ////////////////////////////////////////////////////////////////
 // Tim gia tri khac nnau cua 2 exponent
 ////////////////////////////////////////////////////////////////
@@ -128,6 +131,7 @@ MAN_swap #(
     .o_man_max          (w_MAN_PRE_SWAP_BY_MAN_max),
     .o_man_min          (w_MAN_PRE_SWAP_BY_MAN_min)
 );
+
 SIGN_unit SIGN_OUT(
     .i_add_sub       (i_add_sub),
     .i_comp_man      (w_MAN_COMP_28BIT_less | w_EXPSWAP_compare),
@@ -190,15 +194,72 @@ ROUNDING_unit #(
     .o_ov_flow          (w_ROUNDING_ov_flow)
 );
 
+PSC_unit PSC_UNIT(
+    .i_add_sub          (i_add_sub),
+
+    .i_sign_a           (w_sign_a),
+    .i_exp_a            (w_exponent_a),
+    .i_man_a            (w_mantissa_a),
+
+    .i_sign_b           (w_sign_b),
+    .i_exp_b            (w_exponent_b),
+    .i_man_b            (w_mantissa_b),
+
+    .o_sel_exp          (PSC_o_sel_exp),
+    .o_sel_man          (PSC_o_sel_man) 
+);
+
 ////////////////////////////////////////////////////////////////
 // Output 
 ////////////////////////////////////////////////////////////////
 // assign w_sign_result        = w_MAN_PRE_SWAP_BY_MAN_sign_max;
-assign w_exponent_result    = w_EXP_ADJUST_result;
-assign w_mantissa_result    = w_ROUNDING_man;
+
+// assign w_exponent_result    = w_EXP_ADJUST_result;
+assign w_exponent_result = PSC_o_sel_exp ? 8'hFF : w_EXP_ADJUST_result; 
+
+// assign w_mantissa_result    = w_ROUNDING_man;
+Mux_4_to_1 #(
+    .SIZE_DATA  (24)
+) SEL_MANTISSA_FOR_RESULT (
+    .i_sel          (PSC_o_sel_man),
+    .i_data_00      (w_ROUNDING_man),
+    .i_data_01      (24'h000000),
+    .i_data_10      (24'h000001),
+    .i_data_11      (w_ROUNDING_man),
+    .o_data         (w_mantissa_result) 
+);
 
 assign o_32_s = {w_sign_result, w_exponent_result, w_mantissa_result[22:0]};
 assign o_ov_flag = w_MAN_ALU_overflow | w_ROUNDING_ov_flow;
-assign o_un_flag = w_MAN_ALU_man[27];
+assign o_un_flag = ~w_MAN_ALU_man[27];
+
+endmodule
+module Mux_4_to_1 #(
+    parameter SIZE_DATA = 8
+)(
+    input logic [1:0]               i_sel    ,
+    input logic [SIZE_DATA-1:0]     i_data_00,
+    input logic [SIZE_DATA-1:0]     i_data_01,
+    input logic [SIZE_DATA-1:0]     i_data_10,
+    input logic [SIZE_DATA-1:0]     i_data_11,
+    output logic [SIZE_DATA-1:0]    o_data    
+);
+
+logic [SIZE_DATA-1:0] w_o_data;
+always_comb begin : proc_mux_4_to_1
+    case (i_sel)
+        2'b00: 
+            w_o_data = i_data_00;
+        2'b01:
+            w_o_data = i_data_01;
+        2'b10:
+            w_o_data = i_data_10;
+        2'b11:
+            w_o_data = i_data_11; 
+        default: 
+            w_o_data = i_data_00;
+    endcase
+end
+assign o_data = w_o_data;
 
 endmodule
