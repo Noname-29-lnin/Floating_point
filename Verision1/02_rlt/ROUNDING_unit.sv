@@ -17,7 +17,7 @@ assign w_sticky_bit= i_man[1] | i_man[0];
 
 logic w_rounding_result;
 assign w_rounding_result = (w_guard_bit & w_round_bit) | (w_round_bit & w_sticky_bit);
-CLA_28bit INCREASE_ROUNDING (
+CLA_24bit INCREASE_ROUNDING (
     .i_carry        (w_rounding_result),
     .i_data_a       (w_man_temp),
     .i_data_b       ('0),

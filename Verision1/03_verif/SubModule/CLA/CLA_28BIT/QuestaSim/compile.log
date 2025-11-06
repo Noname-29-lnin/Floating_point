@@ -1,13 +1,13 @@
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-Start time: 19:01:00 on Nov 03,2025
-vlog "+cover=bcesft" -f ./../SubModule/CLA/CLA_28BIT/flist.f 
+Start time: 14:54:51 on Nov 06,2025
+vlog -f ./../SubModule/CLA/CLA_28BIT/flist.f 
 -- Compiling module tb_CLA_28bit
--- Compiling module CLA_4bit
--- Compiling module CLA_8bit
 -- Compiling module CLA_28bit
+-- Compiling module CLA_8bit
+-- Compiling module CLA_4bit
 
 Top level modules:
 	tb_CLA_28bit
 	CLA_8bit
-End time: 19:01:01 on Nov 03,2025, Elapsed time: 0:00:01
+End time: 14:54:51 on Nov 06,2025, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0

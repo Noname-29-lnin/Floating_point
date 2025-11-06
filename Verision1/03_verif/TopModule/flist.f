@@ -3,6 +3,7 @@
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_24bit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv

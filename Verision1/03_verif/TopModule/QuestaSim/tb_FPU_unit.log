@@ -1,6 +1,9 @@
 # vsim -lib ./../TopModule/QuestaSim/work -debugDB -l ./../TopModule/QuestaSim/tb_FPU_unit.log -voptargs="+acc" -assertdebug -c tb_FPU_unit -wlf ./../TopModule/QuestaSim/tb_FPU_unit.wlf -do "cd ./../TopModule/QuestaSim; log -r /*; run -all;" 
-# Start time: 16:21:37 on Nov 05,2025
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 15:45:53 on Nov 06,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2024.3 linux_x86_64 Sep 10 2024
 # //
@@ -40,139 +43,256 @@
 # Loading work.NORMALIZATION_unit(fast)
 # Loading work.SHF_left_28bit(fast)
 # Loading work.ROUNDING_unit(fast)
+# Loading work.CLA_24bit(fast)
 # Loading work.single_port_rom(fast)
 # Loading work.single_port_rom(fast__1)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (24) for port 'i_data_a'. The port definition is at: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_FPU_unit/DUT/ROUNDING_UNIT/INCREASE_ROUNDING File: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv Line: 20
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (24) for port 'o_sum'. The port definition is at: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_FPU_unit/DUT/ROUNDING_UNIT/INCREASE_ROUNDING File: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv Line: 20
-# ** Note: (vsim-8716) Reusing existing debug database ./../TopModule/QuestaSim/tb_FPU_unit.dbg.
+# ** Note: (vsim-8900) Creating design debug database ./../TopModule/QuestaSim/tb_FPU_unit.dbg.
 # cd ./../TopModule/QuestaSim
 # Cannot change directory while a simulation is in progress.
 # Use the "quit -sim" command to unload the design first.
 #  log -r /*
 #  run -all
 # ==========[ Zero (0.0 & 0.0) ]==========
-# [ZERO][ADD]i_32_a=00000000 (0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=00800000 (0.0000) 	| o_ov_flow=x, o_un_flow=0
-# [ZERO][ADD]i_32_a=00000000 (0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=00800000 (0.0000) 	| o_ov_flow=x, o_un_flow=0
-# [ZERO][SUB]i_32_a=00000000 (0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=70800000 (316912650057057350374175801344.0000) 	| o_ov_flow=x, o_un_flow=0
-# [ZERO][SUB]i_32_a=00000000 (0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=70800000 (316912650057057350374175801344.0000) 	| o_ov_flow=x, o_un_flow=0
+# [ZERO][ADD]i_32_a=00000000 (0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=00800000 (0.0000) 	| o_ov_flow=1, o_un_flow=0
+# [ZERO][ADD]i_32_a=00000000 (0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=00800000 (0.0000) 	| o_ov_flow=1, o_un_flow=0
+# [ZERO][SUB]i_32_a=00000000 (0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+# [ZERO][SUB]i_32_a=00000000 (0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
 # ==========[ Zero (0.0 & -0.0) ]==========
-# [ZERO][ADD]i_32_a=00000000 (0.0000) + i_32_b=80000000 (-0.0000) 	| o_32_s=70800000 (316912650057057350374175801344.0000) 	| o_ov_flow=x, o_un_flow=0
-# [ZERO][ADD]i_32_a=80000000 (-0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=f0800000 (-316912650057057350374175801344.0000) 	| o_ov_flow=x, o_un_flow=0
-# [ZERO][SUB]i_32_a=00000000 (0.0000) - i_32_b=80000000 (-0.0000) 	| o_32_s=80800000 (-0.0000) 	| o_ov_flow=x, o_un_flow=0
-# [ZERO][SUB]i_32_a=80000000 (-0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=00800000 (0.0000) 	| o_ov_flow=x, o_un_flow=0
+# [ZERO][ADD]i_32_a=00000000 (0.0000) + i_32_b=80000000 (-0.0000) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+# [ZERO][ADD]i_32_a=80000000 (-0.0000) + i_32_b=00000000 (0.0000) 	| o_32_s=80000000 (-0.0000) 	| o_ov_flow=0, o_un_flow=0
+# [ZERO][SUB]i_32_a=00000000 (0.0000) - i_32_b=80000000 (-0.0000) 	| o_32_s=00800000 (0.0000) 	| o_ov_flow=1, o_un_flow=0
+# [ZERO][SUB]i_32_a=80000000 (-0.0000) - i_32_b=00000000 (0.0000) 	| o_32_s=80800000 (-0.0000) 	| o_ov_flow=1, o_un_flow=0
 # ==========[ INF (inf & inf) ]==========
-# [INT][ADD]i_32_a=7f800000 (inf) + i_32_b=7f800000 (inf) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=x, o_un_flow=0
-# [INT][ADD]i_32_a=7f800000 (inf) + i_32_b=7f800000 (inf) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=x, o_un_flow=0
-# [INT][SUB]i_32_a=7f800000 (inf) - i_32_b=7f800000 (inf) 	| o_32_s=70000000 (158456325028528675187087900672.0000) 	| o_ov_flow=x, o_un_flow=0
-# [INT][SUB]i_32_a=7f800000 (inf) - i_32_b=7f800000 (inf) 	| o_32_s=70000000 (158456325028528675187087900672.0000) 	| o_ov_flow=x, o_un_flow=0
+# [INT][ADD]i_32_a=7f800000 (inf) + i_32_b=7f800000 (inf) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=1, o_un_flow=0
+# [INT][ADD]i_32_a=7f800000 (inf) + i_32_b=7f800000 (inf) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=1, o_un_flow=0
+# [INT][SUB]i_32_a=7f800000 (inf) - i_32_b=7f800000 (inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=0, o_un_flow=0
+# [INT][SUB]i_32_a=7f800000 (inf) - i_32_b=7f800000 (inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=0, o_un_flow=0
 # ==========[ INT (int & -inf) ]==========
-# [INT][ADD]i_32_a=7f800000 (inf) + i_32_b=ff800000 (-inf) 	| o_32_s=70000000 (158456325028528675187087900672.0000) 	| o_ov_flow=x, o_un_flow=0
-# [INT][ADD]i_32_a=ff800000 (-inf) + i_32_b=7f800000 (inf) 	| o_32_s=f0000000 (-158456325028528675187087900672.0000) 	| o_ov_flow=x, o_un_flow=0
-# [INT][SUB]i_32_a=7f800000 (inf) - i_32_b=ff800000 (-inf) 	| o_32_s=80000000 (-0.0000) 	| o_ov_flow=x, o_un_flow=0
-# [INT][SUB]i_32_a=ff800000 (-inf) - i_32_b=7f800000 (inf) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=x, o_un_flow=0
+# [INT][ADD]i_32_a=7f800000 (inf) + i_32_b=ff800000 (-inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=0, o_un_flow=0
+# [INT][ADD]i_32_a=ff800000 (-inf) + i_32_b=7f800000 (inf) 	| o_32_s=ff800000 (-inf) 	| o_ov_flow=0, o_un_flow=0
+# [INT][SUB]i_32_a=7f800000 (inf) - i_32_b=ff800000 (-inf) 	| o_32_s=00000000 (0.0000) 	| o_ov_flow=1, o_un_flow=0
+# [INT][SUB]i_32_a=ff800000 (-inf) - i_32_b=7f800000 (inf) 	| o_32_s=80000000 (-0.0000) 	| o_ov_flow=1, o_un_flow=0
 # ==========[ NORMAL (5.5 & 2.2) ]==========
-# [DIRECLY][ADD]i_32_a=40b00000 (5.5000) + i_32_b=400ccccd (2.2000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=x, o_un_flow=1
-# [DIRECLY][ADD]i_32_a=400ccccd (2.2000) + i_32_b=40b00000 (5.5000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=x, o_un_flow=1
-# [DIRECLY][SUB]i_32_a=40b00000 (5.5000) - i_32_b=400ccccd (2.2000) 	| o_32_s=40533333 (3.3000) 	| o_ov_flow=x, o_un_flow=0
-# [DIRECLY][SUB]i_32_a=400ccccd (2.2000) - i_32_b=40b00000 (5.5000) 	| o_32_s=40533333 (3.3000) 	| o_ov_flow=x, o_un_flow=0
+# [DIRECLY][ADD]i_32_a=40b00000 (5.5000) + i_32_b=400ccccd (2.2000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][ADD]i_32_a=400ccccd (2.2000) + i_32_b=40b00000 (5.5000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=40b00000 (5.5000) - i_32_b=400ccccd (2.2000) 	| o_32_s=40533333 (3.3000) 	| o_ov_flow=0, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=400ccccd (2.2000) - i_32_b=40b00000 (5.5000) 	| o_32_s=c0533333 (-3.3000) 	| o_ov_flow=0, o_un_flow=0
 # ==========[ NORMAL (-5.5 & 2.2) ]==========
-# [DIRECLY][ADD]i_32_a=c0b00000 (-5.5000) + i_32_b=400ccccd (2.2000) 	| o_32_s=c0533333 (-3.3000) 	| o_ov_flow=x, o_un_flow=0
-# [DIRECLY][ADD]i_32_a=400ccccd (2.2000) + i_32_b=c0b00000 (-5.5000) 	| o_32_s=c0533333 (-3.3000) 	| o_ov_flow=x, o_un_flow=0
-# [DIRECLY][SUB]i_32_a=c0b00000 (-5.5000) - i_32_b=400ccccd (2.2000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=x, o_un_flow=1
-# [DIRECLY][SUB]i_32_a=400ccccd (2.2000) - i_32_b=c0b00000 (-5.5000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=x, o_un_flow=1
+# [DIRECLY][ADD]i_32_a=c0b00000 (-5.5000) + i_32_b=400ccccd (2.2000) 	| o_32_s=c0533333 (-3.3000) 	| o_ov_flow=0, o_un_flow=0
+# [DIRECLY][ADD]i_32_a=400ccccd (2.2000) + i_32_b=c0b00000 (-5.5000) 	| o_32_s=c0533333 (-3.3000) 	| o_ov_flow=0, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=c0b00000 (-5.5000) - i_32_b=400ccccd (2.2000) 	| o_32_s=c0f66666 (-7.7000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=400ccccd (2.2000) - i_32_b=c0b00000 (-5.5000) 	| o_32_s=40f66666 (7.7000) 	| o_ov_flow=0, o_un_flow=1
 # ==========[ NORMAL (-5.5 & -5.5) ]==========
-# [DIRECLY][ADD]i_32_a=c0b00000 (-5.5000) + i_32_b=c0b00000 (-5.5000) 	| o_32_s=c1300000 (-11.0000) 	| o_ov_flow=x, o_un_flow=0
-# [DIRECLY][ADD]i_32_a=c0b00000 (-5.5000) + i_32_b=c0b00000 (-5.5000) 	| o_32_s=c1300000 (-11.0000) 	| o_ov_flow=x, o_un_flow=0
-# [DIRECLY][SUB]i_32_a=c0b00000 (-5.5000) - i_32_b=c0b00000 (-5.5000) 	| o_32_s=b1000000 (-0.0000) 	| o_ov_flow=x, o_un_flow=0
-# [DIRECLY][SUB]i_32_a=c0b00000 (-5.5000) - i_32_b=c0b00000 (-5.5000) 	| o_32_s=b1000000 (-0.0000) 	| o_ov_flow=x, o_un_flow=0
+# [DIRECLY][ADD]i_32_a=c0b00000 (-5.5000) + i_32_b=c0b00000 (-5.5000) 	| o_32_s=c1300000 (-11.0000) 	| o_ov_flow=1, o_un_flow=0
+# [DIRECLY][ADD]i_32_a=c0b00000 (-5.5000) + i_32_b=c0b00000 (-5.5000) 	| o_32_s=c1300000 (-11.0000) 	| o_ov_flow=1, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=c0b00000 (-5.5000) - i_32_b=c0b00000 (-5.5000) 	| o_32_s=c0800000 (-4.0000) 	| o_ov_flow=0, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=c0b00000 (-5.5000) - i_32_b=c0b00000 (-5.5000) 	| o_32_s=c0800000 (-4.0000) 	| o_ov_flow=0, o_un_flow=0
 # ==========[ ROUNDING SPECITIAL ]==========
-# [DIRECLY][ADD]i_32_a=c07fffff (-4.0000) + i_32_b=c1f00000 (-30.0000) 	| o_32_s=c2080000 (-34.0000) 	| o_ov_flow=x, o_un_flow=0
-# [DIRECLY][ADD]i_32_a=c1f00000 (-30.0000) + i_32_b=c07fffff (-4.0000) 	| o_32_s=c2080000 (-34.0000) 	| o_ov_flow=x, o_un_flow=0
-# [DIRECLY][SUB]i_32_a=c07fffff (-4.0000) - i_32_b=c1f00000 (-30.0000) 	| o_32_s=c1d00000 (-26.0000) 	| o_ov_flow=x, o_un_flow=1
-# [DIRECLY][SUB]i_32_a=c1f00000 (-30.0000) - i_32_b=c07fffff (-4.0000) 	| o_32_s=c1d00000 (-26.0000) 	| o_ov_flow=x, o_un_flow=1
+# [DIRECLY][ADD]i_32_a=c07fffff (-4.0000) + i_32_b=c1f00000 (-30.0000) 	| o_32_s=c2080000 (-34.0000) 	| o_ov_flow=1, o_un_flow=0
+# [DIRECLY][ADD]i_32_a=c1f00000 (-30.0000) + i_32_b=c07fffff (-4.0000) 	| o_32_s=c2080000 (-34.0000) 	| o_ov_flow=1, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=c07fffff (-4.0000) - i_32_b=c1f00000 (-30.0000) 	| o_32_s=41d00000 (26.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=c1f00000 (-30.0000) - i_32_b=c07fffff (-4.0000) 	| o_32_s=c1d00000 (-26.0000) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ TEST SIGN ]==========
+# [DIRECLY][ADD]i_32_a=c00ccccd (-2.2000) + i_32_b=40533333 (3.3000) 	| o_32_s=3f8ccccc (1.1000) 	| o_ov_flow=0, o_un_flow=0
+# [DIRECLY][ADD]i_32_a=40533333 (3.3000) + i_32_b=c00ccccd (-2.2000) 	| o_32_s=3f8ccccc (1.1000) 	| o_ov_flow=0, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=c00ccccd (-2.2000) - i_32_b=40533333 (3.3000) 	| o_32_s=c0b00000 (-5.5000) 	| o_ov_flow=1, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=40533333 (3.3000) - i_32_b=c00ccccd (-2.2000) 	| o_32_s=40b00000 (5.5000) 	| o_ov_flow=1, o_un_flow=0
+# ==========[ TEST SIGN ]==========
+# [DIRECLY][ADD]i_32_a=c00ccccd (-2.2000) + i_32_b=c0533333 (-3.3000) 	| o_32_s=c0b00000 (-5.5000) 	| o_ov_flow=1, o_un_flow=0
+# [DIRECLY][ADD]i_32_a=c0533333 (-3.3000) + i_32_b=c00ccccd (-2.2000) 	| o_32_s=c0b00000 (-5.5000) 	| o_ov_flow=1, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=c00ccccd (-2.2000) - i_32_b=c0533333 (-3.3000) 	| o_32_s=3f8ccccc (1.1000) 	| o_ov_flow=0, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=c0533333 (-3.3000) - i_32_b=c00ccccd (-2.2000) 	| o_32_s=bf8ccccc (-1.1000) 	| o_ov_flow=0, o_un_flow=0
+# ==========[ TEST SIGN ]==========
+# [DIRECLY][ADD]i_32_a=c00ccccd (-2.2000) + i_32_b=c1b1999a (-22.2000) 	| o_32_s=c1c33333 (-24.4000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][ADD]i_32_a=c1b1999a (-22.2000) + i_32_b=c00ccccd (-2.2000) 	| o_32_s=c1c33333 (-24.4000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=c00ccccd (-2.2000) - i_32_b=c1b1999a (-22.2000) 	| o_32_s=41a00001 (20.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=c1b1999a (-22.2000) - i_32_b=c00ccccd (-2.2000) 	| o_32_s=c1a00001 (-20.0000) 	| o_ov_flow=0, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=3f95d265 (1.1705) + i_32_b=405db127 (3.4639) 	| o_32_s=40944d2d (4.6344) 	| o_ov_flow=x, o_un_flow=0
-# [Random][ADD]i_32_a=405db127 (3.4639) + i_32_b=3f95d265 (1.1705) 	| o_32_s=40944d2d (4.6344) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=3f95d265 (1.1705) - i_32_b=405db127 (3.4639) 	| o_32_s=4012c7f4 (2.2935) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=405db127 (3.4639) - i_32_b=3f95d265 (1.1705) 	| o_32_s=4012c7f4 (2.2935) 	| o_ov_flow=x, o_un_flow=1
+# [Random][ADD]i_32_a=c0ea5dda (-7.3240) + i_32_b=40ef1cf5 (7.4723) 	| o_32_s=3e17e360 (0.1483) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=40ef1cf5 (7.4723) + i_32_b=c0ea5dda (-7.3240) 	| o_32_s=3e17e360 (0.1483) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=c0ea5dda (-7.3240) - i_32_b=40ef1cf5 (7.4723) 	| o_32_s=c16cbd67 (-14.7962) 	| o_ov_flow=1, o_un_flow=1
+# [Random][SUB]i_32_a=40ef1cf5 (7.4723) - i_32_b=c0ea5dda (-7.3240) 	| o_32_s=416cbd67 (14.7962) 	| o_ov_flow=1, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=3f95d265 (1.1705) + i_32_b=405db127 (3.4639) 	| o_32_s=40944d2d (4.6344) 	| o_ov_flow=x, o_un_flow=0
-# [Random][ADD]i_32_a=405db127 (3.4639) + i_32_b=3f95d265 (1.1705) 	| o_32_s=40944d2d (4.6344) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=3f95d265 (1.1705) - i_32_b=405db127 (3.4639) 	| o_32_s=4012c7f4 (2.2935) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=405db127 (3.4639) - i_32_b=3f95d265 (1.1705) 	| o_32_s=4012c7f4 (2.2935) 	| o_ov_flow=x, o_un_flow=1
+# [Random][ADD]i_32_a=c0ea5dda (-7.3240) + i_32_b=40ef1cf5 (7.4723) 	| o_32_s=3e17e360 (0.1483) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=40ef1cf5 (7.4723) + i_32_b=c0ea5dda (-7.3240) 	| o_32_s=3e17e360 (0.1483) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=c0ea5dda (-7.3240) - i_32_b=40ef1cf5 (7.4723) 	| o_32_s=c16cbd67 (-14.7962) 	| o_ov_flow=1, o_un_flow=1
+# [Random][SUB]i_32_a=40ef1cf5 (7.4723) - i_32_b=c0ea5dda (-7.3240) 	| o_32_s=416cbd67 (14.7962) 	| o_ov_flow=1, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=c09e89a2 (-4.9543) + i_32_b=40246ce4 (2.5691) 	| o_32_s=c018a660 (-2.3852) 	| o_ov_flow=x, o_un_flow=0
-# [Random][ADD]i_32_a=40246ce4 (2.5691) + i_32_b=c09e89a2 (-4.9543) 	| o_32_s=c018a660 (-2.3852) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=c09e89a2 (-4.9543) - i_32_b=40246ce4 (2.5691) 	| o_32_s=40f0c014 (7.5234) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=40246ce4 (2.5691) - i_32_b=c09e89a2 (-4.9543) 	| o_32_s=40f0c014 (7.5234) 	| o_ov_flow=x, o_un_flow=1
+# [Random][ADD]i_32_a=405805b9 (3.3753) + i_32_b=bfb90a5f (-1.4456) 	| o_32_s=3ff70113 (1.9297) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=bfb90a5f (-1.4456) + i_32_b=405805b9 (3.3753) 	| o_32_s=3ff70113 (1.9297) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=405805b9 (3.3753) - i_32_b=bfb90a5f (-1.4456) 	| o_32_s=409a4574 (4.8210) 	| o_ov_flow=1, o_un_flow=0
+# [Random][SUB]i_32_a=bfb90a5f (-1.4456) - i_32_b=405805b9 (3.3753) 	| o_32_s=c09a4574 (-4.8210) 	| o_ov_flow=1, o_un_flow=0
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=c103f97e (-8.2484) + i_32_b=bff2f743 (-1.8982) 	| o_32_s=c1225867 (-10.1466) 	| o_ov_flow=x, o_un_flow=1
-# [Random][ADD]i_32_a=bff2f743 (-1.8982) + i_32_b=c103f97e (-8.2484) 	| o_32_s=c1225867 (-10.1466) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=c103f97e (-8.2484) - i_32_b=bff2f743 (-1.8982) 	| o_32_s=c0cb352b (-6.3502) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=bff2f743 (-1.8982) - i_32_b=c103f97e (-8.2484) 	| o_32_s=c0cb352b (-6.3502) 	| o_ov_flow=x, o_un_flow=0
+# [Random][ADD]i_32_a=41c6e1e3 (24.8603) + i_32_b=c022fed2 (-2.5468) 	| o_32_s=41b28209 (22.3135) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=c022fed2 (-2.5468) + i_32_b=41c6e1e3 (24.8603) 	| o_32_s=41b28209 (22.3135) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=41c6e1e3 (24.8603) - i_32_b=c022fed2 (-2.5468) 	| o_32_s=41db41bd (27.4071) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c022fed2 (-2.5468) - i_32_b=41c6e1e3 (24.8603) 	| o_32_s=c1db41bd (-27.4071) 	| o_ov_flow=0, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=bdaa0fac (-0.0830) + i_32_b=c081b086 (-4.0528) 	| o_32_s=c08458c4 (-4.1358) 	| o_ov_flow=x, o_un_flow=1
-# [Random][ADD]i_32_a=c081b086 (-4.0528) + i_32_b=bdaa0fac (-0.0830) 	| o_32_s=c08458c4 (-4.1358) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=bdaa0fac (-0.0830) - i_32_b=c081b086 (-4.0528) 	| o_32_s=c07e108e (-3.9698) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=c081b086 (-4.0528) - i_32_b=bdaa0fac (-0.0830) 	| o_32_s=c07e108e (-3.9698) 	| o_ov_flow=x, o_un_flow=0
+# [Random][ADD]i_32_a=c17c5eae (-15.7731) + i_32_b=c054e23f (-3.3263) 	| o_32_s=c198cb9f (-19.0994) 	| o_ov_flow=1, o_un_flow=0
+# [Random][ADD]i_32_a=c054e23f (-3.3263) + i_32_b=c17c5eae (-15.7731) 	| o_32_s=c198cb9f (-19.0994) 	| o_ov_flow=1, o_un_flow=0
+# [Random][SUB]i_32_a=c17c5eae (-15.7731) - i_32_b=c054e23f (-3.3263) 	| o_32_s=c147261e (-12.4468) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c054e23f (-3.3263) - i_32_b=c17c5eae (-15.7731) 	| o_32_s=4147261e (12.4468) 	| o_ov_flow=0, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=40cadb71 (6.3393) + i_32_b=40bbd561 (5.8698) 	| o_32_s=41435869 (12.2091) 	| o_ov_flow=x, o_un_flow=1
-# [Random][ADD]i_32_a=40bbd561 (5.8698) + i_32_b=40cadb71 (6.3393) 	| o_32_s=c1435869 (-12.2091) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=40cadb71 (6.3393) - i_32_b=40bbd561 (5.8698) 	| o_32_s=3ef06100 (0.4695) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=40bbd561 (5.8698) - i_32_b=40cadb71 (6.3393) 	| o_32_s=3ef06100 (0.4695) 	| o_ov_flow=x, o_un_flow=0
+# [Random][ADD]i_32_a=c0f398fc (-7.6124) + i_32_b=40aed834 (5.4639) 	| o_32_s=c0098190 (-2.1485) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=40aed834 (5.4639) + i_32_b=c0f398fc (-7.6124) 	| o_32_s=c0098190 (-2.1485) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=c0f398fc (-7.6124) - i_32_b=40aed834 (5.4639) 	| o_32_s=c1513898 (-13.0763) 	| o_ov_flow=1, o_un_flow=1
+# [Random][SUB]i_32_a=40aed834 (5.4639) - i_32_b=c0f398fc (-7.6124) 	| o_32_s=41513898 (13.0763) 	| o_ov_flow=1, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=3dfe3136 (0.1241) + i_32_b=c0980728 (-4.7509) 	| o_32_s=c0940e63 (-4.6268) 	| o_ov_flow=x, o_un_flow=1
-# [Random][ADD]i_32_a=c0980728 (-4.7509) + i_32_b=3dfe3136 (0.1241) 	| o_32_s=c0940e63 (-4.6268) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=3dfe3136 (0.1241) - i_32_b=c0980728 (-4.7509) 	| o_32_s=409bffed (4.8750) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=c0980728 (-4.7509) - i_32_b=3dfe3136 (0.1241) 	| o_32_s=409bffed (4.8750) 	| o_ov_flow=x, o_un_flow=1
+# [Random][ADD]i_32_a=c19d7160 (-19.6804) + i_32_b=4016a197 (2.3536) 	| o_32_s=c18a9d2d (-17.3267) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=4016a197 (2.3536) + i_32_b=c19d7160 (-19.6804) 	| o_32_s=c18a9d2d (-17.3267) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c19d7160 (-19.6804) - i_32_b=4016a197 (2.3536) 	| o_32_s=c1b04593 (-22.0340) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=4016a197 (2.3536) - i_32_b=c19d7160 (-19.6804) 	| o_32_s=41b04593 (22.0340) 	| o_ov_flow=0, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=bf1950f9 (-0.5989) + i_32_b=411b7bd4 (9.7177) 	| o_32_s=4111e6c5 (9.1188) 	| o_ov_flow=x, o_un_flow=1
-# [Random][ADD]i_32_a=411b7bd4 (9.7177) + i_32_b=bf1950f9 (-0.5989) 	| o_32_s=4111e6c5 (9.1188) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=bf1950f9 (-0.5989) - i_32_b=411b7bd4 (9.7177) 	| o_32_s=c12510e3 (-10.3166) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=411b7bd4 (9.7177) - i_32_b=bf1950f9 (-0.5989) 	| o_32_s=c12510e3 (-10.3166) 	| o_ov_flow=x, o_un_flow=1
+# [Random][ADD]i_32_a=c1d4e474 (-26.6115) + i_32_b=bfd6aa4a (-1.6771) 	| o_32_s=c1e24f18 (-28.2886) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=bfd6aa4a (-1.6771) + i_32_b=c1d4e474 (-26.6115) 	| o_32_s=c1e24f18 (-28.2886) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c1d4e474 (-26.6115) - i_32_b=bfd6aa4a (-1.6771) 	| o_32_s=c1c779d0 (-24.9345) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=bfd6aa4a (-1.6771) - i_32_b=c1d4e474 (-26.6115) 	| o_32_s=41c779d0 (24.9345) 	| o_ov_flow=0, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=c0c26d25 (-6.0758) + i_32_b=4091d51c (4.5573) 	| o_32_s=bfc26024 (-1.5186) 	| o_ov_flow=x, o_un_flow=0
-# [Random][ADD]i_32_a=4091d51c (4.5573) + i_32_b=c0c26d25 (-6.0758) 	| o_32_s=bfc26024 (-1.5186) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=c0c26d25 (-6.0758) - i_32_b=4091d51c (4.5573) 	| o_32_s=412a2120 (10.6331) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=4091d51c (4.5573) - i_32_b=c0c26d25 (-6.0758) 	| o_32_s=c12a2120 (-10.6331) 	| o_ov_flow=x, o_un_flow=0
+# [Random][ADD]i_32_a=41a4f52e (20.6197) + i_32_b=3e271472 (0.1632) 	| o_32_s=41a64357 (20.7829) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=3e271472 (0.1632) + i_32_b=41a4f52e (20.6197) 	| o_32_s=41a64357 (20.7829) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=41a4f52e (20.6197) - i_32_b=3e271472 (0.1632) 	| o_32_s=41a3a705 (20.4566) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=3e271472 (0.1632) - i_32_b=41a4f52e (20.6197) 	| o_32_s=c1a3a705 (-20.4566) 	| o_ov_flow=0, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=40e369fa (7.1067) + i_32_b=3faa7178 (1.3316) 	| o_32_s=4107032c (8.4383) 	| o_ov_flow=x, o_un_flow=0
-# [Random][ADD]i_32_a=3faa7178 (1.3316) + i_32_b=40e369fa (7.1067) 	| o_32_s=4107032c (8.4383) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=40e369fa (7.1067) - i_32_b=3faa7178 (1.3316) 	| o_32_s=40b8cd9c (5.7751) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=3faa7178 (1.3316) - i_32_b=40e369fa (7.1067) 	| o_32_s=40b8cd9c (5.7751) 	| o_ov_flow=x, o_un_flow=1
+# [Random][ADD]i_32_a=411110d1 (9.0666) + i_32_b=c005c91d (-2.0904) 	| o_32_s=40df3d13 (6.9762) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=c005c91d (-2.0904) + i_32_b=411110d1 (9.0666) 	| o_32_s=40df3d13 (6.9762) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=411110d1 (9.0666) - i_32_b=c005c91d (-2.0904) 	| o_32_s=41328318 (11.1570) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c005c91d (-2.0904) - i_32_b=411110d1 (9.0666) 	| o_32_s=c1328318 (-11.1570) 	| o_ov_flow=0, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=bfcdce87 (-1.6079) + i_32_b=bfc6f8de (-1.5545) 	| o_32_s=c04a63b2 (-3.1623) 	| o_ov_flow=x, o_un_flow=1
-# [Random][ADD]i_32_a=bfc6f8de (-1.5545) + i_32_b=bfcdce87 (-1.6079) 	| o_32_s=404a63b2 (3.1623) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=bfcdce87 (-1.6079) - i_32_b=bfc6f8de (-1.5545) 	| o_32_s=bd5ab520 (-0.0534) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=bfc6f8de (-1.5545) - i_32_b=bfcdce87 (-1.6079) 	| o_32_s=bd5ab520 (-0.0534) 	| o_ov_flow=x, o_un_flow=0
+# [Random][ADD]i_32_a=400dcbca (2.2156) + i_32_b=bfc2c469 (-1.5216) 	| o_32_s=3f31a656 (0.6939) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=bfc2c469 (-1.5216) + i_32_b=400dcbca (2.2156) 	| o_32_s=3f31a656 (0.6939) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=400dcbca (2.2156) - i_32_b=bfc2c469 (-1.5216) 	| o_32_s=406f2dfe (3.7372) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=bfc2c469 (-1.5216) - i_32_b=400dcbca (2.2156) 	| o_32_s=c06f2dfe (-3.7372) 	| o_ov_flow=0, o_un_flow=1
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=40bbf353 (5.8735) + i_32_b=40e8bf13 (7.2733) 	| o_32_s=c1525933 (-13.1468) 	| o_ov_flow=x, o_un_flow=1
-# [Random][ADD]i_32_a=40e8bf13 (7.2733) + i_32_b=40bbf353 (5.8735) 	| o_32_s=41525933 (13.1468) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=40bbf353 (5.8735) - i_32_b=40e8bf13 (7.2733) 	| o_32_s=3fb32f00 (1.3999) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=40e8bf13 (7.2733) - i_32_b=40bbf353 (5.8735) 	| o_32_s=3fb32f00 (1.3999) 	| o_ov_flow=x, o_un_flow=0
+# [Random][ADD]i_32_a=408f8e94 (4.4862) + i_32_b=3fcda401 (1.6066) 	| o_32_s=40c2f794 (6.0927) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=3fcda401 (1.6066) + i_32_b=408f8e94 (4.4862) 	| o_32_s=40c2f794 (6.0927) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=408f8e94 (4.4862) - i_32_b=3fcda401 (1.6066) 	| o_32_s=40384b27 (2.8796) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=3fcda401 (1.6066) - i_32_b=408f8e94 (4.4862) 	| o_32_s=c0384b27 (-2.8796) 	| o_ov_flow=0, o_un_flow=0
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=c041dc8d (-3.0291) + i_32_b=400541a3 (2.0821) 	| o_32_s=bf726ba8 (-0.9470) 	| o_ov_flow=x, o_un_flow=0
-# [Random][ADD]i_32_a=400541a3 (2.0821) + i_32_b=c041dc8d (-3.0291) 	| o_32_s=bf726ba8 (-0.9470) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=c041dc8d (-3.0291) - i_32_b=400541a3 (2.0821) 	| o_32_s=40a38f18 (5.1112) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=400541a3 (2.0821) - i_32_b=c041dc8d (-3.0291) 	| o_32_s=c0a38f18 (-5.1112) 	| o_ov_flow=x, o_un_flow=0
+# [Random][ADD]i_32_a=41103eb4 (9.0153) + i_32_b=410b5577 (8.7084) 	| o_32_s=418dca15 (17.7237) 	| o_ov_flow=1, o_un_flow=0
+# [Random][ADD]i_32_a=410b5577 (8.7084) + i_32_b=41103eb4 (9.0153) 	| o_32_s=418dca15 (17.7237) 	| o_ov_flow=1, o_un_flow=0
+# [Random][SUB]i_32_a=41103eb4 (9.0153) - i_32_b=410b5577 (8.7084) 	| o_32_s=3e9d27a0 (0.3069) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=410b5577 (8.7084) - i_32_b=41103eb4 (9.0153) 	| o_32_s=be9d27a0 (-0.3069) 	| o_ov_flow=0, o_un_flow=0
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=c1033379 (-8.2001) + i_32_b=40d25e13 (6.5740) 	| o_32_s=bfd0237c (-1.6261) 	| o_ov_flow=x, o_un_flow=0
-# [Random][ADD]i_32_a=40d25e13 (6.5740) + i_32_b=c1033379 (-8.2001) 	| o_32_s=bfd0237c (-1.6261) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=c1033379 (-8.2001) - i_32_b=40d25e13 (6.5740) 	| o_32_s=416c6282 (14.7740) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=40d25e13 (6.5740) - i_32_b=c1033379 (-8.2001) 	| o_32_s=416c6282 (14.7740) 	| o_ov_flow=x, o_un_flow=1
+# [Random][ADD]i_32_a=41ad2d6e (21.6472) + i_32_b=4107e5f8 (8.4936) 	| o_32_s=41f1206a (30.1408) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=4107e5f8 (8.4936) + i_32_b=41ad2d6e (21.6472) 	| o_32_s=41f1206a (30.1408) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=41ad2d6e (21.6472) - i_32_b=4107e5f8 (8.4936) 	| o_32_s=415274e4 (13.1535) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=4107e5f8 (8.4936) - i_32_b=41ad2d6e (21.6472) 	| o_32_s=c15274e4 (-13.1535) 	| o_ov_flow=0, o_un_flow=0
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=c0f58db3 (-7.6735) + i_32_b=4121e313 (10.1179) 	| o_32_s=401c70e6 (2.4444) 	| o_ov_flow=x, o_un_flow=0
-# [Random][ADD]i_32_a=4121e313 (10.1179) + i_32_b=c0f58db3 (-7.6735) 	| o_32_s=401c70e6 (2.4444) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=c0f58db3 (-7.6735) - i_32_b=4121e313 (10.1179) 	| o_32_s=c18e54f6 (-17.7915) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=4121e313 (10.1179) - i_32_b=c0f58db3 (-7.6735) 	| o_32_s=c18e54f6 (-17.7915) 	| o_ov_flow=x, o_un_flow=0
+# [Random][ADD]i_32_a=4189e99e (17.2391) + i_32_b=4059383a (3.3941) 	| o_32_s=41a510a5 (20.6331) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=4059383a (3.3941) + i_32_b=4189e99e (17.2391) 	| o_32_s=41a510a5 (20.6331) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=4189e99e (17.2391) - i_32_b=4059383a (3.3941) 	| o_32_s=415d852d (13.8450) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=4059383a (3.3941) - i_32_b=4189e99e (17.2391) 	| o_32_s=c15d852d (-13.8450) 	| o_ov_flow=0, o_un_flow=0
 # ==========[ Read data from ROM ]==========
-# [Random][ADD]i_32_a=c0abb1b8 (-5.3654) + i_32_b=41640815 (14.2520) 	| o_32_s=410e2f39 (8.8865) 	| o_ov_flow=x, o_un_flow=1
-# [Random][ADD]i_32_a=41640815 (14.2520) + i_32_b=c0abb1b8 (-5.3654) 	| o_32_s=410e2f39 (8.8865) 	| o_ov_flow=x, o_un_flow=1
-# [Random][SUB]i_32_a=c0abb1b8 (-5.3654) - i_32_b=41640815 (14.2520) 	| o_32_s=c19cf078 (-19.6174) 	| o_ov_flow=x, o_un_flow=0
-# [Random][SUB]i_32_a=41640815 (14.2520) - i_32_b=c0abb1b8 (-5.3654) 	| o_32_s=c19cf078 (-19.6174) 	| o_ov_flow=x, o_un_flow=0
-# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv(151)
-#    Time: 1416 ns  Iteration: 0  Instance: /tb_FPU_unit
-# End time: 16:21:37 on Nov 05,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
+# [Random][ADD]i_32_a=40cdaed0 (6.4276) + i_32_b=bfb13582 (-1.3844) 	| o_32_s=40a1616f (5.0431) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=bfb13582 (-1.3844) + i_32_b=40cdaed0 (6.4276) 	| o_32_s=40a1616f (5.0431) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=40cdaed0 (6.4276) - i_32_b=bfb13582 (-1.3844) 	| o_32_s=40f9fc30 (7.8120) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=bfb13582 (-1.3844) - i_32_b=40cdaed0 (6.4276) 	| o_32_s=c0f9fc30 (-7.8120) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=419d833b (19.6891) + i_32_b=4006d272 (2.1066) 	| o_32_s=41ae5d89 (21.7957) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=4006d272 (2.1066) + i_32_b=419d833b (19.6891) 	| o_32_s=41ae5d89 (21.7957) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=419d833b (19.6891) - i_32_b=4006d272 (2.1066) 	| o_32_s=418ca8ed (17.5825) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=4006d272 (2.1066) - i_32_b=419d833b (19.6891) 	| o_32_s=c18ca8ed (-17.5825) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=c1284ccb (-10.5187) + i_32_b=4105506e (8.3321) 	| o_32_s=c00bf174 (-2.1866) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=4105506e (8.3321) + i_32_b=c1284ccb (-10.5187) 	| o_32_s=c00bf174 (-2.1866) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=c1284ccb (-10.5187) - i_32_b=4105506e (8.3321) 	| o_32_s=c196ce9c (-18.8509) 	| o_ov_flow=1, o_un_flow=0
+# [Random][SUB]i_32_a=4105506e (8.3321) - i_32_b=c1284ccb (-10.5187) 	| o_32_s=4196ce9c (18.8509) 	| o_ov_flow=1, o_un_flow=0
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=41858f6c (16.6950) + i_32_b=bfe38439 (-1.7775) 	| o_32_s=416eae51 (14.9176) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=bfe38439 (-1.7775) + i_32_b=41858f6c (16.6950) 	| o_32_s=416eae51 (14.9176) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=41858f6c (16.6950) - i_32_b=bfe38439 (-1.7775) 	| o_32_s=4193c7af (18.4725) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=bfe38439 (-1.7775) - i_32_b=41858f6c (16.6950) 	| o_32_s=c193c7af (-18.4725) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=c18de40b (-17.7363) + i_32_b=c096ece1 (-4.7164) 	| o_32_s=c1b39f43 (-22.4528) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=c096ece1 (-4.7164) + i_32_b=c18de40b (-17.7363) 	| o_32_s=c1b39f43 (-22.4528) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c18de40b (-17.7363) - i_32_b=c096ece1 (-4.7164) 	| o_32_s=c15051a5 (-13.0199) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=c096ece1 (-4.7164) - i_32_b=c18de40b (-17.7363) 	| o_32_s=415051a5 (13.0199) 	| o_ov_flow=0, o_un_flow=0
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=c1a3e0cb (-20.4848) + i_32_b=be4261e4 (-0.1898) 	| o_32_s=c1a5658f (-20.6746) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=be4261e4 (-0.1898) + i_32_b=c1a3e0cb (-20.4848) 	| o_32_s=c1a5658f (-20.6746) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c1a3e0cb (-20.4848) - i_32_b=be4261e4 (-0.1898) 	| o_32_s=c1a25c07 (-20.2949) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=be4261e4 (-0.1898) - i_32_b=c1a3e0cb (-20.4848) 	| o_32_s=41a25c07 (20.2949) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=c107cea5 (-8.4880) + i_32_b=bfe8e802 (-1.8196) 	| o_32_s=c124eba5 (-10.3075) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=bfe8e802 (-1.8196) + i_32_b=c107cea5 (-8.4880) 	| o_32_s=c124eba5 (-10.3075) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c107cea5 (-8.4880) - i_32_b=bfe8e802 (-1.8196) 	| o_32_s=c0d56349 (-6.6684) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=bfe8e802 (-1.8196) - i_32_b=c107cea5 (-8.4880) 	| o_32_s=40d56349 (6.6684) 	| o_ov_flow=0, o_un_flow=0
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=3fe4ec4a (1.7885) + i_32_b=409d716e (4.9201) 	| o_32_s=40d6ac80 (6.7086) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=409d716e (4.9201) + i_32_b=3fe4ec4a (1.7885) 	| o_32_s=40d6ac80 (6.7086) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=3fe4ec4a (1.7885) - i_32_b=409d716e (4.9201) 	| o_32_s=c0486cb7 (-3.1316) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=409d716e (4.9201) - i_32_b=3fe4ec4a (1.7885) 	| o_32_s=40486cb7 (3.1316) 	| o_ov_flow=0, o_un_flow=0
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=c1253dfb (-10.3276) + i_32_b=40d2f398 (6.5922) 	| o_32_s=c06f10bc (-3.7354) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=40d2f398 (6.5922) + i_32_b=c1253dfb (-10.3276) 	| o_32_s=c06f10bc (-3.7354) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=c1253dfb (-10.3276) - i_32_b=40d2f398 (6.5922) 	| o_32_s=c1875be3 (-16.9199) 	| o_ov_flow=1, o_un_flow=0
+# [Random][SUB]i_32_a=40d2f398 (6.5922) - i_32_b=c1253dfb (-10.3276) 	| o_32_s=41875be3 (16.9199) 	| o_ov_flow=1, o_un_flow=0
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=c1a93b14 (-21.1538) + i_32_b=bf4dc254 (-0.8037) 	| o_32_s=c1afa926 (-21.9576) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=bf4dc254 (-0.8037) + i_32_b=c1a93b14 (-21.1538) 	| o_32_s=c1afa926 (-21.9576) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c1a93b14 (-21.1538) - i_32_b=bf4dc254 (-0.8037) 	| o_32_s=c1a2cd02 (-20.3501) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=bf4dc254 (-0.8037) - i_32_b=c1a93b14 (-21.1538) 	| o_32_s=41a2cd02 (20.3501) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=c1e48f92 (-28.5701) + i_32_b=40262457 (2.5960) 	| o_32_s=c1cfcb07 (-25.9741) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=40262457 (2.5960) + i_32_b=c1e48f92 (-28.5701) 	| o_32_s=c1cfcb07 (-25.9741) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c1e48f92 (-28.5701) - i_32_b=40262457 (2.5960) 	| o_32_s=c1f9541d (-31.1661) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=40262457 (2.5960) - i_32_b=c1e48f92 (-28.5701) 	| o_32_s=41f9541d (31.1661) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=3fb33a67 (1.4002) + i_32_b=41016f3d (8.0897) 	| o_32_s=4117d68a (9.4899) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=41016f3d (8.0897) + i_32_b=3fb33a67 (1.4002) 	| o_32_s=4117d68a (9.4899) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=3fb33a67 (1.4002) - i_32_b=41016f3d (8.0897) 	| o_32_s=c0d60fe0 (-6.6894) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=41016f3d (8.0897) - i_32_b=3fb33a67 (1.4002) 	| o_32_s=40d60fe0 (6.6894) 	| o_ov_flow=0, o_un_flow=0
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=c1749cb6 (-15.2883) + i_32_b=40ce79e4 (6.4524) 	| o_32_s=c10d5fc4 (-8.8359) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=40ce79e4 (6.4524) + i_32_b=c1749cb6 (-15.2883) 	| o_32_s=c10d5fc4 (-8.8359) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c1749cb6 (-15.2883) - i_32_b=40ce79e4 (6.4524) 	| o_32_s=c1adecd4 (-21.7406) 	| o_ov_flow=1, o_un_flow=0
+# [Random][SUB]i_32_a=40ce79e4 (6.4524) - i_32_b=c1749cb6 (-15.2883) 	| o_32_s=41adecd4 (21.7406) 	| o_ov_flow=1, o_un_flow=0
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=41019d45 (8.1009) + i_32_b=c089020c (-4.2815) 	| o_32_s=407470fc (3.8194) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=c089020c (-4.2815) + i_32_b=41019d45 (8.1009) 	| o_32_s=407470fc (3.8194) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=41019d45 (8.1009) - i_32_b=c089020c (-4.2815) 	| o_32_s=41461e4b (12.3824) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c089020c (-4.2815) - i_32_b=41019d45 (8.1009) 	| o_32_s=c1461e4b (-12.3824) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=c17d7ae0 (-15.8425) + i_32_b=411aa9ba (9.6664) 	| o_32_s=c0c5a24c (-6.1761) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=411aa9ba (9.6664) + i_32_b=c17d7ae0 (-15.8425) 	| o_32_s=c0c5a24c (-6.1761) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=c17d7ae0 (-15.8425) - i_32_b=411aa9ba (9.6664) 	| o_32_s=c1cc124d (-25.5089) 	| o_ov_flow=1, o_un_flow=1
+# [Random][SUB]i_32_a=411aa9ba (9.6664) - i_32_b=c17d7ae0 (-15.8425) 	| o_32_s=41cc124d (25.5089) 	| o_ov_flow=1, o_un_flow=1
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=410b0f00 (8.6912) + i_32_b=c01302e7 (-2.2971) 	| o_32_s=40cc9c8c (6.3941) 	| o_ov_flow=0, o_un_flow=0
+# [Random][ADD]i_32_a=c01302e7 (-2.2971) + i_32_b=410b0f00 (8.6912) 	| o_32_s=40cc9c8c (6.3941) 	| o_ov_flow=0, o_un_flow=0
+# [Random][SUB]i_32_a=410b0f00 (8.6912) - i_32_b=c01302e7 (-2.2971) 	| o_32_s=412fcfba (10.9882) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=c01302e7 (-2.2971) - i_32_b=410b0f00 (8.6912) 	| o_32_s=c12fcfba (-10.9882) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ Read data from ROM ]==========
+# [Random][ADD]i_32_a=40cda240 (6.4261) + i_32_b=bfd3ec40 (-1.6556) 	| o_32_s=4098a730 (4.7704) 	| o_ov_flow=0, o_un_flow=1
+# [Random][ADD]i_32_a=bfd3ec40 (-1.6556) + i_32_b=40cda240 (6.4261) 	| o_32_s=4098a730 (4.7704) 	| o_ov_flow=0, o_un_flow=1
+# [Random][SUB]i_32_a=40cda240 (6.4261) - i_32_b=bfd3ec40 (-1.6556) 	| o_32_s=41014ea8 (8.0817) 	| o_ov_flow=1, o_un_flow=0
+# [Random][SUB]i_32_a=bfd3ec40 (-1.6556) - i_32_b=40cda240 (6.4261) 	| o_32_s=c1014ea8 (-8.0817) 	| o_ov_flow=1, o_un_flow=0
+# ==========[ APPR ZERO or APPR INF ]==========
+# [DIRECLY][ADD]i_32_a=7f21616f (214511611464115339152897452993962573824.0000) + i_32_b=007fffff (0.0000) 	| o_32_s=7f21616f (214511611464115339152897452993962573824.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][ADD]i_32_a=007fffff (0.0000) + i_32_b=7f21616f (214511611464115339152897452993962573824.0000) 	| o_32_s=7f21616f (214511611464115339152897452993962573824.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=7f21616f (214511611464115339152897452993962573824.0000) - i_32_b=007fffff (0.0000) 	| o_32_s=7f21616f (214511611464115339152897452993962573824.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=007fffff (0.0000) - i_32_b=7f21616f (214511611464115339152897452993962573824.0000) 	| o_32_s=ff21616f (-214511611464115339152897452993962573824.0000) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ APPR ZERO or APPR INF ]==========
+# [DIRECLY][ADD]i_32_a=7f7fffff (340282346638528859811704183484516925440.0000) + i_32_b=00ffffff (0.0000) 	| o_32_s=7f7fffff (340282346638528859811704183484516925440.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][ADD]i_32_a=00ffffff (0.0000) + i_32_b=7f7fffff (340282346638528859811704183484516925440.0000) 	| o_32_s=7f7fffff (340282346638528859811704183484516925440.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=7f7fffff (340282346638528859811704183484516925440.0000) - i_32_b=00ffffff (0.0000) 	| o_32_s=7f7fffff (340282346638528859811704183484516925440.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=00ffffff (0.0000) - i_32_b=7f7fffff (340282346638528859811704183484516925440.0000) 	| o_32_s=ff7fffff (-340282346638528859811704183484516925440.0000) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ APPR ZERO or APPR INF ]==========
+# [DIRECLY][ADD]i_32_a=7f7fffff (340282346638528859811704183484516925440.0000) + i_32_b=007fffff (0.0000) 	| o_32_s=7f7fffff (340282346638528859811704183484516925440.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][ADD]i_32_a=007fffff (0.0000) + i_32_b=7f7fffff (340282346638528859811704183484516925440.0000) 	| o_32_s=7f7fffff (340282346638528859811704183484516925440.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=7f7fffff (340282346638528859811704183484516925440.0000) - i_32_b=007fffff (0.0000) 	| o_32_s=7f7fffff (340282346638528859811704183484516925440.0000) 	| o_ov_flow=0, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=007fffff (0.0000) - i_32_b=7f7fffff (340282346638528859811704183484516925440.0000) 	| o_32_s=ff7fffff (-340282346638528859811704183484516925440.0000) 	| o_ov_flow=0, o_un_flow=1
+# ==========[ APPR ZERO or APPR INF ]==========
+# [DIRECLY][ADD]i_32_a=00ffffff (0.0000) + i_32_b=007fffff (0.0000) 	| o_32_s=013fffff (0.0000) 	| o_ov_flow=1, o_un_flow=0
+# [DIRECLY][ADD]i_32_a=007fffff (0.0000) + i_32_b=00ffffff (0.0000) 	| o_32_s=013fffff (0.0000) 	| o_ov_flow=1, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=00ffffff (0.0000) - i_32_b=007fffff (0.0000) 	| o_32_s=007fffff (0.0000) 	| o_ov_flow=0, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=007fffff (0.0000) - i_32_b=00ffffff (0.0000) 	| o_32_s=807fffff (-0.0000) 	| o_ov_flow=0, o_un_flow=0
+# ==========[ APPR ZERO or APPR INF ]==========
+# [DIRECLY][ADD]i_32_a=00ffffff (0.0000) + i_32_b=00ffffff (0.0000) 	| o_32_s=017fffff (0.0000) 	| o_ov_flow=1, o_un_flow=1
+# [DIRECLY][ADD]i_32_a=00ffffff (0.0000) + i_32_b=00ffffff (0.0000) 	| o_32_s=017fffff (0.0000) 	| o_ov_flow=1, o_un_flow=1
+# [DIRECLY][SUB]i_32_a=00ffffff (0.0000) - i_32_b=00ffffff (0.0000) 	| o_32_s=00800000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+# [DIRECLY][SUB]i_32_a=00ffffff (0.0000) - i_32_b=00ffffff (0.0000) 	| o_32_s=00800000 (0.0000) 	| o_ov_flow=0, o_un_flow=0
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv(160)
+#    Time: 4781 ns  Iteration: 0  Instance: /tb_FPU_unit
+# End time: 15:45:54 on Nov 06,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

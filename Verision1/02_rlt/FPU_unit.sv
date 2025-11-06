@@ -130,9 +130,9 @@ MAN_swap #(
 );
 SIGN_unit SIGN_OUT(
     .i_add_sub       (i_add_sub),
-    .i_comp_man      (w_MAN_COMP_28BIT_less),
-    .i_sign_man_a    (w_MAN_PRE_SWAP_BY_MAN_sign_max),
-    .i_sign_man_b    (w_MAN_PRE_SWAP_BY_MAN_sign_min),
+    .i_comp_man      (w_MAN_COMP_28BIT_less | w_EXPSWAP_compare),
+    .i_sign_man_a    (w_sign_a),
+    .i_sign_man_b    (w_sign_b),
     .o_sign_s        (w_sign_result) 
 );
 
@@ -162,7 +162,7 @@ EXP_adjust #(
     .SIZE_EXP       (8),
     .SIZE_LOPD      (8)      
 ) EXP_ADJUST_UNIT (
-    .i_overflow         (w_MAN_ALU_overflow | w_ROUNDING_ov_flow),
+    .i_overflow         (o_ov_flag),
     .i_underflow        (w_MAN_ALU_man[27]),
     .i_zero_flag        (w_LOPD_24BIT_zero_flag),
     .i_lopd_value       ({3'b0, w_LOPD_24BIT_one_position}),

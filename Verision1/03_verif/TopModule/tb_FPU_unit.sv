@@ -3,7 +3,7 @@
 module tb_FPU_unit ();
 
 parameter ALU_OP = 1;
-parameter SIZE_ADDR = 4;
+parameter SIZE_ADDR = 5;
 logic i_clk, i_rst_n;
 logic        i_add_sub;
 logic [31:0] i_32_a;
@@ -56,7 +56,7 @@ end
 initial begin
     i_clk = 1'b0;
     forever begin
-        #5 i_clk = ~i_clk;
+        #10 i_clk = ~i_clk;
     end
 end
 function automatic shortreal float_to_real(input logic [31:0] f);
@@ -64,7 +64,6 @@ function automatic shortreal float_to_real(input logic [31:0] f);
     temp = int'(f);                  // ép logic -> int (2-state)
     return $bitstoshortreal(temp);   // chuyển bit -> shortreal
 endfunction
-
 task automatic Display_result(
     string                      t_type      ,
     input logic                 t_i_add_sub ,
@@ -96,7 +95,7 @@ task automatic TestCase_Display_result(
         i_32_b      = t_i_fpu_b;
         @(negedge i_clk);
         #1;
-        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flow, o_un_flow);
+        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flag, o_un_flow);
         @(posedge i_clk);
         #1;
         i_add_sub   = 1'b0;
@@ -104,7 +103,7 @@ task automatic TestCase_Display_result(
         i_32_b      = t_i_fpu_a;
         @(negedge i_clk);
         #1;
-        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flow, o_un_flow);
+        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flag, o_un_flow);
         @(posedge i_clk);
         #1;
         i_add_sub   = 1'b1;
@@ -112,7 +111,7 @@ task automatic TestCase_Display_result(
         i_32_b      = t_i_fpu_b;
         @(negedge i_clk);
         #1;
-        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flow, o_un_flow);
+        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flag, o_un_flow);
         @(posedge i_clk);
         #1;
         i_add_sub   = 1'b1;
@@ -120,7 +119,7 @@ task automatic TestCase_Display_result(
         i_32_b      = t_i_fpu_a;
         @(negedge i_clk);
         #1;
-        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flow, o_un_flow);
+        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flag, o_un_flow);
     end
 endtask //automatic
 
@@ -141,12 +140,21 @@ initial begin
     TestCase_Display_result("DIRECLY", "NORMAL (-5.5 & 2.2)", 32'hc0b00000, 32'h400ccccd);
     TestCase_Display_result("DIRECLY", "NORMAL (-5.5 & -5.5)", 32'hc0b00000, 32'hc0b00000);
     TestCase_Display_result("DIRECLY", "ROUNDING SPECITIAL", 32'hc07fffff, 32'hc1f00000);
+    TestCase_Display_result("DIRECLY", "TEST SIGN", 32'hc00ccccd, 32'h40533333);
+    TestCase_Display_result("DIRECLY", "TEST SIGN", 32'hc00ccccd, 32'hc0533333);
+    TestCase_Display_result("DIRECLY", "TEST SIGN", 32'hc00ccccd, 32'hc1b1999a);
     repeat(2**SIZE_ADDR) begin
         TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
         @(posedge i_clk);
         #1;
         w_i_addr = w_i_addr + 1;
     end
+    TestCase_Display_result("DIRECLY", "APPR ZERO or APPR INF", 32'h7f21616f, 32'h007fffff);
+    TestCase_Display_result("DIRECLY", "APPR ZERO or APPR INF", 32'h7f7fffff, 32'h00ffffff);
+    TestCase_Display_result("DIRECLY", "APPR ZERO or APPR INF", 32'h7f7fffff, 32'h007fffff);
+    TestCase_Display_result("DIRECLY", "APPR ZERO or APPR INF", 32'h00ffffff, 32'h007fffff);
+    TestCase_Display_result("DIRECLY", "APPR ZERO or APPR INF", 32'h00ffffff, 32'h00ffffff);
+    
     #100;
     $finish;
 end

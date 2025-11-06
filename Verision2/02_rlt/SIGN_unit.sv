@@ -6,8 +6,6 @@ module SIGN_unit (
     output logic            o_sign_s        
 );
 
-logic w_sign_0;
-assign w_sign_0 = i_add_sub ? ~(i_sign_man_a ^ i_sign_man_b) : (i_sign_man_a ^ i_sign_man_b);
-assign o_sign_s = w_sign_0 ? i_sign_man_a : (i_sign_man_b ? ~i_comp_man : i_comp_man);
+assign o_sign_s = (~i_add_sub & i_sign_man_b & i_comp_man) | (i_add_sub & ~i_sign_man_b & i_comp_man) | (i_sign_man_a & ~i_comp_man);
 
 endmodule
