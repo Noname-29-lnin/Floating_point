@@ -1,9 +1,6 @@
 # vsim -lib ./../TopModule/QuestaSim/work -debugDB -l ./../TopModule/QuestaSim/tb_FPU_unit.log -voptargs="+acc" -assertdebug -c tb_FPU_unit -wlf ./../TopModule/QuestaSim/tb_FPU_unit.wlf -do "cd ./../TopModule/QuestaSim; log -r /*; run -all;" 
-# Start time: 17:32:55 on Nov 04,2025
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vsim-8611) Generating debug db.
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Start time: 16:21:37 on Nov 05,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2024.3 linux_x86_64 Sep 10 2024
 # //
@@ -49,7 +46,7 @@
 #    Time: 0 ps  Iteration: 0  Instance: /tb_FPU_unit/DUT/ROUNDING_UNIT/INCREASE_ROUNDING File: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv Line: 20
 # ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (24) for port 'o_sum'. The port definition is at: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv(5).
 #    Time: 0 ps  Iteration: 0  Instance: /tb_FPU_unit/DUT/ROUNDING_UNIT/INCREASE_ROUNDING File: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv Line: 20
-# ** Note: (vsim-8900) Creating design debug database ./../TopModule/QuestaSim/tb_FPU_unit.dbg.
+# ** Note: (vsim-8716) Reusing existing debug database ./../TopModule/QuestaSim/tb_FPU_unit.dbg.
 # cd ./../TopModule/QuestaSim
 # Cannot change directory while a simulation is in progress.
 # Use the "quit -sim" command to unload the design first.
@@ -177,5 +174,5 @@
 # [Random][SUB]i_32_a=41640815 (14.2520) - i_32_b=c0abb1b8 (-5.3654) 	| o_32_s=c19cf078 (-19.6174) 	| o_ov_flow=x, o_un_flow=0
 # ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv(151)
 #    Time: 1416 ns  Iteration: 0  Instance: /tb_FPU_unit
-# End time: 17:32:56 on Nov 04,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 3
+# End time: 16:21:37 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2

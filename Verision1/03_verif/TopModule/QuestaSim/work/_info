@@ -83,10 +83,11 @@ o-quiet -auto_acc_if_foreign -work ./../TopModule/QuestaSim/work -debugdb +acc
 Z3 tCvgOpt 0
 n@_opt
 OL;O;2024.3;79
+R2
 vCLA_28bit
 Z4 2/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/single_port_rom.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SIGN_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_right_28bit.sv
 Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z6 !s110 1762252375
+Z6 !s110 1762334496
 !i10b 1
 !s100 lKWWHQj;a96V[1BJHGUn^0
 If7Dz=;Dg5fbR]=HZ<AO=g3
@@ -95,18 +96,18 @@ R2
 w1762167762
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv
-!i122 34
+!i122 35
 L0 1 41
 Z7 VDg1SIo80bB@j0V0VzS_@n1
 Z8 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z9 !s108 1762252375.000000
-Z10 !s107 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_right_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SIGN_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/single_port_rom.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv|
-Z11 !s90 -f|./../TopModule/flist.f|
+Z9 !s108 1762334496.000000
+!s107 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_right_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SIGN_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/single_port_rom.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv|
+Z10 !s90 -f|./../TopModule/flist.f|
 !i113 0
-Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
 n@c@l@a_28bit
 vCLA_4bit
@@ -121,18 +122,18 @@ R2
 w1762167578
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
-!i122 34
-Z13 L0 1 26
+!i122 35
+Z12 L0 1 26
 R7
 R8
 r1
 !s85 0
 31
 R9
+Z13 !s107 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_right_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SIGN_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_28bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/single_port_rom.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv|
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@c@l@a_4bit
 vCLA_8bit
@@ -147,7 +148,7 @@ R2
 w1762170121
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_8bit.sv
-!i122 34
+!i122 35
 Z14 L0 1 35
 R7
 R8
@@ -155,10 +156,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@c@l@a_8bit
 vCOMP_28bit
@@ -173,7 +174,7 @@ R2
 w1762172879
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv
-!i122 34
+!i122 35
 L0 1 73
 R7
 R8
@@ -181,10 +182,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@c@o@m@p_28bit
 vCOMP_2bit
@@ -199,7 +200,7 @@ R2
 Z15 w1761871637
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_2bit.sv
-!i122 34
+!i122 35
 L0 1 11
 R7
 R8
@@ -207,10 +208,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@c@o@m@p_2bit
 vCOMP_4bit
@@ -225,18 +226,18 @@ R2
 R15
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_4bit.sv
-!i122 34
-R13
+!i122 35
+R12
 R7
 R8
 r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@c@o@m@p_4bit
 vCOMP_8bit
@@ -251,18 +252,18 @@ R2
 w1762185202
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv
-!i122 34
-R13
+!i122 35
+R12
 R7
 R8
 r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@c@o@m@p_8bit
 vEXP_adjust
@@ -277,7 +278,7 @@ R2
 w1762241178
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv
-!i122 34
+!i122 35
 R14
 R7
 R8
@@ -285,10 +286,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@e@x@p_adjust
 vEXP_sub
@@ -303,7 +304,7 @@ R2
 Z16 w1762184587
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv
-!i122 34
+!i122 35
 L0 1 20
 R7
 R8
@@ -311,10 +312,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@e@x@p_sub
 vEXP_swap
@@ -329,7 +330,7 @@ R2
 w1761871656
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv
-!i122 34
+!i122 35
 Z17 L0 1 25
 R7
 R8
@@ -337,10 +338,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@e@x@p_swap
 vFPU_unit
@@ -355,7 +356,7 @@ R2
 w1762252372
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/FPU_unit.sv
-!i122 34
+!i122 35
 L0 1 204
 R7
 R8
@@ -363,10 +364,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@f@p@u_unit
 vLOPD_16bit
@@ -381,7 +382,7 @@ R2
 w1762177867
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv
-!i122 34
+!i122 35
 Z18 L0 1 39
 R7
 R8
@@ -389,10 +390,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@l@o@p@d_16bit
 vLOPD_24bit
@@ -407,7 +408,7 @@ R2
 w1762250793
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_24bit.sv
-!i122 34
+!i122 35
 L0 1 38
 R7
 R8
@@ -415,10 +416,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@l@o@p@d_24bit
 vLOPD_4bit
@@ -433,7 +434,7 @@ R2
 w1762176641
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv
-!i122 34
+!i122 35
 L0 1 19
 R7
 R8
@@ -441,10 +442,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@l@o@p@d_4bit
 vLOPD_8bit
@@ -459,7 +460,7 @@ R2
 w1762177803
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv
-!i122 34
+!i122 35
 R18
 R7
 R8
@@ -467,10 +468,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@l@o@p@d_8bit
 vMAN_ALU
@@ -485,7 +486,7 @@ R2
 R16
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_ALU.sv
-!i122 34
+!i122 35
 L0 1 33
 R7
 R8
@@ -493,10 +494,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@m@a@n_@a@l@u
 vMAN_swap
@@ -511,7 +512,7 @@ R2
 R16
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/MAN_swap.sv
-!i122 34
+!i122 35
 L0 1 31
 R7
 R8
@@ -519,10 +520,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@m@a@n_swap
 vNORMALIZATION_unit
@@ -537,7 +538,7 @@ R2
 R16
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/NORMALIZATION_unit.sv
-!i122 34
+!i122 35
 R17
 R7
 R8
@@ -545,10 +546,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@n@o@r@m@a@l@i@z@a@t@i@o@n_unit
 vROUNDING_unit
@@ -563,7 +564,7 @@ R2
 w1762248557
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/ROUNDING_unit.sv
-!i122 34
+!i122 35
 L0 1 29
 R7
 R8
@@ -571,10 +572,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@r@o@u@n@d@i@n@g_unit
 vSHF_left_28bit
@@ -589,7 +590,7 @@ R2
 R16
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_left_28bit.sv
-!i122 34
+!i122 35
 Z19 L0 1 27
 R7
 R8
@@ -597,10 +598,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@s@h@f_left_28bit
 vSHF_right_28bit
@@ -615,7 +616,7 @@ R2
 R16
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_right_28bit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SHF_right_28bit.sv
-!i122 34
+!i122 35
 R19
 R7
 R8
@@ -623,10 +624,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@s@h@f_right_28bit
 vSIGN_unit
@@ -641,7 +642,7 @@ R2
 w1762252137
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SIGN_unit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SIGN_unit.sv
-!i122 34
+!i122 35
 L0 1 13
 R7
 R8
@@ -649,10 +650,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 n@s@i@g@n_unit
 vsingle_port_rom
@@ -667,7 +668,7 @@ R2
 w1762242453
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/single_port_rom.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/single_port_rom.sv
-!i122 34
+!i122 35
 L0 4 35
 R7
 R8
@@ -675,10 +676,10 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 vtb_FPU_unit
 R4
@@ -692,7 +693,7 @@ R2
 w1762250505
 8/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv
 F/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv
-!i122 34
+!i122 35
 L0 3 152
 R7
 R8
@@ -700,9 +701,9 @@ r1
 !s85 0
 31
 R9
+R13
 R10
-R11
 !i113 0
-R12
+R11
 R3
 ntb_@f@p@u_unit

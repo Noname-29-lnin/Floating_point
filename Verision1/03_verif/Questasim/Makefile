@@ -8,7 +8,7 @@ TOPMODULE       ?= top
 TB_NAME         ?= tb_$(TOPMODULE)
 INC_DIR         ?= ./build
 INC_WORK		:= $(INC_DIR)/QuestaSim
-RADIX           ?= decimal
+RADIX           ?= binary
 
 #==============================
 # Targets
@@ -142,18 +142,26 @@ clean:
 help:
 	@echo ""
 	@echo "****************************************"
-	@echo "** Makefile Help Menu"
+	@echo "** QuestaSim Makefile Help Menu"
 	@echo "****************************************"
-	@echo "** make clean      : Clean all compiled data"
-	@echo "** make build      : Build the design"
-	@echo "** make build_cov  : Build the design in coverage mode"
-	@echo "** make run        : Run simulation"
-	@echo "** make run_cov    : Run simulation in coverage mode"
-	@echo "** make all        : Build and run simulation"
-	@echo "** make all_cov    : Build and run simulation in coverage mode"
-	@echo "** make wave       : Open waveform viewer (GUI mode)"
-	@echo "** make gen_cov    : Merge UCDB files and generate text coverage report"
-	@echo "** make gen_html   : Merge UCDB files and generate HTML coverage report"
-	@echo "** make gen_view   : Open HTML coverage report in default web browser"
+	@echo ""
+	@echo " TOPMODULE : The name of the top-level module to simulate"
+	@echo " INC_DIR   : The directory path containing all design source files"
+	@echo " RADIX     : The waveform display radix (e.g., binary, hex, unsigned, decimal)"
+	@echo ""
+	@echo "****************************************"
+	@echo "** Available Targets"
+	@echo "****************************************"
+	@echo "** make clean      : Remove all compiled libraries and simulation outputs"
+	@echo "** make build      : Compile and elaborate the design"
+	@echo "** make build_cov  : Compile and elaborate the design with coverage enabled"
+	@echo "** make run        : Run the simulation in console mode"
+	@echo "** make run_cov    : Run the simulation in coverage mode"
+	@echo "** make all        : Build and run simulation (non-coverage)"
+	@echo "** make all_cov    : Build and run simulation with coverage"
+	@echo "** make wave       : Launch waveform viewer (GUI mode)"
+	@echo "** make gen_cov    : Merge UCDB files and generate a text-based coverage report"
+	@echo "** make gen_html   : Merge UCDB files and generate an HTML coverage report"
+	@echo "** make gen_view   : Open the HTML coverage report in the default web browser"
 	@echo "****************************************"
 	@echo ""

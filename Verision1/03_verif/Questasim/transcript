@@ -15,8 +15,9 @@
 # ./../TopModule/QuestaSim/tb_FPU_unit.wlf opened as dataset "tb_FPU_unit"
 # add wave vsim:/tb_FPU_unit/*
 # Unrecognized dataset prefix: vsim
-#  radix -decimal
-# decimal
+#  radix -float32
+# ** UI-Msg (Error): (vish-4016) Invalid radix value: float32.
+# Usage: radix [-binary | -octal | -decimal | -hexadecimal | -unsigned | -ascii | -time] [-enumnumeric | -enumsymbolic | -showbase | -symbolic]
 # 
 # stdin: <EOF>
 add wave -position insertpoint  \
@@ -27,8 +28,10 @@ tb_FPU_unit:/tb_FPU_unit/i_32_a \
 tb_FPU_unit:/tb_FPU_unit/i_32_b \
 tb_FPU_unit:/tb_FPU_unit/o_32_s \
 tb_FPU_unit:/tb_FPU_unit/o_ov_flow \
-tb_FPU_unit:/tb_FPU_unit/o_un_flow
-add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/i_man \
-tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/o_man_result \
-tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/o_ov_flow
+tb_FPU_unit:/tb_FPU_unit/o_un_flow \
+tb_FPU_unit:/tb_FPU_unit/w_i_addr \
+tb_FPU_unit:/tb_FPU_unit/w_o_data_rom_a \
+tb_FPU_unit:/tb_FPU_unit/w_o_data_rom_b \
+tb_FPU_unit:/tb_FPU_unit/test_count \
+tb_FPU_unit:/tb_FPU_unit/test_pass \
+tb_FPU_unit:/tb_FPU_unit/o_ov_flag
