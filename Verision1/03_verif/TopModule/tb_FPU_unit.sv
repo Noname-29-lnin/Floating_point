@@ -134,6 +134,8 @@ initial begin
     #100;
     TestCase_Display_result("ZERO", "Zero (0.0 & 0.0)", 32'h00000000, 32'h00000000);
     TestCase_Display_result("ZERO", "Zero (0.0 & -0.0)", 32'h00000000, 32'h80000000);
+    TestCase_Display_result("ZERO", "Zero (0.0 & -0.0)", 32'h4016A197, 32'h4016A197);
+    TestCase_Display_result("ZERO", "Zero (0.0 & -0.0)", 32'h40AED834, 32'h40AED834);
     TestCase_Display_result("INT", "INF (inf & inf)", 32'h7f800000, 32'h7f800000);
     TestCase_Display_result("INT", "INT (int & -inf)", 32'h7f800000, 32'hff800000);
     TestCase_Display_result("DIRECLY", "NORMAL (5.5 & 2.2)", 32'h40b00000, 32'h400ccccd);

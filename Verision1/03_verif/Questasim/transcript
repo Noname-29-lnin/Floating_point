@@ -20,17 +20,20 @@
 # 
 # stdin: <EOF>
 add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_sign_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_sign_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_compare \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_sign_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_sign_min \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_man_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_man_min
-add wave -position insertpoint  \
 tb_FPU_unit:/tb_FPU_unit/DUT/i_add_sub \
 tb_FPU_unit:/tb_FPU_unit/DUT/i_32_a \
 tb_FPU_unit:/tb_FPU_unit/DUT/i_32_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/o_32_s
+tb_FPU_unit:/tb_FPU_unit/DUT/o_32_s \
+tb_FPU_unit:/tb_FPU_unit/DUT/o_ov_flag \
+tb_FPU_unit:/tb_FPU_unit/DUT/o_un_flag \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_sign_a \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_sign_b \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_exponent_a \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_exponent_b \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_mantissa_a \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_mantissa_b \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_sign_result \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_exponent_result \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_mantissa_result
+add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/DUT/LOPD_24BIT_UNIT/o_one_position

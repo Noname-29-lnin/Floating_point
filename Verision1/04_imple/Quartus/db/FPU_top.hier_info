@@ -299,7 +299,7 @@ o_un_flag << o_un_flag~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FPU_top|FPU_unit:FPU_UNIT
-i_add_sub[0] => i_add_sub[0].IN1
+i_add_sub[0] => i_add_sub[0].IN2
 i_32_a[0] => w_mantissa_a[0].IN1
 i_32_a[1] => w_mantissa_a[1].IN1
 i_32_a[2] => w_mantissa_a[2].IN1
@@ -331,7 +331,7 @@ i_32_a[27] => w_exponent_a[4].IN1
 i_32_a[28] => w_exponent_a[5].IN1
 i_32_a[29] => w_exponent_a[6].IN1
 i_32_a[30] => w_exponent_a[7].IN1
-i_32_a[31] => w_sign_a.IN1
+i_32_a[31] => w_sign_a.IN2
 i_32_b[0] => w_mantissa_b[0].IN1
 i_32_b[1] => w_mantissa_b[1].IN1
 i_32_b[2] => w_mantissa_b[2].IN1
@@ -363,7 +363,7 @@ i_32_b[27] => w_exponent_b[4].IN1
 i_32_b[28] => w_exponent_b[5].IN1
 i_32_b[29] => w_exponent_b[6].IN1
 i_32_b[30] => w_exponent_b[7].IN1
-i_32_b[31] => w_sign_b.IN1
+i_32_b[31] => w_sign_b.IN2
 o_32_s[0] <= ROUNDING_unit:ROUNDING_UNIT.o_man_result
 o_32_s[1] <= ROUNDING_unit:ROUNDING_UNIT.o_man_result
 o_32_s[2] <= ROUNDING_unit:ROUNDING_UNIT.o_man_result
@@ -395,8 +395,8 @@ o_32_s[27] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
 o_32_s[28] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
 o_32_s[29] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
 o_32_s[30] <= EXP_adjust:EXP_ADJUST_UNIT.o_exp_result
-o_32_s[31] <= w_MAN_PRE_SWAP_BY_MAN_sign_max.DB_MAX_OUTPUT_PORT_TYPE
-o_ov_flag <= w_MAN_ALU_overflow.DB_MAX_OUTPUT_PORT_TYPE
+o_32_s[31] <= SIGN_unit:SIGN_OUT.o_sign_s
+o_ov_flag <= o_ov_flag.DB_MAX_OUTPUT_PORT_TYPE
 o_un_flag <= w_MAN_ALU_man[27].DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -1719,6 +1719,18 @@ o_man_min[26] <= w_min.DB_MAX_OUTPUT_PORT_TYPE
 o_man_min[27] <= w_min.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|FPU_top|FPU_unit:FPU_UNIT|SIGN_unit:SIGN_OUT
+i_add_sub => o_sign_s.IN0
+i_add_sub => o_sign_s.IN0
+i_comp_man => o_sign_s.IN1
+i_comp_man => o_sign_s.IN1
+i_comp_man => o_sign_s.IN0
+i_sign_man_a => o_sign_s.IN1
+i_sign_man_b => o_sign_s.IN1
+i_sign_man_b => o_sign_s.IN1
+o_sign_s <= o_sign_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT
 i_fpu_op[0] => w_i_carry.OUTPUTSELECT
 i_sign_max => w_i_carry.IN0
@@ -2835,57 +2847,58 @@ i_man[1] => w_sticky_bit.IN1
 i_man[2] => w_rounding_result.IN0
 i_man[2] => w_rounding_result.IN1
 i_man[3] => w_rounding_result.IN1
-i_man[4] => CLA_28bit:INCREASE_ROUNDING.i_data_a[0]
-i_man[5] => CLA_28bit:INCREASE_ROUNDING.i_data_a[1]
-i_man[6] => CLA_28bit:INCREASE_ROUNDING.i_data_a[2]
-i_man[7] => CLA_28bit:INCREASE_ROUNDING.i_data_a[3]
-i_man[8] => CLA_28bit:INCREASE_ROUNDING.i_data_a[4]
-i_man[9] => CLA_28bit:INCREASE_ROUNDING.i_data_a[5]
-i_man[10] => CLA_28bit:INCREASE_ROUNDING.i_data_a[6]
-i_man[11] => CLA_28bit:INCREASE_ROUNDING.i_data_a[7]
-i_man[12] => CLA_28bit:INCREASE_ROUNDING.i_data_a[8]
-i_man[13] => CLA_28bit:INCREASE_ROUNDING.i_data_a[9]
-i_man[14] => CLA_28bit:INCREASE_ROUNDING.i_data_a[10]
-i_man[15] => CLA_28bit:INCREASE_ROUNDING.i_data_a[11]
-i_man[16] => CLA_28bit:INCREASE_ROUNDING.i_data_a[12]
-i_man[17] => CLA_28bit:INCREASE_ROUNDING.i_data_a[13]
-i_man[18] => CLA_28bit:INCREASE_ROUNDING.i_data_a[14]
-i_man[19] => CLA_28bit:INCREASE_ROUNDING.i_data_a[15]
-i_man[20] => CLA_28bit:INCREASE_ROUNDING.i_data_a[16]
-i_man[21] => CLA_28bit:INCREASE_ROUNDING.i_data_a[17]
-i_man[22] => CLA_28bit:INCREASE_ROUNDING.i_data_a[18]
-i_man[23] => CLA_28bit:INCREASE_ROUNDING.i_data_a[19]
-i_man[24] => CLA_28bit:INCREASE_ROUNDING.i_data_a[20]
-i_man[25] => CLA_28bit:INCREASE_ROUNDING.i_data_a[21]
-i_man[26] => CLA_28bit:INCREASE_ROUNDING.i_data_a[22]
-i_man[27] => CLA_28bit:INCREASE_ROUNDING.i_data_a[23]
-o_man_result[0] <= CLA_28bit:INCREASE_ROUNDING.o_sum[0]
-o_man_result[1] <= CLA_28bit:INCREASE_ROUNDING.o_sum[1]
-o_man_result[2] <= CLA_28bit:INCREASE_ROUNDING.o_sum[2]
-o_man_result[3] <= CLA_28bit:INCREASE_ROUNDING.o_sum[3]
-o_man_result[4] <= CLA_28bit:INCREASE_ROUNDING.o_sum[4]
-o_man_result[5] <= CLA_28bit:INCREASE_ROUNDING.o_sum[5]
-o_man_result[6] <= CLA_28bit:INCREASE_ROUNDING.o_sum[6]
-o_man_result[7] <= CLA_28bit:INCREASE_ROUNDING.o_sum[7]
-o_man_result[8] <= CLA_28bit:INCREASE_ROUNDING.o_sum[8]
-o_man_result[9] <= CLA_28bit:INCREASE_ROUNDING.o_sum[9]
-o_man_result[10] <= CLA_28bit:INCREASE_ROUNDING.o_sum[10]
-o_man_result[11] <= CLA_28bit:INCREASE_ROUNDING.o_sum[11]
-o_man_result[12] <= CLA_28bit:INCREASE_ROUNDING.o_sum[12]
-o_man_result[13] <= CLA_28bit:INCREASE_ROUNDING.o_sum[13]
-o_man_result[14] <= CLA_28bit:INCREASE_ROUNDING.o_sum[14]
-o_man_result[15] <= CLA_28bit:INCREASE_ROUNDING.o_sum[15]
-o_man_result[16] <= CLA_28bit:INCREASE_ROUNDING.o_sum[16]
-o_man_result[17] <= CLA_28bit:INCREASE_ROUNDING.o_sum[17]
-o_man_result[18] <= CLA_28bit:INCREASE_ROUNDING.o_sum[18]
-o_man_result[19] <= CLA_28bit:INCREASE_ROUNDING.o_sum[19]
-o_man_result[20] <= CLA_28bit:INCREASE_ROUNDING.o_sum[20]
-o_man_result[21] <= CLA_28bit:INCREASE_ROUNDING.o_sum[21]
-o_man_result[22] <= CLA_28bit:INCREASE_ROUNDING.o_sum[22]
-o_man_result[23] <= CLA_28bit:INCREASE_ROUNDING.o_sum[23]
+i_man[4] => CLA_24bit:INCREASE_ROUNDING.i_data_a[0]
+i_man[5] => CLA_24bit:INCREASE_ROUNDING.i_data_a[1]
+i_man[6] => CLA_24bit:INCREASE_ROUNDING.i_data_a[2]
+i_man[7] => CLA_24bit:INCREASE_ROUNDING.i_data_a[3]
+i_man[8] => CLA_24bit:INCREASE_ROUNDING.i_data_a[4]
+i_man[9] => CLA_24bit:INCREASE_ROUNDING.i_data_a[5]
+i_man[10] => CLA_24bit:INCREASE_ROUNDING.i_data_a[6]
+i_man[11] => CLA_24bit:INCREASE_ROUNDING.i_data_a[7]
+i_man[12] => CLA_24bit:INCREASE_ROUNDING.i_data_a[8]
+i_man[13] => CLA_24bit:INCREASE_ROUNDING.i_data_a[9]
+i_man[14] => CLA_24bit:INCREASE_ROUNDING.i_data_a[10]
+i_man[15] => CLA_24bit:INCREASE_ROUNDING.i_data_a[11]
+i_man[16] => CLA_24bit:INCREASE_ROUNDING.i_data_a[12]
+i_man[17] => CLA_24bit:INCREASE_ROUNDING.i_data_a[13]
+i_man[18] => CLA_24bit:INCREASE_ROUNDING.i_data_a[14]
+i_man[19] => CLA_24bit:INCREASE_ROUNDING.i_data_a[15]
+i_man[20] => CLA_24bit:INCREASE_ROUNDING.i_data_a[16]
+i_man[21] => CLA_24bit:INCREASE_ROUNDING.i_data_a[17]
+i_man[22] => CLA_24bit:INCREASE_ROUNDING.i_data_a[18]
+i_man[23] => CLA_24bit:INCREASE_ROUNDING.i_data_a[19]
+i_man[24] => CLA_24bit:INCREASE_ROUNDING.i_data_a[20]
+i_man[25] => CLA_24bit:INCREASE_ROUNDING.i_data_a[21]
+i_man[26] => CLA_24bit:INCREASE_ROUNDING.i_data_a[22]
+i_man[27] => CLA_24bit:INCREASE_ROUNDING.i_data_a[23]
+o_man_result[0] <= CLA_24bit:INCREASE_ROUNDING.o_sum[0]
+o_man_result[1] <= CLA_24bit:INCREASE_ROUNDING.o_sum[1]
+o_man_result[2] <= CLA_24bit:INCREASE_ROUNDING.o_sum[2]
+o_man_result[3] <= CLA_24bit:INCREASE_ROUNDING.o_sum[3]
+o_man_result[4] <= CLA_24bit:INCREASE_ROUNDING.o_sum[4]
+o_man_result[5] <= CLA_24bit:INCREASE_ROUNDING.o_sum[5]
+o_man_result[6] <= CLA_24bit:INCREASE_ROUNDING.o_sum[6]
+o_man_result[7] <= CLA_24bit:INCREASE_ROUNDING.o_sum[7]
+o_man_result[8] <= CLA_24bit:INCREASE_ROUNDING.o_sum[8]
+o_man_result[9] <= CLA_24bit:INCREASE_ROUNDING.o_sum[9]
+o_man_result[10] <= CLA_24bit:INCREASE_ROUNDING.o_sum[10]
+o_man_result[11] <= CLA_24bit:INCREASE_ROUNDING.o_sum[11]
+o_man_result[12] <= CLA_24bit:INCREASE_ROUNDING.o_sum[12]
+o_man_result[13] <= CLA_24bit:INCREASE_ROUNDING.o_sum[13]
+o_man_result[14] <= CLA_24bit:INCREASE_ROUNDING.o_sum[14]
+o_man_result[15] <= CLA_24bit:INCREASE_ROUNDING.o_sum[15]
+o_man_result[16] <= CLA_24bit:INCREASE_ROUNDING.o_sum[16]
+o_man_result[17] <= CLA_24bit:INCREASE_ROUNDING.o_sum[17]
+o_man_result[18] <= CLA_24bit:INCREASE_ROUNDING.o_sum[18]
+o_man_result[19] <= CLA_24bit:INCREASE_ROUNDING.o_sum[19]
+o_man_result[20] <= CLA_24bit:INCREASE_ROUNDING.o_sum[20]
+o_man_result[21] <= CLA_24bit:INCREASE_ROUNDING.o_sum[21]
+o_man_result[22] <= CLA_24bit:INCREASE_ROUNDING.o_sum[22]
+o_man_result[23] <= CLA_24bit:INCREASE_ROUNDING.o_sum[23]
+o_ov_flow <= CLA_24bit:INCREASE_ROUNDING.o_carry
 
 
-|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_28bit:INCREASE_ROUNDING
+|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_24bit:INCREASE_ROUNDING
 i_carry => w_c[0].IN1
 i_data_a[0] => i_data_a[0].IN1
 i_data_a[1] => i_data_a[1].IN1
@@ -2911,10 +2924,6 @@ i_data_a[20] => i_data_a[20].IN1
 i_data_a[21] => i_data_a[21].IN1
 i_data_a[22] => i_data_a[22].IN1
 i_data_a[23] => i_data_a[23].IN1
-i_data_a[24] => i_data_a[24].IN1
-i_data_a[25] => i_data_a[25].IN1
-i_data_a[26] => i_data_a[26].IN1
-i_data_a[27] => i_data_a[27].IN1
 i_data_b[0] => i_data_b[0].IN1
 i_data_b[1] => i_data_b[1].IN1
 i_data_b[2] => i_data_b[2].IN1
@@ -2939,10 +2948,6 @@ i_data_b[20] => i_data_b[20].IN1
 i_data_b[21] => i_data_b[21].IN1
 i_data_b[22] => i_data_b[22].IN1
 i_data_b[23] => i_data_b[23].IN1
-i_data_b[24] => i_data_b[24].IN1
-i_data_b[25] => i_data_b[25].IN1
-i_data_b[26] => i_data_b[26].IN1
-i_data_b[27] => i_data_b[27].IN1
 o_sum[0] <= CLA_4bit:CLA_4BIT_UNIT_0.sum
 o_sum[1] <= CLA_4bit:CLA_4BIT_UNIT_0.sum
 o_sum[2] <= CLA_4bit:CLA_4BIT_UNIT_0.sum
@@ -2967,14 +2972,10 @@ o_sum[20] <= CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT_1.sum
 o_sum[21] <= CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT_1.sum
 o_sum[22] <= CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT_1.sum
 o_sum[23] <= CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT_1.sum
-o_sum[24] <= CLA_4bit:CLA_BLOCK_GEN[6].CLA_4BIT_UNIT_1.sum
-o_sum[25] <= CLA_4bit:CLA_BLOCK_GEN[6].CLA_4BIT_UNIT_1.sum
-o_sum[26] <= CLA_4bit:CLA_BLOCK_GEN[6].CLA_4BIT_UNIT_1.sum
-o_sum[27] <= CLA_4bit:CLA_BLOCK_GEN[6].CLA_4BIT_UNIT_1.sum
 o_carry <= w_c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_28bit:INCREASE_ROUNDING|CLA_4bit:CLA_4BIT_UNIT_0
+|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_24bit:INCREASE_ROUNDING|CLA_4bit:CLA_4BIT_UNIT_0
 a[0] => w_g[0].IN0
 a[0] => w_p[0].IN0
 a[1] => w_g[1].IN0
@@ -3004,7 +3005,7 @@ o_p <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 o_g <= o_g.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_28bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[1].CLA_4BIT_UNIT_1
+|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_24bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[1].CLA_4BIT_UNIT_1
 a[0] => w_g[0].IN0
 a[0] => w_p[0].IN0
 a[1] => w_g[1].IN0
@@ -3034,7 +3035,7 @@ o_p <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 o_g <= o_g.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_28bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[2].CLA_4BIT_UNIT_1
+|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_24bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[2].CLA_4BIT_UNIT_1
 a[0] => w_g[0].IN0
 a[0] => w_p[0].IN0
 a[1] => w_g[1].IN0
@@ -3064,7 +3065,7 @@ o_p <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 o_g <= o_g.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_28bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT_1
+|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_24bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT_1
 a[0] => w_g[0].IN0
 a[0] => w_p[0].IN0
 a[1] => w_g[1].IN0
@@ -3094,7 +3095,7 @@ o_p <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 o_g <= o_g.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_28bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[4].CLA_4BIT_UNIT_1
+|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_24bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[4].CLA_4BIT_UNIT_1
 a[0] => w_g[0].IN0
 a[0] => w_p[0].IN0
 a[1] => w_g[1].IN0
@@ -3124,37 +3125,7 @@ o_p <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 o_g <= o_g.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_28bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT_1
-a[0] => w_g[0].IN0
-a[0] => w_p[0].IN0
-a[1] => w_g[1].IN0
-a[1] => w_p[1].IN0
-a[2] => w_g[2].IN0
-a[2] => w_p[2].IN0
-a[3] => w_g[3].IN0
-a[3] => w_p[3].IN0
-b[0] => w_g[0].IN1
-b[0] => w_p[0].IN1
-b[1] => w_g[1].IN1
-b[1] => w_p[1].IN1
-b[2] => w_g[2].IN1
-b[2] => w_p[2].IN1
-b[3] => w_g[3].IN1
-b[3] => w_p[3].IN1
-cin => w_c.IN1
-cin => w_c.IN1
-cin => w_c.IN1
-cin => sum.IN1
-cin => o_g.IN1
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-o_p <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-o_g <= o_g.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_28bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[6].CLA_4BIT_UNIT_1
+|FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|CLA_24bit:INCREASE_ROUNDING|CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT_1
 a[0] => w_g[0].IN0
 a[0] => w_p[0].IN0
 a[1] => w_g[1].IN0
