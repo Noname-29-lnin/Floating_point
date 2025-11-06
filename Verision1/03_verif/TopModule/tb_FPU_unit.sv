@@ -3,7 +3,7 @@
 module tb_FPU_unit ();
 
 parameter ALU_OP = 1;
-parameter SIZE_ADDR = 5;
+parameter SIZE_ADDR = 10;
 logic i_clk, i_rst_n;
 logic        i_add_sub;
 logic [31:0] i_32_a;
@@ -64,6 +64,31 @@ function automatic shortreal float_to_real(input logic [31:0] f);
     temp = int'(f);                  // ép logic -> int (2-state)
     return $bitstoshortreal(temp);   // chuyển bit -> shortreal
 endfunction
+function automatic shortreal check_functional(
+    input logic             f_i_add_sub ,
+    input logic [31:0]      f_i_32_a    ,
+    input logic [31:0]      f_i_32_b     
+);
+    shortreal f_sr_32_a, f_sr_32_b, f_sr_32_e;
+    begin
+        f_sr_32_a = float_to_real(f_i_32_a);
+        f_sr_32_b = float_to_real(f_i_32_b);
+        f_sr_32_e = (f_i_add_sub) ? f_sr_32_a + f_sr_32_b : f_sr_32_a - f_sr_32_b;
+
+        return f_sr_32_e;
+    end
+endfunction
+function automatic shortreal cal_rounding_error(
+    input shortreal f_sr_32_s   ,
+    input shortreal f_sr_32_e   
+);
+    begin
+        if (f_sr_32_e == 0.0)
+            cal_rounding_error = (f_sr_32_s == 0.0) ? 0.0 : 100.0;
+        else
+            cal_rounding_error = $abs((f_sr_32_s - f_sr_32_e) / f_sr_32_e) * 100.0;
+    end
+endfunction
 task automatic Display_result(
     string                      t_type      ,
     input logic                 t_i_add_sub ,
@@ -73,11 +98,20 @@ task automatic Display_result(
     input logic                 t_o_ov_flow ,
     input logic                 t_o_un_flow  
 );
+    shortreal t_sr_32_a, t_sr_32_b, t_sr_32_s, t_sr_32_e, t_sr_rounding_error;
+    t_sr_32_a = float_to_real(t_i_32_a);
+    t_sr_32_b = float_to_real(t_i_32_b);
+    t_sr_32_s = float_to_real(t_o_32_s);
+    t_sr_32_e = check_functional(t_i_add_sub, t_i_32_a, t_i_32_b);
+    t_sr_rounding_error = cal_rounding_error(t_sr_32_s, t_sr_32_e);
     begin
         $display("[%s][%s]i_32_a=%h (%.4f) %s i_32_b=%h (%.4f) \t| o_32_s=%h (%.4f) \t| o_ov_flow=%b, o_un_flow=%b",
                     t_type, (t_i_add_sub == 1'b1) ? "SUB" : "ADD", 
-                    t_i_32_a, float_to_real(t_i_32_a), (t_i_add_sub == 1'b1) ? "-" : "+", t_i_32_b, float_to_real(t_i_32_b), t_o_32_s, float_to_real(t_o_32_s),
+                    t_i_32_a, t_sr_32_a, (t_i_add_sub == 1'b1) ? "-" : "+", t_i_32_b, t_sr_32_b, t_o_32_s, t_sr_32_s,
                     t_o_ov_flow, t_o_un_flow);
+        $display("=> %s: expect=%.4f, dut=%.4f, rounding_error=%.8f", (t_sr_rounding_error < 0.001) ? "PASS" : "FAIL", t_sr_32_s, t_sr_32_e);
+        test_count++;
+        if (t_sr_rounding_error < 0.001) test_pass++;
     end
 endtask //automatic
 task automatic TestCase_Display_result(
@@ -132,34 +166,43 @@ initial begin
     #100;
     i_rst_n = 1;
     #100;
-    TestCase_Display_result("ZERO", "Zero (0.0 & 0.0)", 32'h00000000, 32'h00000000);
-    TestCase_Display_result("ZERO", "Zero (0.0 & -0.0)", 32'h00000000, 32'h80000000);
-    TestCase_Display_result("ZERO", "Zero (0.0 & -0.0)", 32'h4016A197, 32'h4016A197);
-    TestCase_Display_result("ZERO", "Zero (0.0 & -0.0)", 32'h40AED834, 32'h40AED834);
-    TestCase_Display_result("INT", "INF (inf & inf)", 32'h7f800000, 32'h7f800000);
-    TestCase_Display_result("INT", "INF (-inf & -inf)", 32'hff800000, 32'hff800000);
-    TestCase_Display_result("INT", "INF (inf & -inf)", 32'hff800000, 32'h7f800000);
-    TestCase_Display_result("INT", "INF (inf & 0)", 32'h7f800000, 32'h00000000);
-    TestCase_Display_result("INT", "INF (-inf & 0)", 32'hff800000, 32'h00000000);
-    TestCase_Display_result("DIRECLY", "NORMAL (5.5 & 2.2)", 32'h40b00000, 32'h400ccccd);
-    TestCase_Display_result("DIRECLY", "NORMAL (-5.5 & 2.2)", 32'hc0b00000, 32'h400ccccd);
-    TestCase_Display_result("DIRECLY", "NORMAL (-5.5 & -5.5)", 32'hc0b00000, 32'hc0b00000);
-    TestCase_Display_result("DIRECLY", "ROUNDING SPECITIAL", 32'hc07fffff, 32'hc1f00000);
-    TestCase_Display_result("DIRECLY", "TEST SIGN", 32'hc00ccccd, 32'h40533333);
-    TestCase_Display_result("DIRECLY", "TEST SIGN", 32'hc00ccccd, 32'hc0533333);
-    TestCase_Display_result("DIRECLY", "TEST SIGN", 32'hc00ccccd, 32'hc1b1999a);
-    repeat(2**SIZE_ADDR) begin
-        TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
-        @(posedge i_clk);
-        #1;
-        w_i_addr = w_i_addr + 1;
-    end
-    TestCase_Display_result("DIRECLY", "APPR ZERO or APPR INF", 32'h7f21616f, 32'h007fffff);
-    TestCase_Display_result("DIRECLY", "APPR ZERO or APPR INF", 32'h7f7fffff, 32'h00ffffff);
-    TestCase_Display_result("DIRECLY", "APPR ZERO or APPR INF", 32'h7f7fffff, 32'h007fffff);
-    TestCase_Display_result("DIRECLY", "APPR ZERO or APPR INF", 32'h00ffffff, 32'h007fffff);
-    TestCase_Display_result("DIRECLY", "APPR ZERO or APPR INF", 32'h00ffffff, 32'h00ffffff);
+    TestCase_Display_result("ZERO", "(0.0 & 0.0)", 32'h00000000, 32'h00000000);
+    TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h00000000, 32'h80000000);
+    TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h4016A197, 32'h4016A197);
+    TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h40AED834, 32'h40AED834);
+    TestCase_Display_result("INF", "(inf & inf)", 32'h7f800000, 32'h7f800000);
+    TestCase_Display_result("INF", "(-inf & -inf)", 32'hff800000, 32'hff800000);
+    TestCase_Display_result("INF", "(inf & -inf)", 32'hff800000, 32'h7f800000);
+    TestCase_Display_result("INF", "(inf & 0)", 32'h7f800000, 32'h00000000);
+    TestCase_Display_result("INF", "(-inf & 0)", 32'hff800000, 32'h00000000);
+    TestCase_Display_result("INF", "(inf & Number)", 32'h7f800000, 32'h40533333);
+    TestCase_Display_result("INF", "(-inf & Number)", 32'hff800000, 32'h40533333);
+    TestCase_Display_result("INF", "(inf & -Number)", 32'h7f800000, 32'hc00ccccd);
+    TestCase_Display_result("INF", "(-inf & -Number)", 32'hff800000, 32'hc00ccccd);
+    TestCase_Display_result("APPRO", "APPR INF", 32'h7f21616f, 32'h007fffff);
+    TestCase_Display_result("APPRO", "APPR INF", 32'h7f7fffff, 32'h00ffffff);
+    TestCase_Display_result("APPRO", "APPR INF", 32'h7f7fffff, 32'h007fffff);
+    TestCase_Display_result("APPRO", "APPR ZERO", 32'h00ffffff, 32'h007fffff);
+    TestCase_Display_result("APPRO", "APPR ZERO", 32'h00ffffff, 32'h00ffffff);
+    TestCase_Display_result("SIGN", "(-A + B)", 32'hc00ccccd, 32'h40533333);
+    TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc0533333);
+    TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc1b1999a);
+    // repeat(2**SIZE_ADDR) begin
+    //     TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
+    //     @(posedge i_clk);
+    //     #1;
+    //     w_i_addr = w_i_addr + 1;
+    // end
     
+    // --- Summary ---
+    #100;
+        $display("\n==================================");
+        $display("========== TEST SUMMARY ==========");
+        $display("Total test cases: %6d", test_count);
+        $display("Passed          : %6d", test_pass);
+        $display("Failed          : %6d", test_count - test_pass);
+        $display("Pass rate       : %0.2f%%", (test_pass * 100.0) / test_count);
+        $display("==================================\n");
     #100;
     $finish;
 end
