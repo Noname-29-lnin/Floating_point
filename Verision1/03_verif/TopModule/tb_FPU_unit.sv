@@ -3,7 +3,7 @@
 module tb_FPU_unit ();
 
 parameter ALU_OP = 1;
-parameter SIZE_ADDR = 10;
+parameter SIZE_ADDR = 11;
 logic i_clk, i_rst_n;
 logic        i_add_sub;
 logic [31:0] i_32_a;

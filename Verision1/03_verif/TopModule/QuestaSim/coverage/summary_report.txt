@@ -36,7 +36,7 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Expressions                      4         3         1    75.00%
+    Expressions                      4         4         0   100.00%
     Statements                       2         2         0   100.00%
     Toggles                          4         4         0   100.00%
 
@@ -46,7 +46,7 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Expressions                      4         0         4     0.00%
+    Expressions                      4         3         1    75.00%
     Statements                       2         2         0   100.00%
     Toggles                          4         4         0   100.00%
 
@@ -86,7 +86,7 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Expressions                     24        17         7    70.83%
+    Expressions                     24        20         4    83.33%
     Statements                       7         7         0   100.00%
     Toggles                         36        34         2    94.44%
 
@@ -96,9 +96,9 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Expressions                     24        11        13    45.83%
+    Expressions                     24        15         9    62.50%
     Statements                       7         7         0   100.00%
-    Toggles                         36        28         8    77.77%
+    Toggles                         36        30         6    83.33%
 
 =================================================================================
 === Instance: /tb_FPU_unit/DUT/EXP_SUB_UNIT/CLA_8BIT_UNIT
@@ -355,7 +355,7 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Expressions                     13         3        10    23.07%
+    Expressions                     13         5         8    38.46%
     Statements                       1         1         0   100.00%
     Toggles                         30        30         0   100.00%
 
@@ -445,7 +445,7 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Expressions                     24        21         3    87.50%
+    Expressions                     24        24         0   100.00%
     Statements                       7         7         0   100.00%
     Toggles                         36        28         8    77.77%
 
@@ -601,7 +601,7 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Expressions                     24        15         9    62.50%
+    Expressions                     24        16         8    66.66%
     Statements                       7         7         0   100.00%
     Toggles                         36        36         0   100.00%
 
@@ -775,7 +775,7 @@ Coverage Report Summary Data by instance
     ----------------              ----      ----    ------  --------
     Branches                         2         2         0   100.00%
     Statements                       4         4         0   100.00%
-    Toggles                         64        57         7    89.06%
+    Toggles                         64        61         3    95.31%
 
 =================================================================================
 === Instance: /tb_FPU_unit
@@ -783,10 +783,12 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                         4         4         0   100.00%
-    Statements                      78        78         0   100.00%
-    Toggles                        350       337        13    96.28%
+    Branches                        21        20         1    95.23%
+    Conditions                       9         6         3    66.66%
+    Expressions                      8         8         0   100.00%
+    Statements                     135       135         0   100.00%
+    Toggles                        480       395        85    82.29%
 
 
-Total Coverage By Instance (filtered view): 93.07%
+Total Coverage By Instance (filtered view): 87.89%
 
