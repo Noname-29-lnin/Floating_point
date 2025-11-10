@@ -189,6 +189,7 @@ ROUNDING_unit #(
     .SIZE_MAN       (28),
     .SIZE_MAN_RESULT(24)
 ) ROUNDING_UNIT (
+    // .i_zero_flag        (w_LOPD_24BIT_zero_flag),
     .i_man              (w_NORMALIZATION_man),
     .o_man_result       (w_ROUNDING_man),
     .o_ov_flow          (w_ROUNDING_ov_flow)

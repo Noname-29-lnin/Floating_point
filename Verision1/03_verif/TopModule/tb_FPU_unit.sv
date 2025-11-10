@@ -25,7 +25,7 @@ FPU_unit #(
     .i_32_a          (i_32_a),
     .i_32_b          (i_32_b),
     .o_32_s          (o_32_s),
-    .o_ov_flag       (o_ov_flag),
+    .o_ov_flag       (o_ov_flow),
     .o_un_flag       (o_un_flow) 
 );
 single_port_rom #(
@@ -64,6 +64,9 @@ function automatic shortreal float_to_real(input logic [31:0] f);
     temp = int'(f);                  // ép logic -> int (2-state)
     return $bitstoshortreal(temp);   // chuyển bit -> shortreal
 endfunction
+function automatic logic [31:0] real_to_float(input shortreal f);
+    real_to_float = $shortrealtobits(f);
+endfunction
 function automatic shortreal check_functional(
     input logic             f_i_add_sub ,
     input logic [31:0]      f_i_32_a    ,
@@ -89,6 +92,13 @@ endfunction
 //             cal_rounding_error = ((f_sr_32_s - f_sr_32_e) / f_sr_32_e) * 100.0;
 //     end
 // endfunction
+function automatic shortreal abs_shortreal(input shortreal val);
+    if (val < 0.0)
+        abs_shortreal = -val;
+    else
+        abs_shortreal = val;
+endfunction
+
 function automatic shortreal cal_rounding_error(
     input shortreal f_sr_32_s,
     input shortreal f_sr_32_e
@@ -118,10 +128,14 @@ function automatic shortreal cal_rounding_error(
         end
         else begin
             diff = f_sr_32_s - f_sr_32_e;
-            if (diff < 0.0)
-                diff = -diff; // thay thế cho $abs()
-            cal_rounding_error = (diff / f_sr_32_e) * 100.0;
+            cal_rounding_error = (abs_shortreal(diff) / abs_shortreal(f_sr_32_e)) * 100.0;
         end
+    end
+endfunction
+
+function shortreal error_avariable ();
+    begin
+        return ((2.0 ** (-23.0)) / 1.0) * 100.0;
     end
 endfunction
 
@@ -135,23 +149,25 @@ task automatic Display_result(
     input logic                 t_o_un_flow  
 );
     shortreal t_sr_32_a, t_sr_32_b, t_sr_32_s, t_sr_32_e, t_sr_rounding_error;
+    shortreal t_error;
+    t_error = error_avariable();
     t_sr_32_a = float_to_real(t_i_32_a);
     t_sr_32_b = float_to_real(t_i_32_b);
     t_sr_32_s = float_to_real(t_o_32_s);
     t_sr_32_e = check_functional(t_i_add_sub, t_i_32_a, t_i_32_b);
     t_sr_rounding_error = cal_rounding_error(t_sr_32_s, t_sr_32_e);
     begin
-        $display("[%s][%s]i_32_a=%h (%.4f) %s i_32_b=%h (%.4f) \t| o_32_s=%h (%.4f) \t| o_ov_flow=%b, o_un_flow=%b",
+        $display("[%s][%s]i_32_a=%h (%.24f) %s i_32_b=%h (%.24f) \t| o_32_s=%h (%.24f) \t| o_ov_flow=%b, o_un_flow=%b",
                     t_type, (t_i_add_sub == 1'b1) ? "SUB" : "ADD", 
                     t_i_32_a, t_sr_32_a, (t_i_add_sub == 1'b1) ? "-" : "+", t_i_32_b, t_sr_32_b, t_o_32_s, t_sr_32_s,
                     t_o_ov_flow, t_o_un_flow);
-        $display("=> %s: expect=%.4f, dut=%.4f, rounding_error=%.8f", 
-                    (t_sr_rounding_error < 0.001) ? "PASS" : "FAIL", 
-                    t_sr_32_e, t_sr_32_s, t_sr_rounding_error);
+        $display("=> %s: expect=%.24f (%h), dut=%.24f (%h), rounding_error=%.8f %% (exp_error = %.8f %%)", 
+                    (t_sr_rounding_error <= t_error) ? "PASS" : "FAIL", 
+                    t_sr_32_e, real_to_float(t_sr_32_e), t_sr_32_s, real_to_float(t_sr_32_e), t_sr_rounding_error, t_error);
         test_count++;
-        if (t_sr_rounding_error < 0.01) test_pass++;
+        if (t_sr_rounding_error <= t_error) test_pass++;
     end
-endtask //automatic
+endtask
 task automatic TestCase_Display_result(
     string              t_type,
     string              t_testcase,
@@ -167,7 +183,7 @@ task automatic TestCase_Display_result(
         i_32_b      = t_i_fpu_b;
         @(negedge i_clk);
         #1;
-        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flag, o_un_flow);
+        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flow, o_un_flow);
         @(posedge i_clk);
         #1;
         i_add_sub   = 1'b0;
@@ -175,7 +191,7 @@ task automatic TestCase_Display_result(
         i_32_b      = t_i_fpu_a;
         @(negedge i_clk);
         #1;
-        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flag, o_un_flow);
+        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flow, o_un_flow);
         @(posedge i_clk);
         #1;
         i_add_sub   = 1'b1;
@@ -183,7 +199,7 @@ task automatic TestCase_Display_result(
         i_32_b      = t_i_fpu_b;
         @(negedge i_clk);
         #1;
-        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flag, o_un_flow);
+        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flow, o_un_flow);
         @(posedge i_clk);
         #1;
         i_add_sub   = 1'b1;
@@ -191,7 +207,7 @@ task automatic TestCase_Display_result(
         i_32_b      = t_i_fpu_a;
         @(negedge i_clk);
         #1;
-        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flag, o_un_flow);
+        Display_result(t_type, i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flow, o_un_flow);
     end
 endtask //automatic
 
@@ -217,6 +233,10 @@ initial begin
     TestCase_Display_result("INF", "(-inf & Number)", 32'hff800000, 32'h40533333);
     TestCase_Display_result("INF", "(inf & -Number)", 32'h7f800000, 32'hc00ccccd);
     TestCase_Display_result("INF", "(-inf & -Number)", 32'hff800000, 32'hc00ccccd);
+    TestCase_Display_result("NaN", "(NaN & -Number)", 32'h7f800001, 32'hc00ccccd);
+    TestCase_Display_result("NaN", "(-NaN & -Number)", 32'hff800001, 32'hc00ccccd);
+    TestCase_Display_result("NaN", "(NaN &  Number)", 32'hff800001, 32'h40533333);
+    TestCase_Display_result("NaN", "(-NaN &  Number)", 32'h7f800001, 32'h40533333);
     TestCase_Display_result("APPRO", "APPR INF", 32'h7f21616f, 32'h007fffff);
     TestCase_Display_result("APPRO", "APPR INF", 32'h7f7fffff, 32'h00ffffff);
     TestCase_Display_result("APPRO", "APPR INF", 32'h7f7fffff, 32'h007fffff);
@@ -226,6 +246,7 @@ initial begin
     TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc0533333);
     TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc1b1999a);
     repeat(2**SIZE_ADDR) begin
+    // repeat(10) begin
         TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
         @(posedge i_clk);
         #1;

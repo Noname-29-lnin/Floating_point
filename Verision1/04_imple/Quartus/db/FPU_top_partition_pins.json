@@ -148,7 +148,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_32_a[31]",
+					"name" : "i_32_b[31]",
 					"strict" : false
 				},
 				{
@@ -156,7 +156,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_32_b[31]",
+					"name" : "i_32_a[31]",
 					"strict" : false
 				},
 				{

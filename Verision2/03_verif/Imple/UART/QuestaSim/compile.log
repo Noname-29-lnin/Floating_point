@@ -1,0 +1,18 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 15:19:26 on Nov 09,2025
+vlog -f ./../Imple/UART/flist.f 
+-- Compiling module tb_UART_Rx_block
+-- Compiling module UART_baud_generator
+-- Compiling module UART_detect_done
+-- Compiling module UART_mem
+-- Compiling module UART_SS_detect_start
+-- Compiling module UART_SS_detect_edge
+-- Compiling module UART_Rx
+-- Compiling module UART_Rx_block
+-- Compiling module UART_Transmitter
+-- Compiling module UART_Tx_block
+
+Top level modules:
+	tb_UART_Rx_block
+End time: 15:19:26 on Nov 09,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

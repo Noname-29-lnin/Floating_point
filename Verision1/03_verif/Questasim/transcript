@@ -20,23 +20,50 @@
 # 
 # stdin: <EOF>
 add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/i_clk \
+tb_FPU_unit:/tb_FPU_unit/i_rst_n \
 tb_FPU_unit:/tb_FPU_unit/i_add_sub \
 tb_FPU_unit:/tb_FPU_unit/i_32_a \
 tb_FPU_unit:/tb_FPU_unit/i_32_b \
 tb_FPU_unit:/tb_FPU_unit/o_32_s \
-tb_FPU_unit:/tb_FPU_unit/o_ov_flow
+tb_FPU_unit:/tb_FPU_unit/o_ov_flow \
+tb_FPU_unit:/tb_FPU_unit/o_un_flow
 add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/i_add_sub \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/i_sign_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/i_exp_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/i_man_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/i_sign_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/i_exp_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/i_man_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/o_sel_exp \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/o_sel_man
+tb_FPU_unit:/tb_FPU_unit/test_pass
 add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/w_E_one_A \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/w_E_one_B \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/w_M_zero_A \
-tb_FPU_unit:/tb_FPU_unit/DUT/PSC_UNIT/w_M_zero_B
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/i_man \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/o_man_result \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/o_ov_flow
+add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/DUT/NORMALIZATION_UNIT/i_overflow \
+tb_FPU_unit:/tb_FPU_unit/DUT/NORMALIZATION_UNIT/i_zero_flag \
+tb_FPU_unit:/tb_FPU_unit/DUT/NORMALIZATION_UNIT/i_one_position \
+tb_FPU_unit:/tb_FPU_unit/DUT/NORMALIZATION_UNIT/i_mantissa \
+tb_FPU_unit:/tb_FPU_unit/DUT/NORMALIZATION_UNIT/o_mantissa
+add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_overflow \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_underflow \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_zero_flag \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_lopd_value \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_exp_value \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/o_exp_result
+add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/w_i_carry
+add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/w_data_b
+add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/i_man \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/o_man_result \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/o_ov_flow \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/w_man_temp \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/w_guard_bit \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/w_round_bit \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/w_sticky_bit \
+tb_FPU_unit:/tb_FPU_unit/DUT/ROUNDING_UNIT/w_rounding_result
+add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_sign_a \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_sign_b \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_exponent_a \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_exponent_b \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_mantissa_a \
+tb_FPU_unit:/tb_FPU_unit/DUT/w_mantissa_b

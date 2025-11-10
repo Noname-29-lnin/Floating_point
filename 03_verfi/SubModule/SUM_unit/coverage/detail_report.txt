@@ -1,2 +1,0 @@
-Total coverage (36/67) 53.00%
-See lines with '%00' in ./SUM_unit/coverage/annotated_src

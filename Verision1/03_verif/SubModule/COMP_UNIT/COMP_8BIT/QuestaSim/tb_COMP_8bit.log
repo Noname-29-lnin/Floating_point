@@ -1,6 +1,9 @@
-# vsim -coverage -lib ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/work -l ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.log -voptargs="+cover=bcesft" -assertdebug -c tb_COMP_8bit -wlf ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.wlf -do "coverage save -onexit ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.ucdb; cd ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim; log -r /*; run -all;" 
-# Start time: 19:09:49 on Nov 03,2025
+# vsim -lib ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/work -debugDB -l ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.log -voptargs="+acc" -assertdebug -c tb_COMP_8bit -wlf ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.wlf -do "cd ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim; log -r /*; run -all;" 
+# Start time: 13:16:07 on Nov 10,2025
 # ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2024.3 linux_x86_64 Sep 10 2024
 # //
@@ -17,8 +20,11 @@
 # //
 # Loading sv_std.std
 # Loading work.tb_COMP_8bit(fast)
-# coverage save -onexit ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.ucdb
-#  cd ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim
+# Loading work.COMP_8bit(fast)
+# Loading work.COMP_4bit(fast)
+# Loading work.COMP_2bit(fast)
+# ** Note: (vsim-8900) Creating design debug database ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim/tb_COMP_8bit.dbg.
+# cd ./../SubModule/COMP_UNIT/COMP_8BIT/QuestaSim
 # Cannot change directory while a simulation is in progress.
 # Use the "quit -sim" command to unload the design first.
 #  log -r /*
@@ -227,16 +233,15 @@
 # [Random] a=91 (01011011), b=246 (11110110) => o_less=1 
 # => PASS: expect=1, dut=1
 # 
-# ================================
+# ==================================
 # ========== TEST SUMMARY ==========
 # Total test cases:    100
 # Passed          :    100
 # Failed          :      0
 # Pass rate       : 100.00%
-# ================================
+# ==================================
 # 
 # ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/COMP_UNIT/COMP_8BIT/tb_COMP_8bit.sv(90)
 #    Time: 1006 ns  Iteration: 0  Instance: /tb_COMP_8bit
-# Saving coverage database on exit...
-# End time: 19:09:50 on Nov 03,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+# End time: 13:16:08 on Nov 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

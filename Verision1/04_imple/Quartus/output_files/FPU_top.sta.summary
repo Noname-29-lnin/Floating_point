@@ -3,79 +3,79 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLK_50MHZ'
-Slack : -0.447
-TNS   : -0.986
+Slack : -0.593
+TNS   : -2.573
 
 Type  : Slow 1100mV 85C Model Hold 'CLK_50MHZ'
-Slack : 0.387
+Slack : 0.411
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'CLK_50MHZ'
-Slack : 12.719
+Slack : 16.084
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'CLK_50MHZ'
-Slack : 3.831
+Slack : 0.840
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLK_50MHZ'
-Slack : 9.377
+Slack : 9.384
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'CLK_50MHZ'
-Slack : -0.202
-TNS   : -0.380
+Slack : -0.466
+TNS   : -1.811
 
 Type  : Slow 1100mV 0C Model Hold 'CLK_50MHZ'
-Slack : 0.390
+Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'CLK_50MHZ'
-Slack : 13.424
+Slack : 13.437
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'CLK_50MHZ'
-Slack : 3.255
+Slack : 3.286
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLK_50MHZ'
-Slack : 9.291
+Slack : 9.296
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLK_50MHZ'
-Slack : 8.218
+Slack : 8.165
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLK_50MHZ'
-Slack : 0.213
+Slack : 0.233
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'CLK_50MHZ'
-Slack : 14.842
+Slack : 14.884
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'CLK_50MHZ'
-Slack : 2.485
+Slack : 2.509
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLK_50MHZ'
-Slack : 9.411
+Slack : 9.413
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLK_50MHZ'
-Slack : 9.319
+Slack : 9.239
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLK_50MHZ'
-Slack : 0.200
+Slack : 0.216
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'CLK_50MHZ'
-Slack : 15.239
+Slack : 17.015
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'CLK_50MHZ'
-Slack : 2.345
+Slack : 0.742
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLK_50MHZ'

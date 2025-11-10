@@ -2,6 +2,7 @@ module ROUNDING_unit #(
     parameter SIZE_MAN          = 28,
     parameter SIZE_MAN_RESULT   = 24
 )(
+    // input logic                         i_zero_flag     ,
     input logic [SIZE_MAN-1:0]          i_man           ,
     output logic [SIZE_MAN_RESULT-1:0]  o_man_result    ,
     output logic                        o_ov_flow       

@@ -1,0 +1,10 @@
+/home/noname/Documents/project_tiny/Floating_point/Verision2/03_verif/Imple/UART/tb_UART_Rx_block.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Code/UART_baud_generator.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Code/UART_detect_done.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Code/UART_mem.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Code/UART_SS_detect_start.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Code/UART_SS_detect_edge.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Code/UART_Rx.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Code/UART_Rx_block.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Code/UART_Transmitter.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Code/UART_Tx_block.sv

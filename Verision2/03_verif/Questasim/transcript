@@ -12,25 +12,39 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-# ./../TopModule/QuestaSim/tb_FPU_unit.wlf opened as dataset "tb_FPU_unit"
-# add wave vsim:/tb_FPU_unit/*
+# ./../Imple/HEX/QuestaSim/tb_HEX_block.wlf opened as dataset "tb_HEX_block"
+# add wave vsim:/tb_HEX_block/*
 # Unrecognized dataset prefix: vsim
 #  radix -binary
 # binary
 # 
 # stdin: <EOF>
 add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_sign_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_sign_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/i_compare \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_sign_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_sign_min \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_man_max \
-tb_FPU_unit:/tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT/o_man_min
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX/i_clk \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX/i_rst_n \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX/i_stick \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX/i_rx_en \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX/i_rx_data \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX/o_rx_data \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX/o_rx_done
 add wave -position insertpoint  \
-tb_FPU_unit:/tb_FPU_unit/DUT/i_add_sub \
-tb_FPU_unit:/tb_FPU_unit/DUT/i_32_a \
-tb_FPU_unit:/tb_FPU_unit/DUT/i_32_b \
-tb_FPU_unit:/tb_FPU_unit/DUT/o_32_s
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/i_clk \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/i_rst_n \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/i_wr_en \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/i_fifo_data \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/o_done_a \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/o_data_a \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/o_done_b \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/o_data_b \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/ptr_wr \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/ptr_wr_n \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/w_update_a_n \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/w_update_b_n \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/w_update_a_n_1 \
+tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/w_update_b_n_1
+find drivers -source -time {19838.883 ns} -cause tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/i_wr_en
+# invalid command name ""add wave -position insertpoint  \
+tb_HEX_block:/tb_HEX_block/UART_RX/BAUD_GEN_UNIT/w_stick
+add wave -position insertpoint  \
+tb_HEX_block:/tb_HEX_block/UART_RX/BAUD_GEN_UNIT/w_stick
+find drivers -source -time {14946.753 ns} -cause tb_HEX_block:/tb_HEX_block/UART_RX/UART_RX_MEM/o_done_a

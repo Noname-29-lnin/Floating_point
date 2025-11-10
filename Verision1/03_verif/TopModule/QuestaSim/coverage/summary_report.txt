@@ -662,7 +662,7 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Expressions                     24         7        17    29.16%
+    Expressions                     24         9        15    37.50%
     Statements                       7         6         1    85.71%
     Toggles                         36        26        10    72.22%
 
@@ -672,7 +672,7 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Expressions                     24         9        15    37.50%
+    Expressions                     24        11        13    45.83%
     Statements                       7         6         1    85.71%
     Toggles                         36        28         8    77.77%
 
@@ -765,7 +765,7 @@ Coverage Report Summary Data by instance
     ----------------              ----      ----    ------  --------
     Branches                         2         2         0   100.00%
     Statements                       4         4         0   100.00%
-    Toggles                         64        59         5    92.18%
+    Toggles                         64        61         3    95.31%
 
 =================================================================================
 === Instance: /tb_FPU_unit/ROM_UNIT_B
@@ -783,12 +783,12 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                        21        20         1    95.23%
-    Conditions                       9         6         3    66.66%
-    Expressions                      8         8         0   100.00%
-    Statements                     135       135         0   100.00%
-    Toggles                        480       395        85    82.29%
+    Branches                        38        34         4    89.47%
+    Conditions                      18        11         7    61.11%
+    Expressions                     16        16         0   100.00%
+    Statements                     176       175         1    99.43%
+    Toggles                        482       401        81    83.19%
 
 
-Total Coverage By Instance (filtered view): 87.89%
+Total Coverage By Instance (filtered view): 86.54%
 

@@ -1,6 +1,6 @@
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-Start time: 19:09:49 on Nov 03,2025
-vlog "+cover=bcesft" -f ./../SubModule/COMP_UNIT/COMP_8BIT/flist.f 
+Start time: 13:16:07 on Nov 10,2025
+vlog -f ./../SubModule/COMP_UNIT/COMP_8BIT/flist.f 
 -- Compiling module tb_COMP_8bit
 -- Compiling module COMP_2bit
 -- Compiling module COMP_4bit
@@ -8,5 +8,5 @@ vlog "+cover=bcesft" -f ./../SubModule/COMP_UNIT/COMP_8BIT/flist.f
 
 Top level modules:
 	tb_COMP_8bit
-End time: 19:09:49 on Nov 03,2025, Elapsed time: 0:00:00
+End time: 13:16:07 on Nov 10,2025, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0

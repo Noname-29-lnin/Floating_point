@@ -1,2 +1,2 @@
-var g_data = {"24":["work.CLA_24bit",94.36,1],"8":["work.CLA_8bit",95.83,1],"12":["work.COMP_28bit",79.48,1],"2":["work.FPU_unit",99.11,1],"16":["work.LOPD_24bit",96.15,1],"10":["work.MAN_swap",99.42,1],"26":["work.Mux_4_to_1",87.77,1],"25":["work.PSC_unit",88.88,1],"23":["work.ROUNDING_unit",99.37,1],"27":["work.single_port_rom",98.43,1],"1":["work.tb_FPU_unit",88.83,1]};
+var g_data = {"24":["work.CLA_24bit",94.36,1],"8":["work.CLA_8bit",95.83,1],"12":["work.COMP_28bit",79.48,1],"2":["work.FPU_unit",99.11,1],"16":["work.LOPD_24bit",96.15,1],"10":["work.MAN_swap",99.42,1],"26":["work.Mux_4_to_1",87.77,1],"25":["work.PSC_unit",88.88,1],"23":["work.ROUNDING_unit",99.37,1],"27":["work.single_port_rom",98.43,1],"1":["work.tb_FPU_unit",86.64,1]};
 processDuLinks(g_data);

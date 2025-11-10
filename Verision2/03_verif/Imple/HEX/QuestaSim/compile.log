@@ -1,0 +1,20 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 17:06:09 on Nov 09,2025
+vlog -f ./../Imple/HEX/flist.f 
+-- Compiling module tb_HEX_block
+-- Compiling module HEX_block
+-- Compiling module HEX_trans
+-- Compiling module UART_baud_generator
+-- Compiling module UART_detect_done
+-- Compiling module UART_mem
+-- Compiling module UART_SS_detect_start
+-- Compiling module UART_SS_detect_edge
+-- Compiling module UART_Rx
+-- Compiling module UART_Rx_block
+-- Compiling module UART_Transmitter
+-- Compiling module UART_Tx_block
+
+Top level modules:
+	tb_HEX_block
+End time: 17:06:09 on Nov 09,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
