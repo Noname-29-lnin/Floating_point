@@ -1,0 +1,14 @@
+/home/noname/Documents/project_tiny/Floating_point/Verision2/03_verif/Imple/UART/RX_DATA/tb_UART_Rx_Data.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/FIFO_Rx_Test.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/FIFO_Tx_Test.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_baud_generator.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Test.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_edge.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Data.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Test.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv

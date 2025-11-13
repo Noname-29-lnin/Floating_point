@@ -12,12 +12,13 @@ module UART_Rx_block #(
     input wire                      i_rx_en     ,
     input wire                      i_rx_data   ,
 
+    output logic                    o_rx_done   ,
+
     output reg [SIZE_DATA-1:0]      o_data_a    ,
     output reg [SIZE_DATA-1:0]      o_data_b    ,
     output reg                      o_done             
 );
 
-wire o_rx_done;
 logic [7:0] w_rx_data;
 
 wire w_stick;

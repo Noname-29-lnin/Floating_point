@@ -1,9 +1,6 @@
-module LOPD_24bit #(
-    parameter SIZE_DATA     = 24    ,
-    parameter SIZE_LOPD     = 5      
-)(
-    input logic [SIZE_DATA-1:0]     i_data          ,
-    output logic [SIZE_LOPD-1:0]    o_one_position  ,
+module LOPD_24bit (
+    input logic [23:0]     i_data          ,
+    output logic [4:0]    o_one_position  ,
     output logic                    o_zero_flag      
 );
 
@@ -27,7 +24,7 @@ LOPD_8bit LOPD_8bit_UNIT_LSB (
     .o_zero_flag        (LOPD8_o_zero_flag)
 );
 
-logic [SIZE_LOPD-1:0]        w_o_one_position;
+logic [4:0]        w_o_one_position;
 assign o_zero_flag         = LOPD16_o_zero_flag & LOPD8_o_zero_flag;
 assign w_o_one_position[4] = LOPD16_o_zero_flag;
 assign w_o_one_position[3] = LOPD16_o_zero_flag ? 1'b0               : LOPD16_o_pos_one[3];

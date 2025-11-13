@@ -1,0 +1,411 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/noname/Documents/project_tiny/Floating_point/Verision2/03_verif/Questasim
+T_opt
+Z3 !s110 1762970026
+VZNF[ePHSc;9mNh]2c`l^?1
+04 15 4 work tb_UART_Rx_Data fast 0
+=1-000ae431a4f1-6914c9aa-86784-147fc
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U16 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work ./../Imple/UART/RX_DATA/QuestaSim/work -debugdb +acc
+Z4 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vFIFO_Rx_Test
+Z5 2/home/noname/Documents/project_tiny/Floating_point/Verision2/03_verif/Imple/UART/RX_DATA/tb_UART_Rx_Data.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/FIFO_Rx_Test.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/FIFO_Tx_Test.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_baud_generator.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Test.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_edge.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Data.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Test.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv
+Z6 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R3
+!i10b 1
+!s100 ;z2akXOHBiI2jhI7J[PUU3
+ICj7?=bdA6I7We>Ih:`EAz3
+S1
+R2
+w1762960798
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/FIFO_Rx_Test.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/FIFO_Rx_Test.sv
+!i122 13
+L0 1 57
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z9 !s108 1762970025.000000
+Z10 !s107 /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Test.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Data.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_edge.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Test.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_baud_generator.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/FIFO_Tx_Test.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/FIFO_Rx_Test.sv|/home/noname/Documents/project_tiny/Floating_point/Verision2/03_verif/Imple/UART/RX_DATA/tb_UART_Rx_Data.sv|
+Z11 !s90 -f|./../Imple/UART/RX_DATA/flist.f|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@f@i@f@o_@rx_@test
+vFIFO_Tx_Test
+R5
+R6
+R3
+!i10b 1
+!s100 ?:::B]=3jo[@Z;4`oTCV32
+IcoZAk<ekCg2D`D2Yg155J3
+S1
+R2
+w1762969505
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/FIFO_Tx_Test.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/FIFO_Tx_Test.sv
+!i122 13
+L0 1 75
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@f@i@f@o_@tx_@test
+vtb_UART_Rx_Data
+R5
+R6
+R3
+!i10b 1
+!s100 mh7ZJ_Kn1?534@U]FN01@1
+I<<_Y=AOVWS598G3kHY3No0
+S1
+R2
+w1762970022
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/03_verif/Imple/UART/RX_DATA/tb_UART_Rx_Data.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/03_verif/Imple/UART/RX_DATA/tb_UART_Rx_Data.sv
+!i122 13
+L0 3 91
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+ntb_@u@a@r@t_@rx_@data
+vUART_baud_generator
+R5
+R6
+R3
+!i10b 1
+!s100 9eb73=``^ijZ@79=L3meK0
+IK_gSUc8hh>TQaL8j>?;]E0
+S1
+R2
+Z13 w1762962820
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_baud_generator.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_baud_generator.sv
+!i122 13
+L0 7 29
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_baud_generator
+vUART_detect_done
+R5
+R6
+R3
+!i10b 1
+!s100 kA;zMAWo>]bWGZa>4J?n:3
+I7o8C:6B3`T_Ue6z?G?J0P1
+S1
+R2
+w1762966837
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv
+!i122 13
+L0 1 33
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_detect_done
+vUART_mem
+R5
+R6
+R3
+!i10b 1
+!s100 aYG:TCfH0e<XE5KVYde2_2
+I7JH0CRRCD3[^XX09>hhiW2
+S1
+R2
+R13
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv
+!i122 13
+L0 1 77
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_mem
+vUART_Rx
+R5
+R6
+R3
+!i10b 1
+!s100 _W0ekLE_B3`NUVH71>=Gj3
+IAUcF`N[eXhN1Dfjz@1Wl:0
+S1
+R2
+w1762966808
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv
+!i122 13
+L0 1 141
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_@rx
+vUART_Rx_Data
+R5
+R6
+R3
+!i10b 1
+!s100 hQJJo;fPUQJ^K_>Gc]1Yk0
+I@^T1941k8_Jdi^0Xg[fez2
+S1
+R2
+w1762964643
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv
+!i122 13
+L0 1 63
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_@rx_@data
+vUART_Rx_Test
+R5
+R6
+R3
+!i10b 1
+!s100 5=UYMOUCK7K`i6?a_T4211
+I]DG<G0j9lWYVK7d9WYNR>0
+S1
+R2
+w1762968341
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Test.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Test.sv
+!i122 13
+L0 1 49
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_@rx_@test
+vUART_SS_detect_edge
+R5
+R6
+R3
+!i10b 1
+!s100 ]93?RfWgJYDi<i1GJ0M^I3
+I=cMbU5^k<@oOL>=BSh5381
+S1
+R2
+Z14 w1762959075
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_edge.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_edge.sv
+!i122 13
+L0 3 34
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_@s@s_detect_edge
+vUART_SS_detect_start
+R5
+R6
+R3
+!i10b 1
+!s100 b:_VH?LUD2TPa<Cf4`YI42
+Ij8V_zN2nocUlil5l2`iS83
+S1
+R2
+R14
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv
+!i122 13
+L0 3 39
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_@s@s_detect_start
+vUART_Tx
+R5
+R6
+R3
+!i10b 1
+!s100 UNjkzedYld]mG_XVDMgj<0
+I6e_KY@zeC5[>LXAl_71eS2
+S1
+R2
+w1762969942
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv
+!i122 13
+L0 1 135
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_@tx
+vUART_Tx_Data
+R5
+R6
+R3
+!i10b 1
+!s100 eAzUNW>`CMc05e1FUYQIN3
+I7oa_>aNDQclHmGWzM[ATL1
+S1
+R2
+w1762966756
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Data.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Data.sv
+!i122 13
+L0 1 66
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_@tx_@data
+vUART_Tx_Test
+R5
+R6
+R3
+!i10b 1
+!s100 Xb;ljJ=>N1lTe_]G8[gnb0
+I?Mm0W;nmUYiaV29hcIn;]2
+S1
+R2
+w1762968334
+8/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Test.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Test.sv
+!i122 13
+L0 1 50
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_@tx_@test

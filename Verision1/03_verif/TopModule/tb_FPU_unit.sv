@@ -245,6 +245,7 @@ initial begin
     TestCase_Display_result("SIGN", "(-A + B)", 32'hc00ccccd, 32'h40533333);
     TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc0533333);
     TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc1b1999a);
+    TestCase_Display_result("PRE_NOR_EXP", "Overflow rouding", 32'h0cffffff, 32'h00f80000);
     repeat(2**SIZE_ADDR) begin
     // repeat(10) begin
         TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);

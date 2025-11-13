@@ -1,6 +1,9 @@
-# vsim -coverage -lib ./../TopModule/QuestaSim/work -l ./../TopModule/QuestaSim/tb_FPU_unit.log -voptargs="+cover=bcesft" -assertdebug -c tb_FPU_unit -wlf ./../TopModule/QuestaSim/tb_FPU_unit.wlf -do "coverage save -onexit ./../TopModule/QuestaSim/tb_FPU_unit.ucdb; cd ./../TopModule/QuestaSim; log -r /*; run -all;" 
-# Start time: 13:08:28 on Nov 10,2025
+# vsim -lib ./../TopModule/QuestaSim/work -debugDB -l ./../TopModule/QuestaSim/tb_FPU_unit.log -voptargs="+acc" -assertdebug -c tb_FPU_unit -wlf ./../TopModule/QuestaSim/tb_FPU_unit.wlf -do "cd ./../TopModule/QuestaSim; log -r /*; run -all;" 
+# Start time: 09:28:27 on Nov 12,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2024.3 linux_x86_64 Sep 10 2024
 # //
@@ -17,8 +20,36 @@
 # //
 # Loading sv_std.std
 # Loading work.tb_FPU_unit(fast)
-# coverage save -onexit ./../TopModule/QuestaSim/tb_FPU_unit.ucdb
-#  cd ./../TopModule/QuestaSim
+# Loading work.FPU_unit(fast)
+# Loading work.EXP_swap(fast)
+# Loading work.COMP_8bit(fast)
+# Loading work.COMP_4bit(fast)
+# Loading work.COMP_2bit(fast)
+# Loading work.EXP_sub(fast)
+# Loading work.CLA_8bit(fast)
+# Loading work.CLA_4bit(fast)
+# Loading work.MAN_swap(fast)
+# Loading work.SHF_right_28bit(fast)
+# Loading work.COMP_28bit(fast)
+# Loading work.MAN_swap(fast__1)
+# Loading work.SIGN_unit(fast)
+# Loading work.MAN_ALU(fast)
+# Loading work.CLA_28bit(fast)
+# Loading work.LOPD_24bit(fast)
+# Loading work.LOPD_16bit(fast)
+# Loading work.LOPD_8bit(fast)
+# Loading work.LOPD_4bit(fast)
+# Loading work.EXP_adjust(fast)
+# Loading work.NORMALIZATION_unit(fast)
+# Loading work.SHF_left_28bit(fast)
+# Loading work.ROUNDING_unit(fast)
+# Loading work.RND_add(fast)
+# Loading work.PSC_unit(fast)
+# Loading work.Mux_4_to_1(fast)
+# Loading work.single_port_rom(fast)
+# Loading work.single_port_rom(fast__1)
+# ** Note: (vsim-8900) Creating design debug database ./../TopModule/QuestaSim/tb_FPU_unit.dbg.
+# cd ./../TopModule/QuestaSim
 # Cannot change directory while a simulation is in progress.
 # Use the "quit -sim" command to unload the design first.
 #  log -r /*
@@ -248,6 +279,15 @@
 # => PASS: expect=20.000000715255737304687500 (41a00000), dut=20.000001907348632812500000 (41a00000), rounding_error=0.00000596 % (exp_error = 0.00001192 %)
 # [SIGN][SUB]i_32_a=c1b1999a (-22.200000762939453125000000) - i_32_b=c00ccccd (-2.200000047683715820312500) 	| o_32_s=c1a00001 (-20.000001907348632812500000) 	| o_ov_flow=0, o_un_flow=0
 # => PASS: expect=-20.000000715255737304687500 (c1a00000), dut=-20.000001907348632812500000 (c1a00000), rounding_error=0.00000596 % (exp_error = 0.00001192 %)
+# ==========[ Overflow rouding ]==========
+# [PRE_NOR_EXP][ADD]i_32_a=0cffffff (0.000000000000000000000000) + i_32_b=00f80000 (0.000000000000000000000000) 	| o_32_s=0d000000 (0.000000000000000000000000) 	| o_ov_flow=1, o_un_flow=0
+# => PASS: expect=0.000000000000000000000000 (0d000000), dut=0.000000000000000000000000 (0d000000), rounding_error=0.00000019 % (exp_error = 0.00001192 %)
+# [PRE_NOR_EXP][ADD]i_32_a=00f80000 (0.000000000000000000000000) + i_32_b=0cffffff (0.000000000000000000000000) 	| o_32_s=0d000000 (0.000000000000000000000000) 	| o_ov_flow=1, o_un_flow=0
+# => PASS: expect=0.000000000000000000000000 (0d000000), dut=0.000000000000000000000000 (0d000000), rounding_error=0.00000019 % (exp_error = 0.00001192 %)
+# [PRE_NOR_EXP][SUB]i_32_a=0cffffff (0.000000000000000000000000) - i_32_b=00f80000 (0.000000000000000000000000) 	| o_32_s=0cfffffe (0.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=0
+# => PASS: expect=0.000000000000000000000000 (0cfffffe), dut=0.000000000000000000000000 (0cfffffe), rounding_error=0.00000019 % (exp_error = 0.00001192 %)
+# [PRE_NOR_EXP][SUB]i_32_a=00f80000 (0.000000000000000000000000) - i_32_b=0cffffff (0.000000000000000000000000) 	| o_32_s=8cfffffe (-0.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=0
+# => PASS: expect=-0.000000000000000000000000 (8cfffffe), dut=-0.000000000000000000000000 (8cfffffe), rounding_error=0.00000019 % (exp_error = 0.00001192 %)
 # ==========[ Read data from ROM ]==========
 # [Random][ADD]i_32_a=5110783b (38780776448.000000000000000000000000) + i_32_b=5177b21a (66490310656.000000000000000000000000) 	| o_32_s=51c4152a (105271083008.000000000000000000000000) 	| o_ov_flow=1, o_un_flow=0
 # => PASS: expect=105271087104.000000000000000000000000 (51c4152a), dut=105271083008.000000000000000000000000 (51c4152a), rounding_error=0.00000389 % (exp_error = 0.00001192 %)
@@ -18683,14 +18723,13 @@
 # 
 # ==================================
 # ========== TEST SUMMARY ==========
-# Total test cases:   8292
-# Passed          :   8292
+# Total test cases:   8296
+# Passed          :   8296
 # Failed          :      0
 # Pass rate       : 100.00%
 # ==================================
 # 
-# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv(266)
-#    Time: 207191 ns  Iteration: 0  Instance: /tb_FPU_unit
-# Saving coverage database on exit...
-# End time: 13:08:47 on Nov 10,2025, Elapsed time: 0:00:19
-# Errors: 0, Warnings: 0
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/TopModule/tb_FPU_unit.sv(267)
+#    Time: 207271 ns  Iteration: 0  Instance: /tb_FPU_unit
+# End time: 09:28:48 on Nov 12,2025, Elapsed time: 0:00:21
+# Errors: 0, Warnings: 1

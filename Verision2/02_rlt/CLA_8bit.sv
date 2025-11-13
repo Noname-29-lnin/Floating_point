@@ -6,24 +6,30 @@ module CLA_8bit(
     output logic        o_carry
 );
 
-    logic [7:0] g, p;
-    logic [8:0] c;
+    logic [1:0] w_P, w_G;
+    logic w_C;
 
-    assign g = i_data_a & i_data_b;
-    assign p = i_data_a ^ i_data_b;
+    // Lower 4-bit CLA (bits [3:0])
+    CLA_4bit CLA_4BIT_UNIT_0 (
+        .a      (i_data_a[3:0]),
+        .b      (i_data_b[3:0]),
+        .cin    (i_carry),
+        .sum    (o_sum[3:0]),
+        .o_p    (w_P[0]),
+        .o_g    (w_G[0])
+    );
 
-    assign c[0] = i_carry;
+    // Upper 4-bit CLA (bits [7:4])
+    assign w_C = w_G[0] | (w_P[0] & i_carry);
+    CLA_4bit CLA_4BIT_UNIT_1 (
+        .a      (i_data_a[7:4]),
+        .b      (i_data_b[7:4]),
+        .cin    (w_C),
+        .sum    (o_sum[7:4]),
+        .o_p    (w_P[1]),
+        .o_g    (w_G[1])
+    );
 
-    assign c[1] = g[0] | (p[0] & c[0]);
-    assign c[2] = g[1] | (p[1] & g[0]) | (p[1] & p[0] & c[0]);
-    assign c[3] = g[2] | (p[2] & g[1]) | (p[2] & p[1] & g[0]) | (p[2] & p[1] & p[0] & c[0]);
-    assign c[4] = g[3] | (p[3] & g[2]) | (p[3] & p[2] & g[1]) | (p[3] & p[2] & p[1] & g[0]) | (p[3] & p[2] & p[1] & p[0] & c[0]);
-    assign c[5] = g[4] | (p[4] & g[3]) | (p[4] & p[3] & g[2]) | (p[4] & p[3] & p[2] & g[1]) | (p[4] & p[3] & p[2] & p[1] & g[0]) | (p[4] & p[3] & p[2] & p[1] & p[0] & c[0]);
-    assign c[6] = g[5] | (p[5] & g[4]) | (p[5] & p[4] & g[3]) | (p[5] & p[4] & p[3] & g[2]) | (p[5] & p[4] & p[3] & p[2] & g[1]) | (p[5] & p[4] & p[3] & p[2] & p[1] & g[0]) | (p[5] & p[4] & p[3] & p[2] & p[1] & p[0] & c[0]);
-    assign c[7] = g[6] | (p[6] & g[5]) | (p[6] & p[5] & g[4]) | (p[6] & p[5] & p[4] & g[3]) | (p[6] & p[5] & p[4] & p[3] & g[2]) | (p[6] & p[5] & p[4] & p[3] & p[2] & g[1]) | (p[6] & p[5] & p[4] & p[3] & p[2] & p[1] & g[0]) | (p[6] & p[5] & p[4] & p[3] & p[2] & p[1] & p[0] & c[0]);
-    assign c[8] = g[7] | (p[7] & g[6]) | (p[7] & p[6] & g[5]) | (p[7] & p[6] & p[5] & g[4]) | (p[7] & p[6] & p[5] & p[4] & g[3]) | (p[7] & p[6] & p[5] & p[4] & p[3] & g[2]) | (p[7] & p[6] & p[5] & p[4] & p[3] & p[2] & g[1]) | (p[7] & p[6] & p[5] & p[4] & p[3] & p[2] & p[1] & g[0]) | (p[7] & p[6] & p[5] & p[4] & p[3] & p[2] & p[1] & p[0] & c[0]);
-
-    assign o_sum   = p ^ c[7:0];
-    assign o_carry = c[8];
+    assign o_carry = w_G[1] | (w_P[1] & (w_G[0] | (w_P[0] & i_carry)));
 
 endmodule

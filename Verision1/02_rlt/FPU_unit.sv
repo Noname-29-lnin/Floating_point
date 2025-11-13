@@ -34,7 +34,7 @@ logic w_EXPSWAP_compare;
 logic [7:0] w_EXPSWAP_max, w_EXPSWAP_min;
 logic [7:0] w_EXPSUB_diff_value;
 
-logic w_MAN_SWAP1_sign_max, w_MAN_SWAP1_sign_min;
+// logic w_MAN_SWAP1_sign_max, w_MAN_SWAP1_sign_min;
 logic [23:0] w_MAN_SWAP1_max, w_MAN_SWAP1_min;
 
 logic [27:0] w_MAN_SHF_RIGHT_min, w_MAN_SHF_RIGHT_max;
@@ -42,7 +42,7 @@ logic [27:0] w_MAN_SHF_RIGHT_min, w_MAN_SHF_RIGHT_max;
 logic w_MAN_COMP_28BIT_less;
 logic w_MAN_PRE_SWAP_BY_MAN_compara;
 
-logic        w_MAN_PRE_SWAP_BY_MAN_sign_max, w_MAN_PRE_SWAP_BY_MAN_sign_min;
+// logic        w_MAN_PRE_SWAP_BY_MAN_sign_max, w_MAN_PRE_SWAP_BY_MAN_sign_min;
 logic [27:0] w_MAN_PRE_SWAP_BY_MAN_max,      w_MAN_PRE_SWAP_BY_MAN_min;
 
 logic [27:0] w_MAN_ALU_man;
@@ -86,15 +86,15 @@ EXP_sub #(
  MAN_swap #(
     .SIZE_MAN       (24)
 ) MAN_PRE_SWAP_BY_EXPONENT_UNIT (
-    .i_sign_a           (w_sign_a),
-    .i_sign_b           (w_sign_b),
+    // .i_sign_a           (w_sign_a),
+    // .i_sign_b           (w_sign_b),
     .i_man_a            (w_mantissa_a),
     .i_man_b            (w_mantissa_b),
     // i_compare = 1 -> a < b
     .i_compare          (w_EXPSWAP_compare),
 
-    .o_sign_max         (w_MAN_SWAP1_sign_max),
-    .o_sign_min         (w_MAN_SWAP1_sign_min),
+    // .o_sign_max         (w_MAN_SWAP1_sign_max),
+    // .o_sign_min         (w_MAN_SWAP1_sign_min),
     .o_man_max          (w_MAN_SWAP1_max),
     .o_man_min          (w_MAN_SWAP1_min)
 );
@@ -119,15 +119,15 @@ assign w_MAN_PRE_SWAP_BY_MAN_compara = w_MAN_COMP_28BIT_less;
 MAN_swap #(
     .SIZE_MAN       (28)
 ) MAN_PRE_SWAP_BY_MAN_UNIT (
-    .i_sign_a           (w_MAN_SWAP1_sign_max), // w_MAN_SWAP1_sign_min
-    .i_sign_b           (w_MAN_SWAP1_sign_min), // w_MAN_SWAP1_sign_max
+    // .i_sign_a           (w_MAN_SWAP1_sign_max), // w_MAN_SWAP1_sign_min
+    // .i_sign_b           (w_MAN_SWAP1_sign_min), // w_MAN_SWAP1_sign_max
     .i_man_a            (w_MAN_SHF_RIGHT_max),  // w_MAN_SHF_RIGHT_min
     .i_man_b            (w_MAN_SHF_RIGHT_min),  // w_MAN_SHF_RIGHT_max
     // i_compare = 1 -> a < b
     .i_compare          (w_MAN_PRE_SWAP_BY_MAN_compara),
 
-    .o_sign_max         (w_MAN_PRE_SWAP_BY_MAN_sign_max),
-    .o_sign_min         (w_MAN_PRE_SWAP_BY_MAN_sign_min),
+    // .o_sign_max         (w_MAN_PRE_SWAP_BY_MAN_sign_max),
+    // .o_sign_min         (w_MAN_PRE_SWAP_BY_MAN_sign_min),
     .o_man_max          (w_MAN_PRE_SWAP_BY_MAN_max),
     .o_man_min          (w_MAN_PRE_SWAP_BY_MAN_min)
 );
@@ -145,8 +145,8 @@ MAN_ALU #(
     .SIZE_MAN       (28)
 ) MAN_ALU_UNIT (
     .i_fpu_op           (i_add_sub),
-    .i_sign_max         (w_MAN_PRE_SWAP_BY_MAN_sign_max),
-    .i_sign_min         (w_MAN_PRE_SWAP_BY_MAN_sign_min),
+    .i_sign_a           (w_sign_a),
+    .i_sign_b           (w_sign_b),
     .i_man_max          (w_MAN_PRE_SWAP_BY_MAN_max),
     .i_man_min          (w_MAN_PRE_SWAP_BY_MAN_min),
     .o_man_alu          (w_MAN_ALU_man),
