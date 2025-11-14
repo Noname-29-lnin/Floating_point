@@ -17,6 +17,8 @@ logic [SIZE_DATA_O-1:0] mem [0: 3];
 logic [1:0] ptr_rd;
 logic [1:0] ptr_rd_n;
 logic w_tx_done;
+logic w_tx_en;
+logic w_tx_done_1;
 
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n) begin
@@ -34,6 +36,20 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin
     end
 end
 
+always_ff @( posedge i_clk or negedge i_rst_n ) begin 
+    if(~i_rst_n) 
+        w_tx_en  <= '0;
+    else
+        w_tx_en  <= i_tx_en;
+end
+
+always_ff @( posedge i_clk or negedge i_rst_n ) begin 
+    if(~i_rst_n) 
+        w_tx_done_1  <= '0;
+    else
+        w_tx_done_1  <= w_tx_done;
+end
+
 UART_Tx #(
     .SIZE_DATA          (SIZE_DATA_O),
     .OVER_SAMPLE        (16) // oversampling
@@ -41,7 +57,7 @@ UART_Tx #(
     .i_clk              (i_clk), // clock for CPU
     .i_rst_n            (i_rst_n), // active low reset
     .i_stick            (i_stick), // baud rate signal
-    .i_tx_en            (i_tx_en | w_tx_done), // start signal
+    .i_tx_en            (w_tx_en | w_tx_done_1), // start signal
     .i_fifo_empty       (1'b0), // FIFO empty signal
     .i_tx_data          (mem[ptr_rd]), // data to be transmitted parallel
     .o_tx_serial        (o_tx_data), // serial data output 

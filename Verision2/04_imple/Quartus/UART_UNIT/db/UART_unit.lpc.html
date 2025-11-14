@@ -16,10 +16,10 @@
 <TH>Output only Bidir</TH>
 </TR>
 <TR >
-<TD >UART_TX_UNIT|UART_TX_UNIT</TD>
+<TD >UART_TX_BLOCK|UART_TX_UNIT</TD>
 <TD >13</TD>
 <TD >1</TD>
-<TD >4</TD>
+<TD >0</TD>
 <TD >1</TD>
 <TD >2</TD>
 <TD >1</TD>
@@ -32,12 +32,12 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >UART_TX_UNIT</TD>
+<TD >UART_TX_BLOCK</TD>
 <TD >36</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
-<TD >2</TD>
+<TD >1</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -1152,7 +1152,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >UART_RX_DATA_UNIT|UART_DETECT_DONE|SS_DETECT_START_A|SS_detect_edge_unit_2</TD>
+<TD >UART_RX_BLOCK|UART_DETECT_DONE|SS_DETECT_START_A|SS_detect_edge_unit_2</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -1168,7 +1168,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >UART_RX_DATA_UNIT|UART_DETECT_DONE|SS_DETECT_START_A|SS_detect_edge_unit</TD>
+<TD >UART_RX_BLOCK|UART_DETECT_DONE|SS_DETECT_START_A|SS_detect_edge_unit</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -1184,7 +1184,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >UART_RX_DATA_UNIT|UART_DETECT_DONE|SS_DETECT_START_A</TD>
+<TD >UART_RX_BLOCK|UART_DETECT_DONE|SS_DETECT_START_A</TD>
 <TD >4</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -1200,7 +1200,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >UART_RX_DATA_UNIT|UART_DETECT_DONE</TD>
+<TD >UART_RX_BLOCK|UART_DETECT_DONE</TD>
 <TD >4</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -1216,8 +1216,40 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >UART_RX_DATA_UNIT|UART_MEM_UNIT</TD>
-<TD >12</TD>
+<TD >UART_RX_BLOCK|UART_MEM_UNIT|UART_SS_B</TD>
+<TD >3</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >UART_RX_BLOCK|UART_MEM_UNIT|UART_SS_A</TD>
+<TD >3</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >UART_RX_BLOCK|UART_MEM_UNIT</TD>
+<TD >11</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -1232,7 +1264,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >UART_RX_DATA_UNIT|UART_RX_UNIT|UART_DETECT_NEG</TD>
+<TD >UART_RX_BLOCK|UART_RX_UNIT|UART_DETECT_NEG</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -1248,7 +1280,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >UART_RX_DATA_UNIT|UART_RX_UNIT</TD>
+<TD >UART_RX_BLOCK|UART_RX_UNIT</TD>
 <TD >6</TD>
 <TD >1</TD>
 <TD >0</TD>
@@ -1264,8 +1296,8 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >UART_RX_DATA_UNIT</TD>
-<TD >5</TD>
+<TD >UART_RX_BLOCK</TD>
+<TD >4</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -1273,6 +1305,22 @@
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >UART_BAUD_GEN</TD>
+<TD >26</TD>
+<TD >24</TD>
+<TD >0</TD>
+<TD >24</TD>
+<TD >1</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>

@@ -5,7 +5,7 @@ module UART_mem #(
 )(
     input logic                     i_clk       ,
     input logic                     i_rst_n     ,
-    input logic                     i_stick     ,
+    // input logic                     i_stick     ,
     input logic                     i_wr_en     ,
     input logic [SIZE_DATA_I-1:0]   i_fifo_data ,
 
@@ -19,6 +19,7 @@ localparam SIZE_ADDR = $clog2(SIZE_DEPTH);
 logic [SIZE_ADDR-1:0] ptr_wr;
 logic [SIZE_ADDR-1:0] ptr_wr_n;
 logic w_update_a_n, w_update_b_n;
+logic w_update_a_2, w_update_b_2;
 
 assign ptr_wr_n = ptr_wr + 1'b1;
 always_ff @( posedge i_clk or negedge i_rst_n ) begin : pointer_for_write
@@ -33,14 +34,31 @@ end
 assign w_update_a_n = (ptr_wr == 3'b011);
 assign w_update_b_n = (ptr_wr == 3'b111);
 
+UART_SS_detect_edge #(
+    .POS_EDGE   (0)   // 1: posedge, 0: negedge
+) UART_SS_A (
+    .i_clk          (i_clk),
+    .i_rst_n        (i_rst_n),
+    .i_signal       (w_update_a_n),
+    .o_signal       (w_update_a_2)
+);
+UART_SS_detect_edge #(
+    .POS_EDGE   (0)   // 1: posedge, 0: negedge
+) UART_SS_B (
+    .i_clk          (i_clk),
+    .i_rst_n        (i_rst_n),
+    .i_signal       (w_update_b_n),
+    .o_signal       (w_update_b_2)
+);
+
 always_ff @( posedge i_clk or negedge i_rst_n ) begin : proc_update_data_a_and_b
     if(~i_rst_n) begin
         o_done_a          <= '0;
         o_done_b          <= '0;
     end else begin
-        if(i_stick)
+        // if(i_stick)
             o_done_a          <= w_update_a_n;
-        if(i_stick)
+        // if(i_stick)
             o_done_b          <= w_update_b_n;
     end
 end
@@ -66,10 +84,10 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin : proc_fifo_read_data_a
         o_data_a        <= '0;
         o_data_b        <= '0;
     end else begin
-        if(o_done_a)
+        if(w_update_a_2)
             o_data_a    <= {mem_reg[3], mem_reg[2], mem_reg[1], mem_reg[0]};
         
-        if(o_done_b)
+        if(w_update_b_2)
             o_data_b    <= {mem_reg[7], mem_reg[6], mem_reg[5], mem_reg[4]};
     end
 end

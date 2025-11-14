@@ -59,19 +59,6 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_detect_done.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/FPU_unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/EXP_swap.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/EXP_sub.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/EXP_adjust.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/COMP_8bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/COMP_4bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/COMP_2bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/COMP_28bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/CLA_8bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/CLA_4bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/CLA_28bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/CLA_24bit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/SIGN_unit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/SHF_right_28bit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/SHF_left_28bit.sv
@@ -86,12 +73,26 @@ set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/LOPD_8bit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/LOPD_4bit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/LOPD_24bit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/LOPD_16bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_mem.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_Rx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/FPU_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/EXP_swap.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/EXP_sub.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/EXP_adjust.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/COMP_8bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/COMP_4bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/COMP_2bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/COMP_28bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/CLA_8bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/CLA_4bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/CLA_28bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../02_rlt/CLA_24bit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_Rx_Data.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_Rx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_detect_done.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_baud_generator.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_SS_detect_edge.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_SS_detect_start.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_Tx.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_Tx_Data.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_Tx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../Version1_UART/UART_SS_detect_start.sv
+set_global_assignment -name SYSTEMVERILOG_FILE UART_unit.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

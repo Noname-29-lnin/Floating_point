@@ -12,43 +12,26 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-# ./../Imple/UART/RX_DATA/QuestaSim/tb_UART_Rx_Data.wlf opened as dataset "tb_UART_Rx_Data"
-# add wave vsim:/tb_UART_Rx_Data/*
+# ./../Imple/UART/UART_MEM/QuestaSim/tb_UART_mem.wlf opened as dataset "tb_UART_mem"
+# add wave vsim:/tb_UART_mem/*
 # Unrecognized dataset prefix: vsim
 #  radix -binary
 # binary
 # 
 # stdin: <EOF>
 add wave -position insertpoint  \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/i_clk \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/i_rst_n \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/i_sel_data \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/i_start \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/i_rd_en \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/o_data \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/o_done \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/w_enable \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/w_update \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/ptr_rd \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/FIFO_TEST/ptr_rd_n
-add wave -position insertpoint  \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/n_index
-add wave -position insertpoint  \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/i_clk \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/i_rst_n \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/i_stick \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/i_tx_en \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/i_fifo_empty \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/i_tx_data \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/o_tx_serial \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/o_tx_done \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/state \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/n_state \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/index \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/n_index \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/w_update_data \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/count \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/n_count \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/w_update_sample \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/w_update_start \
-tb_UART_Rx_Data:/tb_UART_Rx_Data/UART_TX_TEST/UART_TX_UNIT/w_i_data
+tb_UART_mem:/tb_UART_mem/DUT/i_clk \
+tb_UART_mem:/tb_UART_mem/DUT/i_rst_n \
+tb_UART_mem:/tb_UART_mem/DUT/i_stick \
+tb_UART_mem:/tb_UART_mem/DUT/i_wr_en \
+tb_UART_mem:/tb_UART_mem/DUT/i_fifo_data \
+tb_UART_mem:/tb_UART_mem/DUT/o_done_a \
+tb_UART_mem:/tb_UART_mem/DUT/o_data_a \
+tb_UART_mem:/tb_UART_mem/DUT/o_done_b \
+tb_UART_mem:/tb_UART_mem/DUT/o_data_b \
+tb_UART_mem:/tb_UART_mem/DUT/ptr_wr \
+tb_UART_mem:/tb_UART_mem/DUT/ptr_wr_n \
+tb_UART_mem:/tb_UART_mem/DUT/w_update_a_n \
+tb_UART_mem:/tb_UART_mem/DUT/w_update_b_n \
+tb_UART_mem:/tb_UART_mem/DUT/w_update_a_2 \
+tb_UART_mem:/tb_UART_mem/DUT/w_update_b_2

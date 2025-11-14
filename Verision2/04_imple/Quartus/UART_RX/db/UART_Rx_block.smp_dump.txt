@@ -1,7 +1,0 @@
-
-State Machine - |UART_Rx_block|UART_Receiver:UART_RX|state
-Name state.IDLE state.STOP_I state.TRANSMIT state.START 
-state.IDLE 0 0 0 0 
-state.START 1 0 0 1 
-state.TRANSMIT 1 0 1 0 
-state.STOP_I 1 1 0 0 

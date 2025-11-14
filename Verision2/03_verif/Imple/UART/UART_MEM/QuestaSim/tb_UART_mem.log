@@ -1,0 +1,37 @@
+# vsim -lib ./../Imple/UART/UART_MEM/QuestaSim/work -debugDB -l ./../Imple/UART/UART_MEM/QuestaSim/tb_UART_mem.log -voptargs="+acc" -assertdebug -c tb_UART_mem -wlf ./../Imple/UART/UART_MEM/QuestaSim/tb_UART_mem.wlf -do "cd ./../Imple/UART/UART_MEM/QuestaSim; log -r /*; run -all;" 
+# Start time: 00:04:52 on Nov 15,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_UART_mem(fast)
+# Loading work.UART_baud_generator(fast)
+# Loading work.UART_mem(fast)
+# Loading work.UART_SS_detect_edge(fast)
+# ** Note: (vsim-8900) Creating design debug database ./../Imple/UART/UART_MEM/QuestaSim/tb_UART_mem.dbg.
+# cd ./../Imple/UART/UART_MEM/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# ---- START WRITING BYTE ----
+# ---- SIM DONE ----
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision2/03_verif/Imple/UART/UART_MEM/tb_UART_mem.sv(110)
+#    Time: 1005 ns  Iteration: 1  Instance: /tb_UART_mem
+# End time: 00:04:53 on Nov 15,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

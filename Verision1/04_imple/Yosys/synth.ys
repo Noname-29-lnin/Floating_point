@@ -1,0 +1,54 @@
+# ============================================================
+#  Yosys synthesis script for FPU_unit
+#  - Read large RTL list from flist.f
+#  - Use real cell library: slow_vdd1v2_basicCells_hvt.lib
+# ============================================================
+
+# --- [1] Thiết lập mặc định cho Verilog ---
+verilog_defaults -add -sv                # Hỗ trợ SystemVerilog
+verilog_defaults -add -I./include        # Thư mục include (nếu có)
+verilog_defaults -add -DDEF_SYNTH=1      # Định nghĩa macro synthesis
+
+# --- [2] Đọc thư viện cell (.lib) ---
+echo "==> Reading standard cell library ..."
+read_liberty -lib ./slow_vdd1v2_basicCells_hvt.lib
+
+# --- [3] Đọc danh sách file RTL từ flist.f ---
+echo "==> Reading RTL file list from flist.f ..."
+set fp [open "flist.f" r]
+set flist [split [read $fp] "\n"]
+close $fp
+
+foreach f $flist {
+    if {![string match "#*" $f] && [string length $f]} {
+        echo "   -> Reading: $f"
+        read_verilog $f
+    }
+}
+
+# --- [4] Xác định top-level module ---
+hierarchy -check -top FPU_unit
+
+# --- [5] Kiểm tra và thống kê thiết kế ---
+check
+stat
+
+# --- [6] Tổng hợp RTL logic ---
+synth -top FPU_unit
+
+# --- [7] Ánh xạ DFF và logic sang thư viện cell thực ---
+dfflibmap -liberty ./slow_vdd1v2_basicCells_hvt.lib
+abc -liberty ./slow_vdd1v2_basicCells_hvt.lib
+
+# --- [8] Dọn dẹp & tối ưu hóa ---
+clean
+
+# --- [9] Xuất kết quả ---
+write_verilog -noattr FPU_unit_mapped.v
+write_json FPU_unit_mapped.json
+
+echo "============================================================"
+echo "✅  Synthesis finished successfully."
+echo "   Output netlist: FPU_unit_mapped.v"
+echo "   Output JSON   : FPU_unit_mapped.json"
+echo "============================================================"

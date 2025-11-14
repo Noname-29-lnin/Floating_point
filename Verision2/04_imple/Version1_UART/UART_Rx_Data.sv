@@ -43,7 +43,7 @@ UART_mem #(
 ) UART_MEM_UNIT (
     .i_clk              (i_clk),
     .i_rst_n            (i_rst_n),
-    .i_stick            (i_stick),
+    // .i_stick            (i_stick),
     .i_wr_en            (w_wr_fifo_mem),
     .i_fifo_data        (w_data_fifo_mem),
     .o_done_a           (o_done_a),

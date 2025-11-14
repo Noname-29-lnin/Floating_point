@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART_unit
-Thu Nov 13 00:01:05 2025
+Sat Nov 15 00:27:36 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -14,32 +14,39 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT
- 13. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT
- 14. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG
- 15. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT|UART_mem:UART_MEM_UNIT
- 16. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit
- 17. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit_2
- 18. Parameter Settings for User Entity Instance: FPU_unit:FPU_UNIT
- 19. Parameter Settings for User Entity Instance: FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT
- 20. Parameter Settings for User Entity Instance: UART_Tx_Data:UART_TX_UNIT
- 21. Parameter Settings for User Entity Instance: UART_Tx_Data:UART_TX_UNIT|UART_Tx:UART_TX_UNIT
- 22. Port Connectivity Checks: "UART_Tx_Data:UART_TX_UNIT|UART_Tx:UART_TX_UNIT"
- 23. Port Connectivity Checks: "FPU_unit:FPU_UNIT|Mux_4_to_1:SEL_MANTISSA_FOR_RESULT"
- 24. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT|CLA_8bit:CLA_8BIT_UNIT"
- 25. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT"
- 26. Port Connectivity Checks: "FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_0"
- 27. Port Connectivity Checks: "FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT"
- 28. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB_UNIT|CLA_8bit:CLA_8BIT_UNIT"
- 29. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB_UNIT"
- 30. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP_UNIT|COMP_8bit:COMP_LESS_UNIT|COMP_4bit:u_low"
- 31. Port Connectivity Checks: "UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |UART_unit
+ 13. Parameter Settings for User Entity Instance: UART_baud_generator:UART_BAUD_GEN
+ 14. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK
+ 15. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT
+ 16. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG
+ 17. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT
+ 18. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_A
+ 19. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_B
+ 20. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit
+ 21. Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit_2
+ 22. Parameter Settings for User Entity Instance: FPU_unit:FPU_UNIT
+ 23. Parameter Settings for User Entity Instance: FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT
+ 24. Parameter Settings for User Entity Instance: UART_Tx_Data:UART_TX_BLOCK
+ 25. Parameter Settings for User Entity Instance: UART_Tx_Data:UART_TX_BLOCK|UART_Tx:UART_TX_UNIT
+ 26. Port Connectivity Checks: "UART_Tx_Data:UART_TX_BLOCK|UART_Tx:UART_TX_UNIT"
+ 27. Port Connectivity Checks: "UART_Tx_Data:UART_TX_BLOCK"
+ 28. Port Connectivity Checks: "FPU_unit:FPU_UNIT|Mux_4_to_1:SEL_MANTISSA_FOR_RESULT"
+ 29. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT|CLA_8bit:CLA_8BIT_UNIT"
+ 30. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT"
+ 31. Port Connectivity Checks: "FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_0"
+ 32. Port Connectivity Checks: "FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT"
+ 33. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB_UNIT|CLA_8bit:CLA_8BIT_UNIT"
+ 34. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB_UNIT"
+ 35. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP_UNIT|COMP_8bit:COMP_LESS_UNIT|COMP_4bit:u_low"
+ 36. Port Connectivity Checks: "UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT"
+ 37. Port Connectivity Checks: "UART_Rx_Data:UART_RX_BLOCK"
+ 38. Port Connectivity Checks: "UART_baud_generator:UART_BAUD_GEN"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
 
 
 
@@ -66,14 +73,14 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 13 00:01:05 2025           ;
+; Analysis & Synthesis Status     ; Successful - Sat Nov 15 00:27:36 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; UART_unit                                       ;
 ; Top-level Entity Name           ; UART_unit                                       ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 286                                             ;
-; Total pins                      ; 13                                              ;
+; Total registers                 ; 68                                              ;
+; Total pins                      ; 42                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -187,8 +194,7 @@ on the Quartus Prime software download page.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -197,18 +203,6 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path            ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                ; Library ;
 +---------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; ../../Version1_UART/UART_detect_done.sv     ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv     ;         ;
-; ../../../02_rlt/FPU_unit.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv                             ;         ;
-; ../../../02_rlt/EXP_swap.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_swap.sv                             ;         ;
-; ../../../02_rlt/EXP_sub.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_sub.sv                              ;         ;
-; ../../../02_rlt/EXP_adjust.sv               ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_adjust.sv                           ;         ;
-; ../../../02_rlt/COMP_8bit.sv                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_8bit.sv                            ;         ;
-; ../../../02_rlt/COMP_4bit.sv                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_4bit.sv                            ;         ;
-; ../../../02_rlt/COMP_2bit.sv                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_2bit.sv                            ;         ;
-; ../../../02_rlt/COMP_28bit.sv               ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_28bit.sv                           ;         ;
-; ../../../02_rlt/CLA_8bit.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_8bit.sv                             ;         ;
-; ../../../02_rlt/CLA_4bit.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_4bit.sv                             ;         ;
-; ../../../02_rlt/CLA_28bit.sv                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_28bit.sv                            ;         ;
 ; ../../../02_rlt/SIGN_unit.sv                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/SIGN_unit.sv                            ;         ;
 ; ../../../02_rlt/SHF_right_28bit.sv          ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/SHF_right_28bit.sv                      ;         ;
 ; ../../../02_rlt/SHF_left_28bit.sv           ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/SHF_left_28bit.sv                       ;         ;
@@ -223,14 +217,27 @@ on the Quartus Prime software download page.
 ; ../../../02_rlt/LOPD_4bit.sv                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/LOPD_4bit.sv                            ;         ;
 ; ../../../02_rlt/LOPD_24bit.sv               ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/LOPD_24bit.sv                           ;         ;
 ; ../../../02_rlt/LOPD_16bit.sv               ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/LOPD_16bit.sv                           ;         ;
-; ../../Version1_UART/UART_mem.sv             ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv             ;         ;
-; ../../Version1_UART/UART_Rx.sv              ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv              ;         ;
+; ../../../02_rlt/FPU_unit.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv                             ;         ;
+; ../../../02_rlt/EXP_swap.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_swap.sv                             ;         ;
+; ../../../02_rlt/EXP_sub.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_sub.sv                              ;         ;
+; ../../../02_rlt/EXP_adjust.sv               ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_adjust.sv                           ;         ;
+; ../../../02_rlt/COMP_8bit.sv                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_8bit.sv                            ;         ;
+; ../../../02_rlt/COMP_4bit.sv                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_4bit.sv                            ;         ;
+; ../../../02_rlt/COMP_2bit.sv                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_2bit.sv                            ;         ;
+; ../../../02_rlt/COMP_28bit.sv               ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_28bit.sv                           ;         ;
+; ../../../02_rlt/CLA_8bit.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_8bit.sv                             ;         ;
+; ../../../02_rlt/CLA_4bit.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_4bit.sv                             ;         ;
+; ../../../02_rlt/CLA_28bit.sv                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_28bit.sv                            ;         ;
 ; ../../Version1_UART/UART_Rx_Data.sv         ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv         ;         ;
+; ../../Version1_UART/UART_Rx.sv              ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv              ;         ;
+; ../../Version1_UART/UART_mem.sv             ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv             ;         ;
+; ../../Version1_UART/UART_detect_done.sv     ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv     ;         ;
+; ../../Version1_UART/UART_baud_generator.sv  ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_baud_generator.sv  ;         ;
 ; ../../Version1_UART/UART_SS_detect_edge.sv  ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_edge.sv  ;         ;
-; ../../Version1_UART/UART_SS_detect_start.sv ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv ;         ;
-; ../../Version1_UART/UART_Tx.sv              ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv              ;         ;
 ; ../../Version1_UART/UART_Tx_Data.sv         ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Data.sv         ;         ;
-; ../../Version1_UART/UART_unit.sv            ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_unit.sv            ;         ;
+; ../../Version1_UART/UART_Tx.sv              ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv              ;         ;
+; ../../Version1_UART/UART_SS_detect_start.sv ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv ;         ;
+; UART_unit.sv                                ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv        ;         ;
 +---------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -239,103 +246,280 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 414         ;
+; Estimate of Logic utilization (ALMs needed) ; 51          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 569         ;
-;     -- 7 input functions                    ; 26          ;
-;     -- 6 input functions                    ; 207         ;
-;     -- 5 input functions                    ; 117         ;
-;     -- 4 input functions                    ; 138         ;
-;     -- <=3 input functions                  ; 81          ;
+; Combinational ALUT usage for logic          ; 86          ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 15          ;
+;     -- 5 input functions                    ; 23          ;
+;     -- 4 input functions                    ; 11          ;
+;     -- <=3 input functions                  ; 37          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 286         ;
+; Dedicated logic registers                   ; 68          ;
 ;                                             ;             ;
-; I/O pins                                    ; 13          ;
+; I/O pins                                    ; 42          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_clk~input ;
-; Maximum fan-out                             ; 286         ;
-; Total fan-out                               ; 3898        ;
-; Average fan-out                             ; 4.42        ;
+; Maximum fan-out                             ; 68          ;
+; Total fan-out                               ; 604         ;
+; Average fan-out                             ; 2.54        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                   ;
-+---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                          ; Entity Name          ; Library Name ;
-+---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |UART_unit                                              ; 569 (7)             ; 286 (83)                  ; 0                 ; 0          ; 13   ; 0            ; |UART_unit                                                                                                                                                   ; UART_unit            ; work         ;
-;    |FPU_unit:FPU_UNIT|                                  ; 481 (10)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT                                                                                                                                 ; FPU_unit             ; work         ;
-;       |COMP_28bit:MAN_COMP_28BIT_UNIT|                  ; 43 (29)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT                                                                                                  ; COMP_28bit           ; work         ;
-;          |COMP_4bit:u_i_data_1|                         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_1                                                                             ; COMP_4bit            ; work         ;
-;          |COMP_4bit:u_i_data_3|                         ; 6 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_3                                                                             ; COMP_4bit            ; work         ;
-;             |COMP_2bit:u_high|                          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_3|COMP_2bit:u_high                                                            ; COMP_2bit            ; work         ;
-;             |COMP_2bit:u_low|                           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_3|COMP_2bit:u_low                                                             ; COMP_2bit            ; work         ;
-;          |COMP_4bit:u_i_data_4|                         ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_4                                                                             ; COMP_4bit            ; work         ;
-;             |COMP_2bit:u_high|                          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_4|COMP_2bit:u_high                                                            ; COMP_2bit            ; work         ;
-;             |COMP_2bit:u_low|                           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_4|COMP_2bit:u_low                                                             ; COMP_2bit            ; work         ;
-;          |COMP_4bit:u_i_data_5|                         ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_5                                                                             ; COMP_4bit            ; work         ;
-;             |COMP_2bit:u_low|                           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_5|COMP_2bit:u_low                                                             ; COMP_2bit            ; work         ;
-;       |EXP_adjust:EXP_ADJUST_UNIT|                      ; 6 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT                                                                                                      ; EXP_adjust           ; work         ;
-;          |CLA_8bit:CLA_8BIT_UNIT|                       ; 4 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT|CLA_8bit:CLA_8BIT_UNIT                                                                               ; CLA_8bit             ; work         ;
-;             |CLA_4bit:CLA_4BIT_UNIT_0|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_0                                                      ; CLA_4bit             ; work         ;
-;             |CLA_4bit:CLA_4BIT_UNIT_1|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_1                                                      ; CLA_4bit             ; work         ;
-;       |EXP_sub:EXP_SUB_UNIT|                            ; 13 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB_UNIT                                                                                                            ; EXP_sub              ; work         ;
-;          |CLA_8bit:CLA_8BIT_UNIT|                       ; 13 (1)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB_UNIT|CLA_8bit:CLA_8BIT_UNIT                                                                                     ; CLA_8bit             ; work         ;
-;             |CLA_4bit:CLA_4BIT_UNIT_0|                  ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB_UNIT|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_0                                                            ; CLA_4bit             ; work         ;
-;             |CLA_4bit:CLA_4BIT_UNIT_1|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB_UNIT|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_1                                                            ; CLA_4bit             ; work         ;
-;       |EXP_swap:EXP_SWAP_UNIT|                          ; 14 (5)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP_UNIT                                                                                                          ; EXP_swap             ; work         ;
-;          |COMP_8bit:COMP_LESS_UNIT|                     ; 9 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP_UNIT|COMP_8bit:COMP_LESS_UNIT                                                                                 ; COMP_8bit            ; work         ;
-;             |COMP_4bit:u_low|                           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP_UNIT|COMP_8bit:COMP_LESS_UNIT|COMP_4bit:u_low                                                                 ; COMP_4bit            ; work         ;
-;       |LOPD_24bit:LOPD_24BIT_UNIT|                      ; 50 (39)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT                                                                                                      ; LOPD_24bit           ; work         ;
-;          |LOPD_16bit:LOPD_16bit_UNIT_MSB|               ; 8 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB                                                                       ; LOPD_16bit           ; work         ;
-;             |LOPD_8bit:LOPD_8bit_unit_0|                ; 4 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_0                                            ; LOPD_8bit            ; work         ;
-;                |LOPD_4bit:LOPD_4bit_unit_1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_0|LOPD_4bit:LOPD_4bit_unit_1                 ; LOPD_4bit            ; work         ;
-;             |LOPD_8bit:LOPD_8bit_unit_1|                ; 3 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_1                                            ; LOPD_8bit            ; work         ;
-;                |LOPD_4bit:LOPD_4bit_unit_1|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_1|LOPD_4bit:LOPD_4bit_unit_1                 ; LOPD_4bit            ; work         ;
-;          |LOPD_8bit:LOPD_8bit_UNIT_LSB|                 ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_8bit:LOPD_8bit_UNIT_LSB                                                                         ; LOPD_8bit            ; work         ;
-;       |MAN_ALU:MAN_ALU_UNIT|                            ; 96 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT                                                                                                            ; MAN_ALU              ; work         ;
-;          |CLA_28bit:ALU_SUB_UNIT|                       ; 84 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT                                                                                     ; CLA_28bit            ; work         ;
-;             |CLA_4bit:CLA_4BIT_UNIT_0|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_4BIT_UNIT_0                                                            ; CLA_4bit             ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[1].CLA_4BIT_UNIT_1| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[1].CLA_4BIT_UNIT_1                                           ; CLA_4bit             ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[2].CLA_4BIT_UNIT_1| ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[2].CLA_4BIT_UNIT_1                                           ; CLA_4bit             ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT_1| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT_1                                           ; CLA_4bit             ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[4].CLA_4BIT_UNIT_1| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[4].CLA_4BIT_UNIT_1                                           ; CLA_4bit             ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT_1| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT_1                                           ; CLA_4bit             ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[6].CLA_4BIT_UNIT_1| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[6].CLA_4BIT_UNIT_1                                           ; CLA_4bit             ; work         ;
-;       |MAN_swap:MAN_PRE_SWAP_BY_EXPONENT_UNIT|          ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_swap:MAN_PRE_SWAP_BY_EXPONENT_UNIT                                                                                          ; MAN_swap             ; work         ;
-;       |MAN_swap_2:MAN_PRE_SWAP_BY_MAN_UNIT|             ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|MAN_swap_2:MAN_PRE_SWAP_BY_MAN_UNIT                                                                                             ; MAN_swap_2           ; work         ;
-;       |Mux_4_to_1:SEL_MANTISSA_FOR_RESULT|              ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|Mux_4_to_1:SEL_MANTISSA_FOR_RESULT                                                                                              ; Mux_4_to_1           ; work         ;
-;       |NORMALIZATION_unit:NORMALIZATION_UNIT|           ; 97 (63)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT                                                                                           ; NORMALIZATION_unit   ; work         ;
-;          |SHF_left_28bit:SHF_left_28bit_unit|           ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|SHF_left_28bit:SHF_left_28bit_unit                                                        ; SHF_left_28bit       ; work         ;
-;       |PSC_unit:PSC_UNIT|                               ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|PSC_unit:PSC_UNIT                                                                                                               ; PSC_unit             ; work         ;
-;       |ROUNDING_unit:ROUNDING_UNIT|                     ; 11 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT                                                                                                     ; ROUNDING_unit        ; work         ;
-;          |RND_add:INCREASE_ROUNDING|                    ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|RND_add:INCREASE_ROUNDING                                                                           ; RND_add              ; work         ;
-;       |SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|            ; 80 (80)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT                                                                                            ; SHF_right_28bit      ; work         ;
-;    |UART_Rx_Data:UART_RX_DATA_UNIT|                     ; 52 (0)              ; 170 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_DATA_UNIT                                                                                                                    ; UART_Rx_Data         ; work         ;
-;       |UART_Rx:UART_RX_UNIT|                            ; 38 (38)             ; 31 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT                                                                                               ; UART_Rx              ; work         ;
-;          |UART_SS_detect_edge:UART_DETECT_NEG|          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG                                                           ; UART_SS_detect_edge  ; work         ;
-;       |UART_detect_done:UART_DETECT_DONE|               ; 2 (1)               ; 5 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE                                                                                  ; UART_detect_done     ; work         ;
-;          |UART_SS_detect_start:SS_DETECT_START_A|       ; 1 (1)               ; 4 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A                                           ; UART_SS_detect_start ; work         ;
-;             |UART_SS_detect_edge:SS_detect_edge_unit_2| ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit_2 ; UART_SS_detect_edge  ; work         ;
-;             |UART_SS_detect_edge:SS_detect_edge_unit|   ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit   ; UART_SS_detect_edge  ; work         ;
-;       |UART_mem:UART_MEM_UNIT|                          ; 12 (12)             ; 134 (134)                 ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_DATA_UNIT|UART_mem:UART_MEM_UNIT                                                                                             ; UART_mem             ; work         ;
-;    |UART_Tx_Data:UART_TX_UNIT|                          ; 29 (3)              ; 33 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Tx_Data:UART_TX_UNIT                                                                                                                         ; UART_Tx_Data         ; work         ;
-;       |UART_Tx:UART_TX_UNIT|                            ; 26 (26)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Tx_Data:UART_TX_UNIT|UART_Tx:UART_TX_UNIT                                                                                                    ; UART_Tx              ; work         ;
-+---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                           ;
++-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                    ; Entity Name          ; Library Name ;
++-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+; |UART_unit                                            ; 86 (0)              ; 68 (2)                    ; 0                 ; 0          ; 42   ; 0            ; |UART_unit                                                                                                                                             ; UART_unit            ; work         ;
+;    |UART_Rx_Data:UART_RX_BLOCK|                       ; 32 (0)              ; 23 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_BLOCK                                                                                                                  ; UART_Rx_Data         ; work         ;
+;       |UART_Rx:UART_RX_UNIT|                          ; 24 (24)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT                                                                                             ; UART_Rx              ; work         ;
+;       |UART_detect_done:UART_DETECT_DONE|             ; 2 (1)               ; 4 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE                                                                                ; UART_detect_done     ; work         ;
+;          |UART_SS_detect_start:SS_DETECT_START_A|     ; 1 (1)               ; 3 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A                                         ; UART_SS_detect_start ; work         ;
+;             |UART_SS_detect_edge:SS_detect_edge_unit| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit ; UART_SS_detect_edge  ; work         ;
+;       |UART_mem:UART_MEM_UNIT|                        ; 6 (6)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT                                                                                           ; UART_mem             ; work         ;
+;    |UART_Tx_Data:UART_TX_BLOCK|                       ; 25 (3)              ; 18 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Tx_Data:UART_TX_BLOCK                                                                                                                  ; UART_Tx_Data         ; work         ;
+;       |UART_Tx:UART_TX_UNIT|                          ; 22 (22)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_Tx_Data:UART_TX_BLOCK|UART_Tx:UART_TX_UNIT                                                                                             ; UART_Tx              ; work         ;
+;    |UART_baud_generator:UART_BAUD_GEN|                ; 29 (29)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |UART_unit|UART_baud_generator:UART_BAUD_GEN                                                                                                           ; UART_baud_generator  ; work         ;
++-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-; Register name                                                                                                                                                ; Reason for Removal     ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-; UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit_2|w_p_signal ; Merged with w_done_fpu ;
-; Total Number of Removed Registers = 1                                                                                                                        ;                        ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                                                                            ; Reason for Removal                     ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG|w_p_signal                                                           ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG|w_n_signal                                                           ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|w_o_rx_data[0..7]                                                                                        ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|o_rx_data[0..7]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][7]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][6]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][5]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][4]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][3]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][2]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][1]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][0]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][7]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][6]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][5]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][4]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][3]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][2]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][1]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][0]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][7]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][6]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][5]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][4]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][3]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][2]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][1]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][0]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][7]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][6]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][5]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][4]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][3]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][2]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][1]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][0]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][7]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][6]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][5]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][4]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][3]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][2]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][1]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][0]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][7]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][6]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][5]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][4]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][3]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][2]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][1]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][0]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][7]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][6]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][5]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][4]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][3]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][2]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][1]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][0]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][7]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][6]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][5]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][4]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][3]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][2]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][1]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][0]                                                                                          ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[0..31]                                                                                        ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_A|w_n_signal                                                               ; Lost fanout                            ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_A|w_p_signal                                                               ; Lost fanout                            ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[0..31]                                                                                        ; Stuck at GND due to stuck port data_in ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_B|w_n_signal                                                               ; Lost fanout                            ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_B|w_p_signal                                                               ; Lost fanout                            ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit_2|w_p_signal ; Merged with w_tx_en_0                  ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit_2|w_n_signal ; Merged with w_tx_en_1                  ;
+; Total Number of Removed Registers = 152                                                                                                                  ;                                        ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                 ;
++------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------+
+; Register name                                                                                  ; Reason for Removal        ; Registers Removed due to This Register                                                         ;
++------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------+
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|w_o_rx_data[7]                                 ; Stuck at GND              ; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|o_rx_data[7],                                  ;
+;                                                                                                ; due to stuck port data_in ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][7],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][7],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][7],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][7],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][7],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][7],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][7],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][7],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[31],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[23],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[15],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[7],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_A|w_n_signal,    ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_A|w_p_signal,    ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[31],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[23],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[15],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[7],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_B|w_n_signal,    ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_B|w_p_signal     ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|w_o_rx_data[6]                                 ; Stuck at GND              ; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|o_rx_data[6],                                  ;
+;                                                                                                ; due to stuck port data_in ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][6],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][6],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][6],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][6],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][6],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][6],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][6],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][6],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[30],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[22],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[14],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[6],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[30],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[22],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[14],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[6]                                  ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|w_o_rx_data[5]                                 ; Stuck at GND              ; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|o_rx_data[5],                                  ;
+;                                                                                                ; due to stuck port data_in ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][5],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][5],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][5],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][5],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][5],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][5],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][5],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][5],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[29],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[21],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[13],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[5],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[29],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[21],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[13],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[5]                                  ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|w_o_rx_data[4]                                 ; Stuck at GND              ; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|o_rx_data[4],                                  ;
+;                                                                                                ; due to stuck port data_in ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][4],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][4],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][4],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][4],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][4],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][4],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][4],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][4],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[28],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[20],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[12],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[4],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[28],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[20],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[12],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[4]                                  ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|w_o_rx_data[3]                                 ; Stuck at GND              ; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|o_rx_data[3],                                  ;
+;                                                                                                ; due to stuck port data_in ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][3],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][3],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][3],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][3],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][3],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][3],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][3],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][3],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[27],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[19],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[11],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[3],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[27],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[19],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[11],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[3]                                  ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|w_o_rx_data[2]                                 ; Stuck at GND              ; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|o_rx_data[2],                                  ;
+;                                                                                                ; due to stuck port data_in ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][2],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][2],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][2],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][2],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][2],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][2],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][2],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][2],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[26],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[18],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[10],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[2],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[26],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[18],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[10],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[2]                                  ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|w_o_rx_data[1]                                 ; Stuck at GND              ; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|o_rx_data[1],                                  ;
+;                                                                                                ; due to stuck port data_in ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][1],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][1],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][1],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][1],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][1],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][1],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][1],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][1],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[25],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[17],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[9],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[1],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[25],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[17],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[9],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[1]                                  ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|w_o_rx_data[0]                                 ; Stuck at GND              ; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|o_rx_data[0],                                  ;
+;                                                                                                ; due to stuck port data_in ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[7][0],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[6][0],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[5][0],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[4][0],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[3][0],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[2][0],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[1][0],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|mem_reg[0][0],                               ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[24],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[16],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[8],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_a[0],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[24],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[16],                                ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[8],                                 ;
+;                                                                                                ;                           ; UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|o_data_b[0]                                  ;
+; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG|w_p_signal ; Stuck at GND              ; UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG|w_n_signal ;
+;                                                                                                ; due to stuck port data_in ;                                                                                                ;
++------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -343,124 +527,131 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 286   ;
-; Number of registers using Synchronous Clear  ; 12    ;
+; Total registers                              ; 68    ;
+; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 286   ;
+; Number of registers using Asynchronous Clear ; 68    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 237   ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------+
-; Inverted Register Statistics                                         ;
-+------------------------------------------------------------+---------+
-; Inverted Register                                          ; Fan out ;
-+------------------------------------------------------------+---------+
-; UART_Tx_Data:UART_TX_UNIT|UART_Tx:UART_TX_UNIT|o_tx_serial ; 1       ;
-; Total number of inverted registers = 1                     ;         ;
-+------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; 6:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; Yes        ; |UART_unit|UART_Tx_Data:UART_TX_BLOCK|UART_Tx:UART_TX_UNIT|count[1] ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |UART_unit|UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|index[3] ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |UART_unit|UART_Tx_Data:UART_TX_BLOCK|UART_Tx:UART_TX_UNIT|index[3] ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |UART_unit|UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|count[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |UART_unit|w_data_fpu_1[16]                                                                                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |UART_unit|w_data_fpu_1[24]                                                                                        ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |UART_unit|UART_Tx_Data:UART_TX_UNIT|UART_Tx:UART_TX_UNIT|index[3]                                                 ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |UART_unit|UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT|index[0]                                            ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; Yes        ; |UART_unit|UART_Tx_Data:UART_TX_UNIT|UART_Tx:UART_TX_UNIT|count[4]                                                 ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |UART_unit|UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT|count[1]                                            ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|stage[1][22]                                     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|stage[3][22]                                     ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|stage[3][17]                                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|o_data[8]                                        ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|w_i_man_b[0]                                                     ;
-; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|w_i_man_b[4]                                                     ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT|w_data_b[4]                                                ;
-; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|SHF_left_28bit:SHF_left_28bit_unit|stage[2][13] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|SHF_left_28bit:SHF_left_28bit_unit|stage[4][1]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|SHF_left_28bit:SHF_left_28bit_unit|stage[4][7]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|SHF_left_28bit:SHF_left_28bit_unit|stage[4][8]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|stage[3][26]                                     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|stage[3][25]                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|o_data[21]                                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|o_data[17]                                       ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|o_data[1]                                        ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|o_data[4]                                        ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[8]                                   ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[14]                                  ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[16]                                  ;
-; 11:1               ; 3 bits    ; 21 LEs        ; 18 LEs               ; 3 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[24]                                  ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |UART_unit|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|o_one_position[1]                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; SIZE_DATA_I    ; 8     ; Signed Integer                                     ;
-; SIZE_DATA_O    ; 32    ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |UART_unit ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; SIZE_DATA_I    ; 8     ; Signed Integer                                   ;
+; SIZE_DATA_O    ; 32    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT ;
-+----------------+-------+-------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------+
-; SIZE_DATA      ; 8     ; Signed Integer                                                          ;
-; OVER_SAMPLE    ; 16    ; Signed Integer                                                          ;
-; MID_SAMPLE     ; 8     ; Signed Integer                                                          ;
-+----------------+-------+-------------------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_baud_generator:UART_BAUD_GEN ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; SIZE_BAUD      ; 24    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                        ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------------+
-; POS_EDGE       ; 0     ; Signed Integer                                                                                              ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; SIZE_DATA_I    ; 8     ; Signed Integer                                 ;
+; SIZE_DATA_O    ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT|UART_mem:UART_MEM_UNIT ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; SIZE_DATA_I    ; 8     ; Signed Integer                                                            ;
-; SIZE_DATA_O    ; 32    ; Signed Integer                                                            ;
-; SIZE_DEPTH     ; 16    ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; SIZE_DATA      ; 8     ; Signed Integer                                                      ;
+; OVER_SAMPLE    ; 16    ; Signed Integer                                                      ;
+; MID_SAMPLE     ; 8     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; POS_EDGE       ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; POS_EDGE       ; 0     ; Signed Integer                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit_2 ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; POS_EDGE       ; 0     ; Signed Integer                                                                                                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; SIZE_DATA_I    ; 8     ; Signed Integer                                                        ;
+; SIZE_DATA_O    ; 32    ; Signed Integer                                                        ;
+; SIZE_DEPTH     ; 16    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_A ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; POS_EDGE       ; 0     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT|UART_SS_detect_edge:UART_SS_B ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; POS_EDGE       ; 0     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; POS_EDGE       ; 1     ; Signed Integer                                                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit_2 ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; POS_EDGE       ; 0     ; Signed Integer                                                                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -484,35 +675,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Tx_Data:UART_TX_UNIT ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; SIZE_DATA_I    ; 32    ; Signed Integer                                ;
-; SIZE_DATA_O    ; 8     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Tx_Data:UART_TX_BLOCK ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; SIZE_DATA_I    ; 32    ; Signed Integer                                 ;
+; SIZE_DATA_O    ; 8     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Tx_Data:UART_TX_UNIT|UART_Tx:UART_TX_UNIT ;
-+----------------+-------+--------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                               ;
-+----------------+-------+--------------------------------------------------------------------+
-; SIZE_DATA      ; 8     ; Signed Integer                                                     ;
-; OVER_SAMPLE    ; 16    ; Signed Integer                                                     ;
-+----------------+-------+--------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Tx_Data:UART_TX_BLOCK|UART_Tx:UART_TX_UNIT ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; SIZE_DATA      ; 8     ; Signed Integer                                                      ;
+; OVER_SAMPLE    ; 16    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Port Connectivity Checks: "UART_Tx_Data:UART_TX_UNIT|UART_Tx:UART_TX_UNIT" ;
-+--------------+-------+----------+------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                  ;
-+--------------+-------+----------+------------------------------------------+
-; i_fifo_empty ; Input ; Info     ; Stuck at GND                             ;
-+--------------+-------+----------+------------------------------------------+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART_Tx_Data:UART_TX_BLOCK|UART_Tx:UART_TX_UNIT" ;
++--------------+-------+----------+-------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                   ;
++--------------+-------+----------+-------------------------------------------+
+; i_fifo_empty ; Input ; Info     ; Stuck at GND                              ;
++--------------+-------+----------+-------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "UART_Tx_Data:UART_TX_BLOCK" ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; o_tx_data ; Output ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -591,13 +791,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT" ;
-+-------------+-------+----------+------------------------------------------------+
-; Port        ; Type  ; Severity ; Details                                        ;
-+-------------+-------+----------+------------------------------------------------+
-; i_fifo_full ; Input ; Info     ; Stuck at GND                                   ;
-+-------------+-------+----------+------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT" ;
++-------------+-------+----------+--------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                    ;
++-------------+-------+----------+--------------------------------------------+
+; i_fifo_full ; Input ; Info     ; Stuck at GND                               ;
++-------------+-------+----------+--------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "UART_Rx_Data:UART_RX_BLOCK" ;
++-----------+-------+----------+-------------------------+
+; Port      ; Type  ; Severity ; Details                 ;
++-----------+-------+----------+-------------------------+
+; i_rx_data ; Input ; Info     ; Explicitly unconnected  ;
++-----------+-------+----------+-------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "UART_baud_generator:UART_BAUD_GEN" ;
++--------------------+-------+----------+-----------------------+
+; Port               ; Type  ; Severity ; Details               ;
++--------------------+-------+----------+-----------------------+
+; i_baud_rate[8..7]  ; Input ; Info     ; Stuck at VCC          ;
+; i_baud_rate[3..2]  ; Input ; Info     ; Stuck at VCC          ;
+; i_baud_rate[23..9] ; Input ; Info     ; Stuck at GND          ;
+; i_baud_rate[6..4]  ; Input ; Info     ; Stuck at GND          ;
+; i_baud_rate[1..0]  ; Input ; Info     ; Stuck at GND          ;
++--------------------+-------+----------+-----------------------+
 
 
 +-----------------------------------------------------+
@@ -605,24 +827,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 286                         ;
-;     CLR               ; 49                          ;
-;     ENA CLR           ; 225                         ;
-;     ENA CLR SCLR      ; 12                          ;
-; arriav_lcell_comb     ; 570                         ;
-;     extend            ; 26                          ;
-;         7 data inputs ; 26                          ;
-;     normal            ; 544                         ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 29                          ;
-;         3 data inputs ; 50                          ;
-;         4 data inputs ; 138                         ;
-;         5 data inputs ; 117                         ;
-;         6 data inputs ; 207                         ;
-; boundary_port         ; 13                          ;
+; arriav_ff             ; 68                          ;
+;     CLR               ; 44                          ;
+;     CLR SCLR          ; 24                          ;
+; arriav_lcell_comb     ; 89                          ;
+;     arith             ; 24                          ;
+;         1 data inputs ; 24                          ;
+;     normal            ; 65                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 11                          ;
+;         5 data inputs ; 23                          ;
+;         6 data inputs ; 15                          ;
+; boundary_port         ; 42                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 28.00                       ;
-; Average LUT depth     ; 16.66                       ;
+; Max LUT depth         ; 3.30                        ;
+; Average LUT depth     ; 2.04                        ;
 +-----------------------+-----------------------------+
 
 
@@ -631,7 +853,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -641,37 +863,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Thu Nov 13 00:00:54 2025
+    Info: Processing started: Sat Nov 15 00:27:29 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART_unit -c UART_unit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv
-    Info (12023): Found entity 1: UART_detect_done File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv Line: 1
-Info (12021): Found 2 design units, including 2 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv
-    Info (12023): Found entity 1: FPU_unit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv Line: 1
-    Info (12023): Found entity 2: Mux_4_to_1 File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv Line: 211
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_swap.sv
-    Info (12023): Found entity 1: EXP_swap File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_swap.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_sub.sv
-    Info (12023): Found entity 1: EXP_sub File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_sub.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_adjust.sv
-    Info (12023): Found entity 1: EXP_adjust File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_adjust.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_8bit.sv
-    Info (12023): Found entity 1: COMP_8bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_8bit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_4bit.sv
-    Info (12023): Found entity 1: COMP_4bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_4bit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_2bit.sv
-    Info (12023): Found entity 1: COMP_2bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_2bit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_28bit.sv
-    Info (12023): Found entity 1: COMP_28bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_28bit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_8bit.sv
-    Info (12023): Found entity 1: CLA_8bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_8bit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_4bit.sv
-    Info (12023): Found entity 1: CLA_4bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_4bit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_28bit.sv
-    Info (12023): Found entity 1: CLA_28bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_28bit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_24bit.sv
-    Info (12023): Found entity 1: CLA_24bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_24bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/SIGN_unit.sv
     Info (12023): Found entity 1: SIGN_unit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/SIGN_unit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/SHF_right_28bit.sv
@@ -700,32 +895,64 @@ Info (12021): Found 1 design units, including 1 entities, in source file /home/n
     Info (12023): Found entity 1: LOPD_24bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/LOPD_24bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/LOPD_16bit.sv
     Info (12023): Found entity 1: LOPD_16bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/LOPD_16bit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv
-    Info (12023): Found entity 1: UART_mem File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv
-    Info (12023): Found entity 1: UART_Rx File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv
+    Info (12023): Found entity 1: FPU_unit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv Line: 1
+    Info (12023): Found entity 2: Mux_4_to_1 File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv Line: 211
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_swap.sv
+    Info (12023): Found entity 1: EXP_swap File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_swap.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_sub.sv
+    Info (12023): Found entity 1: EXP_sub File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_sub.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_adjust.sv
+    Info (12023): Found entity 1: EXP_adjust File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_adjust.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_8bit.sv
+    Info (12023): Found entity 1: COMP_8bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_8bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_4bit.sv
+    Info (12023): Found entity 1: COMP_4bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_2bit.sv
+    Info (12023): Found entity 1: COMP_2bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_2bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_28bit.sv
+    Info (12023): Found entity 1: COMP_28bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_28bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_8bit.sv
+    Info (12023): Found entity 1: CLA_8bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_8bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_4bit.sv
+    Info (12023): Found entity 1: CLA_4bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_28bit.sv
+    Info (12023): Found entity 1: CLA_28bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_28bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_24bit.sv
+    Info (12023): Found entity 1: CLA_24bit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/CLA_24bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv
     Info (12023): Found entity 1: UART_Rx_Data File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv
+    Info (12023): Found entity 1: UART_Rx File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv
+    Info (12023): Found entity 1: UART_mem File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_mem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv
+    Info (12023): Found entity 1: UART_detect_done File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_baud_generator.sv
+    Info (12023): Found entity 1: UART_baud_generator File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_baud_generator.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_edge.sv
     Info (12023): Found entity 1: UART_SS_detect_edge File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_edge.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv
-    Info (12023): Found entity 1: UART_SS_detect_start File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv
-    Info (12023): Found entity 1: UART_Tx File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Data.sv
     Info (12023): Found entity 1: UART_Tx_Data File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Data.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_unit.sv
-    Info (12023): Found entity 1: UART_unit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv
+    Info (12023): Found entity 1: UART_Tx File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv
+    Info (12023): Found entity 1: UART_SS_detect_start File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file UART_unit.sv
+    Info (12023): Found entity 1: UART_unit File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at UART_SS_detect_start.sv(38): created implicit net for "w_next_start" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv Line: 38
 Info (12127): Elaborating entity "UART_unit" for the top level hierarchy
-Info (12128): Elaborating entity "UART_Rx_Data" for hierarchy "UART_Rx_Data:UART_RX_DATA_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_unit.sv Line: 39
-Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv Line: 37
-Info (12128): Elaborating entity "UART_SS_detect_edge" for hierarchy "UART_Rx_Data:UART_RX_DATA_UNIT|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv Line: 53
-Info (12128): Elaborating entity "UART_mem" for hierarchy "UART_Rx_Data:UART_RX_DATA_UNIT|UART_mem:UART_MEM_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv Line: 53
-Info (12128): Elaborating entity "UART_detect_done" for hierarchy "UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv Line: 61
-Info (12128): Elaborating entity "UART_SS_detect_start" for hierarchy "UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv Line: 16
-Info (12128): Elaborating entity "UART_SS_detect_edge" for hierarchy "UART_Rx_Data:UART_RX_DATA_UNIT|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv Line: 19
-Info (12128): Elaborating entity "FPU_unit" for hierarchy "FPU_unit:FPU_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_unit.sv Line: 68
+Warning (10034): Output port "LEDR[15..8]" at UART_unit.sv(5) has no driver File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+Warning (10034): Output port "LEDR[5..0]" at UART_unit.sv(5) has no driver File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+Info (12128): Elaborating entity "UART_baud_generator" for hierarchy "UART_baud_generator:UART_BAUD_GEN" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 32
+Info (12128): Elaborating entity "UART_Rx_Data" for hierarchy "UART_Rx_Data:UART_RX_BLOCK" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 48
+Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv Line: 37
+Info (12128): Elaborating entity "UART_SS_detect_edge" for hierarchy "UART_Rx_Data:UART_RX_BLOCK|UART_Rx:UART_RX_UNIT|UART_SS_detect_edge:UART_DETECT_NEG" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx.sv Line: 53
+Info (12128): Elaborating entity "UART_mem" for hierarchy "UART_Rx_Data:UART_RX_BLOCK|UART_mem:UART_MEM_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv Line: 53
+Info (12128): Elaborating entity "UART_detect_done" for hierarchy "UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Rx_Data.sv Line: 61
+Info (12128): Elaborating entity "UART_SS_detect_start" for hierarchy "UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_detect_done.sv Line: 16
+Info (12128): Elaborating entity "UART_SS_detect_edge" for hierarchy "UART_Rx_Data:UART_RX_BLOCK|UART_detect_done:UART_DETECT_DONE|UART_SS_detect_start:SS_DETECT_START_A|UART_SS_detect_edge:SS_detect_edge_unit" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_SS_detect_start.sv Line: 19
+Info (12128): Elaborating entity "FPU_unit" for hierarchy "FPU_unit:FPU_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 81
 Info (12128): Elaborating entity "EXP_swap" for hierarchy "FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv Line: 72
 Info (12128): Elaborating entity "COMP_8bit" for hierarchy "FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP_UNIT|COMP_8bit:COMP_LESS_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/EXP_swap.sv Line: 14
 Info (12128): Elaborating entity "COMP_4bit" for hierarchy "FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP_UNIT|COMP_8bit:COMP_LESS_UNIT|COMP_4bit:u_low" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/COMP_8bit.sv Line: 14
@@ -751,20 +978,56 @@ Info (12128): Elaborating entity "ROUNDING_unit" for hierarchy "FPU_unit:FPU_UNI
 Info (12128): Elaborating entity "RND_add" for hierarchy "FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|RND_add:INCREASE_ROUNDING" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/ROUNDING_unit.sv Line: 34
 Info (12128): Elaborating entity "PSC_unit" for hierarchy "FPU_unit:FPU_UNIT|PSC_unit:PSC_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv Line: 186
 Info (12128): Elaborating entity "Mux_4_to_1" for hierarchy "FPU_unit:FPU_UNIT|Mux_4_to_1:SEL_MANTISSA_FOR_RESULT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/02_rlt/FPU_unit.sv Line: 204
-Info (12128): Elaborating entity "UART_Tx_Data" for hierarchy "UART_Tx_Data:UART_TX_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_unit.sv Line: 103
-Info (12128): Elaborating entity "UART_Tx" for hierarchy "UART_Tx_Data:UART_TX_UNIT|UART_Tx:UART_TX_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Data.sv Line: 49
-Warning (10027): Verilog HDL or VHDL warning at the UART_Tx.sv(102): index expression is not wide enough to address all of the elements in the array File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx.sv Line: 102
+Info (12128): Elaborating entity "UART_Tx_Data" for hierarchy "UART_Tx_Data:UART_TX_BLOCK" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 94
+Info (12128): Elaborating entity "UART_Tx" for hierarchy "UART_Tx_Data:UART_TX_BLOCK|UART_Tx:UART_TX_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Version1_UART/UART_Tx_Data.sv Line: 65
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[6]" is stuck at VCC File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 5
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 808 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 795 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 470 megabytes
-    Info: Processing ended: Thu Nov 13 00:01:05 2025
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[10]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[11]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[12]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[13]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[14]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[15]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[16]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 3
+    Warning (15610): No output dependent on input pin "BTN[0]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 4
+    Warning (15610): No output dependent on input pin "BTN[1]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 4
+    Warning (15610): No output dependent on input pin "BTN[2]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 4
+    Warning (15610): No output dependent on input pin "BTN[3]" File: /home/noname/Documents/project_tiny/Floating_point/Verision2/04_imple/Quartus/UART_UNIT/UART_unit.sv Line: 4
+Info (21057): Implemented 134 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 92 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Sat Nov 15 00:27:36 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
 
 

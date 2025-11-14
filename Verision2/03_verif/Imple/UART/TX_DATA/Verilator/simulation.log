@@ -1,0 +1,4 @@
+- /home/noname/Documents/project_tiny/Floating_point/Verision2/03_verif/Imple/UART/TX_DATA/tb_UART_Tx_Data.sv:62: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.024 2024-04-05
+- Verilator: $finish at 10us; walltime 0.001 s; speed 0.000 s/s
+- Verilator: cpu 0.000 s on 1 threads; alloced 57 MB

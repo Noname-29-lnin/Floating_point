@@ -4,31 +4,27 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "o_tx_data",
+					"name" : "LEDR[7]",
 					"strict" : false
 				},
 				{
-					"name" : "o_done_a",
+					"name" : "LEDG[0]",
 					"strict" : false
 				},
 				{
-					"name" : "o_done_b",
+					"name" : "LEDG[1]",
 					"strict" : false
 				},
 				{
-					"name" : "o_done_rx",
+					"name" : "LEDG[2]",
 					"strict" : false
 				},
 				{
-					"name" : "o_done_tx",
+					"name" : "LEDG[3]",
 					"strict" : false
 				},
 				{
-					"name" : "o_ov_flag",
-					"strict" : false
-				},
-				{
-					"name" : "o_un_flag",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
@@ -36,23 +32,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_rst_n",
-					"strict" : false
-				},
-				{
-					"name" : "i_stick",
-					"strict" : false
-				},
-				{
-					"name" : "i_add_sub",
-					"strict" : false
-				},
-				{
-					"name" : "i_rx_data",
-					"strict" : false
-				},
-				{
-					"name" : "i_rx_en",
+					"name" : "SW[9]",
 					"strict" : false
 				}
 			]
