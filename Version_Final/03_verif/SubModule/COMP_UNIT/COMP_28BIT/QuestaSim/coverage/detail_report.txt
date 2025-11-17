@@ -1,0 +1,202 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb_COMP_28bit/DUT
+=== Design Unit: work.COMP_8bit
+=================================================================================
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     38        31         7    81.57%
+
+================================Expression Details================================
+
+Expression Coverage for instance /tb_COMP_28bit/DUT --
+
+  File /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv
+
+
+
+
+
+----------------Focused Expression View-----------------
+Line       33 Item    1  (w_equal[1] & equal_chain[2])
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+      w_equal[1]         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  w_equal[1]_0          equal_chain[2]                
+  Row   2:          2  w_equal[1]_1          equal_chain[2]                
+  Row   3:          2  equal_chain[2]_0      w_equal[1]                    
+  Row   4:          2  equal_chain[2]_1      w_equal[1]                    
+
+
+----------------Focused Expression View-----------------
+Line       33 Item    1  (w_equal[2] & equal_chain[3])
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+      w_equal[2]         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  w_equal[2]_0          equal_chain[3]                
+  Row   2:          2  w_equal[2]_1          equal_chain[3]                
+  Row   3:          2  equal_chain[3]_0      w_equal[2]                    
+  Row   4:          2  equal_chain[3]_1      w_equal[2]                    
+
+
+----------------Focused Expression View-----------------
+Line       33 Item    1  (w_equal[3] & equal_chain[4])
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+      w_equal[3]         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  w_equal[3]_0          equal_chain[4]                
+  Row   2:          2  w_equal[3]_1          equal_chain[4]                
+  Row   3:          2  equal_chain[4]_0      w_equal[3]                    
+  Row   4:          2  equal_chain[4]_1      w_equal[3]                    
+
+
+----------------Focused Expression View-----------------
+Line       33 Item    1  (w_equal[4] & equal_chain[5])
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+      w_equal[4]         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  w_equal[4]_0          equal_chain[5]                
+  Row   2:          2  w_equal[4]_1          equal_chain[5]                
+  Row   3:          2  equal_chain[5]_0      w_equal[4]                    
+  Row   4:          2  equal_chain[5]_1      w_equal[4]                    
+
+
+
+----------------Focused Expression View-----------------
+Line       32 Item    1  (w_less[6] | (w_equal[6] & less_chain[7]))
+Expression totals: 1 of 3 input terms covered = 33.33%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+     w_equal[6]         N  No hits                  Hit '_0' and '_1'
+  less_chain[7]         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          2  w_less[6]_0           ~(w_equal[6] & less_chain[7]) 
+  Row   2:          2  w_less[6]_1           ~(w_equal[6] & less_chain[7]) 
+  Row   3:    ***0***  w_equal[6]_0          (~w_less[6] && less_chain[7]) 
+  Row   4:    ***0***  w_equal[6]_1          (~w_less[6] && less_chain[7]) 
+  Row   5:          2  less_chain[7]_0       (~w_less[6] && w_equal[6])    
+  Row   6:    ***0***  less_chain[7]_1       (~w_less[6] && w_equal[6])    
+
+----------------Focused Expression View-----------------
+Line       33 Item    1  (w_equal[6] & equal_chain[7])
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  equal_chain[7]         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          2  w_equal[6]_0          equal_chain[7]                
+  Row   2:          2  w_equal[6]_1          equal_chain[7]                
+  Row   3:    ***0***  equal_chain[7]_0      w_equal[6]                    
+  Row   4:          2  equal_chain[7]_1      w_equal[6]                    
+
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        100        89        11    89.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /tb_COMP_28bit/DUT --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                  equal_chain[0-5]           2           0       50.00 
+                                    equal_chain[6]           2           2      100.00 
+                                    equal_chain[7]           0           0        0.00 
+                                   less_chain[0-6]           2           2      100.00 
+                                     less_chain[7]           0           0        0.00 
+                                           o_equal           4           0       50.00 
+                                            o_less           7           7      100.00 
+                                      w_equal[0-6]           2           2      100.00 
+                                       w_equal_0_0           3           3      100.00 
+                                       w_equal_0_1           3           3      100.00 
+                                       w_equal_0_2           3           3      100.00 
+                                       w_equal_0_3           3           3      100.00 
+                                       w_equal_0_4           3           3      100.00 
+                                       w_equal_0_5           3           3      100.00 
+                                       w_equal_0_6           3           3      100.00 
+                                      w_equal_high           2           2      100.00 
+                                       w_equal_low           2           2      100.00 
+                                       w_less[0-6]           2           2      100.00 
+                                        w_less_0_0           3           3      100.00 
+                                        w_less_0_1           3           3      100.00 
+                                        w_less_0_2           3           3      100.00 
+                                        w_less_0_3           3           3      100.00 
+                                        w_less_0_4           3           3      100.00 
+                                        w_less_0_5           3           3      100.00 
+                                        w_less_0_6           3           3      100.00 
+                                       w_less_high           2           2      100.00 
+                                        w_less_low           2           2      100.00 
+
+Total Node Count     =         50 
+Toggled Node Count   =         41 
+Untoggled Node Count =          9 
+
+Toggle Coverage      =      89.00% (89 of 100 bins)
+
+=================================================================================
+=== Instance: /tb_COMP_28bit
+=== Design Unit: work.tb_COMP_28bit
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        246       144       102    58.53%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /tb_COMP_28bit --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                             i_clk           7           7      100.00 
+                                    i_data_a[0-27]           7           7      100.00 
+                                    i_data_b[0-27]           7           7      100.00 
+                                            o_less           7           7      100.00 
+                                   test_count[0-5]           7           7      100.00 
+                                     test_count[6]           0           7       50.00 
+                                  test_count[7-31]           0           0        0.00 
+                                    test_pass[0-4]           7           7      100.00 
+                                      test_pass[5]           3           7      100.00 
+                                      test_pass[6]           0           3       50.00 
+                                   test_pass[7-31]           0           0        0.00 
+                                          w_expect           7           7      100.00 
+
+Total Node Count     =        123 
+Toggled Node Count   =         71 
+Untoggled Node Count =         52 
+
+Toggle Coverage      =      58.53% (144 of 246 bins)
+
+
+Total Coverage By Instance (filtered view): 74.45%
+

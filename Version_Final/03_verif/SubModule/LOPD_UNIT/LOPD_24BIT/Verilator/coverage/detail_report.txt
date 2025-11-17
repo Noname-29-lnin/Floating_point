@@ -1,0 +1,2 @@
+Total coverage (45/93) 48.00%
+See lines with '%00' in ./../SubModule/LOPD_UNIT/LOPD_24BIT/Verilator/coverage/annotated_src

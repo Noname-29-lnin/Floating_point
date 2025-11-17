@@ -1,0 +1,2 @@
+var g_data = {"name":"/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/SIGN_unit.sv","src":"module SIGN_unit (\n    input logic             i_add_sub       ,\n    input logic             i_comp_man      ,\n    input logic             i_sign_man_a    ,\n    input logic             i_sign_man_b    ,\n    output logic            o_sign_s        \n);\n\nassign o_sign_s = (~i_add_sub & i_sign_man_b & i_comp_man) | (i_add_sub & ~i_sign_man_b & i_comp_man) | (i_sign_man_a & ~i_comp_man);\n\nendmodule\n","lang":"verilog"};
+processSrcData(g_data);

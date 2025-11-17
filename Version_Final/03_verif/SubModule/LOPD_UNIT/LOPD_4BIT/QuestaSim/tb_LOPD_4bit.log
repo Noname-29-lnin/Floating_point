@@ -1,0 +1,71 @@
+# vsim -lib ./../SubModule/LOPD_UNIT/LOPD_4BIT/QuestaSim/work -debugDB -l ./../SubModule/LOPD_UNIT/LOPD_4BIT/QuestaSim/tb_LOPD_4bit.log -voptargs="+acc" -assertdebug -c tb_LOPD_4bit -wlf ./../SubModule/LOPD_UNIT/LOPD_4BIT/QuestaSim/tb_LOPD_4bit.wlf -do "cd ./../SubModule/LOPD_UNIT/LOPD_4BIT/QuestaSim; log -r /*; run -all;" 
+# Start time: 20:30:44 on Nov 03,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_LOPD_4bit(fast)
+# Loading work.LOPD_4bit(fast)
+# ** Note: (vsim-8900) Creating design debug database ./../SubModule/LOPD_UNIT/LOPD_4BIT/QuestaSim/tb_LOPD_4bit.dbg.
+# cd ./../SubModule/LOPD_UNIT/LOPD_4BIT/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# 
+# === START 4-bit LEADING ONE POSITION DETECTOR TEST ===
+# 
+# [Fixed] data=0000 => expect(pos=0, zero=1), dut(pos=0, zero=1) => PASS
+# [Fixed] data=0001 => expect(pos=3, zero=0), dut(pos=3, zero=0) => PASS
+# [Fixed] data=0010 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Fixed] data=0011 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Fixed] data=0100 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Fixed] data=0101 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Fixed] data=0110 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Fixed] data=0111 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Fixed] data=1000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Fixed] data=1001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Fixed] data=1010 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Fixed] data=1011 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Fixed] data=1100 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Fixed] data=1101 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Fixed] data=1110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Fixed] data=1111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=1001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=1010 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=1110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=1010 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=1110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=0010 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=1011 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=1001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=1100 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=0111 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# 
+# ================================
+# ========== TEST SUMMARY ==========
+# Total test cases:     26
+# Passed          :     26
+# Failed          :      0
+# Pass rate       : 100.00%
+# ================================
+# 
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/LOPD_UNIT/LOPD_4BIT/tb_LOPD_4bit.sv(105)
+#    Time: 41 ns  Iteration: 0  Instance: /tb_LOPD_4bit
+# End time: 20:30:44 on Nov 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

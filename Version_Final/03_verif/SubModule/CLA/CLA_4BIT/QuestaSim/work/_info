@@ -1,0 +1,99 @@
+m255
+K4
+z2
+!s12c _opt1
+Z0 !s99 nomlopt
+!s12c _opt
+R0
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/Questasim
+T_opt
+!s110 1762168534
+Vb9PX2@_gP96VLoNFVi]Ii3
+Z2 04 11 4 work tb_CLA_4bit fast 0
+=1-000ae431a4f1-69088ed6-5d247-4f91
+R0
+Z3 !s12f OEM100
+Z4 !s12b OEM100
+Z5 !s124 OEM10U2 
+Z6 !s135 nogc
+o-quiet -auto_acc_if_foreign -work ./../SubModule/CLA/CLA_4BIT/QuestaSim/work -debugdb +acc
+Z7 tCvgOpt 0
+n@_opt
+Z8 OL;O;2024.3;79
+R1
+T_opt1
+Z9 !s110 1762170000
+V0P8k1NS2I>QIicnoi0=O60
+R2
+=1-000ae431a4f1-69089490-c3e57-5dec
+Z10 !s102 +cover=bcesft
+R0
+R3
+R4
+R5
+R6
+o-quiet -auto_acc_if_foreign -work ./../SubModule/CLA/CLA_4BIT/QuestaSim/work +cover=bcesft
+R7
+n@_opt1
+R8
+vCLA_4bit
+Z11 2/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_4BIT/tb_CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
+Z12 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R9
+!i10b 1
+!s100 K4nQ9>NEU5ZKo<Q?QE:531
+IJ_67RIg1cSm_Bz>W87Fd?1
+S1
+R1
+w1762167578
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv
+!i122 1
+L0 1 26
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+Z14 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z15 !s108 1762170000.000000
+Z16 !s107 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_4BIT/tb_CLA_4bit.sv|
+Z17 !s90 +cover=bcesft|-f|./../SubModule/CLA/CLA_4BIT/flist.f|
+!i113 0
+R10
+Z18 o+cover=bcesft -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+n@c@l@a_4bit
+vtb_CLA_4bit
+R11
+R12
+R9
+!i10b 1
+!s100 b;Y=ZCToD^j?0<@Yco4Dd0
+I=QKNf^40JUa1OAccAY<>`3
+S1
+R1
+w1762168471
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_4BIT/tb_CLA_4bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_4BIT/tb_CLA_4bit.sv
+!i122 1
+L0 3 104
+R13
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R10
+R18
+R7
+ntb_@c@l@a_4bit

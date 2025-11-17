@@ -1,0 +1,242 @@
+# vsim -coverage -lib ./../SubModule/CLA/CLA_4BIT/QuestaSim/work -l ./../SubModule/CLA/CLA_4BIT/QuestaSim/tb_CLA_4bit.log -voptargs="+cover=bcesft" -assertdebug -c tb_CLA_4bit -wlf ./../SubModule/CLA/CLA_4BIT/QuestaSim/tb_CLA_4bit.wlf -do "coverage save -onexit ./../SubModule/CLA/CLA_4BIT/QuestaSim/tb_CLA_4bit.ucdb; cd ./../SubModule/CLA/CLA_4BIT/QuestaSim; log -r /*; run -all;" 
+# Start time: 18:40:00 on Nov 03,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_CLA_4bit(fast)
+# coverage save -onexit ./../SubModule/CLA/CLA_4BIT/QuestaSim/tb_CLA_4bit.ucdb
+#  cd ./../SubModule/CLA/CLA_4BIT/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# 
+# === START CLA 4-bit TEST ===
+# 
+# [Random] a=0100 (4), b=0110 (6), cin=0  =>  sum=1010 (10), o_p=0, o_g=0
+# => PASS: expect=01010, dut={o_g,sum}=01010
+# [Random] a=1110 (14), b=0001 (1), cin=1  =>  sum=0000 (0), o_p=1, o_g=1
+# => PASS: expect=10000, dut={o_g,sum}=10000
+# [Random] a=0001 (1), b=1001 (9), cin=0  =>  sum=1010 (10), o_p=0, o_g=0
+# => PASS: expect=01010, dut={o_g,sum}=01010
+# [Random] a=1011 (11), b=0000 (0), cin=1  =>  sum=1100 (12), o_p=0, o_g=0
+# => PASS: expect=01100, dut={o_g,sum}=01100
+# [Random] a=1010 (10), b=0111 (7), cin=0  =>  sum=0001 (1), o_p=0, o_g=1
+# => PASS: expect=10001, dut={o_g,sum}=10001
+# [Random] a=1000 (8), b=1001 (9), cin=1  =>  sum=0010 (2), o_p=0, o_g=1
+# => PASS: expect=10010, dut={o_g,sum}=10010
+# [Random] a=0101 (5), b=1011 (11), cin=1  =>  sum=0001 (1), o_p=0, o_g=1
+# => PASS: expect=10001, dut={o_g,sum}=10001
+# [Random] a=1001 (9), b=1010 (10), cin=1  =>  sum=0100 (4), o_p=0, o_g=1
+# => PASS: expect=10100, dut={o_g,sum}=10100
+# [Random] a=1111 (15), b=0111 (7), cin=0  =>  sum=0110 (6), o_p=0, o_g=1
+# => PASS: expect=10110, dut={o_g,sum}=10110
+# [Random] a=0010 (2), b=1100 (12), cin=1  =>  sum=1111 (15), o_p=0, o_g=0
+# => PASS: expect=01111, dut={o_g,sum}=01111
+# [Random] a=1110 (14), b=0110 (6), cin=0  =>  sum=0100 (4), o_p=0, o_g=1
+# => PASS: expect=10100, dut={o_g,sum}=10100
+# [Random] a=1100 (12), b=0111 (7), cin=0  =>  sum=0011 (3), o_p=0, o_g=1
+# => PASS: expect=10011, dut={o_g,sum}=10011
+# [Random] a=1000 (8), b=1000 (8), cin=1  =>  sum=0001 (1), o_p=0, o_g=1
+# => PASS: expect=10001, dut={o_g,sum}=10001
+# [Random] a=0001 (1), b=1001 (9), cin=1  =>  sum=1011 (11), o_p=0, o_g=0
+# => PASS: expect=01011, dut={o_g,sum}=01011
+# [Random] a=1010 (10), b=1011 (11), cin=1  =>  sum=0110 (6), o_p=0, o_g=1
+# => PASS: expect=10110, dut={o_g,sum}=10110
+# [Random] a=0111 (7), b=1101 (13), cin=0  =>  sum=0100 (4), o_p=0, o_g=1
+# => PASS: expect=10100, dut={o_g,sum}=10100
+# [Random] a=0110 (6), b=1100 (12), cin=1  =>  sum=0011 (3), o_p=0, o_g=1
+# => PASS: expect=10011, dut={o_g,sum}=10011
+# [Random] a=1101 (13), b=0110 (6), cin=1  =>  sum=0100 (4), o_p=0, o_g=1
+# => PASS: expect=10100, dut={o_g,sum}=10100
+# [Random] a=1000 (8), b=0000 (0), cin=0  =>  sum=1000 (8), o_p=0, o_g=0
+# => PASS: expect=01000, dut={o_g,sum}=01000
+# [Random] a=1001 (9), b=1001 (9), cin=0  =>  sum=0010 (2), o_p=0, o_g=1
+# => PASS: expect=10010, dut={o_g,sum}=10010
+# [Random] a=1100 (12), b=1111 (15), cin=1  =>  sum=1100 (12), o_p=0, o_g=1
+# => PASS: expect=11100, dut={o_g,sum}=11100
+# [Random] a=1110 (14), b=0101 (5), cin=1  =>  sum=0100 (4), o_p=0, o_g=1
+# => PASS: expect=10100, dut={o_g,sum}=10100
+# [Random] a=1111 (15), b=0100 (4), cin=0  =>  sum=0011 (3), o_p=0, o_g=1
+# => PASS: expect=10011, dut={o_g,sum}=10011
+# [Random] a=1000 (8), b=1111 (15), cin=0  =>  sum=0111 (7), o_p=0, o_g=1
+# => PASS: expect=10111, dut={o_g,sum}=10111
+# [Random] a=0001 (1), b=0100 (4), cin=0  =>  sum=0101 (5), o_p=0, o_g=0
+# => PASS: expect=00101, dut={o_g,sum}=00101
+# [Random] a=0111 (7), b=0111 (7), cin=1  =>  sum=1111 (15), o_p=0, o_g=0
+# => PASS: expect=01111, dut={o_g,sum}=01111
+# [Random] a=0010 (2), b=1101 (13), cin=0  =>  sum=1111 (15), o_p=1, o_g=0
+# => PASS: expect=01111, dut={o_g,sum}=01111
+# [Random] a=0001 (1), b=0101 (5), cin=1  =>  sum=0111 (7), o_p=0, o_g=0
+# => PASS: expect=00111, dut={o_g,sum}=00111
+# [Random] a=1001 (9), b=1010 (10), cin=0  =>  sum=0011 (3), o_p=0, o_g=1
+# => PASS: expect=10011, dut={o_g,sum}=10011
+# [Random] a=1011 (11), b=1110 (14), cin=1  =>  sum=1010 (10), o_p=0, o_g=1
+# => PASS: expect=11010, dut={o_g,sum}=11010
+# [Random] a=0001 (1), b=0110 (6), cin=0  =>  sum=0111 (7), o_p=0, o_g=0
+# => PASS: expect=00111, dut={o_g,sum}=00111
+# [Random] a=1001 (9), b=1111 (15), cin=0  =>  sum=1000 (8), o_p=0, o_g=1
+# => PASS: expect=11000, dut={o_g,sum}=11000
+# [Random] a=1100 (12), b=0000 (0), cin=1  =>  sum=1101 (13), o_p=0, o_g=0
+# => PASS: expect=01101, dut={o_g,sum}=01101
+# [Random] a=0011 (3), b=0110 (6), cin=0  =>  sum=1001 (9), o_p=0, o_g=0
+# => PASS: expect=01001, dut={o_g,sum}=01001
+# [Random] a=0000 (0), b=1000 (8), cin=0  =>  sum=1000 (8), o_p=0, o_g=0
+# => PASS: expect=01000, dut={o_g,sum}=01000
+# [Random] a=0101 (5), b=1001 (9), cin=0  =>  sum=1110 (14), o_p=0, o_g=0
+# => PASS: expect=01110, dut={o_g,sum}=01110
+# [Random] a=1001 (9), b=1100 (12), cin=1  =>  sum=0110 (6), o_p=0, o_g=1
+# => PASS: expect=10110, dut={o_g,sum}=10110
+# [Random] a=0111 (7), b=1101 (13), cin=0  =>  sum=0100 (4), o_p=0, o_g=1
+# => PASS: expect=10100, dut={o_g,sum}=10100
+# [Random] a=0010 (2), b=0011 (3), cin=0  =>  sum=0101 (5), o_p=0, o_g=0
+# => PASS: expect=00101, dut={o_g,sum}=00101
+# [Random] a=0101 (5), b=0010 (2), cin=1  =>  sum=1000 (8), o_p=0, o_g=0
+# => PASS: expect=01000, dut={o_g,sum}=01000
+# [Random] a=1000 (8), b=1110 (14), cin=1  =>  sum=0111 (7), o_p=0, o_g=1
+# => PASS: expect=10111, dut={o_g,sum}=10111
+# [Random] a=0000 (0), b=0110 (6), cin=1  =>  sum=0111 (7), o_p=0, o_g=0
+# => PASS: expect=00111, dut={o_g,sum}=00111
+# [Random] a=1100 (12), b=0000 (0), cin=0  =>  sum=1100 (12), o_p=0, o_g=0
+# => PASS: expect=01100, dut={o_g,sum}=01100
+# [Random] a=1001 (9), b=0101 (5), cin=1  =>  sum=1111 (15), o_p=0, o_g=0
+# => PASS: expect=01111, dut={o_g,sum}=01111
+# [Random] a=0101 (5), b=1111 (15), cin=1  =>  sum=0101 (5), o_p=0, o_g=1
+# => PASS: expect=10101, dut={o_g,sum}=10101
+# [Random] a=0011 (3), b=1110 (14), cin=0  =>  sum=0001 (1), o_p=0, o_g=1
+# => PASS: expect=10001, dut={o_g,sum}=10001
+# [Random] a=0101 (5), b=0000 (0), cin=1  =>  sum=0110 (6), o_p=0, o_g=0
+# => PASS: expect=00110, dut={o_g,sum}=00110
+# [Random] a=0111 (7), b=0011 (3), cin=0  =>  sum=1010 (10), o_p=0, o_g=0
+# => PASS: expect=01010, dut={o_g,sum}=01010
+# [Random] a=1111 (15), b=1100 (12), cin=1  =>  sum=1100 (12), o_p=0, o_g=1
+# => PASS: expect=11100, dut={o_g,sum}=11100
+# [Random] a=1011 (11), b=0101 (5), cin=0  =>  sum=0000 (0), o_p=0, o_g=1
+# => PASS: expect=10000, dut={o_g,sum}=10000
+# [Random] a=1100 (12), b=1000 (8), cin=1  =>  sum=0101 (5), o_p=0, o_g=1
+# => PASS: expect=10101, dut={o_g,sum}=10101
+# [Random] a=1010 (10), b=1100 (12), cin=0  =>  sum=0110 (6), o_p=0, o_g=1
+# => PASS: expect=10110, dut={o_g,sum}=10110
+# [Random] a=1101 (13), b=1000 (8), cin=1  =>  sum=0110 (6), o_p=0, o_g=1
+# => PASS: expect=10110, dut={o_g,sum}=10110
+# [Random] a=1001 (9), b=0110 (6), cin=1  =>  sum=0000 (0), o_p=1, o_g=1
+# => PASS: expect=10000, dut={o_g,sum}=10000
+# [Random] a=0111 (7), b=1101 (13), cin=0  =>  sum=0100 (4), o_p=0, o_g=1
+# => PASS: expect=10100, dut={o_g,sum}=10100
+# [Random] a=0010 (2), b=1101 (13), cin=0  =>  sum=1111 (15), o_p=1, o_g=0
+# => PASS: expect=01111, dut={o_g,sum}=01111
+# [Random] a=0001 (1), b=1011 (11), cin=0  =>  sum=1100 (12), o_p=0, o_g=0
+# => PASS: expect=01100, dut={o_g,sum}=01100
+# [Random] a=1000 (8), b=1111 (15), cin=1  =>  sum=1000 (8), o_p=0, o_g=1
+# => PASS: expect=11000, dut={o_g,sum}=11000
+# [Random] a=0110 (6), b=1111 (15), cin=0  =>  sum=0101 (5), o_p=0, o_g=1
+# => PASS: expect=10101, dut={o_g,sum}=10101
+# [Random] a=1000 (8), b=1110 (14), cin=0  =>  sum=0110 (6), o_p=0, o_g=1
+# => PASS: expect=10110, dut={o_g,sum}=10110
+# [Random] a=1000 (8), b=1110 (14), cin=1  =>  sum=0111 (7), o_p=0, o_g=1
+# => PASS: expect=10111, dut={o_g,sum}=10111
+# [Random] a=0110 (6), b=0000 (0), cin=1  =>  sum=0111 (7), o_p=0, o_g=0
+# => PASS: expect=00111, dut={o_g,sum}=00111
+# [Random] a=0010 (2), b=0101 (5), cin=1  =>  sum=1000 (8), o_p=0, o_g=0
+# => PASS: expect=01000, dut={o_g,sum}=01000
+# [Random] a=0000 (0), b=0111 (7), cin=0  =>  sum=0111 (7), o_p=0, o_g=0
+# => PASS: expect=00111, dut={o_g,sum}=00111
+# [Random] a=1100 (12), b=0010 (2), cin=1  =>  sum=1111 (15), o_p=0, o_g=0
+# => PASS: expect=01111, dut={o_g,sum}=01111
+# [Random] a=1100 (12), b=0010 (2), cin=0  =>  sum=1110 (14), o_p=0, o_g=0
+# => PASS: expect=01110, dut={o_g,sum}=01110
+# [Random] a=1011 (11), b=0110 (6), cin=0  =>  sum=0001 (1), o_p=0, o_g=1
+# => PASS: expect=10001, dut={o_g,sum}=10001
+# [Random] a=0000 (0), b=0000 (0), cin=0  =>  sum=0000 (0), o_p=0, o_g=0
+# => PASS: expect=00000, dut={o_g,sum}=00000
+# [Random] a=0011 (3), b=0000 (0), cin=1  =>  sum=0100 (4), o_p=0, o_g=0
+# => PASS: expect=00100, dut={o_g,sum}=00100
+# [Random] a=0001 (1), b=0110 (6), cin=0  =>  sum=0111 (7), o_p=0, o_g=0
+# => PASS: expect=00111, dut={o_g,sum}=00111
+# [Random] a=1001 (9), b=0111 (7), cin=1  =>  sum=0001 (1), o_p=0, o_g=1
+# => PASS: expect=10001, dut={o_g,sum}=10001
+# [Random] a=0101 (5), b=1100 (12), cin=1  =>  sum=0010 (2), o_p=0, o_g=1
+# => PASS: expect=10010, dut={o_g,sum}=10010
+# [Random] a=1011 (11), b=1000 (8), cin=0  =>  sum=0011 (3), o_p=0, o_g=1
+# => PASS: expect=10011, dut={o_g,sum}=10011
+# [Random] a=0001 (1), b=1101 (13), cin=0  =>  sum=1110 (14), o_p=0, o_g=0
+# => PASS: expect=01110, dut={o_g,sum}=01110
+# [Random] a=0010 (2), b=1010 (10), cin=0  =>  sum=1100 (12), o_p=0, o_g=0
+# => PASS: expect=01100, dut={o_g,sum}=01100
+# [Random] a=0001 (1), b=1010 (10), cin=0  =>  sum=1011 (11), o_p=0, o_g=0
+# => PASS: expect=01011, dut={o_g,sum}=01011
+# [Random] a=1111 (15), b=1011 (11), cin=1  =>  sum=1011 (11), o_p=0, o_g=1
+# => PASS: expect=11011, dut={o_g,sum}=11011
+# [Random] a=0100 (4), b=1101 (13), cin=1  =>  sum=0010 (2), o_p=0, o_g=1
+# => PASS: expect=10010, dut={o_g,sum}=10010
+# [Random] a=0110 (6), b=0101 (5), cin=1  =>  sum=1100 (12), o_p=0, o_g=0
+# => PASS: expect=01100, dut={o_g,sum}=01100
+# [Random] a=1001 (9), b=0100 (4), cin=1  =>  sum=1110 (14), o_p=0, o_g=0
+# => PASS: expect=01110, dut={o_g,sum}=01110
+# [Random] a=0010 (2), b=0001 (1), cin=0  =>  sum=0011 (3), o_p=0, o_g=0
+# => PASS: expect=00011, dut={o_g,sum}=00011
+# [Random] a=1010 (10), b=1011 (11), cin=1  =>  sum=0110 (6), o_p=0, o_g=1
+# => PASS: expect=10110, dut={o_g,sum}=10110
+# [Random] a=1010 (10), b=0001 (1), cin=0  =>  sum=1011 (11), o_p=0, o_g=0
+# => PASS: expect=01011, dut={o_g,sum}=01011
+# [Random] a=1010 (10), b=1110 (14), cin=0  =>  sum=1000 (8), o_p=0, o_g=1
+# => PASS: expect=11000, dut={o_g,sum}=11000
+# [Random] a=1110 (14), b=0001 (1), cin=0  =>  sum=1111 (15), o_p=1, o_g=0
+# => PASS: expect=01111, dut={o_g,sum}=01111
+# [Random] a=0100 (4), b=0001 (1), cin=0  =>  sum=0101 (5), o_p=0, o_g=0
+# => PASS: expect=00101, dut={o_g,sum}=00101
+# [Random] a=0110 (6), b=0111 (7), cin=0  =>  sum=1101 (13), o_p=0, o_g=0
+# => PASS: expect=01101, dut={o_g,sum}=01101
+# [Random] a=1101 (13), b=0001 (1), cin=0  =>  sum=1110 (14), o_p=0, o_g=0
+# => PASS: expect=01110, dut={o_g,sum}=01110
+# [Random] a=1100 (12), b=1101 (13), cin=1  =>  sum=1010 (10), o_p=0, o_g=1
+# => PASS: expect=11010, dut={o_g,sum}=11010
+# [Random] a=0000 (0), b=0101 (5), cin=1  =>  sum=0110 (6), o_p=0, o_g=0
+# => PASS: expect=00110, dut={o_g,sum}=00110
+# [Random] a=0000 (0), b=0101 (5), cin=1  =>  sum=0110 (6), o_p=0, o_g=0
+# => PASS: expect=00110, dut={o_g,sum}=00110
+# [Random] a=0010 (2), b=0000 (0), cin=0  =>  sum=0010 (2), o_p=0, o_g=0
+# => PASS: expect=00010, dut={o_g,sum}=00010
+# [Random] a=1001 (9), b=1110 (14), cin=0  =>  sum=0111 (7), o_p=0, o_g=1
+# => PASS: expect=10111, dut={o_g,sum}=10111
+# [Random] a=1110 (14), b=0001 (1), cin=1  =>  sum=0000 (0), o_p=1, o_g=1
+# => PASS: expect=10000, dut={o_g,sum}=10000
+# [Random] a=0100 (4), b=0111 (7), cin=0  =>  sum=1011 (11), o_p=0, o_g=0
+# => PASS: expect=01011, dut={o_g,sum}=01011
+# [Random] a=1100 (12), b=1110 (14), cin=1  =>  sum=1011 (11), o_p=0, o_g=1
+# => PASS: expect=11011, dut={o_g,sum}=11011
+# [Random] a=1101 (13), b=1111 (15), cin=0  =>  sum=1100 (12), o_p=0, o_g=1
+# => PASS: expect=11100, dut={o_g,sum}=11100
+# [Random] a=0001 (1), b=0010 (2), cin=1  =>  sum=0100 (4), o_p=0, o_g=0
+# => PASS: expect=00100, dut={o_g,sum}=00100
+# [Random] a=0100 (4), b=0110 (6), cin=0  =>  sum=1010 (10), o_p=0, o_g=0
+# => PASS: expect=01010, dut={o_g,sum}=01010
+# [Random] a=0001 (1), b=1000 (8), cin=0  =>  sum=1001 (9), o_p=0, o_g=0
+# => PASS: expect=01001, dut={o_g,sum}=01001
+# 
+# ================================
+# ========== TEST SUMMARY ==========
+# Total test cases:    100
+# Passed          :    100
+# Failed          :      0
+# Pass rate       : 100.00%
+# ================================
+# 
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/CLA/CLA_4BIT/tb_CLA_4bit.sv(103)
+#    Time: 1086 ns  Iteration: 0  Instance: /tb_CLA_4bit
+# Saving coverage database on exit...
+# End time: 18:40:01 on Nov 03,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

@@ -11,6 +11,7 @@
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_8bit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/COMP_28bit.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_adjust.sv
+/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_rounding.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_sub.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/EXP_swap.sv
 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv

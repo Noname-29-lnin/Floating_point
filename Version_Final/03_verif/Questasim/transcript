@@ -1,0 +1,50 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# ./../TopModule/QuestaSim/tb_FPU_unit.wlf opened as dataset "tb_FPU_unit"
+# add wave vsim:/tb_FPU_unit/*
+# Unrecognized dataset prefix: vsim
+#  radix -binary
+# binary
+# 
+# stdin: <EOF>
+add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/i_clk \
+tb_FPU_unit:/tb_FPU_unit/i_rst_n \
+tb_FPU_unit:/tb_FPU_unit/i_add_sub \
+tb_FPU_unit:/tb_FPU_unit/i_32_a \
+tb_FPU_unit:/tb_FPU_unit/i_32_b \
+tb_FPU_unit:/tb_FPU_unit/o_32_s \
+tb_FPU_unit:/tb_FPU_unit/o_ov_flow \
+tb_FPU_unit:/tb_FPU_unit/o_un_flow
+add wave -position insertpoint  \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_overflow \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_underflow \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_zero_flag \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_lopd_value \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_exp_value \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/o_exp_result \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/w_exp_result \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/w_i_carry \
+tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/w_data_b
+find drivers -source -time {2211 ns} -cause tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_underflow
+# Multiple active drivers exist at time 2211 ns for signal tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_underflow:
+#    PROCESS: #ASSIGN#22  SIGNAL: /tb_FPU_unit/DUT/MAN_ALU_UNIT/ALU_SUB_UNIT/CLA_BLOCK_GEN[6]/CLA_4BIT_UNIT_1/w_c[3:0]  FILE: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv:22
+#    PROCESS: #ASSIGN#22  SIGNAL: /tb_FPU_unit/DUT/MAN_ALU_UNIT/ALU_SUB_UNIT/CLA_BLOCK_GEN[6]/CLA_4BIT_UNIT_1/w_p[3:0]  FILE: /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/CLA_4bit.sv:22
+# 
+# ========================================================================================================
+# *PARTIAL* causality trace results for signal "tb_FPU_unit:/tb_FPU_unit/DUT/EXP_ADJUST_UNIT/i_underflow":
+# 
+#    Time | Type | Scope                                    | Signal | Source File
+# ------- | ---- | ---------------------------------------- | ------ | --------------------------------------------------------------------------------

@@ -1,0 +1,173 @@
+# vsim -lib ./../SubModule/LOPD_UNIT/LOPD_24BIT/QuestaSim/work -debugDB -l ./../SubModule/LOPD_UNIT/LOPD_24BIT/QuestaSim/tb_LOPD_24bit.log -voptargs="+acc" -assertdebug -c tb_LOPD_24bit -wlf ./../SubModule/LOPD_UNIT/LOPD_24BIT/QuestaSim/tb_LOPD_24bit.wlf -do "cd ./../SubModule/LOPD_UNIT/LOPD_24BIT/QuestaSim; log -r /*; run -all;" 
+# Start time: 22:39:36 on Nov 03,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_LOPD_24bit(fast)
+# Loading work.LOPD_24bit(fast)
+# Loading work.LOPD_16bit(fast)
+# Loading work.LOPD_8bit(fast)
+# Loading work.LOPD_4bit(fast)
+# ** Note: (vsim-8900) Creating design debug database ./../SubModule/LOPD_UNIT/LOPD_24BIT/QuestaSim/tb_LOPD_24bit.dbg.
+# cd ./../SubModule/LOPD_UNIT/LOPD_24BIT/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# 
+# === START 8-bit LEADING ONE POSITION DETECTOR TEST ===
+# 
+# [Zero] data=000000000000000000000000 => expect(pos=0, zero=1), dut(pos=0, zero=1) => PASS
+# [Direcly] data=000000000000000000000001 => expect(pos=23, zero=0), dut(pos=23, zero=0) => PASS
+# [Direcly] data=000000000000000000000010 => expect(pos=22, zero=0), dut(pos=22, zero=0) => PASS
+# [Direcly] data=000000000000000000000100 => expect(pos=21, zero=0), dut(pos=21, zero=0) => PASS
+# [Direcly] data=000000000000000000001000 => expect(pos=20, zero=0), dut(pos=20, zero=0) => PASS
+# [Direcly] data=000000000000000000010000 => expect(pos=19, zero=0), dut(pos=19, zero=0) => PASS
+# [Direcly] data=000000000000000000100000 => expect(pos=18, zero=0), dut(pos=18, zero=0) => PASS
+# [Direcly] data=000000000000000001000000 => expect(pos=17, zero=0), dut(pos=17, zero=0) => PASS
+# [Direcly] data=000000000000000010000000 => expect(pos=16, zero=0), dut(pos=16, zero=0) => PASS
+# [Direcly] data=000000000000000100000000 => expect(pos=15, zero=0), dut(pos=15, zero=0) => PASS
+# [Direcly] data=000000000000001000000000 => expect(pos=14, zero=0), dut(pos=14, zero=0) => PASS
+# [Direcly] data=000000000000010000000000 => expect(pos=13, zero=0), dut(pos=13, zero=0) => PASS
+# [Direcly] data=000000000000100000000000 => expect(pos=12, zero=0), dut(pos=12, zero=0) => PASS
+# [Direcly] data=000000000001000000000000 => expect(pos=11, zero=0), dut(pos=11, zero=0) => PASS
+# [Direcly] data=000000000010000000000000 => expect(pos=10, zero=0), dut(pos=10, zero=0) => PASS
+# [Direcly] data=000000000100000000000000 => expect(pos=9, zero=0), dut(pos=9, zero=0) => PASS
+# [Direcly] data=000000001000000000000000 => expect(pos=8, zero=0), dut(pos=8, zero=0) => PASS
+# [Direcly] data=000000010000000000000000 => expect(pos=7, zero=0), dut(pos=7, zero=0) => PASS
+# [Direcly] data=000000100000000000000000 => expect(pos=6, zero=0), dut(pos=6, zero=0) => PASS
+# [Direcly] data=000001000000000000000000 => expect(pos=5, zero=0), dut(pos=5, zero=0) => PASS
+# [Direcly] data=000010000000000000000000 => expect(pos=4, zero=0), dut(pos=4, zero=0) => PASS
+# [Direcly] data=000100000000000000000000 => expect(pos=3, zero=0), dut(pos=3, zero=0) => PASS
+# [Direcly] data=001000000000000000000000 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Direcly] data=010000000000000000000000 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Direcly] data=100000000000000000000000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=001100110111110110100100 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=100001001100011111000110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=000011110110100110011110 => expect(pos=4, zero=0), dut(pos=4, zero=0) => PASS
+# [Random] data=110111101001111010111110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=011000011100100000010001 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=100011111101011101000101 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=110011011110010110110001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=100011110110101101111001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=010110010011111000111000 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=010001000000010000101011 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=101001111101110100000000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=111010100100110010001011 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=001011010110000000011010 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=000110011010000011110111 => expect(pos=3, zero=0), dut(pos=3, zero=0) => PASS
+# [Random] data=011110001000000100101110 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=110110000001110100111000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=010110000000011010011001 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=011000001001001111110111 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=001101010101000001010101 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=010111100111110000001011 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=000011111100011011001001 => expect(pos=4, zero=0), dut(pos=4, zero=0) => PASS
+# [Random] data=011111100000100111101001 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=111110010010111010101010 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=011010001101101100001101 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=010100111100111110001111 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=000110011011110001010111 => expect(pos=3, zero=0), dut(pos=3, zero=0) => PASS
+# [Random] data=000110011001000110000100 => expect(pos=3, zero=0), dut(pos=3, zero=0) => PASS
+# [Random] data=101111011000101010010010 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=011000100111000000011100 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=010110100100101101010001 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=110100101010001110101110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=011101010001001000010110 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=011101100100011000110100 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=000010101001100000011100 => expect(pos=4, zero=0), dut(pos=4, zero=0) => PASS
+# [Random] data=000101011111011011010111 => expect(pos=3, zero=0), dut(pos=3, zero=0) => PASS
+# [Random] data=110101000011101111101010 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=101000110010111000011000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=001001001011001001001000 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=100001001110110101111111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=110101010101100100100001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=010000111001001001011001 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=100100011110111011000111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=101101110110110111101010 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=011100110110001100111011 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=111001010001101001111001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=111010110000000100000111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=010001011011001010111101 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=101100110111101011100000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=110101110111001001100110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=000010100010101010011100 => expect(pos=4, zero=0), dut(pos=4, zero=0) => PASS
+# [Random] data=001100001010011000111001 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=100101100110000010011101 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=001100010100110011100110 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=001101000010000001001011 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=011110100011100100101000 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=001111101101110100000000 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=011000000101101001001110 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=111110010110100101101001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=000100101000110001101001 => expect(pos=3, zero=0), dut(pos=3, zero=0) => PASS
+# [Random] data=001000010111110101110000 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=101001000111010000001100 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=111000101111010110011111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=101110100111000101001001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=100001110110000110111110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=111110000010001000010101 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=110010111101000101101101 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=110100101101001101111111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=001001001101111110000100 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=101000101001111100011110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=100000001101100001101000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=011001000000001001001111 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=100101011000100010001110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=000100000001000100010001 => expect(pos=3, zero=0), dut(pos=3, zero=0) => PASS
+# [Random] data=010000110111000110110100 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=110011011111100100101000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=011001010010011100010111 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=100110111000011101110111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=110010001101111101000011 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=110011110011000110110010 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=011001010001011110011101 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=110101011001110100000000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=110010101000011010100001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=001110100111110100000101 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=101111010111011010100101 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=011101111100111110101001 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=010010110001001000101010 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=110110111010011111011100 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=001101100001011000111011 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=000001000111010011011110 => expect(pos=5, zero=0), dut(pos=5, zero=0) => PASS
+# [Random] data=111111001001010110111111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=000000000001011111100001 => expect(pos=11, zero=0), dut(pos=11, zero=0) => PASS
+# [Random] data=101011001111011010110110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=010100100011010001100110 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=011000111110000101101001 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+# [Random] data=100111101111011001011111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=111010000100101101001100 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=001010110100001011011100 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+# [Random] data=100011111000110000000000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=111001101010110010100111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# [Random] data=111001001110001101010011 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+# 
+# ==================================
+# ========== TEST SUMMARY ==========
+# Total test cases:    125
+# Passed          :    125
+# Failed          :      0
+# Pass rate       : 100.00%
+# ==================================
+# 
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/LOPD_UNIT/LOPD_24BIT/tb_LOPD_24bit.sv(128)
+#    Time: 366 ns  Iteration: 0  Instance: /tb_LOPD_24bit
+# End time: 22:39:37 on Nov 03,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

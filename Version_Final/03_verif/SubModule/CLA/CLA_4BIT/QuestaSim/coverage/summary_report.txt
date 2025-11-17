@@ -1,0 +1,26 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /tb_CLA_4bit/DUT
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_CLA_4bit
+=== Design Unit: work.tb_CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         2         2    50.00%
+    Conditions                       2         0         2     0.00%
+    Statements                      37        37         0   100.00%
+    Toggles                        172        69       103    40.11%
+
+
+Total Coverage By Instance (filtered view): 60.09%
+
