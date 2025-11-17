@@ -9,13 +9,10 @@
 #define VERILATED_VTB_COMP_28BIT_H_  // guard
 
 #include "verilated.h"
-#include "verilated_cov.h"
 
 class Vtb_COMP_28bit__Syms;
 class Vtb_COMP_28bit___024root;
 class VerilatedVcdC;
-class Vtb_COMP_28bit_COMP_4bit;
-
 
 // This class is the main interface to the Verilated model
 class alignas(VL_CACHE_LINE_BYTES) Vtb_COMP_28bit VL_NOT_FINAL : public VerilatedModel {
@@ -32,13 +29,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_COMP_28bit VL_NOT_FINAL : public Verilate
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
-    Vtb_COMP_28bit_COMP_4bit* const __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_0;
-    Vtb_COMP_28bit_COMP_4bit* const __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_1;
-    Vtb_COMP_28bit_COMP_4bit* const __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_2;
-    Vtb_COMP_28bit_COMP_4bit* const __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_3;
-    Vtb_COMP_28bit_COMP_4bit* const __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_4;
-    Vtb_COMP_28bit_COMP_4bit* const __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_5;
-    Vtb_COMP_28bit_COMP_4bit* const __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_6;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.
@@ -72,7 +62,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_COMP_28bit VL_NOT_FINAL : public Verilate
     /// Returns time at next time slot. Aborts if !eventsPending()
     uint64_t nextTimeSlot();
     /// Trace signals in the model; called by application code
-    void trace(VerilatedTraceBaseC* tfp, int levels, int options = 0) { contextp()->trace(tfp, levels, options); }
+    void trace(VerilatedVcdC* tfp, int levels, int options = 0);
     /// Retrieve name of this model instance (as passed to constructor).
     const char* name() const;
 
@@ -87,9 +77,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_COMP_28bit VL_NOT_FINAL : public Verilate
     /// Re-allocate necessary resources. Called after cloning.
     void atClone() const;
     std::unique_ptr<VerilatedTraceConfig> traceConfig() const override final;
-  private:
-    // Internal functions - trace registration
-    void traceBaseModel(VerilatedTraceBaseC* tfp, int levels, int options);
 };
 
 #endif  // guard

@@ -29,14 +29,7 @@ int main(int argc, char** argv, char**) {
         VL_DEBUG_IF(VL_PRINTF("+ Exiting without $finish; no events left\n"););
     }
 
-    // Execute 'final' processes
+    // Final model cleanup
     topp->final();
-
-    // Write coverage data (since Verilated with --coverage)
-    contextp->coveragep()->write();
-
-    // Print statistical summary report
-    contextp->statsPrintSummary();
-
     return 0;
 }

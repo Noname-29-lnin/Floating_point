@@ -10,19 +10,10 @@
 Vtb_COMP_28bit::Vtb_COMP_28bit(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new Vtb_COMP_28bit__Syms(contextp(), _vcname__, this)}
-    , __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_0{vlSymsp->TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_0}
-    , __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_1{vlSymsp->TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_1}
-    , __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_2{vlSymsp->TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_2}
-    , __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_3{vlSymsp->TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_3}
-    , __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_4{vlSymsp->TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_4}
-    , __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_5{vlSymsp->TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_5}
-    , __PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_6{vlSymsp->TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_6}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context
     contextp()->addModel(this);
-    contextp()->traceBaseModelCbAdd(
-        [this](VerilatedTraceBaseC* tfp, int levels, int options) { traceBaseModel(tfp, levels, options); });
 }
 
 Vtb_COMP_28bit::Vtb_COMP_28bit(const char* _vcname__)
@@ -137,14 +128,12 @@ VL_ATTR_COLD static void trace_init(void* voidSelf, VerilatedVcd* tracep, uint32
 
 VL_ATTR_COLD void Vtb_COMP_28bit___024root__trace_register(Vtb_COMP_28bit___024root* vlSelf, VerilatedVcd* tracep);
 
-VL_ATTR_COLD void Vtb_COMP_28bit::traceBaseModel(VerilatedTraceBaseC* tfp, int levels, int options) {
-    (void)levels; (void)options;
-    VerilatedVcdC* const stfp = dynamic_cast<VerilatedVcdC*>(tfp);
-    if (VL_UNLIKELY(!stfp)) {
-        vl_fatal(__FILE__, __LINE__, __FILE__,"'Vtb_COMP_28bit::trace()' called on non-VerilatedVcdC object;"
-            " use --trace-fst with VerilatedFst object, and --trace with VerilatedVcd object");
+VL_ATTR_COLD void Vtb_COMP_28bit::trace(VerilatedVcdC* tfp, int levels, int options) {
+    if (tfp->isOpen()) {
+        vl_fatal(__FILE__, __LINE__, __FILE__,"'Vtb_COMP_28bit::trace()' shall not be called after 'VerilatedVcdC::open()'.");
     }
-    stfp->spTrace()->addModel(this);
-    stfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP));
-    Vtb_COMP_28bit___024root__trace_register(&(vlSymsp->TOP), stfp->spTrace());
+    if (false && levels && options) {}  // Prevent unused
+    tfp->spTrace()->addModel(this);
+    tfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP));
+    Vtb_COMP_28bit___024root__trace_register(&(vlSymsp->TOP), tfp->spTrace());
 }

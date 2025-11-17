@@ -16,7 +16,6 @@
 
 // INCLUDE MODULE CLASSES
 #include "Vtb_COMP_28bit___024root.h"
-#include "Vtb_COMP_28bit_COMP_4bit.h"
 
 // SYMS CLASS (contains all model state)
 class alignas(VL_CACHE_LINE_BYTES)Vtb_COMP_28bit__Syms final : public VerilatedSyms {
@@ -33,16 +32,6 @@ class alignas(VL_CACHE_LINE_BYTES)Vtb_COMP_28bit__Syms final : public VerilatedS
 
     // MODULE INSTANCE STATE
     Vtb_COMP_28bit___024root       TOP;
-    Vtb_COMP_28bit_COMP_4bit       TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_0;
-    Vtb_COMP_28bit_COMP_4bit       TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_1;
-    Vtb_COMP_28bit_COMP_4bit       TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_2;
-    Vtb_COMP_28bit_COMP_4bit       TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_3;
-    Vtb_COMP_28bit_COMP_4bit       TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_4;
-    Vtb_COMP_28bit_COMP_4bit       TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_5;
-    Vtb_COMP_28bit_COMP_4bit       TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_6;
-
-    // COVERAGE
-    uint32_t __Vcoverage[99];
 
     // CONSTRUCTORS
     Vtb_COMP_28bit__Syms(VerilatedContext* contextp, const char* namep, Vtb_COMP_28bit* modelp);

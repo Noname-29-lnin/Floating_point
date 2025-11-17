@@ -2,4 +2,5 @@
 \babel@toc {english}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \contentsline {section}{\numberline {1}Design FPU}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Bộ so sánh 4-bit}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.1}Bộ tiền xử lý liên quan đến Exponent}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Bộ tiền xử lý liên quan đến Mantissa}{2}{subsection.1.2}%

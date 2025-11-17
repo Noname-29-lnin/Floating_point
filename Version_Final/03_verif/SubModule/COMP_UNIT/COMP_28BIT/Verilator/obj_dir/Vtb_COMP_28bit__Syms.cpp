@@ -4,7 +4,6 @@
 #include "Vtb_COMP_28bit__pch.h"
 #include "Vtb_COMP_28bit.h"
 #include "Vtb_COMP_28bit___024root.h"
-#include "Vtb_COMP_28bit_COMP_4bit.h"
 
 // FUNCTIONS
 Vtb_COMP_28bit__Syms::~Vtb_COMP_28bit__Syms()
@@ -42,34 +41,11 @@ Vtb_COMP_28bit__Syms::Vtb_COMP_28bit__Syms(VerilatedContext* contextp, const cha
     , __Vm_modelp{modelp}
     // Setup module instances
     , TOP{this, namep}
-    , TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_0{this, Verilated::catName(namep, "tb_COMP_28bit.DUT.u_i_data_0")}
-    , TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_1{this, Verilated::catName(namep, "tb_COMP_28bit.DUT.u_i_data_1")}
-    , TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_2{this, Verilated::catName(namep, "tb_COMP_28bit.DUT.u_i_data_2")}
-    , TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_3{this, Verilated::catName(namep, "tb_COMP_28bit.DUT.u_i_data_3")}
-    , TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_4{this, Verilated::catName(namep, "tb_COMP_28bit.DUT.u_i_data_4")}
-    , TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_5{this, Verilated::catName(namep, "tb_COMP_28bit.DUT.u_i_data_5")}
-    , TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_6{this, Verilated::catName(namep, "tb_COMP_28bit.DUT.u_i_data_6")}
 {
-        // Check resources
-        Verilated::stackCheck(86);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-9);
     _vm_contextp__->timeprecision(-12);
     // Setup each module's pointers to their submodules
-    TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_0 = &TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_0;
-    TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_1 = &TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_1;
-    TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_2 = &TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_2;
-    TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_3 = &TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_3;
-    TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_4 = &TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_4;
-    TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_5 = &TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_5;
-    TOP.__PVT__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_6 = &TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_6;
     // Setup each module's pointer back to symbol table (for public functions)
     TOP.__Vconfigure(true);
-    TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_0.__Vconfigure(true);
-    TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_1.__Vconfigure(false);
-    TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_2.__Vconfigure(false);
-    TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_3.__Vconfigure(false);
-    TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_4.__Vconfigure(false);
-    TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_5.__Vconfigure(false);
-    TOP__tb_COMP_28bit__DOT__DUT__DOT__u_i_data_6.__Vconfigure(false);
 }

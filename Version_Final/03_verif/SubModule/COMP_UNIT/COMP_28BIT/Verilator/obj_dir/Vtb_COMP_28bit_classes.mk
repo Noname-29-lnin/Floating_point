@@ -10,7 +10,7 @@ VM_C11 = 1
 # Timing enabled?  0/1
 VM_TIMING = 1
 # Coverage output mode?  0/1 (from --coverage)
-VM_COVERAGE = 1
+VM_COVERAGE = 0
 # Parallel builds?  0/1 (from --output-split)
 VM_PARALLEL_BUILDS = 0
 # Tracing output mode?  0/1 (from --trace/--trace-fst)
@@ -26,7 +26,6 @@ VM_CLASSES_FAST += \
 	Vtb_COMP_28bit \
 	Vtb_COMP_28bit___024root__DepSet_hdf226333__0 \
 	Vtb_COMP_28bit___024root__DepSet_h24ee8694__0 \
-	Vtb_COMP_28bit_COMP_4bit__DepSet_h1c55a325__0 \
 	Vtb_COMP_28bit__main \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
@@ -34,9 +33,6 @@ VM_CLASSES_SLOW += \
 	Vtb_COMP_28bit___024root__Slow \
 	Vtb_COMP_28bit___024root__DepSet_hdf226333__0__Slow \
 	Vtb_COMP_28bit___024root__DepSet_h24ee8694__0__Slow \
-	Vtb_COMP_28bit_COMP_4bit__Slow \
-	Vtb_COMP_28bit_COMP_4bit__DepSet_h9dbc9d83__0__Slow \
-	Vtb_COMP_28bit_COMP_4bit__DepSet_h1c55a325__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \
@@ -51,7 +47,6 @@ VM_SUPPORT_SLOW += \
 # Global classes, need linked once per executable, fast-path, compile with highest optimization
 VM_GLOBAL_FAST += \
 	verilated \
-	verilated_cov \
 	verilated_vcd_c \
 	verilated_timing \
 	verilated_threads \
