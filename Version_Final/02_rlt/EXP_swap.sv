@@ -18,8 +18,8 @@ COMP_8bit #(
 );
 
 always_comb begin
-    o_less_data     = (o_compare) ? i_data_a : i_data_b;
     o_greater_data  = (o_compare) ? i_data_b : i_data_a;
+    o_less_data     = (o_compare) ? i_data_a : i_data_b;
 end
 
 endmodule
