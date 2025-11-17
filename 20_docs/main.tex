@@ -6,6 +6,10 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese, english]{babel}
 
+%\usepackage{tcolorbox}           % tạo box đẹp
+%\usepackage{microtype}
+%\usepackage{ragged2e}            % \justifying nếu cần canh đều
+
 \usepackage{textcomp}
 % =========================
 % Cover page information
@@ -16,17 +20,17 @@
 \NameUniname{Ho Chi Minh City University of Technology}
 \NameDeptname{Faculty of Electrical and Electronics Engineering}
 \NamePathlogo{./my-chapters/my-images/01_logobachkhoatoi.png}
-\NameClass{Digital signal processing on FPGA}
+\NameClass{Digital System Design \\ &  and Verification}
 \NameGroup{08}
-\NameLesson[\Large]{LABORATORY REPORT}
-\NameTitle[\Huge]{Waveform generator}
-\NameAdvisor{Nguyễn Tuấn Hùng}
+\NameLesson[\Large]{BIG PROJECT 1 REPORT}
+\NameTitle[\Huge]{Floating Point Adder and Subtractor}
+\NameAdvisor{Nguyễn Trung Hiếu}
 \NamePlace{Ho Chi Minh}
 \NameTime{../../20..}
 \NamePathBackground[width=\paperwidth,height=\paperheight]{./my-chapters/my-images/bia.jpg} 
 \MemberTableData{
-1 & 2213874 & Nguyễn Thanh Tùng & L01 \\ \hline
-2 & 2210780 & Nguyễn Đại Đồng & L01 \\ \hline
+1 & 2210780 & Nguyễn Đại Đồng & L01 \\ \hline
+2 & 2213874 & Nguyễn Thanh Tùng & L01 \\ \hline
 3 & 2213496 & Nguyễn Quốc Tín & L01 \\ \hline
 }
 
@@ -43,7 +47,7 @@
 \pagestyle{empty}
 \MycoverFinalProject % Cover page
 \newpage
-\selectlanguage{vietnam}
+\selectlanguage{vietnamese}
 \renewcommand{\arraystretch}{1.5} % tăng khoảng cách dòng (row height)
 \setlength{\parindent}{1cm}
 \onehalfspacing
@@ -56,5 +60,6 @@
 \pagestyle{fancy}
 \MycountPages{number}
 \fancyfoot[L]{\includegraphics[width=.02\linewidth]{./my-chapters/my-images/logo_DEE.png}\text{ Department of Electronics}}
-
+%\include{./my-chapters/introduction.tex}
+\include{./my-chapters/Design_FPU.tex}
 \end{document}

@@ -1,0 +1,57 @@
+\section{Requirement}
+
+
+\begin{center}
+	\begin{tikzpicture}
+		% Hộp (rectangle)
+		\node[
+		draw=violet!70!black,
+		fill=violet!10,
+		rounded corners=2pt,
+		inner xsep=6pt,
+		inner ysep=6pt,
+		text width=0.85\textwidth,
+		align=justify
+		] (box) {
+			\small
+			Thiết kế một bộ \textbf{Floating Point (FPU)} có thể cộng và trừ hai số 
+			\textbf{floating-point 32-bit}. Phương pháp thiết kế sử dụng thuần là bộ tổ hợp.
+		};
+	\end{tikzpicture}
+\end{center}
+
+\noindent Sau khi thiết kế thành công, cần:
+
+\begin{itemize}
+	\item Viết chương trình kiểm định thiết kế \textbf{FPU} trên.
+	\item Thực hiện thiết kế trên KIT FPGA để kiểm tra chức năng của thiết kế.
+	\item Tiến hành tổng hợp thiết kế sử dụng các standard cell trong thư viện có sẵn tại các trường hợp thực tế và loại bỏ các glitchs.
+\end{itemize}
+
+\noindent Ngõ vào và ngõ ra của thiết kế được mô tả như sau:
+
+\begin{table}[H] % or [t], [b], [!ht], etc.
+	\centering
+	\begin{tabular}{|>{\centering\arraybackslash}m{2cm}
+		                 |>{\centering\arraybackslash}m{2cm}
+		                 |>{\centering\arraybackslash}m{2cm}
+		                 |>{\raggedright\arraybackslash}m{7.5cm}|}
+	     \hline
+	     Name 			& Port Type 	& Width 		& Description\\
+	     \hline
+	     i\_32\_a		& Input 		& 32			& 32-bit floating point number A\\
+	     \hline
+	     i\_32\_b		& Input 		& 32			& 32-bit floating point number B\\
+	     \hline
+	     i\_add\_subb	& Input 		& 1				& Operation: 0 = add, 1 = sub\\
+	     \hline
+		 o\_32\_s		& Output 		& 32			& 32-bit floating point output\\
+	     \hline
+	     o\_ov\_flag	& Output 		& 1				& Overflow Flag: 1 = overflow, 0 = no overflow occurs\\
+	     \hline
+	     o\_un\_flaag 	& Output 		& 1 			& Underflow Flag: 1 = underflow, 0 = no underflow occurs\\
+	     \hline
+	 \end{tabular}
+	 \caption{Input and Output Ports.}
+	 \label{tab: input-and-output-ports}
+\end{table}
