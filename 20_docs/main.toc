@@ -4,4 +4,7 @@
 \contentsline {section}{\numberline {1}Requirement}{1}{section.1}%
 \contentsline {section}{\numberline {2}Design FPU}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Bộ tiền xử lý liên quan đến Exponent}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Bộ tiền xử lý liên quan đến Mantissa}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Bộ tiền xử lý liên quan đến Mantissa}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Bộ xử lý dấu của phép tính}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Bộ xử lý các trường hợp đặc biệt ở ngõ vào}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Bộ căn chỉnh Exponent}{8}{subsection.2.5}%

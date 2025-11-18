@@ -2,3 +2,6 @@
 \babel@toc {english}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Sơ đồ khổi tổng quan của bộ FPU.}}{2}{figure.caption.2}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Bộ tính toán giá trị $| \text {EXP\_A} - \text {EXP\_B} |$.}}{3}{figure.caption.3}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Bìa K của bộ so sánh 4-bit (\textsf {COMP\_4bit}).}}{4}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Rút gọn bìa K theo bảng sự thật \ref {tab: truth table for sign_unit}.}}{6}{figure.caption.8}%

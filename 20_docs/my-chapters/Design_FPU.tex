@@ -13,7 +13,47 @@ Ta có thiết kế tổng quan của bộ tính toán FPU:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{./my-chapters/my-diagrams/Exponent_Block_1.png}
+	\caption{Bộ tính toán giá trị $| \text{EXP\_A} - \text{EXP\_B} |$.}
 \end{figure}
+
+Bộ có chức năng thực hiện tính giá trị trị khác nhau giữa hai Exponent của A và B.  Trong đó,
+
+\begin{itemize}[label=-]
+	\item Bộ \textsf{COMP\_4bit}: là bộ so sánh 4-bit hai số được triển khai dựa vào bảng sự thật và rút gọn bìa K như sau:
+	
+	\begin{minipage}{.45\linewidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\linewidth]{./my-chapters/my-images/K_maps/comp_4bit.png}
+			\caption{Bìa K của bộ so sánh 4-bit (\textsf{COMP\_4bit}).}
+		\end{figure}
+	\end{minipage}
+	\hspace{0.5cm}
+	\begin{minipage}{.45\linewidth}
+%		 \begin{table}[h] % or [t], [b], [!ht], etc.
+%			 \centering
+%			 \begin{tabular}{|>{\centering\arraybackslash}m{.5cm}
+%			                 |>{\centering\arraybackslash}m{.5cm}
+%			                 |>{\centering\arraybackslash}m{.5cm}
+%			                 |>{\centering\arraybackslash}m{.5cm}
+%			                 |>{\centering\arraybackslash}m{.5cm}
+%			                 |>{\centering\arraybackslash}m{.5cm}
+%			                 |>{\centering\arraybackslash}m{.5cm}
+%			                 |>{\centering\arraybackslash}m{.5cm}
+%			                 |>{\centering\arraybackslash}m{.5cm}|}
+%		     \hline
+%		     \multirow{4}{*}{\textsf{i\_data\_a}} & \multirow{4}{*}{\textsf{i\_data\_b}} & \multicolumn{2}{c|}{\textsf{COMP\_LESS}} \\
+%		     
+%			 \end{tabular}
+%			 \caption{Bảng sự thật của \textsf{COMP\_4bit}.}
+%	 	\end{table}
+		\begin{lstlisting}[style=StyleCode, language=SystemVerilog, caption={Rút gọn từ Bìa K của bộ so sánh 4-bit (\textsf{COMP\_4bit}).}]
+			assign o_less = (~i_data_a[3] & ~i_data_a[2] & ~i_data_a[1] & ~i_data_a[0] & i_data_b[0]) | (~i_data_a[3] & ~i_data_a[2] & ~i_data_a[1] & i_data_b[1]) | (~i_data_a[3] & ~i_data_a[2] & i_data_b[2]) | (~i_data_a[3] & i_data_b[3]) | (~i_data_a[3] & ~i_data_a[2] & ~i_data_a[0] & i_data_b[1] & i_data_b[0]) | (~i_data_a[3] & ~i_data_a[1] & ~i_data_a[0] & i_data_b[2] & i_data_b[0]) | (~i_data_a[3] & ~i_data_a[1] & i_data_b[2] & i_data_b[1]) | (~i_data_a[3] & ~i_data_a[0] & i_data_b[2] & i_data_b[1] & i_data_b[0]) | (~i_data_a[2] & ~i_data_a[1] & ~i_data_a[0] & i_data_b[3] & i_data_b[0]) | (~i_data_a[2] & ~i_data_a[1] & i_data_b[3] & i_data_b[1]) | (~i_data_a[2] & i_data_b[3] & i_data_b[2]) | (~i_data_a[2] & ~i_data_a[0] & i_data_b[3] & i_data_b[1] & i_data_b[0]) | (~i_data_a[1] & ~i_data_a[0] & i_data_b[3] & i_data_b[2] & i_data_b[0]) | (~i_data_a[1] & i_data_b[3] & i_data_b[2] & i_data_b[1]) | (~i_data_a[0] & i_data_b[3] & i_data_b[2] & i_data_b[1] & i_data_b[0]);
+			
+			assign o_equal = ~|(i_data_a ^ i_data_b);
+		\end{lstlisting}
+	\end{minipage}
+\end{itemize}
 
 \subsection{Bộ tiền xử lý liên quan đến Mantissa}
 
@@ -22,15 +62,115 @@ Ta có thiết kế tổng quan của bộ tính toán FPU:
 	\includegraphics[width=\linewidth]{./my-chapters/my-diagrams/man_swap.png}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{./my-chapters/my-diagrams/EXP_adjust.png}
-\end{figure}
-
+\subsection{Bộ xử lý dấu của phép tính}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.5\linewidth]{./my-chapters/my-diagrams/Final_sign.png}
+\end{figure}
+
+\begin{table}[H] % or [t], [b], [!ht], etc.
+	\centering
+	\begin{tabular}{|>{\centering\arraybackslash}m{2cm}
+			|>{\centering\arraybackslash}m{2cm}
+			|>{\centering\arraybackslash}m{2cm}
+			|>{\centering\arraybackslash}m{2cm}
+			|>{\centering\arraybackslash}m{2.5cm}
+			|>{\raggedright\arraybackslash}m{5cm}|}
+		\hline
+		\textsf{i\_add\_sub} 	& \textsf{i\_sign\_a}	& \textsf{i\_sign\_b}	& \textsf{i\_comp}	& \textsf{o\_sign\_result} 	& \\
+		\hline
+		0	& 0	& 0	& X	& 0	& $(A + B) > 0$ \\
+		\hline
+		0	& 0	& 1 & 0 & 0 & $(A \geq B) \rightarrow (A - B) > 0$	\\
+		\hline
+		0 	& 0 & 1 & 1 & 1 & $(A < B) \rightarrow (A - B) < 0$ \\
+		\hline
+		0	& 1 & 0 & 0 & 1 & $(A \geq B) \rightarrow (- A + B) < 0$ \\
+		\hline
+		0	& 1 & 0 & 1 & 0 & $(A < B) \rightarrow (-A + B) > 0$\\
+		\hline
+		0 	& 1	& 1 & X & 1 & $(-A - B) < 0$ \\
+		\hline
+		1	& 0	& 0 & 0	& 0 & $(A \geq B) \rightarrow (A - B) > 0$ \\
+		\hline
+		1	& 0	& 0 & 1 & 1	& $(A < B) \rightarrow (A - B) < 0$ \\
+		\hline
+		1	& 0	& 1 & X & 0	& $(A - -B) > 0$ \\
+		\hline
+		1 	& 1 & 0 & X & 1 & $(-A - B) < 0$ \\
+		\hline
+		1	& 1 & 1 & 0	& 1	& $(A \geq B) \rightarrow (-A - -B) < 0$ \\
+		\hline
+		1	& 1 & 1 & 1 & 0	& $(A < B) \rightarrow (-A - - B) > 0$ \\
+		\hline
+	\end{tabular}
+	\caption{Bảng sự thật của \textsf{SIGN\_RESULT}.}
+	\label{tab: truth table for sign_unit}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{./my-chapters/my-images/K_maps/SIgn_unit.png}
+	\caption{Rút gọn bìa K theo bảng sự thật \ref{tab: truth table for sign_unit}.}
+\end{figure}
+
+\subsection{Bộ xử lý các trường hợp đặc biệt ở ngõ vào}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.4\linewidth]{./my-chapters/my-diagrams/PSC.png}
+\end{figure}
+	
+\begin{longtable}{|>{\centering\arraybackslash}m{3cm}
+		|>{\centering\arraybackslash}m{4cm}
+		|>{\centering\arraybackslash}m{4cm}
+		|>{\centering\arraybackslash}m{4cm}|}
+	\endfirsthead
+	
+	\multicolumn{3}{c}%
+	{\tablename\ \thetable\ -- continued from previous page} \\ \hline
+	\textsf{i\_add\_sub}	& \textsf{i\_data\_a} 	& \textsf{i\_data\_b} & \textsf{o\_data\_fpu} \\
+	\endhead
+	
+	\hline \multicolumn{4}{r}{Continued on next page \dots} \\
+	\endfoot
+	
+	\endlastfoot
+		\hline
+		\textsf{i\_add\_sub}	& \textsf{i\_data\_a} 	& \textsf{i\_data\_b} & \textsf{o\_data\_fpu} \\
+		\hline
+		0						& $+ \infty$ & $+ \infty$ & $+ \infty$ \\
+		\hline
+		0						& $+ \infty$ & $- \infty$ & $NaN$ \\
+		\hline
+		0						& $- \infty$ & $+ \infty$ & $NaN$ \\
+		\hline
+		0						& $- \infty$ & $- \infty$ & $- \infty$ \\
+		\hline
+		1						& $+ \infty$ & $+ \infty$ & $- \infty$ \\
+		\hline
+		1 						& $+ \infty$ & $- \infty$ & $NaN$ \\
+		\hline
+		1 						& $- \infty$ & $+ \infty$ & $- \infty$ \\
+		\hline
+		1 						& $- \infty$ & $- \infty$ & $NaN$ \\
+		\hline
+		0						& $NaN$		& X			  & $NaN$ \\
+		\hline
+		0						& X			&$NaN$		  & $NaN$ \\
+		\hline
+		1						& $NaN$		& X			  & $NaN$ \\
+		\hline
+		1						& X			& $NaN$		  & $NaN$ \\
+		\hline
+\end{longtable}
+
+\subsection{Bộ căn chỉnh Exponent}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{./my-chapters/my-diagrams/EXP_adjust.png}
 \end{figure}
 
 \begin{figure}[H]
