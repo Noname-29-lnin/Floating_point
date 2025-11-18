@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.10)  18 NOV 2025 11:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.10)  18 NOV 2025 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1502,7 +1502,7 @@ Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported on input line 18.
 
-(main.aux (my-chapters/Design_FPU.aux))
+(main.aux (my-chapters/introduction.aux) (my-chapters/Design_FPU.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
@@ -1596,7 +1596,7 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count413
-<./my-chapters/my-images/01_logobachkhoatoi.png, id=18, 471.9231pt x 478.9092pt
+<./my-chapters/my-images/01_logobachkhoatoi.png, id=22, 471.9231pt x 478.9092pt
 >
 File: ./my-chapters/my-images/01_logobachkhoatoi.png Graphic file (type png)
 <use ./my-chapters/my-images/01_logobachkhoatoi.png>
@@ -1621,7 +1621,7 @@ Overfull \hbox (2.19716pt too wide) in paragraph at lines 48--48
 
 
 
-<./my-chapters/my-images/bia.jpg, id=20, 301.125pt x 414.95026pt>
+<./my-chapters/my-images/bia.jpg, id=24, 301.125pt x 414.95026pt>
 File: ./my-chapters/my-images/bia.jpg Graphic file (type jpg)
 <use ./my-chapters/my-images/bia.jpg>
 Package pdftex.def Info: ./my-chapters/my-images/bia.jpg  used on input line 49
@@ -1650,10 +1650,41 @@ s/my-images/bia.jpg> <./my-chapters/my-images/01_logobachkhoatoi.png>]
 
 
 [2]
+\openout2 = `./my-chapters/introduction.aux'.
+
+ (my-chapters/introduction.tex
+Overfull \hbox (7.76892pt too wide) in paragraph at lines 46--46
+ []|\T5/cmr/m/n/12 i_add_subb| 
+ []
+
+
+Overfull \hbox (4.76689pt too wide) in paragraph at lines 52--52
+ []|\T5/cmr/m/n/12 o_un_flaag| 
+ []
+
+)
+
+Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
+(babel)             Reported on input line 63.
+<./my-chapters/my-images/logo_DEE.png, id=46, 76.03406pt x 75.28125pt>
+File: ./my-chapters/my-images/logo_DEE.png Graphic file (type png)
+<use ./my-chapters/my-images/logo_DEE.png>
+Package pdftex.def Info: ./my-chapters/my-images/logo_DEE.png  used on input li
+ne 63.
+(pdftex.def)             Requested size: 9.676pt x 9.58012pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63 \include{./my-chapters/introduction.tex}
+                                              [1
+
+ <./my-chapters/my-images/logo_DEE.png>]
 \openout2 = `./my-chapters/Design_FPU.aux'.
 
  (my-chapters/Design_FPU.tex
-<./my-chapters/my-diagrams/BlockDiagram_Overview.png, id=39, 1373.13pt x 1446.4
+<./my-chapters/my-diagrams/BlockDiagram_Overview.png, id=56, 1373.13pt x 1446.4
 0375pt>
 File: ./my-chapters/my-diagrams/BlockDiagram_Overview.png Graphic file (type pn
 g)
@@ -1661,7 +1692,7 @@ g)
 Package pdftex.def Info: ./my-chapters/my-diagrams/BlockDiagram_Overview.png  u
 sed on input line 7.
 (pdftex.def)             Requested size: 435.32422pt x 458.53288pt.
-<./my-chapters/my-diagrams/Exponent_Block_1.png, id=40, 1405.25pt x 586.19pt>
+<./my-chapters/my-diagrams/Exponent_Block_1.png, id=57, 1405.25pt x 586.19pt>
 File: ./my-chapters/my-diagrams/Exponent_Block_1.png Graphic file (type png)
 <use ./my-chapters/my-diagrams/Exponent_Block_1.png>
 Package pdftex.def Info: ./my-chapters/my-diagrams/Exponent_Block_1.png  used o
@@ -1669,31 +1700,29 @@ n input line 15.
 (pdftex.def)             Requested size: 483.69687pt x 201.77065pt.
 
 
-Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported on input line 17.
-<./my-chapters/my-images/logo_DEE.png, id=41, 76.03406pt x 75.28125pt>
 File: ./my-chapters/my-images/logo_DEE.png Graphic file (type png)
 <use ./my-chapters/my-images/logo_DEE.png>
 Package pdftex.def Info: ./my-chapters/my-images/logo_DEE.png  used on input li
 ne 17.
 (pdftex.def)             Requested size: 9.676pt x 9.58012pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.17 
-      [1
+      [2
 
- <./my-chapters/my-diagrams/BlockDiagram_Overview.png> <./my-chapters/my-images
-/logo_DEE.png>]
-<./my-chapters/my-diagrams/man_swap.png, id=49, 2244.385pt x 1207.51125pt>
+
+
+ <./my-chapters/my-diagrams/BlockDiagram_Overview.png>]
+<./my-chapters/my-diagrams/man_swap.png, id=63, 2244.385pt x 1207.51125pt>
 File: ./my-chapters/my-diagrams/man_swap.png Graphic file (type png)
 <use ./my-chapters/my-diagrams/man_swap.png>
 Package pdftex.def Info: ./my-chapters/my-diagrams/man_swap.png  used on input 
 line 22.
 (pdftex.def)             Requested size: 483.69687pt x 260.23631pt.
-<./my-chapters/my-diagrams/EXP_adjust.png, id=50, 1009.7725pt x 569.12625pt>
+<./my-chapters/my-diagrams/EXP_adjust.png, id=64, 1009.7725pt x 569.12625pt>
 File: ./my-chapters/my-diagrams/EXP_adjust.png Graphic file (type png)
 <use ./my-chapters/my-diagrams/EXP_adjust.png>
 Package pdftex.def Info: ./my-chapters/my-diagrams/EXP_adjust.png  used on inpu
@@ -1706,21 +1735,15 @@ File: ./my-chapters/my-images/logo_DEE.png Graphic file (type png)
 Package pdftex.def Info: ./my-chapters/my-images/logo_DEE.png  used on input li
 ne 29.
 (pdftex.def)             Requested size: 9.676pt x 9.58012pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.29 
-      [2 <./my-chapters/my-diagrams/Exponent_Block_1.png> <./my-chapters/my-dia
-grams/man_swap.png>]
-<./my-chapters/my-diagrams/Final_sign.png, id=59, 410.53375pt x 457.71pt>
+[3 <./my-chapters/my-diagrams/Exponent_Block_1.png> <./my-chapters/my-diagrams/
+man_swap.png>]
+<./my-chapters/my-diagrams/Final_sign.png, id=74, 410.53375pt x 457.71pt>
 File: ./my-chapters/my-diagrams/Final_sign.png Graphic file (type png)
 <use ./my-chapters/my-diagrams/Final_sign.png>
 Package pdftex.def Info: ./my-chapters/my-diagrams/Final_sign.png  used on inpu
 t line 33.
 (pdftex.def)             Requested size: 241.84843pt x 269.6345pt.
-<./my-chapters/my-diagrams/ALU_MAN.png, id=60, 1040.88875pt x 712.6625pt>
+<./my-chapters/my-diagrams/ALU_MAN.png, id=75, 1040.88875pt x 712.6625pt>
 File: ./my-chapters/my-diagrams/ALU_MAN.png Graphic file (type png)
 <use ./my-chapters/my-diagrams/ALU_MAN.png>
 Package pdftex.def Info: ./my-chapters/my-diagrams/ALU_MAN.png  used on input l
@@ -1733,15 +1756,29 @@ File: ./my-chapters/my-images/logo_DEE.png Graphic file (type png)
 Package pdftex.def Info: ./my-chapters/my-images/logo_DEE.png  used on input li
 ne 40.
 (pdftex.def)             Requested size: 9.676pt x 9.58012pt.
-[3 <./my-chapters/my-diagrams/EXP_adjust.png> <./my-chapters/my-diagrams/Final_
+[4 <./my-chapters/my-diagrams/EXP_adjust.png> <./my-chapters/my-diagrams/Final_
 sign.png>]
-<./my-chapters/my-diagrams/Normalization.png, id=70, 1462.46375pt x 1094.0875pt
+<./my-chapters/my-diagrams/Normalization.png, id=85, 1462.46375pt x 1094.0875pt
 >
 File: ./my-chapters/my-diagrams/Normalization.png Graphic file (type png)
 <use ./my-chapters/my-diagrams/Normalization.png>
 Package pdftex.def Info: ./my-chapters/my-diagrams/Normalization.png  used on i
 nput line 43.
 (pdftex.def)             Requested size: 483.69687pt x 361.85132pt.
+
+
+File: ./my-chapters/my-images/logo_DEE.png Graphic file (type png)
+<use ./my-chapters/my-images/logo_DEE.png>
+Package pdftex.def Info: ./my-chapters/my-images/logo_DEE.png  used on input li
+ne 45.
+(pdftex.def)             Requested size: 9.676pt x 9.58012pt.
+[5 <./my-chapters/my-diagrams/ALU_MAN.png>]
+<./my-chapters/my-diagrams/LODP_24bit.png, id=94, 1521.685pt x 812.03375pt>
+File: ./my-chapters/my-diagrams/LODP_24bit.png Graphic file (type png)
+<use ./my-chapters/my-diagrams/LODP_24bit.png>
+Package pdftex.def Info: ./my-chapters/my-diagrams/LODP_24bit.png  used on inpu
+t line 48.
+(pdftex.def)             Requested size: 483.69687pt x 258.12141pt.
 )
 
 File: ./my-chapters/my-images/logo_DEE.png Graphic file (type png)
@@ -1749,42 +1786,38 @@ File: ./my-chapters/my-images/logo_DEE.png Graphic file (type png)
 Package pdftex.def Info: ./my-chapters/my-images/logo_DEE.png  used on input li
 ne 64.
 (pdftex.def)             Requested size: 9.676pt x 9.58012pt.
-[4 <./my-chapters/my-diagrams/ALU_MAN.png>]
-
-File: ./my-chapters/my-images/logo_DEE.png Graphic file (type png)
-<use ./my-chapters/my-images/logo_DEE.png>
-Package pdftex.def Info: ./my-chapters/my-images/logo_DEE.png  used on input li
-ne 64.
-(pdftex.def)             Requested size: 9.676pt x 9.58012pt.
-[5 <./my-chapters/my-diagrams/Normalization.png>]
-
+[6 <./my-chapters/my-diagrams/Normalization.png> <./my-chapters/my-diagrams/LOD
+P_24bit.png>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-runsystem(latexminted cleantemp  --timestamp 20251118111055 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20251118164758 FAD58DE7366495DB465
 0CFEFAC2FCD61)...disabled (restricted).
 
-(main.aux (my-chapters/Design_FPU.aux))
+(main.aux (my-chapters/introduction.aux) (my-chapters/Design_FPU.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DE7D226DF8C4AF4F132C89ACCA467513;710.
+(rerunfilecheck)             Checksum: 73A4ACB4EC60B8DCC3B0801683FD14D8;820.
  ) 
 Here is how much of TeX's memory you used:
- 32430 strings out of 468134
- 635836 string characters out of 5430740
+ 32545 strings out of 468134
+ 639189 string characters out of 5430740
  1150845 words of memory out of 5000000
- 60467 multiletter control sequences out of 15000+600000
- 646924 words of font info for 85 fonts, out of 8000000 for 9000
+ 60568 multiletter control sequences out of 15000+600000
+ 649213 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,14n,101p,1065b,508s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pf
-b><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb
-><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb>
-
-Output written on main.pdf (7 pages, 384720 bytes).
+ 99i,14n,101p,1065b,700s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\nguye\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1200.pk><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnb
+x10.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnb
+x12.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr
+10.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr1
+2.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17
+.pfb>
+Output written on main.pdf (8 pages, 462666 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 87 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -27,6 +27,8 @@ VM_CLASSES_FAST += \
 	Vtb_FPU_unit___024root__DepSet_h70cef955__0 \
 	Vtb_FPU_unit___024root__DepSet_h69e43522__0 \
 	Vtb_FPU_unit___024root__DepSet_h69e43522__1 \
+	Vtb_FPU_unit___024root__DepSet_h69e43522__2 \
+	Vtb_FPU_unit___024root__DepSet_h69e43522__3 \
 	Vtb_FPU_unit__main \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization

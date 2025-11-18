@@ -1,6 +1,7 @@
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {section}{\numberline {1}Design FPU}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Bộ tiền xử lý liên quan đến Exponent}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Bộ tiền xử lý liên quan đến Mantissa}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {1}Requirement}{1}{section.1}%
+\contentsline {section}{\numberline {2}Design FPU}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Bộ tiền xử lý liên quan đến Exponent}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Bộ tiền xử lý liên quan đến Mantissa}{3}{subsection.2.2}%

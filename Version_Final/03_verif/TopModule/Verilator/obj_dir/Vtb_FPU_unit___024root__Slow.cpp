@@ -18,7 +18,7 @@ Vtb_FPU_unit___024root::Vtb_FPU_unit___024root(Vtb_FPU_unit__Syms* symsp, const 
 }
 
 void Vtb_FPU_unit___024root::__Vconfigure(bool first) {
-    (void)first;  // Prevent unused variable warning
+    if (false && first) {}  // Prevent unused
 }
 
 Vtb_FPU_unit___024root::~Vtb_FPU_unit___024root() {

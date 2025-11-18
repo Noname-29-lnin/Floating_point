@@ -25,6 +25,23 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit VL_NOT_FINAL : public VerilatedM
     // PORTS
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
+    VL_IN8(&COMP_2bit__02Ei_data_a,1,0);
+    VL_IN8(&COMP_2bit__02Ei_data_b,1,0);
+    VL_OUT8(&o_less,0,0);
+    VL_OUT8(&o_equal,0,0);
+    VL_IN8(&i_data,3,0);
+    VL_OUT8(&o_pos_one,1,0);
+    VL_OUT8(&o_zero_flag,0,0);
+    VL_IN8(&CLA_24bit__02Ei_carry,0,0);
+    VL_OUT8(&CLA_24bit__02Eo_carry,0,0);
+    VL_IN8(&CKSA_28bit__02Ei_carry,0,0);
+    VL_OUT8(&CKSA_28bit__02Eo_carry,0,0);
+    VL_IN(&CLA_24bit__02Ei_data_a,23,0);
+    VL_IN(&CLA_24bit__02Ei_data_b,23,0);
+    VL_OUT(&CLA_24bit__02Eo_sum,23,0);
+    VL_IN(&CKSA_28bit__02Ei_data_a,27,0);
+    VL_IN(&CKSA_28bit__02Ei_data_b,27,0);
+    VL_OUT(&CKSA_28bit__02Eo_sum,27,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.
@@ -62,7 +79,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit VL_NOT_FINAL : public VerilatedM
     /// Returns time at next time slot. Aborts if !eventsPending()
     uint64_t nextTimeSlot();
     /// Trace signals in the model; called by application code
-    void trace(VerilatedTraceBaseC* tfp, int levels, int options = 0) { contextp()->trace(tfp, levels, options); }
+    void trace(VerilatedVcdC* tfp, int levels, int options = 0);
     /// Retrieve name of this model instance (as passed to constructor).
     const char* name() const;
 
@@ -77,9 +94,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_FPU_unit VL_NOT_FINAL : public VerilatedM
     /// Re-allocate necessary resources. Called after cloning.
     void atClone() const;
     std::unique_ptr<VerilatedTraceConfig> traceConfig() const override final;
-  private:
-    // Internal functions - trace registration
-    void traceBaseModel(VerilatedTraceBaseC* tfp, int levels, int options);
 };
 
 #endif  // guard

@@ -20,8 +20,8 @@ assign w_i_carry = i_fpu_op ? ~(i_sign_a ^ i_sign_b) : (i_sign_a ^ i_sign_b);
 assign w_n_man_b = ~(i_man_min);
 assign w_i_man_b = w_i_carry ? w_n_man_b : i_man_min;
 
-// CLA_28bit ALU_SUB_UNIT (
-CKSA_28bit ALU_SUB_UNIT (
+CLA_28bit ALU_SUB_UNIT (
+// CKSA_28bit ALU_SUB_UNIT (
     .i_carry        (w_i_carry),
     .i_data_a       (i_man_max),
     .i_data_b       (w_i_man_b),

@@ -10,12 +10,27 @@
 Vtb_FPU_unit::Vtb_FPU_unit(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new Vtb_FPU_unit__Syms(contextp(), _vcname__, this)}
+    , COMP_2bit__02Ei_data_a{vlSymsp->TOP.COMP_2bit__02Ei_data_a}
+    , COMP_2bit__02Ei_data_b{vlSymsp->TOP.COMP_2bit__02Ei_data_b}
+    , o_less{vlSymsp->TOP.o_less}
+    , o_equal{vlSymsp->TOP.o_equal}
+    , i_data{vlSymsp->TOP.i_data}
+    , o_pos_one{vlSymsp->TOP.o_pos_one}
+    , o_zero_flag{vlSymsp->TOP.o_zero_flag}
+    , CLA_24bit__02Ei_carry{vlSymsp->TOP.CLA_24bit__02Ei_carry}
+    , CLA_24bit__02Eo_carry{vlSymsp->TOP.CLA_24bit__02Eo_carry}
+    , CKSA_28bit__02Ei_carry{vlSymsp->TOP.CKSA_28bit__02Ei_carry}
+    , CKSA_28bit__02Eo_carry{vlSymsp->TOP.CKSA_28bit__02Eo_carry}
+    , CLA_24bit__02Ei_data_a{vlSymsp->TOP.CLA_24bit__02Ei_data_a}
+    , CLA_24bit__02Ei_data_b{vlSymsp->TOP.CLA_24bit__02Ei_data_b}
+    , CLA_24bit__02Eo_sum{vlSymsp->TOP.CLA_24bit__02Eo_sum}
+    , CKSA_28bit__02Ei_data_a{vlSymsp->TOP.CKSA_28bit__02Ei_data_a}
+    , CKSA_28bit__02Ei_data_b{vlSymsp->TOP.CKSA_28bit__02Ei_data_b}
+    , CKSA_28bit__02Eo_sum{vlSymsp->TOP.CKSA_28bit__02Eo_sum}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context
     contextp()->addModel(this);
-    contextp()->traceBaseModelCbAdd(
-        [this](VerilatedTraceBaseC* tfp, int levels, int options) { traceBaseModel(tfp, levels, options); });
 }
 
 Vtb_FPU_unit::Vtb_FPU_unit(const char* _vcname__)
@@ -130,14 +145,12 @@ VL_ATTR_COLD static void trace_init(void* voidSelf, VerilatedVcd* tracep, uint32
 
 VL_ATTR_COLD void Vtb_FPU_unit___024root__trace_register(Vtb_FPU_unit___024root* vlSelf, VerilatedVcd* tracep);
 
-VL_ATTR_COLD void Vtb_FPU_unit::traceBaseModel(VerilatedTraceBaseC* tfp, int levels, int options) {
-    (void)levels; (void)options;
-    VerilatedVcdC* const stfp = dynamic_cast<VerilatedVcdC*>(tfp);
-    if (VL_UNLIKELY(!stfp)) {
-        vl_fatal(__FILE__, __LINE__, __FILE__,"'Vtb_FPU_unit::trace()' called on non-VerilatedVcdC object;"
-            " use --trace-fst with VerilatedFst object, and --trace with VerilatedVcd object");
+VL_ATTR_COLD void Vtb_FPU_unit::trace(VerilatedVcdC* tfp, int levels, int options) {
+    if (tfp->isOpen()) {
+        vl_fatal(__FILE__, __LINE__, __FILE__,"'Vtb_FPU_unit::trace()' shall not be called after 'VerilatedVcdC::open()'.");
     }
-    stfp->spTrace()->addModel(this);
-    stfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP));
-    Vtb_FPU_unit___024root__trace_register(&(vlSymsp->TOP), stfp->spTrace());
+    if (false && levels && options) {}  // Prevent unused
+    tfp->spTrace()->addModel(this);
+    tfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP));
+    Vtb_FPU_unit___024root__trace_register(&(vlSymsp->TOP), tfp->spTrace());
 }

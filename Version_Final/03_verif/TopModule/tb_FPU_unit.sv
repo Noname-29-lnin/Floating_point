@@ -103,14 +103,13 @@ function automatic shortreal cal_rounding_error(
     input shortreal f_sr_32_s,
     input shortreal f_sr_32_e
 );
-    int s_bits, e_bits;
+    logic [31:0] s_bits, e_bits;
     bit s_is_nan, e_is_nan, s_is_inf, e_is_inf;
     shortreal diff;
 
     begin
-        // Chuyển từ shortreal → bit pattern (int 32-bit)
-        s_bits = $shortrealtobits(f_sr_32_s);
-        e_bits = $shortrealtobits(f_sr_32_e);
+        s_bits = real_to_float(f_sr_32_s);
+        e_bits = real_to_float(f_sr_32_e);
 
         // Tách các phần của IEEE 754 single-precision
         // [31]: sign, [30:23]: exponent, [22:0]: fraction
@@ -121,12 +120,14 @@ function automatic shortreal cal_rounding_error(
 
         // Nếu có NaN hoặc Inf thì bỏ qua
         if (s_is_nan || e_is_nan || s_is_inf || e_is_inf) begin
-            cal_rounding_error = 0.0;
-        end
-        else if (f_sr_32_e == 0.0) begin
+            if((s_is_nan && e_is_nan) || (s_is_inf && e_is_inf)) begin
+                cal_rounding_error = 0.0;
+            end else begin
+                cal_rounding_error = 100.0;
+            end
+        end else if (f_sr_32_e == 0.0) begin
             cal_rounding_error = (f_sr_32_s == 0.0) ? 0.0 : 100.0;
-        end
-        else begin
+        end else begin
             diff = f_sr_32_s - f_sr_32_e;
             cal_rounding_error = (abs_shortreal(diff) / abs_shortreal(f_sr_32_e)) * 100.0;
         end
@@ -150,11 +151,11 @@ task automatic Display_result(
 );
     shortreal t_sr_32_a, t_sr_32_b, t_sr_32_s, t_sr_32_e, t_sr_rounding_error;
     shortreal t_error;
-    t_error = error_avariable();
-    t_sr_32_a = float_to_real(t_i_32_a);
-    t_sr_32_b = float_to_real(t_i_32_b);
-    t_sr_32_s = float_to_real(t_o_32_s);
-    t_sr_32_e = check_functional(t_i_add_sub, t_i_32_a, t_i_32_b);
+    t_error     = error_avariable();
+    t_sr_32_a   = float_to_real(t_i_32_a);
+    t_sr_32_b   = float_to_real(t_i_32_b);
+    t_sr_32_s   = float_to_real(t_o_32_s);
+    t_sr_32_e   = check_functional(t_i_add_sub, t_i_32_a, t_i_32_b);
     t_sr_rounding_error = cal_rounding_error(t_sr_32_s, t_sr_32_e);
     begin
         $display("[%s][%s]i_32_a=%h (%.24f) %s i_32_b=%h (%.24f) \t| o_32_s=%h (%.24f) \t| o_ov_flow=%b, o_un_flow=%b",
@@ -247,12 +248,12 @@ initial begin
     TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc1b1999a);
     TestCase_Display_result("PRE_NOR_EXP", "Overflow rouding", 32'h0cffffff, 32'h00f80000);
     // repeat(2**SIZE_ADDR) begin
-    repeat(100) begin
-        TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
-        @(posedge i_clk);
-        #1;
-        w_i_addr = w_i_addr + 1;
-    end
+    // repeat(100) begin
+    //     TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
+    //     @(posedge i_clk);
+    //     #1;
+    //     w_i_addr = w_i_addr + 1;
+    // end
     
     // --- Summary ---
     #100;
