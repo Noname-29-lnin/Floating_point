@@ -2554,157 +2554,124 @@ i_data[12] => i_data[12].IN1
 i_data[13] => i_data[13].IN1
 i_data[14] => i_data[14].IN1
 i_data[15] => i_data[15].IN1
-o_pos_one[0] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[2] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[3] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+o_pos_one[0] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+o_pos_one[1] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+o_pos_one[2] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+o_pos_one[3] <= LOPD_8bit:LOPD_8bit_unit_1.o_zero_flag
 o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_0
-i_data[0] => i_data[0].IN1
-i_data[1] => i_data[1].IN1
-i_data[2] => i_data[2].IN1
-i_data[3] => i_data[3].IN1
-i_data[4] => i_data[4].IN1
-i_data[5] => i_data[5].IN1
-i_data[6] => i_data[6].IN1
-i_data[7] => i_data[7].IN1
-o_pos_one[0] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[2] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_0|LOPD_4bit:LOPD_4bit_unit_0
-i_data[0] => o_pos_one.IN0
-i_data[0] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN0
-i_data[2] => o_zero_flag.IN0
-i_data[2] => o_pos_one.IN0
-i_data[2] => o_pos_one.IN1
+i_data[0] => w_o_pos_one.IN1
+i_data[0] => w_o_pos_one.IN1
+i_data[0] => w_o_pos_one.IN1
+i_data[0] => o_zero_flag.IN1
+i_data[1] => w_o_pos_one.IN1
+i_data[1] => w_o_pos_one.IN1
+i_data[1] => o_zero_flag.IN1
+i_data[1] => w_o_pos_one.IN1
+i_data[2] => w_o_pos_one.IN1
+i_data[2] => w_o_pos_one.IN1
+i_data[2] => o_zero_flag.IN1
+i_data[2] => w_o_pos_one.IN1
+i_data[3] => w_o_pos_one.IN1
 i_data[3] => o_zero_flag.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-o_pos_one[0] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_0|LOPD_4bit:LOPD_4bit_unit_1
-i_data[0] => o_pos_one.IN0
-i_data[0] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN0
-i_data[2] => o_zero_flag.IN0
-i_data[2] => o_pos_one.IN0
-i_data[2] => o_pos_one.IN1
-i_data[3] => o_zero_flag.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-o_pos_one[0] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+i_data[3] => w_o_pos_one.IN1
+i_data[3] => w_o_pos_one.IN1
+i_data[4] => w_o_pos_one.IN1
+i_data[4] => w_o_pos_one.IN1
+i_data[4] => o_zero_flag.IN1
+i_data[4] => w_o_pos_one.IN1
+i_data[5] => w_o_pos_one.IN1
+i_data[5] => o_zero_flag.IN1
+i_data[5] => w_o_pos_one.IN1
+i_data[5] => w_o_pos_one.IN0
+i_data[6] => w_o_pos_one.IN0
+i_data[6] => o_zero_flag.IN0
+i_data[6] => w_o_pos_one.IN0
+i_data[7] => o_zero_flag.IN1
+i_data[7] => w_o_pos_one.IN1
+i_data[7] => w_o_pos_one.IN1
+i_data[7] => w_o_pos_one.IN1
+o_pos_one[0] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+o_pos_one[1] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+o_pos_one[2] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
 o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_1
-i_data[0] => i_data[0].IN1
-i_data[1] => i_data[1].IN1
-i_data[2] => i_data[2].IN1
-i_data[3] => i_data[3].IN1
-i_data[4] => i_data[4].IN1
-i_data[5] => i_data[5].IN1
-i_data[6] => i_data[6].IN1
-i_data[7] => i_data[7].IN1
-o_pos_one[0] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[2] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_1|LOPD_4bit:LOPD_4bit_unit_0
-i_data[0] => o_pos_one.IN0
-i_data[0] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN0
-i_data[2] => o_zero_flag.IN0
-i_data[2] => o_pos_one.IN0
-i_data[2] => o_pos_one.IN1
+i_data[0] => w_o_pos_one.IN1
+i_data[0] => w_o_pos_one.IN1
+i_data[0] => w_o_pos_one.IN1
+i_data[0] => o_zero_flag.IN1
+i_data[1] => w_o_pos_one.IN1
+i_data[1] => w_o_pos_one.IN1
+i_data[1] => o_zero_flag.IN1
+i_data[1] => w_o_pos_one.IN1
+i_data[2] => w_o_pos_one.IN1
+i_data[2] => w_o_pos_one.IN1
+i_data[2] => o_zero_flag.IN1
+i_data[2] => w_o_pos_one.IN1
+i_data[3] => w_o_pos_one.IN1
 i_data[3] => o_zero_flag.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-o_pos_one[0] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_1|LOPD_4bit:LOPD_4bit_unit_1
-i_data[0] => o_pos_one.IN0
-i_data[0] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN0
-i_data[2] => o_zero_flag.IN0
-i_data[2] => o_pos_one.IN0
-i_data[2] => o_pos_one.IN1
-i_data[3] => o_zero_flag.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-o_pos_one[0] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+i_data[3] => w_o_pos_one.IN1
+i_data[3] => w_o_pos_one.IN1
+i_data[4] => w_o_pos_one.IN1
+i_data[4] => w_o_pos_one.IN1
+i_data[4] => o_zero_flag.IN1
+i_data[4] => w_o_pos_one.IN1
+i_data[5] => w_o_pos_one.IN1
+i_data[5] => o_zero_flag.IN1
+i_data[5] => w_o_pos_one.IN1
+i_data[5] => w_o_pos_one.IN0
+i_data[6] => w_o_pos_one.IN0
+i_data[6] => o_zero_flag.IN0
+i_data[6] => w_o_pos_one.IN0
+i_data[7] => o_zero_flag.IN1
+i_data[7] => w_o_pos_one.IN1
+i_data[7] => w_o_pos_one.IN1
+i_data[7] => w_o_pos_one.IN1
+o_pos_one[0] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+o_pos_one[1] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+o_pos_one[2] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
 o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_8bit:LOPD_8bit_UNIT_LSB
-i_data[0] => i_data[0].IN1
-i_data[1] => i_data[1].IN1
-i_data[2] => i_data[2].IN1
-i_data[3] => i_data[3].IN1
-i_data[4] => i_data[4].IN1
-i_data[5] => i_data[5].IN1
-i_data[6] => i_data[6].IN1
-i_data[7] => i_data[7].IN1
-o_pos_one[0] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[2] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_8bit:LOPD_8bit_UNIT_LSB|LOPD_4bit:LOPD_4bit_unit_0
-i_data[0] => o_pos_one.IN0
-i_data[0] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN0
-i_data[2] => o_zero_flag.IN0
-i_data[2] => o_pos_one.IN0
-i_data[2] => o_pos_one.IN1
+i_data[0] => w_o_pos_one.IN1
+i_data[0] => w_o_pos_one.IN1
+i_data[0] => w_o_pos_one.IN1
+i_data[0] => o_zero_flag.IN1
+i_data[1] => w_o_pos_one.IN1
+i_data[1] => w_o_pos_one.IN1
+i_data[1] => o_zero_flag.IN1
+i_data[1] => w_o_pos_one.IN1
+i_data[2] => w_o_pos_one.IN1
+i_data[2] => w_o_pos_one.IN1
+i_data[2] => o_zero_flag.IN1
+i_data[2] => w_o_pos_one.IN1
+i_data[3] => w_o_pos_one.IN1
 i_data[3] => o_zero_flag.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-o_pos_one[0] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_8bit:LOPD_8bit_UNIT_LSB|LOPD_4bit:LOPD_4bit_unit_1
-i_data[0] => o_pos_one.IN0
-i_data[0] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN1
-i_data[1] => o_pos_one.IN0
-i_data[2] => o_zero_flag.IN0
-i_data[2] => o_pos_one.IN0
-i_data[2] => o_pos_one.IN1
-i_data[3] => o_zero_flag.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-i_data[3] => o_pos_one.IN1
-o_pos_one[0] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
-o_pos_one[1] <= o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+i_data[3] => w_o_pos_one.IN1
+i_data[3] => w_o_pos_one.IN1
+i_data[4] => w_o_pos_one.IN1
+i_data[4] => w_o_pos_one.IN1
+i_data[4] => o_zero_flag.IN1
+i_data[4] => w_o_pos_one.IN1
+i_data[5] => w_o_pos_one.IN1
+i_data[5] => o_zero_flag.IN1
+i_data[5] => w_o_pos_one.IN1
+i_data[5] => w_o_pos_one.IN0
+i_data[6] => w_o_pos_one.IN0
+i_data[6] => o_zero_flag.IN0
+i_data[6] => w_o_pos_one.IN0
+i_data[7] => o_zero_flag.IN1
+i_data[7] => w_o_pos_one.IN1
+i_data[7] => w_o_pos_one.IN1
+i_data[7] => w_o_pos_one.IN1
+o_pos_one[0] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+o_pos_one[1] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
+o_pos_one[2] <= w_o_pos_one.DB_MAX_OUTPUT_PORT_TYPE
 o_zero_flag <= o_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
 
 
