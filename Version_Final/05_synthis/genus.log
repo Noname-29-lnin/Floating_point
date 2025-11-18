@@ -1,0 +1,114 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: GENUS15.20 - 15.20-p004_1, built Sat Nov 14 2015
+Options: 
+Date:    Tue Nov 18 10:23:59 2025
+Host:    centos7 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (2*Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz 8192KB)
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+Sourcing GUI preferences file /home/admin/.cadence/genus/gui.tcl...
+Finished loading tool scripts (4 seconds elapsed).
+
+WARNING: This version of the tool is 3657 days old.
+genus@root:> read_hdl -f flist.f 
+    input logic [NUM_OP-1:0]    i_add_sub       ,
+                                        |
+Error   : SystemVerilog feature. [VLOGPT-9] [read_hdl]
+        : Array port in file './../02_rlt/FPU_unit.sv' on line 4, column 41.
+        : The design must be read in with 'read_hdl -sv'.
+    input logic [NUM_OP-1:0]    i_add_sub       ,
+                                        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ')', found '<identifier>' in file './../02_rlt/FPU_unit.sv' on line 4, column 41.
+        : Invalid Verilog syntax is parsed, or unsupported Verilog syntax is encountered.
+    input logic [NUM_OP-1:0]    i_add_sub       ,
+                                        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file './../02_rlt/FPU_unit.sv' on line 4, column 41.
+logic w_sign_a, w_sign_b;
+              |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Bad declaration using undeclared type 'logic' in file './../02_rlt/FPU_unit.sv' on line 16, column 15.
+logic [7:0] w_exponent_a, w_exponent_b;
+                       |
+Error   : Instance name required for module instance. [VLOGPT-58] [read_hdl]
+        : in file './../02_rlt/FPU_unit.sv' on line 17, column 24.
+        : Illegal Verilog syntax is encountered.
+logic [7:0] w_exponent_a, w_exponent_b;
+                       |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Bad declaration using undeclared type 'logic' in file './../02_rlt/FPU_unit.sv' on line 17, column 24.
+logic [23:0] w_mantissa_a, w_mantissa_b;
+                        |
+Error   : Instance name required for module instance. [VLOGPT-58] [read_hdl]
+        : in file './../02_rlt/FPU_unit.sv' on line 18, column 25.
+logic [23:0] w_mantissa_a, w_mantissa_b;
+                        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Bad declaration using undeclared type 'logic' in file './../02_rlt/FPU_unit.sv' on line 18, column 25.
+assign w_sign_a = i_32_a[31];
+                  |
+Error   : Reference to undeclared variable. [VLOGPT-20] [read_hdl]
+        : Symbol 'i_32_a' in file './../02_rlt/FPU_unit.sv' on line 19, column 19.
+        : A variable must be declared before it can be referenced.
+assign w_sign_b = i_32_b[31];
+                  |
+Error   : Reference to undeclared variable. [VLOGPT-20] [read_hdl]
+        : Symbol 'i_32_b' in file './../02_rlt/FPU_unit.sv' on line 20, column 19.
+assign w_exponent_a = i_32_a[30:23];
+                      |
+Error   : Reference to undeclared variable. [VLOGPT-20] [read_hdl]
+        : Symbol 'i_32_a' in file './../02_rlt/FPU_unit.sv' on line 21, column 23.
+assign w_exponent_b = i_32_b[30:23]; 
+                      |
+Error   : Reference to undeclared variable. [VLOGPT-20] [read_hdl]
+        : Symbol 'i_32_b' in file './../02_rlt/FPU_unit.sv' on line 22, column 23.
+assign w_mantissa_a = {1'b1, i_32_a[22:0]};
+                             |
+Error   : Reference to undeclared variable. [VLOGPT-20] [read_hdl]
+        : Symbol 'i_32_a' in file './../02_rlt/FPU_unit.sv' on line 23, column 30.
+assign w_mantissa_b = {1'b1, i_32_b[22:0]};
+                             |
+Error   : Reference to undeclared variable. [VLOGPT-20] [read_hdl]
+        : Symbol 'i_32_b' in file './../02_rlt/FPU_unit.sv' on line 24, column 30.
+logic w_sign_result;
+                   |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Bad declaration using undeclared type 'logic' in file './../02_rlt/FPU_unit.sv' on line 26, column 20.
+logic [7:0] w_exponent_result;
+                            |
+Error   : Instance name required for module instance. [VLOGPT-58] [read_hdl]
+        : in file './../02_rlt/FPU_unit.sv' on line 27, column 29.
+logic [7:0] w_exponent_result;
+                            |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Bad declaration using undeclared type 'logic' in file './../02_rlt/FPU_unit.sv' on line 27, column 29.
+logic [23:0] w_mantissa_result;
+                             |
+Error   : Instance name required for module instance. [VLOGPT-58] [read_hdl]
+        : in file './../02_rlt/FPU_unit.sv' on line 28, column 30.
+logic [23:0] w_mantissa_result;
+                             |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Bad declaration using undeclared type 'logic' in file './../02_rlt/FPU_unit.sv' on line 28, column 30.
+logic w_EXPSWAP_compare;
+                       |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Bad declaration using undeclared type 'logic' in file './../02_rlt/FPU_unit.sv' on line 33, column 24.
+1
+genus@root:> read_hdl-sv  -f flist.f 
+invalid command name "read_hdl-sv"
+genus@root:> read_hdl -sv -f flist.f 
+genus@root:> set_db design_top FPU_unit
+Error   : <Start> word is not recognized. [TUI-182] [set_db]
+        : 'design_top' is not a recognized object/attribute. Type 'help root' to get a list of all supported objects and attributes.
+        : Check <Start> object/attribute.
+1
+genus@root:> exit
+Normal exit.

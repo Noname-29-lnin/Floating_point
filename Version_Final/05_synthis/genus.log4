@@ -1,0 +1,34 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: GENUS15.20 - 15.20-p004_1, built Sat Nov 14 2015
+Options: -files genus_shell.tcl 
+Date:    Tue Nov 18 11:35:21 2025
+Host:    centos7 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (2*Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz 8192KB)
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+Sourcing GUI preferences file /home/admin/.cadence/genus/gui.tcl...
+Finished loading tool scripts (5 seconds elapsed).
+
+Sourcing genus_shell.tcl ...
+Error   : File error. [FILE-100] [set_db]
+        : Cannot open file '/home/noname/Documents/project_tiny/PDKs/skywater130/timing/sky130_fd_sc_hd__ff_100C_1v65.lib'. File not found.
+        : Make sure that the file is a readable regular file and has the specified name.
+Error   : A library file does not exist. [LBR-68] [set_db]
+        : File '/home/noname/Documents/project_tiny/PDKs/skywater130/timing/sky130_fd_sc_hd__ff_100C_1v65.lib ' could not be found. File '<none>' was the last file that was successfully read in.
+        : Make sure that the library file exists or check for a typo in the file name.
+Error   : The data value for this attribute is invalid. [TUI-24] [set_db]
+        : The value '/home/noname/Documents/project_tiny/PDKs/skywater130/timing/sky130_fd_sc_hd__ff_100C_1v65.lib' cannot be set for attribute 'library'.
+        : To see the usage/description for this attribute, type '::legacy::set_attribute -h <attr_name> *'.
+errorInfo: _setdb_by_c library /home/noname/Documents/project_tiny/PDKs/skywater130/timing/sky130_fd_sc_hd__ff_100C_1v65.lib
+errorInfo: 1
+    while executing
+"set_db library [list /home/noname/Documents/project_tiny/PDKs/skywater130/timing/sky130_fd_sc_hd__ff_100C_1v65.lib ]"
+1
+Encountered problems processing file: genus_shell.tcl
+WARNING: This version of the tool is 3657 days old.
