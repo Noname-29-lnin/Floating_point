@@ -1,0 +1,163 @@
+m255
+K4
+z2
+!s12c _opt1
+Z0 !s99 nomlopt
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/Questasim
+T_opt1
+!s110 1762178188
+VEIa^3Xek7o8oKTG`4gEX31
+04 13 4 work tb_LOPD_16bit fast 0
+=1-000ae431a4f1-6908b48b-eb5d9-168f9
+Z2 !s102 +cover=bcesft
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U8 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work ./../SubModule/LOPD_UNIT/LOPD_16BIT/QuestaSim/work +cover=bcesft
+Z3 tCvgOpt 0
+n@_opt1
+OL;O;2024.3;79
+vLOPD_16bit
+Z4 2/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/LOPD_UNIT/LOPD_16BIT/tb_LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1762178187
+!i10b 1
+!s100 =B`0jke^QJI_PGh^dfS053
+IeK:[mI[DUamfnTgW:bV9`0
+S1
+R1
+w1762177867
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv
+!i122 1
+Z7 L0 1 39
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z10 !s108 1762178187.000000
+Z11 !s107 /home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_16bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv|/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/LOPD_UNIT/LOPD_16BIT/tb_LOPD_16bit.sv|
+Z12 !s90 +cover=bcesft|-f|./../SubModule/LOPD_UNIT/LOPD_16BIT/flist.f|
+!i113 0
+R2
+Z13 o+cover=bcesft -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@l@o@p@d_16bit
+vLOPD_4bit
+R4
+R5
+R6
+!i10b 1
+!s100 Idi^z5a[AUI]`TTXnkA8S0
+I5m_6@H>oYClL;M`J@0WHU1
+S1
+R1
+w1762176641
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_4bit.sv
+!i122 1
+L0 1 19
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R2
+R13
+R3
+n@l@o@p@d_4bit
+vLOPD_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 ZVU8M>5UaMX0TGkL=ASX90
+ILPzeACZ2PI17;0M=nbg^:0
+S1
+R1
+w1762177803
+8/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv
+F/home/noname/Documents/project_tiny/Floating_point/Verision1/02_rlt/LOPD_8bit.sv
+!i122 1
+R7
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R2
+R13
+R3
+n@l@o@p@d_8bit
+vtb_LOPD_16bit
+R4
+R5
+R6
+!i10b 1
+!s100 UNaa][idl[lNU5U:3V7U<3
+IlXA^BNhfUHS<RX?CPi6aD3
+S1
+R1
+w1762178182
+Z14 8/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/LOPD_UNIT/LOPD_16BIT/tb_LOPD_16bit.sv
+Z15 F/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/LOPD_UNIT/LOPD_16BIT/tb_LOPD_16bit.sv
+!i122 1
+Z16 L0 3 106
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R2
+R13
+R3
+ntb_@l@o@p@d_16bit
+vtb_LOPD_8bit
+R4
+R5
+!s110 1762178059
+!i10b 1
+!s100 jd4mWZo^=OK7jkMTDWl3L0
+I?KD5[6ZeGb`g<T8JHGk9k3
+S1
+R1
+w1762177938
+R14
+R15
+!i122 0
+R16
+R8
+R9
+r1
+!s85 0
+31
+!s108 1762178059.000000
+R11
+R12
+!i113 0
+R2
+R13
+R3
+ntb_@l@o@p@d_8bit

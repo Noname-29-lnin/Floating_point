@@ -1,6 +1,6 @@
-# vsim -coverage -lib ./../Topmodule/QuestaSim/work -l ./../Topmodule/QuestaSim/tb_FPU_unit.log -voptargs="+cover=bcesft" -assertdebug -c tb_FPU_unit -wlf ./../Topmodule/QuestaSim/tb_FPU_unit.wlf -do "coverage save -onexit ./../Topmodule/QuestaSim/tb_FPU_unit.ucdb; cd ./../Topmodule/QuestaSim; log -r /*; run -all;" 
-# Start time: 18:01:53 on Nov 20,2025
-# ** Note: (vsim-3812) Design is being optimized...
+# vsim -lib ./../Topmodule/QuestaSim/work -debugDB -l ./../Topmodule/QuestaSim/tb_FPU_unit.log -voptargs="+acc" -assertdebug -c tb_FPU_unit -wlf ./../Topmodule/QuestaSim/tb_FPU_unit.wlf -do "cd ./../Topmodule/QuestaSim; log -r /*; run -all;" 
+# Start time: 22:19:07 on Nov 20,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt4
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2024.3 linux_x86_64 Sep 10 2024
 # //
@@ -18,12 +18,45 @@
 # Loading sv_std.std
 # Loading work.tb_FPU_unit_sv_unit(fast)
 # Loading work.tb_FPU_unit(fast)
-# coverage save -onexit ./../Topmodule/QuestaSim/tb_FPU_unit.ucdb
-#  cd ./../Topmodule/QuestaSim
+# Loading work.FPU_unit(fast)
+# Loading work.EXP_swap(fast)
+# Loading work.COMP_8bit(fast)
+# Loading work.COMP_4bit(fast)
+# Loading work.EXP_sub(fast)
+# Loading work.CLA_8bit(fast)
+# Loading work.CLA_4bit(fast)
+# Loading work.MAN_swap(fast)
+# Loading work.SHF_right_28bit(fast)
+# Loading work.COMP_28bit(fast)
+# Loading work.MAN_swap(fast__1)
+# Loading work.SIGN_unit(fast)
+# Loading work.MAN_ALU(fast)
+# Loading work.CLA_28bit(fast)
+# Loading work.LOPD_24bit(fast)
+# Loading work.LOPD_16bit(fast)
+# Loading work.LOPD_8bit(fast)
+# Loading work.EXP_adjust(fast)
+# Loading work.NORMALIZATION_unit(fast)
+# Loading work.SHF_left_28bit(fast)
+# Loading work.ROUNDING_unit(fast)
+# Loading work.RND_add(fast)
+# Loading work.EXP_rounding(fast)
+# Loading work.PSC_unit(fast)
+# Loading work.Mux_4_to_1(fast)
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$shm_open' is not defined.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_FPU_unit File: ./../Topmodule/tb_FPU_unit.sv Line: 63
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$shm_probe' is not defined.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_FPU_unit File: ./../Topmodule/tb_FPU_unit.sv Line: 64
+# ** Note: (vsim-8716) Reusing existing debug database ./../Topmodule/QuestaSim/tb_FPU_unit.dbg.
+# cd ./../Topmodule/QuestaSim
 # Cannot change directory while a simulation is in progress.
 # Use the "quit -sim" command to unload the design first.
 #  log -r /*
 #  run -all
+# ** Error (suppressible): (vsim-12023) Cannot execute undefined system task/function '$shm_open'
+#    Time: 0 ps  Iteration: 0  Process: /tb_FPU_unit/#INITIAL#28,62 File: ./../Topmodule/tb_FPU_unit.sv Line: 63
+# ** Error (suppressible): (vsim-12023) Cannot execute undefined system task/function '$shm_probe'
+#    Time: 0 ps  Iteration: 0  Process: /tb_FPU_unit/#INITIAL#28,62 File: ./../Topmodule/tb_FPU_unit.sv Line: 64
 # ==========[ (0.0 & 0.0) ]==========
 # [ZERO][ADD]i_32_a=00000000 (0.000000000000000000000000) + i_32_b=00000000 (0.000000000000000000000000) 	| o_32_s=00000000 (0.000000000000000000000000) 	| o_ov_flow=1, o_un_flow=1
 # => PASS: expect=0.000000000000000000000000 (00000000), dut=0.000000000000000000000000 (00000000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
@@ -18701,6 +18734,5 @@
 # 
 # ** Note: $finish    : ./../Topmodule/tb_FPU_unit.sv(234)
 #    Time: 207371 ns  Iteration: 0  Instance: /tb_FPU_unit
-# Saving coverage database on exit...
-# End time: 18:02:03 on Nov 20,2025, Elapsed time: 0:00:10
-# Errors: 0, Warnings: 0
+# End time: 22:19:17 on Nov 20,2025, Elapsed time: 0:00:10
+# Errors: 2, Warnings: 2

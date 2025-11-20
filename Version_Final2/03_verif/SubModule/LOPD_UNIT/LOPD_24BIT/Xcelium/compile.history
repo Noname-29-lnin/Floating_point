@@ -1,0 +1,1 @@
+s1(20Nov2025:10:31:56):  xrun +xm64bit -sv -f ./../SubModule/LOPD_UNIT/LOPD_24BIT/flist.f -top tb_LOPD_24bit -access +rwc -clean -log ./../SubModule/LOPD_UNIT/LOPD_24BIT/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 

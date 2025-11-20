@@ -1,0 +1,100 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb_COMP_8bit
+=== Design Unit: work.tb_COMP_8bit
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         2         2    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /tb_COMP_8bit
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/COMP_UNIT/COMP_8BIT/tb_COMP_8bit.sv
+------------------------------------IF Branch------------------------------------
+    74                                       100     Count coming in to IF
+    74              1                        100                              (w_expect == o_less) ? "PASS" : "FAIL",
+    74              2                    ***0***                              (w_expect == o_less) ? "PASS" : "FAIL",
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    77                                       100     Count coming in to IF
+    77              1                        100                     if (w_expect == o_less) test_pass++;
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         0         2     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /tb_COMP_8bit --
+
+  File /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/COMP_UNIT/COMP_8BIT/tb_COMP_8bit.sv
+----------------Focused Condition View-------------------
+Line       74 Item    1  (w_expect == o_less)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (w_expect == o_less)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:    ***0***  (w_expect == o_less)_0  -                             
+  Row   2:          1  (w_expect == o_less)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       77 Item    1  (w_expect == o_less)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (w_expect == o_less)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:    ***0***  (w_expect == o_less)_0  -                             
+  Row   2:          1  (w_expect == o_less)_1  -                             
+
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        166        64       102    38.55%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /tb_COMP_8bit --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                             i_clk           1           1      100.00 
+                                     i_data_a[0-7]           1           1      100.00 
+                                     i_data_b[0-7]           1           1      100.00 
+                                            o_less           1           1      100.00 
+                                   test_count[0-5]           1           1      100.00 
+                                     test_count[6]           0           1       50.00 
+                                  test_count[7-31]           0           0        0.00 
+                                    test_pass[0-5]           1           1      100.00 
+                                      test_pass[6]           0           1       50.00 
+                                   test_pass[7-31]           0           0        0.00 
+                                          w_expect           1           1      100.00 
+
+Total Node Count     =         83 
+Toggled Node Count   =         31 
+Untoggled Node Count =         52 
+
+Toggle Coverage      =      38.55% (64 of 166 bins)
+
+
+Total Coverage By Instance (filtered view): 29.51%
+

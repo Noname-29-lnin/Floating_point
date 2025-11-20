@@ -1,0 +1,198 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 d/home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/Questasim
+T_opt
+!s110 1762184376
+VL2^?ZFU_;O5EN8]Pi:_FG1
+Z4 04 13 4 work tb_LOPD_24bit fast 0
+=1-000ae431a4f1-6908ccb8-9e5a1-1cc9c
+R1
+Z5 !s12f OEM100
+Z6 !s12b OEM100
+!s124 OEM10U12 
+Z7 !s135 nogc
+Z8 o-quiet -auto_acc_if_foreign -work ./../SubModule/LOPD_UNIT/LOPD_24BIT/QuestaSim/work -debugdb +acc
+Z9 tCvgOpt 0
+n@_opt
+Z10 OL;O;2024.3;79
+R3
+T_opt1
+Z11 !s110 1763652258
+VAlNGQZle<R10=G0RRNMGA1
+R4
+=1-000ae431a4f1-691f32a2-a1ea6-1a3cc
+R1
+R5
+R6
+!s124 OEM10U6 
+R7
+R8
+R9
+n@_opt1
+R10
+vLOPD_16bit
+Z12 2./../SubModule/LOPD_UNIT/LOPD_24BIT/tb_LOPD_24bit.sv|./../../02_rtl/LOPD_4bit.sv|./../../02_rtl/LOPD_8bit.sv|./../../02_rtl/LOPD_16bit.sv|./../../02_rtl/LOPD_24bit.sv
+Z13 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R11
+!i10b 1
+!s100 PGg=8U5dl^SLXAGJWOajF1
+I7>K3c[iBWA`zLP@boEAW92
+S1
+Z14 d/home/noname/Documents/project_tiny/Floating_point/Version_Final2/03_verif/Questasim
+Z15 w1763476176
+8./../../02_rtl/LOPD_16bit.sv
+F./../../02_rtl/LOPD_16bit.sv
+!i122 30
+L0 1 40
+Z16 VDg1SIo80bB@j0V0VzS_@n1
+Z17 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z18 !s108 1763652258.000000
+Z19 !s107 ./../../02_rtl/LOPD_24bit.sv|./../../02_rtl/LOPD_16bit.sv|./../../02_rtl/LOPD_8bit.sv|./../../02_rtl/LOPD_4bit.sv|./../SubModule/LOPD_UNIT/LOPD_24BIT/tb_LOPD_24bit.sv|
+Z20 !s90 -f|./../SubModule/LOPD_UNIT/LOPD_24BIT/flist.f|
+!i113 0
+Z21 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
+n@l@o@p@d_16bit
+vLOPD_24bit
+R12
+R13
+R11
+!i10b 1
+!s100 b=2g^Fl2ec^@S?gbRkiRQ2
+Iao4Yjg4jV19a8YA7b`dco2
+S1
+R14
+Z22 w1763383287
+8./../../02_rtl/LOPD_24bit.sv
+F./../../02_rtl/LOPD_24bit.sv
+!i122 30
+L0 1 39
+R16
+R17
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R21
+R9
+n@l@o@p@d_24bit
+vLOPD_4bit
+R12
+R13
+R11
+!i10b 1
+!s100 Idi^z5a[AUI]`TTXnkA8S0
+IUKCe<c^JZh;TaMPK6hn3b0
+S1
+R14
+R22
+8./../../02_rtl/LOPD_4bit.sv
+F./../../02_rtl/LOPD_4bit.sv
+!i122 30
+L0 1 19
+R16
+R17
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R21
+R9
+n@l@o@p@d_4bit
+vLOPD_8bit
+R12
+R13
+R11
+!i10b 1
+!s100 BQkbY=bgbbWQiT3T=<O861
+IZ1o?M1KiHYo8ZQc^neRTJ3
+S1
+R14
+R15
+8./../../02_rtl/LOPD_8bit.sv
+F./../../02_rtl/LOPD_8bit.sv
+!i122 30
+L0 1 43
+R16
+R17
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R21
+R9
+n@l@o@p@d_8bit
+vtb_LOPD_24bit
+R12
+R13
+R11
+!i10b 1
+!s100 miia4F[08ODUmjVRMLG6T2
+IH;S`W84VE9k:GbI>aJ8K61
+S1
+R14
+w1763652255
+8./../SubModule/LOPD_UNIT/LOPD_24BIT/tb_LOPD_24bit.sv
+F./../SubModule/LOPD_UNIT/LOPD_24BIT/tb_LOPD_24bit.sv
+!i122 30
+L0 3 131
+R16
+R17
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R21
+R9
+ntb_@l@o@p@d_24bit

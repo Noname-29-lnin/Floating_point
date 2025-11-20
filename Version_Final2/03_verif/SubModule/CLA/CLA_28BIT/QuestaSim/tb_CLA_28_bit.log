@@ -1,0 +1,11 @@
+# vsim -lib ./../SubModule/CLA/CLA_28BIT/QuestaSim/work -debugDB -l ./../SubModule/CLA/CLA_28BIT/QuestaSim/tb_CLA_28_bit.log -voptargs="+acc" -assertdebug -c tb_CLA_28_bit -wlf ./../SubModule/CLA/CLA_28BIT/QuestaSim/tb_CLA_28_bit.wlf -do "cd ./../SubModule/CLA/CLA_28BIT/QuestaSim; log -r /*; run -all;" 
+# Start time: 14:54:51 on Nov 06,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Error: (vopt-11) Could not find ./../SubModule/CLA/CLA_28BIT/QuestaSim/work.tb_CLA_28_bit.
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 14:54:51 on Nov 06,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1

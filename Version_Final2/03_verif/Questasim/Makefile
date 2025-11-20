@@ -5,35 +5,57 @@
 # Simulation Configuration
 #==============================
 TOPMODULE       ?= top
-LIB_DIR         ?= ./
-# Chỉ lấy các thư mục chứa file .svh
-LIB_INC         := $(shell find $(LIB_DIR) -type f -name "*.svh" -exec dirname {} \; | sort -u)
-LIB_FLAG        := $(foreach d, $(LIB_INC), +incdir+$(d))
-TB_NAME         ?= tb_$(TOPMODULE)
 INC_DIR         ?= ./build
-INC_WORK        := $(INC_DIR)/QuestaSim
+LIB_DIR         ?= ./
 RADIX           ?= binary
 
-#==============================
+LIB_INC          = $(shell find $(LIB_DIR) -type f -name "*.svh" -exec dirname {} \; | sort -u)
+LIB_FLAG         = $(foreach d, $(LIB_INC), +incdir+$(d))
+TB_NAME          = tb_$(TOPMODULE)
+INC_WORK         = $(INC_DIR)/QuestaSim
+
+-include config.mk
+
+# Load Targets
+.PHONY: load
+load:
+	@echo "Saving configuration..."
+	@echo "TOPMODULE=$(TOPMODULE)" > config.mk
+	@echo "INC_DIR=$(INC_DIR)" >> config.mk
+	@echo "LIB_DIR=$(LIB_DIR)" >> config.mk
+	@echo "RADIX=$(RADIX)" >> config.mk
+	@echo "-> Saved to config.mk"
+	@cat config.mk
+
 # Targets
-#==============================
-.PHONY: all all_wave all_cov compile compile_cover run run_cover wave gen_cov gen_html gen_view clean help 
+.PHONY: all all_wave all_cov compile compile_cover run run_cover wave gen_cov gen_html gen_view clean clear_temp help 
 
-#------------------------------
-# Default target
-#------------------------------
-all: compile run
-all_wave: compile run wave
-all_cov: compile_cover run_cover gen_cov gen_html
+all: compile run clear_temp
+all_wave: compile run wave clear_temp
+all_cov: compile_cover run_cover clear_temp gen_cov gen_html
 
-#------------------------------
-# Compile
-#------------------------------
 compile:
 	@echo "-> mkdir..."
 	@mkdir -p $(INC_WORK) \
 		&& echo "<Pass> mkdir $(INC_WORK)" \
 		|| echo "<False> mkdir $(INC_WORK)"
+	@echo "TB_NAME: $(TB_NAME)"
+	@echo "INC_DIR: $(INC_DIR)"
+	@echo "LIB_DIR: $(LIB_DIR)"
+	@echo "RADIX: 	$(RADIX)" 
+	@echo "FLIST content:"
+	@cat $(INC_DIR)/flist.f
+	@echo " "
+	@echo "LIB_INC directories:"
+	@for dir in $(LIB_INC); do \
+		echo "  $$dir"; \
+	done
+	@echo "LIB_FLAG: $(LIB_FLAG)"
+	@echo " "
+	@find $(LIB_DIR) -name "*.svh" 2>/dev/null | while read file; do \
+		echo "  $$file"; \
+	done || echo "  No .svh files found"
+	@echo " "
 	@echo "-> compile..."
 	@vlib $(INC_WORK)/work > /dev/null 2>&1
 	@vmap work $(INC_WORK)/work > /dev/null 2>&1
@@ -62,15 +84,12 @@ compile_cover:
 		echo "<Pass> compile $(TOPMODULE)"; \
 	fi
 
-#------------------------------
-# Run Simulation
-#------------------------------
 run:
 	@echo "-> Copy modelsim.ini..."
 	@cp ./modelsim.ini $(INC_WORK)
 	@if ls ./*.vcd > /dev/null 2>&1; then \
-		mv ./tb_$(TOPMODULE).vcd $(INC_DIR)/ 2>/dev/null; \
-		echo "<Pass> moved .vcd files to $(INC_DIR)"; \
+		mv ./tb_$(TOPMODULE).vcd $(INC_WORK)/ 2>/dev/null; \
+		echo "<Pass> moved .vcd files to $(INC_WORK)"; \
 	else \
 		echo "<Info> no .vcd files found in current directory"; \
 	fi
@@ -85,8 +104,8 @@ run_cover:
 	@cp ./modelsim.ini $(INC_WORK)
 	@echo "-> Move .vcd..."
 	@if ls ./*.vcd > /dev/null 2>&1; then \
-		mv ./tb_$(TOPMODULE).vcd $(INC_DIR)/ 2>/dev/null; \
-		echo "<Pass> moved .vcd files to $(INC_DIR)"; \
+		mv ./tb_$(TOPMODULE).vcd $(INC_WORK)/ 2>/dev/null; \
+		echo "<Pass> moved .vcd files to $(INC_WORK)"; \
 	else \
 		echo "<Info> no .vcd files found in current directory"; \
 	fi
@@ -96,17 +115,11 @@ run_cover:
 		-wlf $(INC_WORK)/$(TB_NAME).wlf \
 		-do "coverage save -onexit $(INC_WORK)/$(TB_NAME).ucdb; cd $(INC_WORK); log -r /*; run -all;"
 
-#------------------------------
-# Waveform Viewer
-#------------------------------
 wave:
 	@echo "-> open waveform..."
 	@vsim -i -view $(INC_WORK)/$(TB_NAME).wlf -do "add wave vsim:/$(TB_NAME)/*; radix -$(RADIX)" &
 	@echo "<Pass> open waveform for $(TB_NAME)"
 
-#------------------------------
-# Coverage Reports
-#------------------------------
 gen_cov:
 	@echo "-> generate coverage text reports..."
 	@mkdir -p $(INC_WORK)/coverage \
@@ -134,18 +147,15 @@ gen_view:
 	@echo "-> open HTML coverage report..."
 	xdg-open "$(INC_WORK)/covhtmlreport/index.html" >/dev/null 2>&1 
 
-#------------------------------
-# Clean
-#------------------------------
+clear_temp:
+	@rm -rf ./*.vcd ./*.log
+
 clean:
 	@echo "-> clean..."
 	@rm -rf $(INC_WORK)/work $(INC_WORK)/vsim.dbg $(INC_WORK)/*.ini $(INC_WORK)/*.log $(INC_WORK)/*.vcd \
 		$(INC_WORK)/*.wlf $(INC_WORK)/transcript $(INC_WORK)/*.ucdb $(INC_WORK)/coverage
 	@echo "<Pass> clean $(TOPMODULE)"
 
-#------------------------------
-# Help Menu
-#------------------------------
 help:
 	@echo ""
 	@echo "****************************************"

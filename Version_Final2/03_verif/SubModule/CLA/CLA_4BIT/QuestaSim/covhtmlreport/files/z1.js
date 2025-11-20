@@ -1,0 +1,2 @@
+var g_data = {"3":{"st":"inst","pa":0,"n":"/tb_CLA_4bit","l":"Verilog","sn":1,"ln":0,"du":{"n":"work.tb_CLA_4bit","s":1,"b":1},"bc":[{"n":"tb_CLA_4bit","s":3,"z":1}],"loc":{"cp":47.52,"data":{"b":[4,2,1],"fc":[2,0,1],"t":[172,69,1]}}},"1":{"st":"du","pa":0,"n":"work.tb_CLA_4bit","l":"Verilog","sn":1,"ln":3,"one_inst":3,"loc":{"cp":47.52,"data":{"b":[4,2,1],"fc":[2,0,1],"t":[172,69,1]}}}};
+processSummaryData(g_data);

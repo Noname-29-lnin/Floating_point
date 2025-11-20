@@ -1,0 +1,42 @@
+
+=== START 4-bit LEADING ONE POSITION DETECTOR TEST ===
+
+[Fixed] data=0000 => expect(pos=0, zero=1), dut(pos=0, zero=1) => PASS
+[Fixed] data=0001 => expect(pos=3, zero=0), dut(pos=3, zero=0) => PASS
+[Fixed] data=0010 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+[Fixed] data=0011 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+[Fixed] data=0100 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+[Fixed] data=0101 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+[Fixed] data=0110 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+[Fixed] data=0111 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+[Fixed] data=1000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Fixed] data=1001 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Fixed] data=1010 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Fixed] data=1011 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Fixed] data=1100 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Fixed] data=1101 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Fixed] data=1110 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Fixed] data=1111 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Random] data=0100 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+[Random] data=1100 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Random] data=0010 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+[Random] data=0100 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+[Random] data=1000 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Random] data=1100 => expect(pos=0, zero=0), dut(pos=0, zero=0) => PASS
+[Random] data=0110 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+[Random] data=0100 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+[Random] data=0111 => expect(pos=1, zero=0), dut(pos=1, zero=0) => PASS
+[Random] data=0011 => expect(pos=2, zero=0), dut(pos=2, zero=0) => PASS
+
+================================
+========== TEST SUMMARY ==========
+Total test cases:     26
+Passed          :     26
+Failed          :      0
+Pass rate       : 100.00%
+================================
+
+- /home/noname/Documents/project_tiny/Floating_point/Verision1/03_verif/SubModule/LOPD_UNIT/LOPD_4BIT/tb_LOPD_4bit.sv:105: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.024 2024-04-05
+- Verilator: $finish at 41ns; walltime 0.000 s; speed 0.000 s/s
+- Verilator: cpu 0.000 s on 1 threads; alloced 57 MB

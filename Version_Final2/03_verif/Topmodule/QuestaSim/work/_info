@@ -27,6 +27,8 @@ R0
 R1
 R0
 R1
+R0
+R1
 !s11f vlog 2024.3 2024.09, Sep 10 2024
 13
 !s112 1.1
@@ -36,24 +38,24 @@ R1
 cModel Technology
 Z2 d/home/noname/Documents/project_tiny/Floating_point/Version_Final2/03_verif/Questasim
 T_opt4
-!s110 1763636514
-VUW;S6_5eAF2M;bPaFMKz?1
+!s110 1763648860
+V94g_:;1AA0VR0BO8_8TB32
 04 11 4 work tb_FPU_unit fast 0
-=1-000ae431a4f1-691ef521-f0174-2c436
-!s102 +cover=bcesft
+=1-000ae431a4f1-691f255c-c42a4-4e81
 R1
 !s12f OEM100
 !s12b OEM100
 !s124 OEM10U47 
 !s135 nogc
-o-quiet -auto_acc_if_foreign -work ./../Topmodule/QuestaSim/work +cover=bcesft
+o-quiet -auto_acc_if_foreign -work ./../Topmodule/QuestaSim/work -debugdb +acc
 Z3 tCvgOpt 0
 n@_opt4
 OL;O;2024.3;79
+R2
 vCLA_24bit
 Z4 2./../Topmodule/tb_FPU_unit.sv|./../../02_rtl/CLA_4bit.sv|./../../02_rtl/CLA_8bit.sv|./../../02_rtl/CLA_24bit.sv|./../../02_rtl/CLA_28bit.sv|./../../02_rtl/COMP_2bit.sv|./../../02_rtl/COMP_4bit.sv|./../../02_rtl/COMP_8bit.sv|./../../02_rtl/COMP_28bit.sv|./../../02_rtl/EXP_adjust.sv|./../../02_rtl/EXP_rounding.sv|./../../02_rtl/EXP_sub.sv|./../../02_rtl/EXP_swap.sv|./../../02_rtl/FPU_unit.sv|./../../02_rtl/LOPD_4bit.sv|./../../02_rtl/LOPD_8bit.sv|./../../02_rtl/LOPD_16bit.sv|./../../02_rtl/LOPD_24bit.sv|./../../02_rtl/MAN_ALU.sv|./../../02_rtl/MAN_swap.sv|./../../02_rtl/NORMALIZATION_unit.sv|./../../02_rtl/PSC_unit.sv|./../../02_rtl/RND_add.sv|./../../02_rtl/ROUNDING_unit.sv|./../../02_rtl/SHF_left_28bit.sv|./../../02_rtl/SHF_right_28bit.sv|./../../02_rtl/SIGN_unit.sv
 Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z6 !s110 1763636513
+Z6 !s110 1763651875
 !i10b 1
 !s100 F1Qd:B<TeVFe:>F8[Bk[C3
 Ig6n1f6VlKU]I_a]QePO1K2
@@ -62,19 +64,19 @@ R2
 Z7 w1763383287
 8./../../02_rtl/CLA_24bit.sv
 F./../../02_rtl/CLA_24bit.sv
-!i122 16
+!i122 18
 L0 1 64
 Z8 VDg1SIo80bB@j0V0VzS_@n1
 Z9 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z10 !s108 1763636513.000000
-Z11 !s107 ./../Topmodule/lib/gen_clock.svh|./../Topmodule/lib/display.svh|./../Topmodule/lib/Cal_funs.svh|./../../02_rtl/SIGN_unit.sv|./../../02_rtl/SHF_right_28bit.sv|./../../02_rtl/SHF_left_28bit.sv|./../../02_rtl/ROUNDING_unit.sv|./../../02_rtl/RND_add.sv|./../../02_rtl/PSC_unit.sv|./../../02_rtl/NORMALIZATION_unit.sv|./../../02_rtl/MAN_swap.sv|./../../02_rtl/MAN_ALU.sv|./../../02_rtl/LOPD_24bit.sv|./../../02_rtl/LOPD_16bit.sv|./../../02_rtl/LOPD_8bit.sv|./../../02_rtl/LOPD_4bit.sv|./../../02_rtl/FPU_unit.sv|./../../02_rtl/EXP_swap.sv|./../../02_rtl/EXP_sub.sv|./../../02_rtl/EXP_rounding.sv|./../../02_rtl/EXP_adjust.sv|./../../02_rtl/COMP_28bit.sv|./../../02_rtl/COMP_8bit.sv|./../../02_rtl/COMP_4bit.sv|./../../02_rtl/COMP_2bit.sv|./../../02_rtl/CLA_28bit.sv|./../../02_rtl/CLA_24bit.sv|./../../02_rtl/CLA_8bit.sv|./../../02_rtl/CLA_4bit.sv|./../Topmodule/tb_FPU_unit.sv|
-Z12 !s90 +incdir+./../Topmodule/lib|-f|./../Topmodule/flist.f|
+Z10 !s108 1763651875.000000
+!s107 ./../Topmodule/lib/gen_clock.svh|./../Topmodule/lib/display.svh|./../Topmodule/lib/Cal_funs.svh|./../../02_rtl/SIGN_unit.sv|./../../02_rtl/SHF_right_28bit.sv|./../../02_rtl/SHF_left_28bit.sv|./../../02_rtl/ROUNDING_unit.sv|./../../02_rtl/RND_add.sv|./../../02_rtl/PSC_unit.sv|./../../02_rtl/NORMALIZATION_unit.sv|./../../02_rtl/MAN_swap.sv|./../../02_rtl/MAN_ALU.sv|./../../02_rtl/LOPD_24bit.sv|./../../02_rtl/LOPD_16bit.sv|./../../02_rtl/LOPD_8bit.sv|./../../02_rtl/LOPD_4bit.sv|./../../02_rtl/FPU_unit.sv|./../../02_rtl/EXP_swap.sv|./../../02_rtl/EXP_sub.sv|./../../02_rtl/EXP_rounding.sv|./../../02_rtl/EXP_adjust.sv|./../../02_rtl/COMP_28bit.sv|./../../02_rtl/COMP_8bit.sv|./../../02_rtl/COMP_4bit.sv|./../../02_rtl/COMP_2bit.sv|./../../02_rtl/CLA_28bit.sv|./../../02_rtl/CLA_24bit.sv|./../../02_rtl/CLA_8bit.sv|./../../02_rtl/CLA_4bit.sv|./../Topmodule/tb_FPU_unit.sv|
+Z11 !s90 +incdir+./../Topmodule/lib|-f|./../Topmodule/flist.f|
 !i113 0
-Z13 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z14 !s92 +incdir+./../Topmodule/lib +incdir+./../Topmodule/lib/ -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z13 !s92 +incdir+./../Topmodule/lib +incdir+./../Topmodule/lib/ -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
 n@c@l@a_24bit
 vCLA_28bit
@@ -89,7 +91,7 @@ R2
 R7
 8./../../02_rtl/CLA_28bit.sv
 F./../../02_rtl/CLA_28bit.sv
-!i122 16
+!i122 18
 L0 1 54
 R8
 R9
@@ -97,11 +99,11 @@ r1
 !s85 0
 31
 R10
+Z14 !s107 ./../Topmodule/lib/gen_clock.svh|./../Topmodule/lib/display.svh|./../Topmodule/lib/Cal_funs.svh|./../../02_rtl/SIGN_unit.sv|./../../02_rtl/SHF_right_28bit.sv|./../../02_rtl/SHF_left_28bit.sv|./../../02_rtl/ROUNDING_unit.sv|./../../02_rtl/RND_add.sv|./../../02_rtl/PSC_unit.sv|./../../02_rtl/NORMALIZATION_unit.sv|./../../02_rtl/MAN_swap.sv|./../../02_rtl/MAN_ALU.sv|./../../02_rtl/LOPD_24bit.sv|./../../02_rtl/LOPD_16bit.sv|./../../02_rtl/LOPD_8bit.sv|./../../02_rtl/LOPD_4bit.sv|./../../02_rtl/FPU_unit.sv|./../../02_rtl/EXP_swap.sv|./../../02_rtl/EXP_sub.sv|./../../02_rtl/EXP_rounding.sv|./../../02_rtl/EXP_adjust.sv|./../../02_rtl/COMP_28bit.sv|./../../02_rtl/COMP_8bit.sv|./../../02_rtl/COMP_4bit.sv|./../../02_rtl/COMP_2bit.sv|./../../02_rtl/CLA_28bit.sv|./../../02_rtl/CLA_24bit.sv|./../../02_rtl/CLA_8bit.sv|./../../02_rtl/CLA_4bit.sv|./../Topmodule/tb_FPU_unit.sv|
 R11
-R12
 !i113 0
+R12
 R13
-R14
 R3
 n@c@l@a_28bit
 vCLA_4bit
@@ -116,7 +118,7 @@ R2
 R7
 8./../../02_rtl/CLA_4bit.sv
 F./../../02_rtl/CLA_4bit.sv
-!i122 16
+!i122 18
 Z15 L0 1 26
 R8
 R9
@@ -124,11 +126,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@c@l@a_4bit
 vCLA_8bit
@@ -143,7 +145,7 @@ R2
 R7
 8./../../02_rtl/CLA_8bit.sv
 F./../../02_rtl/CLA_8bit.sv
-!i122 16
+!i122 18
 Z16 L0 1 35
 R8
 R9
@@ -151,11 +153,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@c@l@a_8bit
 vCOMP_28bit
@@ -170,7 +172,7 @@ R2
 Z17 w1763476176
 8./../../02_rtl/COMP_28bit.sv
 F./../../02_rtl/COMP_28bit.sv
-!i122 16
+!i122 18
 L0 1 73
 R8
 R9
@@ -178,11 +180,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@c@o@m@p_28bit
 vCOMP_2bit
@@ -197,7 +199,7 @@ R2
 w1763384019
 8./../../02_rtl/COMP_2bit.sv
 F./../../02_rtl/COMP_2bit.sv
-!i122 16
+!i122 18
 Z18 L0 1 11
 R8
 R9
@@ -205,11 +207,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@c@o@m@p_2bit
 vCOMP_4bit
@@ -224,7 +226,7 @@ R2
 w1763384988
 8./../../02_rtl/COMP_4bit.sv
 F./../../02_rtl/COMP_4bit.sv
-!i122 16
+!i122 18
 L0 1 30
 R8
 R9
@@ -232,11 +234,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@c@o@m@p_4bit
 vCOMP_8bit
@@ -251,7 +253,7 @@ R2
 R7
 8./../../02_rtl/COMP_8bit.sv
 F./../../02_rtl/COMP_8bit.sv
-!i122 16
+!i122 18
 R15
 R8
 R9
@@ -259,11 +261,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@c@o@m@p_8bit
 vEXP_adjust
@@ -278,7 +280,7 @@ R2
 R7
 8./../../02_rtl/EXP_adjust.sv
 F./../../02_rtl/EXP_adjust.sv
-!i122 16
+!i122 18
 R16
 R8
 R9
@@ -286,11 +288,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@e@x@p_adjust
 vEXP_rounding
@@ -305,7 +307,7 @@ R2
 R7
 8./../../02_rtl/EXP_rounding.sv
 F./../../02_rtl/EXP_rounding.sv
-!i122 16
+!i122 18
 Z19 L0 1 20
 R8
 R9
@@ -313,11 +315,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@e@x@p_rounding
 vEXP_sub
@@ -332,7 +334,7 @@ R2
 R7
 8./../../02_rtl/EXP_sub.sv
 F./../../02_rtl/EXP_sub.sv
-!i122 16
+!i122 18
 R19
 R8
 R9
@@ -340,11 +342,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@e@x@p_sub
 vEXP_swap
@@ -359,7 +361,7 @@ R2
 R17
 8./../../02_rtl/EXP_swap.sv
 F./../../02_rtl/EXP_swap.sv
-!i122 16
+!i122 18
 Z20 L0 1 25
 R8
 R9
@@ -367,11 +369,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@e@x@p_swap
 vFPU_unit
@@ -386,7 +388,7 @@ R2
 Z21 w1763635344
 Z22 8./../../02_rtl/FPU_unit.sv
 Z23 F./../../02_rtl/FPU_unit.sv
-!i122 16
+!i122 18
 L0 1 240
 R8
 R9
@@ -394,11 +396,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@f@p@u_unit
 vLOPD_16bit
@@ -413,7 +415,7 @@ R2
 R17
 8./../../02_rtl/LOPD_16bit.sv
 F./../../02_rtl/LOPD_16bit.sv
-!i122 16
+!i122 18
 Z24 L0 1 40
 R8
 R9
@@ -421,11 +423,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@l@o@p@d_16bit
 vLOPD_24bit
@@ -440,7 +442,7 @@ R2
 R7
 8./../../02_rtl/LOPD_24bit.sv
 F./../../02_rtl/LOPD_24bit.sv
-!i122 16
+!i122 18
 L0 1 39
 R8
 R9
@@ -448,11 +450,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@l@o@p@d_24bit
 vLOPD_4bit
@@ -467,7 +469,7 @@ R2
 R7
 8./../../02_rtl/LOPD_4bit.sv
 F./../../02_rtl/LOPD_4bit.sv
-!i122 16
+!i122 18
 L0 1 19
 R8
 R9
@@ -475,11 +477,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@l@o@p@d_4bit
 vLOPD_8bit
@@ -494,7 +496,7 @@ R2
 R17
 8./../../02_rtl/LOPD_8bit.sv
 F./../../02_rtl/LOPD_8bit.sv
-!i122 16
+!i122 18
 L0 1 43
 R8
 R9
@@ -502,11 +504,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@l@o@p@d_8bit
 vMAN_ALU
@@ -521,7 +523,7 @@ R2
 R17
 8./../../02_rtl/MAN_ALU.sv
 F./../../02_rtl/MAN_ALU.sv
-!i122 16
+!i122 18
 R16
 R8
 R9
@@ -529,11 +531,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@m@a@n_@a@l@u
 vMAN_swap
@@ -548,7 +550,7 @@ R2
 R7
 8./../../02_rtl/MAN_swap.sv
 F./../../02_rtl/MAN_swap.sv
-!i122 16
+!i122 18
 L0 1 31
 R8
 R9
@@ -556,11 +558,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@m@a@n_swap
 vMux_4_to_1
@@ -575,7 +577,7 @@ R2
 R21
 R22
 R23
-!i122 16
+!i122 18
 L0 241 29
 R8
 R9
@@ -583,11 +585,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@mux_4_to_1
 vNORMALIZATION_unit
@@ -602,7 +604,7 @@ R2
 R7
 8./../../02_rtl/NORMALIZATION_unit.sv
 F./../../02_rtl/NORMALIZATION_unit.sv
-!i122 16
+!i122 18
 R20
 R8
 R9
@@ -610,11 +612,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@n@o@r@m@a@l@i@z@a@t@i@o@n_unit
 vPSC_unit
@@ -629,7 +631,7 @@ R2
 w1763635290
 8./../../02_rtl/PSC_unit.sv
 F./../../02_rtl/PSC_unit.sv
-!i122 16
+!i122 18
 R16
 R8
 R9
@@ -637,11 +639,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@p@s@c_unit
 vRND_add
@@ -656,7 +658,7 @@ R2
 R7
 8./../../02_rtl/RND_add.sv
 F./../../02_rtl/RND_add.sv
-!i122 16
+!i122 18
 L0 1 38
 R8
 R9
@@ -664,11 +666,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@r@n@d_add
 vROUNDING_unit
@@ -683,7 +685,7 @@ R2
 R7
 8./../../02_rtl/ROUNDING_unit.sv
 F./../../02_rtl/ROUNDING_unit.sv
-!i122 16
+!i122 18
 R24
 R8
 R9
@@ -691,11 +693,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@r@o@u@n@d@i@n@g_unit
 vSHF_left_28bit
@@ -710,7 +712,7 @@ R2
 R7
 8./../../02_rtl/SHF_left_28bit.sv
 F./../../02_rtl/SHF_left_28bit.sv
-!i122 16
+!i122 18
 Z25 L0 1 27
 R8
 R9
@@ -718,11 +720,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@s@h@f_left_28bit
 vSHF_right_28bit
@@ -737,7 +739,7 @@ R2
 R7
 8./../../02_rtl/SHF_right_28bit.sv
 F./../../02_rtl/SHF_right_28bit.sv
-!i122 16
+!i122 18
 R25
 R8
 R9
@@ -745,11 +747,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@s@h@f_right_28bit
 vSIGN_unit
@@ -764,7 +766,7 @@ R2
 R7
 8./../../02_rtl/SIGN_unit.sv
 F./../../02_rtl/SIGN_unit.sv
-!i122 16
+!i122 18
 R18
 R8
 R9
@@ -772,11 +774,11 @@ r1
 !s85 0
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 n@s@i@g@n_unit
 vtb_FPU_unit
@@ -788,24 +790,24 @@ R8
 r1
 !s85 0
 !i10b 1
-!s100 9nCdSo>Hn?E[:<0lMW_WN3
-IFm9]Edh3M7>QcDV5V?Ycb3
+!s100 9Zi1]S[=aTHbQiD]APmU?3
+IX<hl@c5BlY4VZ<kGAgCnU1
 !s105 tb_FPU_unit_sv_unit
 S1
 R2
-Z26 w1763635749
+Z26 w1763641677
 Z27 8./../Topmodule/tb_FPU_unit.sv
 Z28 F./../Topmodule/tb_FPU_unit.sv
-!i122 16
+!i122 18
 L0 6 232
 R9
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 ntb_@f@p@u_unit
 Xtb_FPU_unit_sv_unit
@@ -827,15 +829,15 @@ R28
 F./../Topmodule/lib/Cal_funs.svh
 F./../Topmodule/lib/display.svh
 F./../Topmodule/lib/gen_clock.svh
-!i122 16
+!i122 18
 L0 1 0
 R9
 31
 R10
-R11
-R12
-!i113 0
-R13
 R14
+R11
+!i113 0
+R12
+R13
 R3
 ntb_@f@p@u_unit_sv_unit

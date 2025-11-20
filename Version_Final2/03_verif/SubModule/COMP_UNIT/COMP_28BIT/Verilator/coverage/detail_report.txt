@@ -1,0 +1,2 @@
+Total coverage (37/60) 61.00%
+See lines with '%00' in ./../SubModule/COMP_UNIT/COMP_28BIT/Verilator/coverage/annotated_src
