@@ -1,0 +1,491 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_SWAP_UNIT/COMP_LESS_UNIT/u_low
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         8         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_SWAP_UNIT/COMP_LESS_UNIT/u_high
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         7         1    87.50%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_SWAP_UNIT/COMP_LESS_UNIT
+=== Design Unit: work.COMP_8bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      3         3         0   100.00%
+    Statements                       1         1         0   100.00%
+    Toggles                         10        10         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_SWAP_UNIT
+=== Design Unit: work.EXP_swap
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         4         0   100.00%
+    Statements                       3         3         0   100.00%
+    Toggles                         34        34         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_SUB_UNIT/CLA_8BIT_UNIT/CLA_4BIT_UNIT_0
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        16         8    66.66%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        34         2    94.44%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_SUB_UNIT/CLA_8BIT_UNIT/CLA_4BIT_UNIT_1
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        15         9    62.50%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        30         6    83.33%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_SUB_UNIT/CLA_8BIT_UNIT
+=== Design Unit: work.CLA_8bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      6         1         5    16.66%
+    Statements                       2         2         0   100.00%
+    Toggles                         28        24         4    85.71%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_SUB_UNIT
+=== Design Unit: work.EXP_sub
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       1         1         0   100.00%
+    Toggles                         32        32         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_EXPONENT_UNIT
+=== Design Unit: work.MAN_swap
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         4         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                         96        92         4    95.83%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/SHF_RIGHT_28BIT_UNIT
+=== Design Unit: work.SHF_right_28bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+    Statements                      17        17         0   100.00%
+    Toggles                         56        56         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT/u_i_data_0
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         4         4    50.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT/u_i_data_1
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         8         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT/u_i_data_2
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         8         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT/u_i_data_3
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         8         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT/u_i_data_4
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         8         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT/u_i_data_5
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         8         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT/u_i_data_6
+=== Design Unit: work.COMP_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         7         1    87.50%
+    Statements                       2         2         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_COMP_28BIT_UNIT
+=== Design Unit: work.COMP_28bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     13         5         8    38.46%
+    Statements                       1         1         0   100.00%
+    Toggles                         30        30         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_PRE_SWAP_BY_MAN_UNIT
+=== Design Unit: work.MAN_swap
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         4         0   100.00%
+    Statements                       2         2         0   100.00%
+    Toggles                        112       102        10    91.07%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/SIGN_OUT
+=== Design Unit: work.SIGN_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      4         4         0   100.00%
+    Statements                       1         1         0   100.00%
+    Toggles                          2         2         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_ALU_UNIT/ALU_SUB_UNIT/CLA_BLOCK_GEN[6]/CLA_4BIT_UNIT
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_ALU_UNIT/ALU_SUB_UNIT/CLA_BLOCK_GEN[5]/CLA_4BIT_UNIT
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_ALU_UNIT/ALU_SUB_UNIT/CLA_BLOCK_GEN[4]/CLA_4BIT_UNIT
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_ALU_UNIT/ALU_SUB_UNIT/CLA_BLOCK_GEN[3]/CLA_4BIT_UNIT
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_ALU_UNIT/ALU_SUB_UNIT/CLA_BLOCK_GEN[2]/CLA_4BIT_UNIT
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_ALU_UNIT/ALU_SUB_UNIT/CLA_BLOCK_GEN[1]/CLA_4BIT_UNIT
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_ALU_UNIT/ALU_SUB_UNIT/CLA_BLOCK_GEN[0]/CLA_4BIT_UNIT
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        21         3    87.50%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        28         8    77.77%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_ALU_UNIT/ALU_SUB_UNIT
+=== Design Unit: work.CLA_28bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     63        52        11    82.53%
+    Statements                       7         7         0   100.00%
+    Toggles                        102       102         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/MAN_ALU_UNIT
+=== Design Unit: work.MAN_ALU
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         6         6         0   100.00%
+    Expressions                      5         5         0   100.00%
+    Statements                       4         4         0   100.00%
+    Toggles                        174       174         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/LOPD_24BIT_UNIT/LOPD_16bit_UNIT_MSB/LOPD_8bit_unit_0
+=== Design Unit: work.LOPD_8bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     32        32         0   100.00%
+    Statements                       4         4         0   100.00%
+    Toggles                         14        14         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/LOPD_24BIT_UNIT/LOPD_16bit_UNIT_MSB/LOPD_8bit_unit_1
+=== Design Unit: work.LOPD_8bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     32        32         0   100.00%
+    Statements                       4         4         0   100.00%
+    Toggles                         14        14         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/LOPD_24BIT_UNIT/LOPD_16bit_UNIT_MSB
+=== Design Unit: work.LOPD_16bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         6         6         0   100.00%
+    Expressions                     11        11         0   100.00%
+    Statements                       4         4         0   100.00%
+    Toggles                         34        34         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/LOPD_24BIT_UNIT/LOPD_8bit_UNIT_LSB
+=== Design Unit: work.LOPD_8bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     32        32         0   100.00%
+    Statements                       4         4         0   100.00%
+    Toggles                         14        14         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/LOPD_24BIT_UNIT
+=== Design Unit: work.LOPD_24bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+    Expressions                     13        13         0   100.00%
+    Statements                       8         8         0   100.00%
+    Toggles                         88        88         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_ADJUST_UNIT/CLA_8BIT_UNIT/CLA_4BIT_UNIT_0
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        24         0   100.00%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_ADJUST_UNIT/CLA_8BIT_UNIT/CLA_4BIT_UNIT_1
+=== Design Unit: work.CLA_4bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     24        16         8    66.66%
+    Statements                       7         7         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_ADJUST_UNIT/CLA_8BIT_UNIT
+=== Design Unit: work.CLA_8bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      8         7         1    87.50%
+    Statements                       2         2         0   100.00%
+    Toggles                         28        28         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_ADJUST_UNIT
+=== Design Unit: work.EXP_adjust
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         6         6         0   100.00%
+    Expressions                      2         2         0   100.00%
+    Statements                       3         3         0   100.00%
+    Toggles                         50        50         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/NORMALIZATION_UNIT/SHF_left_28bit_unit
+=== Design Unit: work.SHF_left_28bit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+    Statements                      16        16         0   100.00%
+    Toggles                         56        56         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/NORMALIZATION_UNIT
+=== Design Unit: work.NORMALIZATION_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         6         6         0   100.00%
+    Statements                       1         1         0   100.00%
+    Toggles                        112       112         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/ROUNDING_UNIT/INCREASE_ROUNDING
+=== Design Unit: work.RND_add
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     48        48         0   100.00%
+    Statements                      25        25         0   100.00%
+    Toggles                         98        98         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/ROUNDING_UNIT
+=== Design Unit: work.ROUNDING_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      5         5         0   100.00%
+    Statements                       3         3         0   100.00%
+    Toggles                        106       106         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/EXP_ROUNDING
+=== Design Unit: work.EXP_rounding
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     14         1        13     7.14%
+    Statements                       8         8         0   100.00%
+    Toggles                         32        20        12    62.50%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/PSC_UNIT
+=== Design Unit: work.PSC_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     15        15         0   100.00%
+    Statements                       5         5         0   100.00%
+    Toggles                         14        14         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT/SEL_MANTISSA_FOR_RESULT
+=== Design Unit: work.Mux_4_to_1
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         4         1    80.00%
+    Statements                       6         5         1    83.33%
+    Toggles                         96        96         0   100.00%
+
+=================================================================================
+=== Instance: /tb_FPU_unit/DUT
+=== Design Unit: work.FPU_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Expressions                      4         4         0   100.00%
+    Statements                       8         8         0   100.00%
+    Toggles                        856       828        28    96.72%
+
+=================================================================================
+=== Instance: /tb_FPU_unit
+=== Design Unit: work.tb_FPU_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        16         6        10    37.50%
+    Expressions                      1         0         1     0.00%
+    Statements                     107        95        12    88.78%
+    Toggles                        480       397        83    82.70%
+
+=================================================================================
+=== Instance: /tb_FPU_unit_sv_unit
+=== Design Unit: work.tb_FPU_unit_sv_unit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        20        11         9    55.00%
+    Conditions                       8         3         5    37.50%
+    Expressions                     18         8        10    44.44%
+    Statements                      46        29        17    63.04%
+
+
+Total Coverage By Instance (filtered view): 78.81%
+

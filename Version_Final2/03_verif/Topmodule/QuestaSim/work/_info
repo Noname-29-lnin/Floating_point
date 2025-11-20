@@ -1,0 +1,841 @@
+m255
+K4
+z2
+Z0 !s12c _opt4
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/noname/Documents/project_tiny/Floating_point/Version_Final2/03_verif/Questasim
+T_opt4
+!s110 1763636514
+VUW;S6_5eAF2M;bPaFMKz?1
+04 11 4 work tb_FPU_unit fast 0
+=1-000ae431a4f1-691ef521-f0174-2c436
+!s102 +cover=bcesft
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U47 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work ./../Topmodule/QuestaSim/work +cover=bcesft
+Z3 tCvgOpt 0
+n@_opt4
+OL;O;2024.3;79
+vCLA_24bit
+Z4 2./../Topmodule/tb_FPU_unit.sv|./../../02_rtl/CLA_4bit.sv|./../../02_rtl/CLA_8bit.sv|./../../02_rtl/CLA_24bit.sv|./../../02_rtl/CLA_28bit.sv|./../../02_rtl/COMP_2bit.sv|./../../02_rtl/COMP_4bit.sv|./../../02_rtl/COMP_8bit.sv|./../../02_rtl/COMP_28bit.sv|./../../02_rtl/EXP_adjust.sv|./../../02_rtl/EXP_rounding.sv|./../../02_rtl/EXP_sub.sv|./../../02_rtl/EXP_swap.sv|./../../02_rtl/FPU_unit.sv|./../../02_rtl/LOPD_4bit.sv|./../../02_rtl/LOPD_8bit.sv|./../../02_rtl/LOPD_16bit.sv|./../../02_rtl/LOPD_24bit.sv|./../../02_rtl/MAN_ALU.sv|./../../02_rtl/MAN_swap.sv|./../../02_rtl/NORMALIZATION_unit.sv|./../../02_rtl/PSC_unit.sv|./../../02_rtl/RND_add.sv|./../../02_rtl/ROUNDING_unit.sv|./../../02_rtl/SHF_left_28bit.sv|./../../02_rtl/SHF_right_28bit.sv|./../../02_rtl/SIGN_unit.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1763636513
+!i10b 1
+!s100 F1Qd:B<TeVFe:>F8[Bk[C3
+Ig6n1f6VlKU]I_a]QePO1K2
+S1
+R2
+Z7 w1763383287
+8./../../02_rtl/CLA_24bit.sv
+F./../../02_rtl/CLA_24bit.sv
+!i122 16
+L0 1 64
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z10 !s108 1763636513.000000
+Z11 !s107 ./../Topmodule/lib/gen_clock.svh|./../Topmodule/lib/display.svh|./../Topmodule/lib/Cal_funs.svh|./../../02_rtl/SIGN_unit.sv|./../../02_rtl/SHF_right_28bit.sv|./../../02_rtl/SHF_left_28bit.sv|./../../02_rtl/ROUNDING_unit.sv|./../../02_rtl/RND_add.sv|./../../02_rtl/PSC_unit.sv|./../../02_rtl/NORMALIZATION_unit.sv|./../../02_rtl/MAN_swap.sv|./../../02_rtl/MAN_ALU.sv|./../../02_rtl/LOPD_24bit.sv|./../../02_rtl/LOPD_16bit.sv|./../../02_rtl/LOPD_8bit.sv|./../../02_rtl/LOPD_4bit.sv|./../../02_rtl/FPU_unit.sv|./../../02_rtl/EXP_swap.sv|./../../02_rtl/EXP_sub.sv|./../../02_rtl/EXP_rounding.sv|./../../02_rtl/EXP_adjust.sv|./../../02_rtl/COMP_28bit.sv|./../../02_rtl/COMP_8bit.sv|./../../02_rtl/COMP_4bit.sv|./../../02_rtl/COMP_2bit.sv|./../../02_rtl/CLA_28bit.sv|./../../02_rtl/CLA_24bit.sv|./../../02_rtl/CLA_8bit.sv|./../../02_rtl/CLA_4bit.sv|./../Topmodule/tb_FPU_unit.sv|
+Z12 !s90 +incdir+./../Topmodule/lib|-f|./../Topmodule/flist.f|
+!i113 0
+Z13 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 !s92 +incdir+./../Topmodule/lib +incdir+./../Topmodule/lib/ -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@c@l@a_24bit
+vCLA_28bit
+R4
+R5
+R6
+!i10b 1
+!s100 3^4BD48?<bI;fbG6bZWB70
+IDzefIEGClOhdco?f30FmG1
+S1
+R2
+R7
+8./../../02_rtl/CLA_28bit.sv
+F./../../02_rtl/CLA_28bit.sv
+!i122 16
+L0 1 54
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@c@l@a_28bit
+vCLA_4bit
+R4
+R5
+R6
+!i10b 1
+!s100 K4nQ9>NEU5ZKo<Q?QE:531
+IHbGo@:_a;i]7__5kENPDG1
+S1
+R2
+R7
+8./../../02_rtl/CLA_4bit.sv
+F./../../02_rtl/CLA_4bit.sv
+!i122 16
+Z15 L0 1 26
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@c@l@a_4bit
+vCLA_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 hg?]T;mmS2_:;_6@miKH=3
+IHZa^0BOS^ZKPVi65YYh1X1
+S1
+R2
+R7
+8./../../02_rtl/CLA_8bit.sv
+F./../../02_rtl/CLA_8bit.sv
+!i122 16
+Z16 L0 1 35
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@c@l@a_8bit
+vCOMP_28bit
+R4
+R5
+R6
+!i10b 1
+!s100 164`kl[O9=9g0mHP44Dk02
+IW?ba7E2S^5;ID^c^@^0z32
+S1
+R2
+Z17 w1763476176
+8./../../02_rtl/COMP_28bit.sv
+F./../../02_rtl/COMP_28bit.sv
+!i122 16
+L0 1 73
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@c@o@m@p_28bit
+vCOMP_2bit
+R4
+R5
+R6
+!i10b 1
+!s100 d4iFLO4YodoMWf;_G@:982
+IOgcn?Zeg6XgZGE:i=WPfi1
+S1
+R2
+w1763384019
+8./../../02_rtl/COMP_2bit.sv
+F./../../02_rtl/COMP_2bit.sv
+!i122 16
+Z18 L0 1 11
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@c@o@m@p_2bit
+vCOMP_4bit
+R4
+R5
+R6
+!i10b 1
+!s100 @M;?`1h[leol9LISZKoem1
+Ih=C2zXS_;?M7@zmfUJ4YH1
+S1
+R2
+w1763384988
+8./../../02_rtl/COMP_4bit.sv
+F./../../02_rtl/COMP_4bit.sv
+!i122 16
+L0 1 30
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@c@o@m@p_4bit
+vCOMP_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 e@Ji`hT;WR=PgJ8N>_mX`1
+I>`NM@CD?YQWz3`l]hhGQX2
+S1
+R2
+R7
+8./../../02_rtl/COMP_8bit.sv
+F./../../02_rtl/COMP_8bit.sv
+!i122 16
+R15
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@c@o@m@p_8bit
+vEXP_adjust
+R4
+R5
+R6
+!i10b 1
+!s100 X?fokbP?REG`Z1J;5Cg^h1
+Ig5XOLaHYQJP`k00CVk>g;2
+S1
+R2
+R7
+8./../../02_rtl/EXP_adjust.sv
+F./../../02_rtl/EXP_adjust.sv
+!i122 16
+R16
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@e@x@p_adjust
+vEXP_rounding
+R4
+R5
+R6
+!i10b 1
+!s100 =16ogD5:ej4>1lf^[]hZV0
+IaeO8J^66iVDLEF91NJFEn3
+S1
+R2
+R7
+8./../../02_rtl/EXP_rounding.sv
+F./../../02_rtl/EXP_rounding.sv
+!i122 16
+Z19 L0 1 20
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@e@x@p_rounding
+vEXP_sub
+R4
+R5
+R6
+!i10b 1
+!s100 7ijcX_oX;8VR`n0BGFCL72
+I3LfK:a=NMODLE724Fk2b@0
+S1
+R2
+R7
+8./../../02_rtl/EXP_sub.sv
+F./../../02_rtl/EXP_sub.sv
+!i122 16
+R19
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@e@x@p_sub
+vEXP_swap
+R4
+R5
+R6
+!i10b 1
+!s100 n2ZfHnRm[H1oP3RVC@m1:1
+IYf<NVJhVl0DC<YUiTBZ5R3
+S1
+R2
+R17
+8./../../02_rtl/EXP_swap.sv
+F./../../02_rtl/EXP_swap.sv
+!i122 16
+Z20 L0 1 25
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@e@x@p_swap
+vFPU_unit
+R4
+R5
+R6
+!i10b 1
+!s100 BUllcCnOG2EAE]WC3X;4F2
+IC=?cLocFf@h5nE7o6XgBT1
+S1
+R2
+Z21 w1763635344
+Z22 8./../../02_rtl/FPU_unit.sv
+Z23 F./../../02_rtl/FPU_unit.sv
+!i122 16
+L0 1 240
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@f@p@u_unit
+vLOPD_16bit
+R4
+R5
+R6
+!i10b 1
+!s100 PGg=8U5dl^SLXAGJWOajF1
+IB8nGnJQ=J]_A4H`NWfcaf1
+S1
+R2
+R17
+8./../../02_rtl/LOPD_16bit.sv
+F./../../02_rtl/LOPD_16bit.sv
+!i122 16
+Z24 L0 1 40
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@l@o@p@d_16bit
+vLOPD_24bit
+R4
+R5
+R6
+!i10b 1
+!s100 b=2g^Fl2ec^@S?gbRkiRQ2
+I4KmUEK?c@gBJUWc9ak3Gn1
+S1
+R2
+R7
+8./../../02_rtl/LOPD_24bit.sv
+F./../../02_rtl/LOPD_24bit.sv
+!i122 16
+L0 1 39
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@l@o@p@d_24bit
+vLOPD_4bit
+R4
+R5
+R6
+!i10b 1
+!s100 Idi^z5a[AUI]`TTXnkA8S0
+Ig6zC3eYMKgH]GQVCcLOAE3
+S1
+R2
+R7
+8./../../02_rtl/LOPD_4bit.sv
+F./../../02_rtl/LOPD_4bit.sv
+!i122 16
+L0 1 19
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@l@o@p@d_4bit
+vLOPD_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 BQkbY=bgbbWQiT3T=<O861
+I<?2i7O;AU^zX4`:1i?a@Y0
+S1
+R2
+R17
+8./../../02_rtl/LOPD_8bit.sv
+F./../../02_rtl/LOPD_8bit.sv
+!i122 16
+L0 1 43
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@l@o@p@d_8bit
+vMAN_ALU
+R4
+R5
+R6
+!i10b 1
+!s100 kzJB9c`9B[;Q02BO3^=XC1
+I;F=3]KfZa:Z3HX6?L>R8g3
+S1
+R2
+R17
+8./../../02_rtl/MAN_ALU.sv
+F./../../02_rtl/MAN_ALU.sv
+!i122 16
+R16
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@m@a@n_@a@l@u
+vMAN_swap
+R4
+R5
+R6
+!i10b 1
+!s100 RUI@L8eZ`H?Y4TEn`]RCG3
+ID@W2Hl<8l^7:>hZIh^IU?2
+S1
+R2
+R7
+8./../../02_rtl/MAN_swap.sv
+F./../../02_rtl/MAN_swap.sv
+!i122 16
+L0 1 31
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@m@a@n_swap
+vMux_4_to_1
+R4
+R5
+R6
+!i10b 1
+!s100 knmE54d0JWm@Ic;31L6GG1
+I<Sh?oXIgMT4hzKTQ7KShV3
+S1
+R2
+R21
+R22
+R23
+!i122 16
+L0 241 29
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@mux_4_to_1
+vNORMALIZATION_unit
+R4
+R5
+R6
+!i10b 1
+!s100 0^dW?<ihG3HGO`4lc>`0f1
+IT8YN7D[kReM3QlicSg65Z0
+S1
+R2
+R7
+8./../../02_rtl/NORMALIZATION_unit.sv
+F./../../02_rtl/NORMALIZATION_unit.sv
+!i122 16
+R20
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@n@o@r@m@a@l@i@z@a@t@i@o@n_unit
+vPSC_unit
+R4
+R5
+R6
+!i10b 1
+!s100 CjTAPOjW`j9F:dLFeEhOS3
+I^i7zSaW=A8T9naB8]:_E20
+S1
+R2
+w1763635290
+8./../../02_rtl/PSC_unit.sv
+F./../../02_rtl/PSC_unit.sv
+!i122 16
+R16
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@p@s@c_unit
+vRND_add
+R4
+R5
+R6
+!i10b 1
+!s100 V5a<m6WEcK4g6YQ9zAim@2
+I2cR5]@[EAFG1HKf7z`G811
+S1
+R2
+R7
+8./../../02_rtl/RND_add.sv
+F./../../02_rtl/RND_add.sv
+!i122 16
+L0 1 38
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@r@n@d_add
+vROUNDING_unit
+R4
+R5
+R6
+!i10b 1
+!s100 0PbLA@BJUkzlEoHW1[>jF3
+Il0SI_OKR051D<9@BfQgEG0
+S1
+R2
+R7
+8./../../02_rtl/ROUNDING_unit.sv
+F./../../02_rtl/ROUNDING_unit.sv
+!i122 16
+R24
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@r@o@u@n@d@i@n@g_unit
+vSHF_left_28bit
+R4
+R5
+R6
+!i10b 1
+!s100 iF_I^6Y0Jf1SAjOBXGPb23
+IfUG56L4mOlfk9zK_F^g3M1
+S1
+R2
+R7
+8./../../02_rtl/SHF_left_28bit.sv
+F./../../02_rtl/SHF_left_28bit.sv
+!i122 16
+Z25 L0 1 27
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@s@h@f_left_28bit
+vSHF_right_28bit
+R4
+R5
+R6
+!i10b 1
+!s100 CDYBZ@3UH=@XfOE6PG15Z0
+Ih:7eaKKToSfU^dDHjj4ib3
+S1
+R2
+R7
+8./../../02_rtl/SHF_right_28bit.sv
+F./../../02_rtl/SHF_right_28bit.sv
+!i122 16
+R25
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@s@h@f_right_28bit
+vSIGN_unit
+R4
+R5
+R6
+!i10b 1
+!s100 bPKfhl;XmnIhlSJc9fSNC2
+IF5TYV`e;>zKC]]D6@d4SC1
+S1
+R2
+R7
+8./../../02_rtl/SIGN_unit.sv
+F./../../02_rtl/SIGN_unit.sv
+!i122 16
+R18
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@s@i@g@n_unit
+vtb_FPU_unit
+R4
+R5
+DXx4 work 19 tb_FPU_unit_sv_unit 0 22 3SmCSKc8NdEdUdkfzMO<M3
+R6
+R8
+r1
+!s85 0
+!i10b 1
+!s100 9nCdSo>Hn?E[:<0lMW_WN3
+IFm9]Edh3M7>QcDV5V?Ycb3
+!s105 tb_FPU_unit_sv_unit
+S1
+R2
+Z26 w1763635749
+Z27 8./../Topmodule/tb_FPU_unit.sv
+Z28 F./../Topmodule/tb_FPU_unit.sv
+!i122 16
+L0 6 232
+R9
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+ntb_@f@p@u_unit
+Xtb_FPU_unit_sv_unit
+R4
+R5
+R6
+V3SmCSKc8NdEdUdkfzMO<M3
+r1
+!s85 0
+!i10b 1
+!s100 0MdFjgMd^Dc9k7z106hcC1
+I3SmCSKc8NdEdUdkfzMO<M3
+!i103 1
+S1
+R2
+R26
+R27
+R28
+F./../Topmodule/lib/Cal_funs.svh
+F./../Topmodule/lib/display.svh
+F./../Topmodule/lib/gen_clock.svh
+!i122 16
+L0 1 0
+R9
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+ntb_@f@p@u_unit_sv_unit

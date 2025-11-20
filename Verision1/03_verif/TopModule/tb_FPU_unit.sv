@@ -163,7 +163,7 @@ task automatic Display_result(
                     t_o_ov_flow, t_o_un_flow);
         $display("=> %s: expect=%.24f (%h), dut=%.24f (%h), rounding_error=%.8f %% (exp_error = %.8f %%)", 
                     (t_sr_rounding_error <= t_error) ? "PASS" : "FAIL", 
-                    t_sr_32_e, real_to_float(t_sr_32_e), t_sr_32_s, real_to_float(t_sr_32_e), t_sr_rounding_error, t_error);
+                    t_sr_32_e, real_to_float(t_sr_32_e), t_sr_32_s, real_to_float(t_sr_32_s), t_sr_rounding_error, t_error);
         test_count++;
         if (t_sr_rounding_error <= t_error) test_pass++;
     end
@@ -246,8 +246,8 @@ initial begin
     TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc0533333);
     TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc1b1999a);
     TestCase_Display_result("PRE_NOR_EXP", "Overflow rouding", 32'h0cffffff, 32'h00f80000);
-    // repeat(2**SIZE_ADDR) begin
-    repeat(10) begin
+    repeat(2**SIZE_ADDR) begin
+    // repeat(10) begin
         TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
         @(posedge i_clk);
         #1;

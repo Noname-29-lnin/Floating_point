@@ -1,0 +1,40 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 14:51:32 on Nov 20,2025
+vlog -f ./../TopModule/flist.f 
+-- Compiling module tb_FPU_unit
+-- Compiling module single_port_rom
+-- Compiling module FPU_unit
+-- Compiling module Mux_4_to_1
+-- Compiling module CLA_4bit
+-- Compiling module CLA_8bit
+-- Compiling module CLA_24bit
+-- Compiling module CLA_28bit
+-- Compiling module COMP_2bit
+-- Compiling module COMP_4bit
+-- Compiling module COMP_8bit
+-- Compiling module COMP_28bit
+-- Compiling module EXP_adjust
+-- Compiling module EXP_rounding
+-- Compiling module EXP_sub
+-- Compiling module EXP_swap
+-- Compiling module LOPD_4bit
+-- Compiling module LOPD_8bit
+-- Compiling module LOPD_16bit
+-- Compiling module LOPD_24bit
+-- Compiling module MAN_ALU
+-- Compiling module MAN_swap
+-- Compiling module NORMALIZATION_unit
+-- Compiling module PSC_unit
+-- Compiling module RND_add
+-- Compiling module ROUNDING_unit
+-- Compiling module SHF_left_28bit
+-- Compiling module SHF_right_28bit
+-- Compiling module SIGN_unit
+
+Top level modules:
+	tb_FPU_unit
+	CLA_24bit
+	COMP_2bit
+	LOPD_4bit
+End time: 14:51:32 on Nov 20,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

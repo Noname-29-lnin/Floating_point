@@ -1,0 +1,2 @@
+var g_data = {"name":"/home/noname/Documents/project_tiny/Floating_point/Version_Final2/03_verif/Questasim/./../Topmodule/lib/gen_clock.svh","src":"task automatic Gen_CLOCK(\n    output logic t_clk,\n    input  int    PERIOD\n);\nbegin\n    fork\n        t_clk = 0;\n        forever #(PERIOD/2) t_clk = ~t_clk;\n    join_none\nend\nendtask\n","lang":"verilog"};
+processSrcData(g_data);

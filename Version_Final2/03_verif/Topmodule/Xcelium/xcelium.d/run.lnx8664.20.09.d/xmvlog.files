@@ -1,0 +1,31 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/admin/shared/My_project/Floating_point/Version_Final2/03_verif/Topmodule/tb_FPU_unit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/CLA_4bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/CLA_8bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/CLA_24bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/CLA_28bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/COMP_2bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/COMP_4bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/COMP_8bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/COMP_28bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/EXP_adjust.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/EXP_rounding.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/EXP_sub.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/EXP_swap.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/FPU_unit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/LOPD_4bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/LOPD_8bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/LOPD_16bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/LOPD_24bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/MAN_ALU.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/MAN_swap.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/NORMALIZATION_unit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/PSC_unit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/RND_add.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/ROUNDING_unit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/SHF_left_28bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/SHF_right_28bit.sv
+/home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/SIGN_unit.sv

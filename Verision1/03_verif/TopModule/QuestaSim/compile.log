@@ -1,5 +1,5 @@
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-Start time: 19:40:42 on Nov 17,2025
+Start time: 14:54:50 on Nov 20,2025
 vlog -f ./../TopModule/flist.f 
 -- Compiling module tb_FPU_unit
 -- Compiling module single_port_rom
@@ -34,5 +34,5 @@ vlog -f ./../TopModule/flist.f
 Top level modules:
 	tb_FPU_unit
 	CLA_24bit
-End time: 19:40:42 on Nov 17,2025, Elapsed time: 0:00:00
+End time: 14:54:50 on Nov 20,2025, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
