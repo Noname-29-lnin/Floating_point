@@ -1,10 +1,4 @@
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {section}{\numberline {1}Design FPU}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Bộ tiền xử lý liên quan đến Exponent}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Bộ tiền xử lý liên quan đến Mantissa}{4}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Bộ xử lý dấu của phép tính}{5}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Bộ xử lý các trường hợp đặc biệt ở ngõ vào}{7}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Bộ căn chỉnh Exponent}{10}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Bộ cộng trừ Mantissa}{11}{subsection.1.6}%
+\contentsline {section}{\numberline {1}Simulation and Verification}{1}{section.1}%

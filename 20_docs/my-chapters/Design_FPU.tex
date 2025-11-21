@@ -66,7 +66,30 @@ Bộ Compare Mantissa, nhóm em đề xuất hai phương pháp như sau:
 
 \begin{enumerate}[label=Phương pháp \arabic*., leftmargin=2cm]
 	\item Sử dụng phương pháp xây dựng từ bộ \textsf{COMP\_4bit} để tạo nên bộ \textsf{COMP\_28bit} như sau:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.9\linewidth]{./my-chapters/my-diagrams/comp_28bit.png}
+			\caption{Bộ so sánh 28-bit sử dụng các so sánh lan truyền.}
+			\label{fig: comp_28bit_using_propagation_lessandequal}
+		\end{figure}
+	\item Sử dụng giải thuật cộng của bộ CLA (Carry Lookahead Adder) như sau:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.9\linewidth]{./my-chapters/my-diagrams/COM_28bit_1.png}
+			\caption{Bộ so sánh 28-bit sử dụng phép trừ sử dụng giải thuật của bộ CLA.}
+		\end{figure}
+		
+		Tuy nhiên với bộ tạo ra tín hiệu \texttt{P} và \texttt{G} sẽ khác do đây là phép trừ hai bit được biểu dưới dạng như:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.9\linewidth]{./my-chapters/my-diagrams/COM_28bit_1_unit.png}
+		\end{figure}
+		
+		Và từ đó sẽ tiền hành như bộ CLA.
 \end{enumerate}
+
+Từ hai phương pháp trên, nhóm em quyết định sử dụng bộ \ref{fig: comp_28bit_using_propagation_lessandequal} để có thể dễ dàng triển khai bộ \texttt{COMP\_28bit}.
 
 \subsection{Bộ xử lý dấu của phép tính}
 
@@ -323,17 +346,46 @@ Tại bộ \textsf{ALU\_UNIT}, nhóm em sử dụng một bộ cộng với 28-b
 	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagrams/cla_28bit.png}
 \end{figure} 
 
+\subsection{Bộ chuẩn hóa Mantissa}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{./my-chapters/my-diagrams/Normalization.png}
 \end{figure}
+
+\subsection{Bộ tìm vị trí bit 1 của MANTISSA sau khi chuẩn hóa}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{./my-chapters/my-diagrams/LODP_24bit.png}
 \end{figure}
 
+\subsection{Bộ làm tròn cho giá trị Mantissa và Exponent}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{./my-chapters/my-diagrams/rounding.png}
 \end{figure}
+
+Ở đây bộ \texttt{RND\_unit} là bộ cộng giá trị làm tròn cho dữ liệu đầu vào, với kiểu làm tròn là làm tròn gần nhất. Vì vậy, ở đây ta thấy ở đây chỉ lấy \textsf{i\_data} + \textsf{i\_carry} bởi vì chỉ là cộng thêm 1 hoặc không. 
+
+\begin{minipage}{.38\linewidth}
+	\begin{lstlisting}[style=StyleCode, language=SystemVerilog, linewidth=.9\linewidth]
+		p = a ^ b;
+		g = a & b;
+		c[i] = g[i] | (p[i] & c[i-1])
+	\end{lstlisting}
+\end{minipage}
+\begin{minipage}{.1\linewidth}
+	\hspace{0.5cm}
+	$\Rightarrow$
+\end{minipage}
+\begin{minipage}{.38\linewidth}
+	\begin{lstlisting}[style=StyleCode, language=SystemVerilog, linewidth=.9\linewidth]
+		p = a;
+		c[i] = g[i] | (p[i] & c[i-1])
+		
+		s 	= p ^ c
+		c_o	= &a & c[0]
+	\end{lstlisting}
+\end{minipage}
