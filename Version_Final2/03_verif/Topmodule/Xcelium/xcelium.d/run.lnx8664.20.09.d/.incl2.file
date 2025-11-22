@@ -4,3 +4,7 @@
 /home/admin/shared/My_project/Floating_point/Version_Final2/03_verif/Topmodule/lib/display.svh
 ./../Topmodule/lib/gen_clock.svh
 /home/admin/shared/My_project/Floating_point/Version_Final2/03_verif/Topmodule/lib/gen_clock.svh
+./../../05_synth/Genus/Genus/FPU_unit_netlist.v
+/home/admin/shared/My_project/Floating_point/Version_Final2/05_synth/Genus/Genus/FPU_unit_netlist.v
+./../../05_synth/slow_vdd1v2_basicCells_lvt.v
+/home/admin/shared/My_project/Floating_point/Version_Final2/05_synth/slow_vdd1v2_basicCells_lvt.v

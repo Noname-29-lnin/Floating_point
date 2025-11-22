@@ -84,10 +84,10 @@ end
 //     $dumpfile("tb_FPU_unit.vcd");
 //     $dumpvars(0, tb_FPU_unit);
 // end
-// initial begin 
-//     $shm_open("tb_FPU_unit.shm");
-//     $shm_probe("ASM");
-// end
+initial begin 
+    $shm_open("tb_FPU_unit.shm");
+    $shm_probe("ASM");
+end
 
 task automatic Display_result_Error (
     string                      t_type      ,

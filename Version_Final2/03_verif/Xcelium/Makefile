@@ -107,6 +107,7 @@ compile_annotation:
 
 run:
 	@echo "-> Move file $(TB_NAME).shm"
+	@rm -rf $(WORK_DIR)/$(TB_NAME).shm
 	@mv $(TB_NAME).shm $(WORK_DIR) \
 	     && echo "<Pass> Move $(TB_NAME).shm to $(WORK_DIR)/$(TB_NAME)" || (echo "<False> Move $(TB_NAME).shm to $(WORK_DIR)/$(TB_NAME)" && exit 1)
 	@echo "-> Copy Xcelium..."

@@ -8,9 +8,9 @@
 +nctimescale+1ns/1ps
 -MESSAGES
 +EMGRLOG
-./../Topmodule/Xcelium/compile.log
+./../Topmodule/Xcelium/compile_annotation.log
 -XLSTIME
-1763641652
+1763818251
 -XLKEEP
 -XLMODE
 ./xcelium.d/run.lnx8664.20.09.d

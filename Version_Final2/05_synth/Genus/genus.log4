@@ -5335,3 +5335,4 @@ invalid command name ".report_attr_2.fr.table"
     invoked from within
 "vrc_util_table_column_resize_col_int .report_attr_2.fr.table {0 1}"
     ("after" script)
+Normal exit.

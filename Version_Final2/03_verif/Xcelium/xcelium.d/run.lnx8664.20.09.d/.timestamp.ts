@@ -1,10 +1,9 @@
-1763809381 /home/admin/shared/My_project/Floating_point/Version_Final2/03_verif/Topmodule/tb_FPU_unit.sv
+1763818243 /home/admin/shared/My_project/Floating_point/Version_Final2/03_verif/Topmodule/tb_FPU_unit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/SHF_right_28bit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/SIGN_unit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/ROUNDING_unit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/CLA_4bit.sv
 1763635290 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/PSC_unit.sv
-1763635344 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/FPU_unit.sv
 1763476176 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/MAN_ALU.sv
 1763384019 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/COMP_2bit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/COMP_8bit.sv

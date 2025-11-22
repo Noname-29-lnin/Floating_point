@@ -3,5 +3,9 @@
 // Do not modify this file
 //
 -sv
+-DEFINE
+GATELEVEL
+-DEFINE
+ANNOTATION
 -INCDIR
 ./../Topmodule/lib/
