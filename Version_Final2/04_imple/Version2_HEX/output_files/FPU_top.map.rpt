@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPU_top
-Thu Nov 20 04:40:37 2025
+Sat Nov 22 11:56:11 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -81,13 +81,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 20 04:40:37 2025           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 22 11:56:11 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; FPU_top                                         ;
 ; Top-level Entity Name              ; FPU_top                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 753                                             ;
-;     Total combinational functions  ; 730                                             ;
+; Total logic elements               ; 755                                             ;
+;     Total combinational functions  ; 732                                             ;
 ;     Dedicated logic registers      ; 114                                             ;
 ; Total registers                    ; 114                                             ;
 ; Total pins                         ; 101                                             ;
@@ -200,39 +200,39 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                           ;
-+-----------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                    ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                    ; Library ;
-+-----------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
-; ../../../Version_Final/02_rlt/SIGN_unit.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/SIGN_unit.sv                      ;         ;
-; ../../../Version_Final/02_rlt/SHF_right_28bit.sv    ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/SHF_right_28bit.sv                ;         ;
-; ../../../Version_Final/02_rlt/SHF_left_28bit.sv     ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/SHF_left_28bit.sv                 ;         ;
-; ../../../Version_Final/02_rlt/ROUNDING_unit.sv      ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/ROUNDING_unit.sv                  ;         ;
-; ../../../Version_Final/02_rlt/RND_add.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/RND_add.sv                        ;         ;
-; ../../../Version_Final/02_rlt/PSC_unit.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/PSC_unit.sv                       ;         ;
-; ../../../Version_Final/02_rlt/NORMALIZATION_unit.sv ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/NORMALIZATION_unit.sv             ;         ;
-; ../../../Version_Final/02_rlt/MAN_swap.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/MAN_swap.sv                       ;         ;
-; ../../../Version_Final/02_rlt/MAN_ALU.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/MAN_ALU.sv                        ;         ;
-; ../../../Version_Final/02_rlt/LOPD_24bit.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/LOPD_24bit.sv                     ;         ;
-; ../../../Version_Final/02_rlt/LOPD_16bit.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/LOPD_16bit.sv                     ;         ;
-; ../../../Version_Final/02_rlt/LOPD_8bit.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/LOPD_8bit.sv                      ;         ;
-; ../../../Version_Final/02_rlt/FPU_unit.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/FPU_unit.sv                       ;         ;
-; ../../../Version_Final/02_rlt/EXP_swap.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/EXP_swap.sv                       ;         ;
-; ../../../Version_Final/02_rlt/EXP_sub.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/EXP_sub.sv                        ;         ;
-; ../../../Version_Final/02_rlt/EXP_rounding.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/EXP_rounding.sv                   ;         ;
-; ../../../Version_Final/02_rlt/EXP_adjust.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/EXP_adjust.sv                     ;         ;
-; ../../../Version_Final/02_rlt/COMP_28bit.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/COMP_28bit.sv                     ;         ;
-; ../../../Version_Final/02_rlt/COMP_8bit.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/COMP_8bit.sv                      ;         ;
-; ../../../Version_Final/02_rlt/COMP_4bit.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/COMP_4bit.sv                      ;         ;
-; ../../../Version_Final/02_rlt/CLA_28bit.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/CLA_28bit.sv                      ;         ;
-; ../../../Version_Final/02_rlt/CLA_8bit.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/CLA_8bit.sv                       ;         ;
-; ../../../Version_Final/02_rlt/CLA_4bit.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final/02_rlt/CLA_4bit.sv                       ;         ;
-; UART_SS_detect_edge.sv                              ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Verision2/04_imple/Version2_HEX/UART_SS_detect_edge.sv ;         ;
-; HEX_trans.sv                                        ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Verision2/04_imple/Version2_HEX/HEX_trans.sv           ;         ;
-; HEX_block.sv                                        ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Verision2/04_imple/Version2_HEX/HEX_block.sv           ;         ;
-; FPU_top.sv                                          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Verision2/04_imple/Version2_HEX/FPU_top.sv             ;         ;
-+-----------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                               ;
++------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                         ; Library ;
++------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; ../../02_rtl/SIGN_unit.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/SIGN_unit.sv                          ;         ;
+; ../../02_rtl/SHF_right_28bit.sv    ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/SHF_right_28bit.sv                    ;         ;
+; ../../02_rtl/SHF_left_28bit.sv     ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/SHF_left_28bit.sv                     ;         ;
+; ../../02_rtl/ROUNDING_unit.sv      ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/ROUNDING_unit.sv                      ;         ;
+; ../../02_rtl/RND_add.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/RND_add.sv                            ;         ;
+; ../../02_rtl/PSC_unit.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/PSC_unit.sv                           ;         ;
+; ../../02_rtl/NORMALIZATION_unit.sv ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/NORMALIZATION_unit.sv                 ;         ;
+; ../../02_rtl/MAN_swap.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/MAN_swap.sv                           ;         ;
+; ../../02_rtl/MAN_ALU.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/MAN_ALU.sv                            ;         ;
+; ../../02_rtl/LOPD_24bit.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/LOPD_24bit.sv                         ;         ;
+; ../../02_rtl/LOPD_16bit.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/LOPD_16bit.sv                         ;         ;
+; ../../02_rtl/LOPD_8bit.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/LOPD_8bit.sv                          ;         ;
+; ../../02_rtl/FPU_unit.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/FPU_unit.sv                           ;         ;
+; ../../02_rtl/EXP_swap.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/EXP_swap.sv                           ;         ;
+; ../../02_rtl/EXP_sub.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/EXP_sub.sv                            ;         ;
+; ../../02_rtl/EXP_rounding.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/EXP_rounding.sv                       ;         ;
+; ../../02_rtl/EXP_adjust.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/EXP_adjust.sv                         ;         ;
+; ../../02_rtl/COMP_28bit.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/COMP_28bit.sv                         ;         ;
+; ../../02_rtl/COMP_8bit.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/COMP_8bit.sv                          ;         ;
+; ../../02_rtl/COMP_4bit.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/COMP_4bit.sv                          ;         ;
+; ../../02_rtl/CLA_28bit.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/CLA_28bit.sv                          ;         ;
+; ../../02_rtl/CLA_8bit.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/CLA_8bit.sv                           ;         ;
+; ../../02_rtl/CLA_4bit.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/02_rtl/CLA_4bit.sv                           ;         ;
+; UART_SS_detect_edge.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/04_imple/Version2_HEX/UART_SS_detect_edge.sv ;         ;
+; HEX_trans.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/04_imple/Version2_HEX/HEX_trans.sv           ;         ;
+; HEX_block.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/04_imple/Version2_HEX/HEX_block.sv           ;         ;
+; FPU_top.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Document_forme/project_tiny/BigProject/Floating_point/Version_Final2/04_imple/Version2_HEX/FPU_top.sv             ;         ;
++------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -240,16 +240,16 @@ applicable agreement for further details.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 753    ;
+; Estimated Total logic elements              ; 755    ;
 ;                                             ;        ;
-; Total combinational functions               ; 730    ;
+; Total combinational functions               ; 732    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 523    ;
-;     -- 3 input functions                    ; 129    ;
-;     -- <=2 input functions                  ; 78     ;
+;     -- 4 input functions                    ; 534    ;
+;     -- 3 input functions                    ; 121    ;
+;     -- <=2 input functions                  ; 77     ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 699    ;
+;     -- normal mode                          ; 701    ;
 ;     -- arithmetic mode                      ; 31     ;
 ;                                             ;        ;
 ; Total registers                             ; 114    ;
@@ -260,8 +260,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; SW[17] ;
 ; Maximum fan-out                             ; 114    ;
-; Total fan-out                               ; 3126   ;
-; Average fan-out                             ; 3.31   ;
+; Total fan-out                               ; 3144   ;
+; Average fan-out                             ; 3.32   ;
 +---------------------------------------------+--------+
 
 
@@ -270,9 +270,9 @@ applicable agreement for further details.
 +-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Library Name ;
 +-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------+
-; |FPU_top                                              ; 730 (46)          ; 114 (52)     ; 0           ; 0            ; 0       ; 0         ; 101  ; 0            ; |FPU_top                                                                                                        ; work         ;
-;    |FPU_unit:FPU_UNIT|                                ; 627 (9)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT                                                                                      ; work         ;
-;       |COMP_28bit:MAN_COMP_28BIT_UNIT|                ; 29 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT                                                       ; work         ;
+; |FPU_top                                              ; 732 (46)          ; 114 (52)     ; 0           ; 0            ; 0       ; 0         ; 101  ; 0            ; |FPU_top                                                                                                        ; work         ;
+;    |FPU_unit:FPU_UNIT|                                ; 629 (9)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT                                                                                      ; work         ;
+;       |COMP_28bit:MAN_COMP_28BIT_UNIT|                ; 31 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT                                                       ; work         ;
 ;          |COMP_4bit:u_i_data_4|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|COMP_28bit:MAN_COMP_28BIT_UNIT|COMP_4bit:u_i_data_4                                  ; work         ;
 ;       |EXP_adjust:EXP_ADJUST_UNIT|                    ; 33 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT                                                           ; work         ;
 ;          |CLA_8bit:CLA_8BIT_UNIT|                     ; 20 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT|CLA_8bit:CLA_8BIT_UNIT                                    ; work         ;
@@ -290,23 +290,23 @@ applicable agreement for further details.
 ;             |LOPD_8bit:LOPD_8bit_unit_0|              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_0 ; work         ;
 ;             |LOPD_8bit:LOPD_8bit_unit_1|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_1 ; work         ;
 ;          |LOPD_8bit:LOPD_8bit_UNIT_LSB|               ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|LOPD_8bit:LOPD_8bit_UNIT_LSB                              ; work         ;
-;       |MAN_ALU:MAN_ALU_UNIT|                          ; 155 (10)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT                                                                 ; work         ;
-;          |CLA_28bit:ALU_SUB_UNIT|                     ; 145 (20)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT                                          ; work         ;
+;       |MAN_ALU:MAN_ALU_UNIT|                          ; 157 (10)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT                                                                 ; work         ;
+;          |CLA_28bit:ALU_SUB_UNIT|                     ; 147 (20)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT                                          ; work         ;
 ;             |CLA_4bit:CLA_BLOCK_GEN[0].CLA_4BIT_UNIT| ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[0].CLA_4BIT_UNIT  ; work         ;
 ;             |CLA_4bit:CLA_BLOCK_GEN[1].CLA_4BIT_UNIT| ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[1].CLA_4BIT_UNIT  ; work         ;
 ;             |CLA_4bit:CLA_BLOCK_GEN[2].CLA_4BIT_UNIT| ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[2].CLA_4BIT_UNIT  ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT| ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT  ; work         ;
+;             |CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT| ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT  ; work         ;
 ;             |CLA_4bit:CLA_BLOCK_GEN[4].CLA_4BIT_UNIT| ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[4].CLA_4BIT_UNIT  ; work         ;
 ;             |CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT| ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT  ; work         ;
 ;             |CLA_4bit:CLA_BLOCK_GEN[6].CLA_4BIT_UNIT| ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|CLA_28bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[6].CLA_4BIT_UNIT  ; work         ;
 ;       |MAN_swap:MAN_PRE_SWAP_BY_EXPONENT_UNIT|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_swap:MAN_PRE_SWAP_BY_EXPONENT_UNIT                                               ; work         ;
 ;       |MAN_swap:MAN_PRE_SWAP_BY_MAN_UNIT|             ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_swap:MAN_PRE_SWAP_BY_MAN_UNIT                                                    ; work         ;
-;       |Mux_4_to_1:SEL_MANTISSA_FOR_RESULT|            ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|Mux_4_to_1:SEL_MANTISSA_FOR_RESULT                                                   ; work         ;
-;       |NORMALIZATION_unit:NORMALIZATION_UNIT|         ; 167 (83)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT                                                ; work         ;
+;       |Mux_4_to_1:SEL_MANTISSA_FOR_RESULT|            ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|Mux_4_to_1:SEL_MANTISSA_FOR_RESULT                                                   ; work         ;
+;       |NORMALIZATION_unit:NORMALIZATION_UNIT|         ; 166 (82)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT                                                ; work         ;
 ;          |SHF_left_28bit:SHF_left_28bit_unit|         ; 84 (84)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|SHF_left_28bit:SHF_left_28bit_unit             ; work         ;
 ;       |PSC_unit:PSC_UNIT|                             ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|PSC_unit:PSC_UNIT                                                                    ; work         ;
-;       |ROUNDING_unit:ROUNDING_UNIT|                   ; 27 (8)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT                                                          ; work         ;
-;          |RND_add:INCREASE_ROUNDING|                  ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|RND_add:INCREASE_ROUNDING                                ; work         ;
+;       |ROUNDING_unit:ROUNDING_UNIT|                   ; 25 (7)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT                                                          ; work         ;
+;          |RND_add:INCREASE_ROUNDING|                  ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|ROUNDING_unit:ROUNDING_UNIT|RND_add:INCREASE_ROUNDING                                ; work         ;
 ;       |SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|          ; 87 (87)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT                                                 ; work         ;
 ;       |SIGN_unit:SIGN_OUT|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|SIGN_unit:SIGN_OUT                                                                   ; work         ;
 ;    |HEX_block:HEX_BLOCK_UNIT|                         ; 56 (0)            ; 58 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPU_top|HEX_block:HEX_BLOCK_UNIT                                                                               ; work         ;
@@ -409,16 +409,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT|w_data_b[4]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|o_data[11]      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|o_data[13]      ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|w_i_man_b[11]                   ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|o_one_position[1]         ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST_UNIT|w_data_b[2]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|o_data[4]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right_28bit:SHF_RIGHT_28BIT_UNIT|o_data[14]      ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU_UNIT|w_i_man_b[18]                   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT_UNIT|o_one_position[2]         ;
 ; 5:1                ; 12 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[0]  ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[12] ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[19] ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[15] ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[16] ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[20] ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[25] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NORMALIZATION_unit:NORMALIZATION_UNIT|o_mantissa[24] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 
 
@@ -725,16 +725,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FPU_unit:FPU_UNIT|Mux_4_to_1:SEL_MANTISSA_FOR_RESULT"                                           ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_data_01        ; Input  ; Info     ; Stuck at GND                                                                        ;
-; i_data_10[23..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; i_data_10[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; o_data[23]       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FPU_unit:FPU_UNIT|Mux_4_to_1:SEL_MANTISSA_FOR_RESULT"                                            ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; i_data_10         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_data_11[23..22] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_data_11[21..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; o_data[23]        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -822,7 +822,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -832,61 +832,61 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Nov 20 04:40:32 2025
+    Info: Processing started: Sat Nov 22 11:56:05 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPU_top -c FPU_top
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/sign_unit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/sign_unit.sv
     Info (12023): Found entity 1: SIGN_unit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/shf_right_28bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/shf_right_28bit.sv
     Info (12023): Found entity 1: SHF_right_28bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/shf_left_28bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/shf_left_28bit.sv
     Info (12023): Found entity 1: SHF_left_28bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/rounding_unit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/rounding_unit.sv
     Info (12023): Found entity 1: ROUNDING_unit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/rnd_add.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/rnd_add.sv
     Info (12023): Found entity 1: RND_add
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/psc_unit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/psc_unit.sv
     Info (12023): Found entity 1: PSC_unit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/normalization_unit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/normalization_unit.sv
     Info (12023): Found entity 1: NORMALIZATION_unit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/man_swap.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/man_swap.sv
     Info (12023): Found entity 1: MAN_swap
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/man_alu.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/man_alu.sv
     Info (12023): Found entity 1: MAN_ALU
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/lopd_24bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/lopd_24bit.sv
     Info (12023): Found entity 1: LOPD_24bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/lopd_16bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/lopd_16bit.sv
     Info (12023): Found entity 1: LOPD_16bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/lopd_8bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/lopd_8bit.sv
     Info (12023): Found entity 1: LOPD_8bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/lopd_4bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/lopd_4bit.sv
     Info (12023): Found entity 1: LOPD_4bit
-Info (12021): Found 2 design units, including 2 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/fpu_unit.sv
+Info (12021): Found 2 design units, including 2 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/fpu_unit.sv
     Info (12023): Found entity 1: FPU_unit
     Info (12023): Found entity 2: Mux_4_to_1
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/exp_swap.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/exp_swap.sv
     Info (12023): Found entity 1: EXP_swap
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/exp_sub.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/exp_sub.sv
     Info (12023): Found entity 1: EXP_sub
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/exp_rounding.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/exp_rounding.sv
     Info (12023): Found entity 1: EXP_rounding
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/exp_adjust.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/exp_adjust.sv
     Info (12023): Found entity 1: EXP_adjust
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/comp_28bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/comp_28bit.sv
     Info (12023): Found entity 1: COMP_28bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/comp_8bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/comp_8bit.sv
     Info (12023): Found entity 1: COMP_8bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/comp_4bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/comp_4bit.sv
     Info (12023): Found entity 1: COMP_4bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/comp_2bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/comp_2bit.sv
     Info (12023): Found entity 1: COMP_2bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/cla_28bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/cla_28bit.sv
     Info (12023): Found entity 1: CLA_28bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/cla_24bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/cla_24bit.sv
     Info (12023): Found entity 1: CLA_24bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/cla_8bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/cla_8bit.sv
     Info (12023): Found entity 1: CLA_8bit
-Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final/02_rlt/cla_4bit.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/cla_4bit.sv
     Info (12023): Found entity 1: CLA_4bit
 Info (12021): Found 1 design units, including 1 entities, in source file uart_ss_detect_start.sv
     Info (12023): Found entity 1: UART_SS_detect_start
@@ -898,6 +898,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file hex_blo
     Info (12023): Found entity 1: HEX_block
 Info (12021): Found 1 design units, including 1 entities, in source file fpu_top.sv
     Info (12023): Found entity 1: FPU_top
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/cska_28bit.sv
+    Info (12023): Found entity 1: CKSA_28bit
+Info (12021): Found 1 design units, including 1 entities, in source file /document_forme/project_tiny/bigproject/floating_point/version_final2/02_rtl/cska_4bit.sv
+    Info (12023): Found entity 1: CSKA_4bit
 Info (12127): Elaborating entity "FPU_top" for the top level hierarchy
 Info (12128): Elaborating entity "UART_SS_detect_edge" for hierarchy "UART_SS_detect_edge:SSDE_I_VALID_UNIT"
 Info (12128): Elaborating entity "FPU_unit" for hierarchy "FPU_unit:FPU_UNIT"
@@ -934,14 +938,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 855 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 857 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 78 output pins
-    Info (21061): Implemented 754 logic cells
+    Info (21061): Implemented 756 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4613 megabytes
-    Info: Processing ended: Thu Nov 20 04:40:37 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4611 megabytes
+    Info: Processing ended: Sat Nov 22 11:56:11 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 
