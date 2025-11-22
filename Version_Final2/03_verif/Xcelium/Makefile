@@ -2,8 +2,8 @@ TOPMODULE   	?= top
 INC_DIR     	?= ./
 LIB_DIR     	?= ./
 
-DEF_GATELEVEL 	?= GATE_LEVEL 
-DEF_ANNOTATION 	?= ANNOTATION 
+DEF_GATELEVEL 	?=  
+DEF_ANNOTATION 	?=  
 
 TB_NAME      	= tb_$(TOPMODULE)
 WORK_DIR     	= $(INC_DIR)/Xcelium
@@ -28,7 +28,7 @@ load:
 	@echo "-> Saved to config.mk"
 	@cat config.mk
 
-.PHONY: all all_wave create compile run gui clean kill help
+.PHONY: all all_wave create view compile run gui clean kill help
 all: create compile run
 all_wave: create compile run gui
 .PHONY: all_gatelevel all_annotation compile_gatelevel compile_annotation
@@ -58,6 +58,10 @@ create:
 	@echo "DEF_GATELEVEL = $(NAME_GATELEVEL)"
 	@echo "DEF_ANNOTATION = $(NAME_ANNOTATION)"
 	@echo " "
+
+view:
+	@echo "Open config.mk..."
+	@cat ./config.mk
 
 compile:
 	@echo "-> compile..."

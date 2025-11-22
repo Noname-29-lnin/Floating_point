@@ -1,0 +1,1 @@
+s1(22Nov2025:06:05:57):  xrun +xm64bit -sv -define GATELEVEL -f ./../Topmodule/flist.f -top tb_FPU_unit -access +rwc -clean -log ./../Topmodule/Xcelium/compile_gatelevel.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 

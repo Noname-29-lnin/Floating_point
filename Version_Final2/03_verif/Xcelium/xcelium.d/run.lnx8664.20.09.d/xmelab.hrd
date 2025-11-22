@@ -3,7 +3,7 @@
 // Do not modify this file
 //
 
-tb_LOPD_24bit
+tb_FPU_unit
 -ACCESS
 +rwc
 -timescale

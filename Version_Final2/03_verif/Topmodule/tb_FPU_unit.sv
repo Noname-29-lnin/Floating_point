@@ -3,6 +3,10 @@
 `include "./../Topmodule/lib/display.svh"
 `include "./../Topmodule/lib/gen_clock.svh"
 
+`ifdef GATELEVEL
+    `include "./../../05_synth/Genus/Genus/FPU_unit_netlist.v"
+    `include "./../../05_synth/slow_vdd1v2_basicCells_lvt.v"
+`endif // GATELEVEL
 module tb_FPU_unit();
 localparam ALU_OP       = 1;
 localparam SIZE_ADDR    = 11;
@@ -35,16 +39,37 @@ assign w_o_data_rom_b = rom_B[w_i_addr];
 int test_count = 0;
 int test_pass  = 0;
 
-FPU_unit #(
-    .NUM_OP     (ALU_OP)
-) DUT (
-    .i_add_sub       (i_add_sub),
-    .i_32_a          (i_32_a),
-    .i_32_b          (i_32_b),
-    .o_32_s          (o_32_s),
-    .o_ov_flag       (o_ov_flow),
-    .o_un_flag       (o_un_flow) 
-);
+`ifdef GATELEVEL
+    FPU_unit DUT(
+        .i_add_sub       (i_add_sub),
+        .i_32_a          (i_32_a),
+        .i_32_b          (i_32_b),
+        .o_32_s          (o_32_s),
+        .o_ov_flag       (o_ov_flow),
+        .o_un_flag       (o_un_flow) 
+    );
+`else
+    FPU_unit #(
+        .NUM_OP     (ALU_OP)
+    ) DUT (
+        .i_add_sub       (i_add_sub),
+        .i_32_a          (i_32_a),
+        .i_32_b          (i_32_b),
+        .o_32_s          (o_32_s),
+        .o_ov_flag       (o_ov_flow),
+        .o_un_flag       (o_un_flow) 
+    );
+`endif
+`ifdef ANNOTATION
+    initial begin
+        $display(">>> Loading SDF timing...");
+        $sdf_annotate("./../../05_synth/Genus/Genus/FPU_unit.sdf",
+                    DUT,
+                    , ,
+                    "MAXIMUM");
+    end
+`endif
+
 
 // Gen_CLOCK(i_clk, 20);
 
