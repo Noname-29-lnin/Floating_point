@@ -1,6 +1,193 @@
 \section{Simulation and Verification}
 
-\begin{lstlisting}[style=StyleResult, language=Result]
+Để thực hiện kiểm định thiết kế, nhóm em sử dụng kiểu dữ liệu \texttt{shortreal} của SystemVerilog để thực hiện làm một golden module như sau:
+
+\begin{lstlisting}[style=StyleCode, language=SystemVerilog, caption={Hàm golden model để thực hiện test.}]
+	function automatic shortreal Cal_FPU_expected(
+		input logic         f_i_add_sub ,
+		input shortreal     f_i_32_a    ,
+		input shortreal     f_i_32_b            
+	);
+		begin
+			return (f_i_add_sub) ? f_i_32_a - f_i_32_b : f_i_32_a + f_i_32_b;
+		end
+	endfunction
+\end{lstlisting}
+
+Nhóm em sử dụng các test theo sai số, với sai số nhóm em chọn là: 
+\[ \text{Error\_standard} = \dfrac{2.0^{-23}}{1.0} \times 100 \approx 11.9209\,\mu\% \]
+Có nghĩa là sai ở bit LSB của Mantissa.
+
+Tiếp theo, ta thực hiện xây dựng hàm tính sai số giữa kết quả của golden model và kết quả từ bộ DUT,
+
+\begin{lstlisting}[style=StyleCode, language=SystemVerilog, caption={Hàm tính sai số giữa kết quả của DUT và kết quả của golden model để thực hiện test.}]
+	function automatic shortreal Error_actual(
+		input shortreal         f_i_32_s    ,
+		input shortreal         f_i_32_e     
+	);
+		logic [31:0] f_t_32_s, f_t_32_e;
+		logic is_E_one_S, is_E_one_E;
+		logic is_M_zero_S, is_M_zero_E;
+		logic is_INF_S, is_INF_E;
+		logic is_NAN_S, is_NAN_E;
+		
+		begin
+			f_t_32_s    = REAL_TO_HEX(f_i_32_s);
+			f_t_32_e    = REAL_TO_HEX(f_i_32_e);
+			is_E_one_S  = &f_t_32_s[30:23];
+			is_M_zero_S = ~|f_t_32_s[22:0];
+			is_INF_S    = is_E_one_S & is_M_zero_S;
+			is_NAN_S    = is_E_one_S & ~is_M_zero_S;
+			is_E_one_E  = &f_t_32_e[30:23];
+			is_M_zero_E = ~|f_t_32_e[22:0];
+			is_INF_E    = is_E_one_E & is_M_zero_E;
+			is_NAN_E    = is_E_one_E & ~is_M_zero_E;
+			
+			if(is_NAN_S) begin
+				Error_actual = (is_NAN_E) ? 0.0 : 100.0;
+			end else if(is_NAN_E) begin
+				Error_actual = (is_NAN_S) ? 0.0 : 100.0;
+			end else if(is_INF_S || is_INF_E) begin
+				Error_actual = (f_t_32_s == f_t_32_e) ? 0.0 : 100;
+			end else if((f_i_32_e == 0.0) || (f_i_32_e == -0.0)) begin
+				Error_actual = ((f_i_32_s == 0.0) || (f_i_32_s == -0.0)) ? 0.0 : 100.0;
+			end else begin
+				Error_actual = ((ABS_value(f_i_32_e - f_i_32_s)) / ABS_value(f_i_32_e)) * 100.0;
+			end
+		end
+	endfunction
+\end{lstlisting}
+
+Với xử lý các trường hợp như sau: 
+
+\begin{itemize}
+	\item Nếu kết quả của DUT là một NaN-(Not A Number), hoặc kết quả của bộ golden model là NaN, và khi kiểm tra trường hợp có xuất hiện NaN thì không quan tâm đến dấu của phép tính, vậy ta có kết quả sẽ kiểm tra như sau:
+		\begin{itemize}
+			\item Nếu cả hai đều là NaN thì $\text{Error\_actual} = 0.0 \%$
+			\item Còn nếu một kết quả là NaN còn kết quả còn lại không phải là NaN thì $\text{Error\_actual} = 100.0 \%$
+		\end{itemize}
+	\item Nếu kết quả của DUT là một $\pm \infty$, hoặc kết quả của bộ golden model là $\pm \infty$, thì kiểm tra kết quả của bộ DUT và golden model có giống nhau không:
+		\begin{itemize}
+			\item Nếu cả hai giống nhau thì $\text{Error\_actual} = 0.0 \%$
+			\item Còn nếu hai kết qua không giống nhau thì $\text{Error\_actual} = 100.0 \%$
+		\end{itemize}
+	\item Còn các trường hợp còn lại thì thực hiện việc tính sai số như sau:
+	\[ \text{Error\_actual} = \dfrac{| \textsf{f\_i\_32\_e} - \textsf{f\_i\_32\_s} |}{| \textsf{f\_i\_32\_e} |} \times 100.0\]
+\end{itemize}
+
+Từ đó ta có hàm test chính như sau:
+
+\begin{lstlisting}[style=StyleCode, language=SystemVerilog, caption={Hàm Testbench chính.}]
+	initial begin
+	i_rst_n = 0;
+	i_add_sub       = 1'b0;
+	i_32_a          = 32'h0;
+	i_32_b          = 32'h0;
+	w_i_addr        = '0;
+	#100;
+	i_rst_n = 1;
+	#100;
+	TestCase_Display_result("ZERO", "(0.0 & 0.0)", 32'h00000000, 32'h00000000);
+	TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h00000000, 32'h80000000);
+	TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h4016A197, 32'h4016A197);
+	TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h40AED834, 32'h40AED834);
+	TestCase_Display_result("INF", "(inf & inf)", 32'h7f800000, 32'h7f800000);
+	TestCase_Display_result("INF", "(-inf & -inf)", 32'hff800000, 32'hff800000);
+	TestCase_Display_result("INF", "(inf & -inf)", 32'hff800000, 32'h7f800000);
+	TestCase_Display_result("INF", "(inf & 0)", 32'h7f800000, 32'h00000000);
+	TestCase_Display_result("INF", "(-inf & 0)", 32'hff800000, 32'h00000000);
+	TestCase_Display_result("INF", "(inf & Number)", 32'h7f800000, 32'h40533333);
+	TestCase_Display_result("INF", "(-inf & Number)", 32'hff800000, 32'h40533333);
+	TestCase_Display_result("INF", "(inf & -Number)", 32'h7f800000, 32'hc00ccccd);
+	TestCase_Display_result("INF", "(-inf & -Number)", 32'hff800000, 32'hc00ccccd);
+	TestCase_Display_result("NaN", "(NaN & -Number)", 32'h7f800001, 32'hc00ccccd);
+	TestCase_Display_result("NaN", "(-NaN & -Number)", 32'hff800001, 32'hc00ccccd);
+	TestCase_Display_result("NaN", "(NaN &  Number)", 32'hff800001, 32'h40533333);
+	TestCase_Display_result("NaN", "(-NaN &  Number)", 32'h7f800001, 32'h40533333);
+	TestCase_Display_result("APPRO", "APPR INF", 32'h7f21616f, 32'h007fffff);
+	TestCase_Display_result("APPRO", "APPR INF", 32'h7f7fffff, 32'h00ffffff);
+	TestCase_Display_result("APPRO", "APPR INF", 32'h7f7fffff, 32'h007fffff);
+	TestCase_Display_result("APPRO", "APPR ZERO", 32'h00ffffff, 32'h007fffff);
+	TestCase_Display_result("APPRO", "APPR ZERO", 32'h00ffffff, 32'h00ffffff);
+	TestCase_Display_result("SIGN", "(-A + B)", 32'hc00ccccd, 32'h40533333);
+	TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc0533333);
+	TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc1b1999a);
+	TestCase_Display_result("PRE_NOR_EXP", "Overflow rouding", 32'h0cffffff, 32'h00f80000);
+	repeat(2**SIZE_ADDR) begin
+		TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
+		@(posedge i_clk);
+		#1;
+		w_i_addr = w_i_addr + 1;
+	end
+	
+	Display_SummaryResult(test_count, test_pass);
+	#100;
+	$finish;
+	end
+\end{lstlisting}
+
+Kết quả của Testbench (\href{https://github.com/Noname-29-lnin/Floating_point/blob/main/Version_Final2/03_verif/Topmodule/Xcelium/compile.log}{Compile.log})
+
+\begin{lstlisting}[style=StyleResult, language=Result, basicstyle=\fontsize{5}{6}\selectfont\ttfamily,caption={Kết quả của Testbench.}]
+	==========[ (0.0 & 0.0) ]==========
+	[ZERO][ADD]i_32_a=00000000 (0.000000000000000000000000) + i_32_b=00000000 (0.000000000000000000000000) 	| o_32_s=00000000 (0.000000000000000000000000) 	| o_ov_flow=1, o_un_flow=1
+	=> PASS: expect=0.000000000000000000000000 (00000000), dut=0.000000000000000000000000 (00000000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[ZERO][ADD]i_32_a=00000000 (0.000000000000000000000000) + i_32_b=00000000 (0.000000000000000000000000) 	| o_32_s=00000000 (0.000000000000000000000000) 	| o_ov_flow=1, o_un_flow=1
+	=> PASS: expect=0.000000000000000000000000 (00000000), dut=0.000000000000000000000000 (00000000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[ZERO][SUB]i_32_a=00000000 (0.000000000000000000000000) - i_32_b=00000000 (0.000000000000000000000000) 	| o_32_s=00000000 (0.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=1
+	=> PASS: expect=0.000000000000000000000000 (00000000), dut=0.000000000000000000000000 (00000000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[ZERO][SUB]i_32_a=00000000 (0.000000000000000000000000) - i_32_b=00000000 (0.000000000000000000000000) 	| o_32_s=00000000 (0.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=1
+	=> PASS: expect=0.000000000000000000000000 (00000000), dut=0.000000000000000000000000 (00000000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	...
+	==========[ (inf & inf) ]==========
+	[INF][ADD]i_32_a=7f800000 (inf) + i_32_b=7f800000 (inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=1, o_un_flow=1
+	=> PASS: expect=inf (7f800000), dut=inf (7f800000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[INF][ADD]i_32_a=7f800000 (inf) + i_32_b=7f800000 (inf) 	| o_32_s=7f800000 (inf) 	| o_ov_flow=1, o_un_flow=1
+	=> PASS: expect=inf (7f800000), dut=inf (7f800000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[INF][SUB]i_32_a=7f800000 (inf) - i_32_b=7f800000 (inf) 	| o_32_s=7fc00000 (nan) 	| o_ov_flow=0, o_un_flow=1
+	=> PASS: expect=-nan (ffc00000), dut=nan (7fc00000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[INF][SUB]i_32_a=7f800000 (inf) - i_32_b=7f800000 (inf) 	| o_32_s=7fc00000 (nan) 	| o_ov_flow=0, o_un_flow=1
+	=> PASS: expect=-nan (ffc00000), dut=nan (7fc00000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	...
+	==========[ (-NaN &  Number) ]==========
+	[NaN][ADD]i_32_a=7f800001 (nan) + i_32_b=40533333 (3.299999952316284179687500) 	| o_32_s=7fc00000 (nan) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=nan (7fc00001), dut=nan (7fc00000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[NaN][ADD]i_32_a=40533333 (3.299999952316284179687500) + i_32_b=7f800001 (nan) 	| o_32_s=7fc00000 (nan) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=nan (7fc00001), dut=nan (7fc00000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[NaN][SUB]i_32_a=7f800001 (nan) - i_32_b=40533333 (3.299999952316284179687500) 	| o_32_s=7fc00000 (nan) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=nan (7fc00001), dut=nan (7fc00000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[NaN][SUB]i_32_a=40533333 (3.299999952316284179687500) - i_32_b=7f800001 (nan) 	| o_32_s=ffc00000 (-nan) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=nan (7fc00001), dut=-nan (ffc00000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	...
+	==========[ APPR INF ]==========
+	[APPRO][ADD]i_32_a=7f21616f (214511611464115339152897452993962573824.000000000000000000000000) + i_32_b=007fffff (0.000000000000000000000000) 	| o_32_s=7f21616f (214511611464115339152897452993962573824.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=214511611464115339152897452993962573824.000000000000000000000000 (7f21616f), dut=214511611464115339152897452993962573824.000000000000000000000000 (7f21616f), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[APPRO][ADD]i_32_a=007fffff (0.000000000000000000000000) + i_32_b=7f21616f (214511611464115339152897452993962573824.000000000000000000000000) 	| o_32_s=7f21616f (214511611464115339152897452993962573824.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=214511611464115339152897452993962573824.000000000000000000000000 (7f21616f), dut=214511611464115339152897452993962573824.000000000000000000000000 (7f21616f), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[APPRO][SUB]i_32_a=7f21616f (214511611464115339152897452993962573824.000000000000000000000000) - i_32_b=007fffff (0.000000000000000000000000) 	| o_32_s=7f21616f (214511611464115339152897452993962573824.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=214511611464115339152897452993962573824.000000000000000000000000 (7f21616f), dut=214511611464115339152897452993962573824.000000000000000000000000 (7f21616f), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[APPRO][SUB]i_32_a=007fffff (0.000000000000000000000000) - i_32_b=7f21616f (214511611464115339152897452993962573824.000000000000000000000000) 	| o_32_s=ff21616f (-214511611464115339152897452993962573824.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=-214511611464115339152897452993962573824.000000000000000000000000 (ff21616f), dut=-214511611464115339152897452993962573824.000000000000000000000000 (ff21616f), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	==========[ Overflow rouding ]==========
+	[PRE_NOR_EXP][ADD]i_32_a=0cffffff (0.000000000000000000000000) + i_32_b=00f80000 (0.000000000000000000000000) 	| o_32_s=0d000000 (0.000000000000000000000000) 	| o_ov_flow=1, o_un_flow=0
+	=> PASS: expect=0.000000000000000000000000 (0d000000), dut=0.000000000000000000000000 (0d000000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[PRE_NOR_EXP][ADD]i_32_a=00f80000 (0.000000000000000000000000) + i_32_b=0cffffff (0.000000000000000000000000) 	| o_32_s=0d000000 (0.000000000000000000000000) 	| o_ov_flow=1, o_un_flow=0
+	=> PASS: expect=0.000000000000000000000000 (0d000000), dut=0.000000000000000000000000 (0d000000), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[PRE_NOR_EXP][SUB]i_32_a=0cffffff (0.000000000000000000000000) - i_32_b=00f80000 (0.000000000000000000000000) 	| o_32_s=0cfffffe (0.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=0.000000000000000000000000 (0cfffffe), dut=0.000000000000000000000000 (0cfffffe), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[PRE_NOR_EXP][SUB]i_32_a=00f80000 (0.000000000000000000000000) - i_32_b=0cffffff (0.000000000000000000000000) 	| o_32_s=8cfffffe (-0.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=-0.000000000000000000000000 (8cfffffe), dut=-0.000000000000000000000000 (8cfffffe), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	...
+	==========[ Read data from ROM ]==========
+	[Random][ADD]i_32_a=d09f76d2 (-21402914816.000000000000000000000000) + i_32_b=501fb38a (10717374464.000000000000000000000000) 	| o_32_s=d01f3a1a (-10685540352.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=1
+	=> PASS: expect=-10685540352.000000000000000000000000 (d01f3a1a), dut=-10685540352.000000000000000000000000 (d01f3a1a), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[Random][ADD]i_32_a=501fb38a (10717374464.000000000000000000000000) + i_32_b=d09f76d2 (-21402914816.000000000000000000000000) 	| o_32_s=d01f3a1a (-10685540352.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=1
+	=> PASS: expect=-10685540352.000000000000000000000000 (d01f3a1a), dut=-10685540352.000000000000000000000000 (d01f3a1a), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[Random][SUB]i_32_a=d09f76d2 (-21402914816.000000000000000000000000) - i_32_b=501fb38a (10717374464.000000000000000000000000) 	| o_32_s=d0ef5097 (-32120289280.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=-32120289280.000000000000000000000000 (d0ef5097), dut=-32120289280.000000000000000000000000 (d0ef5097), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	[Random][SUB]i_32_a=501fb38a (10717374464.000000000000000000000000) - i_32_b=d09f76d2 (-21402914816.000000000000000000000000) 	| o_32_s=50ef5097 (32120289280.000000000000000000000000) 	| o_ov_flow=0, o_un_flow=0
+	=> PASS: expect=32120289280.000000000000000000000000 (50ef5097), dut=32120289280.000000000000000000000000 (50ef5097), rounding_error=0.00000000 % (exp_error = 0.00001192 %)
+	
 	==================================
 	========== TEST SUMMARY ==========
 	Total test cases:   8296
@@ -8,4 +195,9 @@
 	Failed          :      0
 	Pass rate       : 100.00%
 	==================================
+	
+	Simulation complete via $finish(1) at time 207371 NS + 0
+	../Topmodule/tb_FPU_unit.sv:234     $finish;
+	xcelium> exit
+	TOOL:	xrun(64)
 \end{lstlisting}

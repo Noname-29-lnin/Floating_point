@@ -1,0 +1,19 @@
+\section{Implement on FPGA}
+
+Sử dụng DE2 để thực hiện kiểm chứng bộ FPU, tổng quan thiết kế của bộ khi thực hiện như sau:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{./my-chapters/my-images/imple/FPU_top.png}
+	\caption{RTL Viewer của bộ FPU.}
+\end{figure}
+
+Với việc cố định giá trị \textsf{i\_32\_a} = \texttt{32'h41200000} (tương ứng với $10.0$). Kết quả sau khi đổ kit như sau:
+
+\begin{figure}[H]
+	\centering
+	\href{https://youtube.com/shorts/b3xa6yQqnns?si=XoMHZASqf1ZnwrYf}{
+		\includegraphics[width=.8\linewidth]{./my-chapters/my-images/imple/imple_on_fpga.jpg}
+	}
+	\caption{Kết quả khi thực hiện trên kit DE2.}
+\end{figure}

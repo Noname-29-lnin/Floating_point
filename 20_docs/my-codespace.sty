@@ -66,6 +66,11 @@
 	keywords={Function, if, then, else, return, for},
 	sensitive=true
 }
+\lstdefinelanguage{TCL}{
+	keywords={set, set_db, read_hdl, elaborate, set_top_module, write_hdl, check_design, read_sdc, syn_generic, syn_map, syn_opt, report, write_sdf, gui_show, set_max_delay, set_input_delay, set_output_delay, Capture, Path, Delay, Arrival, Required, Time, Data, Path},
+    morekeywords=[2]{Slack},
+	sensitive=true
+}
 
 % Language definition: C
 \lstdefinelanguage{C}{
@@ -92,6 +97,7 @@
 	backgroundcolor=\color{backcolour},
 	commentstyle=\color{codegreen},
 	keywordstyle=\color{magenta},
+    keywordstyle=[2]\color{red},
 	numberstyle=\tiny\color{codegray},
 	stringstyle=\color{codepurple},
 	basicstyle=\fontsize{10}{11}\selectfont\ttfamily, % Custom font size,
