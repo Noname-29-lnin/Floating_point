@@ -1,12 +1,5 @@
 \section{Synthesis my design}
 
-Nhóm em sử dụng Standard Cells là:
-
-\begin{itemize}[label=+, leftmargin=2cm]
-	\item slow\_vdd1v2\_basicCells\_lvt.lib
-	\item slow\_vdd1v2\_basicCells\_lvt.v
-\end{itemize}
-
 Tiến hành sử dụng file .tcl sau để thực hiện trên Genus:
 
 \begin{lstlisting}[style=StyleCode, language=TCL, caption={genus\_synthesis.tcl}]
@@ -17,201 +10,212 @@ Tiến hành sử dụng file .tcl sau để thực hiện trên Genus:
 	# Digital system design and Verification
 	#
 	##################################################
-	set top_module FPU_unit
-	set_db library [list ./../slow_vdd1v2_basicCells_lvt.lib ]
-	#HDL files read#
-	read_hdl -sv -f ./flist.f
+	set Top_module  FPU_unit
+	set LIB_DIR     "./../PDK45nm/gpdk045_lib"
+	set LIB_NAME    "fast_vdd1v0_basicCells_hvt"
+	set LIB_FILE    "${LIB_DIR}/${LIB_NAME}.lib"
+	set SDC_FILE    "./constraint.sdc"
+	set SRC_FILE    "./../../02_rtl/"
+	if {![file exists ${LIB_FILE}]} {
+		error "ERROR: Library file not found: ${LIB_FILE}"
+	}
+	put "TOP_MODULE = $Top_module"
+	put "LIB_DIR = $LIB_DIR"
+	put "LIB_NAME = $LIB_NAME"
+	put "LIB_FILE = $LIB_FILE"
+	put "SDC_FILE = $SDC_FILE"
+	put "SRD_FILE = $SRC_FILE"
+
+	read_libs ${LIB_FILE}
+	read_hdl -sv [glob ${SRC_FILE}*.sv]
+	# read_hdl -sv -f ./flist.f
 	elaborate
-	set_top_module ${top_module}
-	write_hdl > ./Genus/${top_module}_elab.v
+	set_top_module ${Top_module}
+
+	set elab_v "./${LIB_NAME}/${Top_module}_elab.v"
+	write_hdl > ${elab_v}
 	check_design -all
-	read_sdc ./constraint.sdc
+
+	read_sdc ${SDC_FILE}
+
+	set_db syn_generic_effort medium
+	set_db syn_map_effort medium 
+	set_db syn_opt_effort medium
+
 	syn_generic
-	write_hdl > ./Genus/${top_module}_generic.v
+	set generic_v "./${LIB_NAME}/${Top_module}_generic.v"
+	write_hdl > ${generic_v}
+
 	syn_map
-	write_hdl > ./Genus/${top_module}_tech_map.v
+	set techmap_v "./${LIB_NAME}/${Top_module}_tech_map.v"
+	write_hdl > $techmap_v
+
 	remove_assigns_without_optimization -verbose
-	syn_opt  
+	syn_opt
+
 	report timing -lint
-	write_sdf -edges check_edge -setuphold "split" -recrem split > ./Genus/${top_module}.sdf
-	report timing -max_paths 10 > ./Genus/report/${top_module}.timing.rpt
-	report hierarchy > ./Genus/report/${top_module}.hier.rpt
-	report gates > ./Genus/report/${top_module}.gates.rpt
-	report datapath > ./Genus/report/${top_module}.datapath.rpt
-	report qor > ./Genus/report/${top_module}.qor.rpt
-	report area > ./Genus/report/${top_module}.area.rpt
-	report power > ./Genus/report/${top_module}.power.rpt
+	set netlist_v "./${LIB_NAME}/${Top_module}_netlist.v"
+	write_hdl > ${netlist_v}
+
+	set sdf_out "./${LIB_NAME}/${Top_module}.sdf"
+	write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge -setuphold split  > $sdf_out
+
+	report_timing -max_paths 1 > ./${LIB_NAME}/report/${Top_module}_timing.rpt
+	report hierarchy > ./${LIB_NAME}/report/${Top_module}_hier.rpt
+	report gates > ./${LIB_NAME}/report/${Top_module}_gates.rpt
+	report datapath > ./${LIB_NAME}/report/${Top_module}_datapath.rpt
+	report_qor > ./${LIB_NAME}/report/${Top_module}_qor.rpt
+	report_area > ./${LIB_NAME}/report/${Top_module}_area.rpt
+	report_power > ./${LIB_NAME}/report/${Top_module}_power.rpt
+
+	puts "Done. Using library: $LIB_FILE"
+	puts "Elaborated    -> $elab_v"
+	puts "Generic       -> $generic_v"
+	puts "Tech-mapped   -> $techmap_v"
+	puts "Netlist       -> $netlist_v"
+	puts "SDF           -> $sdf_out"
+	puts "Reports       -> ./${LIB_NAME}/report/"
+
+	##################################################
+	# Open genus GUI
 	gui_show
 \end{lstlisting}
 
 Với file \textbf{constraint.sdc} như sau:
 
 \begin{lstlisting}[style=StyleCode, language=TCL, caption={File constraint.sdc}]
-	set_max_delay 2.0 -from [all_inputs] -to [all_outputs]
+	set_max_delay ?.0 -from [all_inputs] -to [all_outputs]
 	set_input_delay 0.1 -clock [get_clocks *] [all_inputs]
 	set_output_delay 0.1 -clock [get_clocks *] [all_outputs]
 	set timing_report_unconstrained true
 \end{lstlisting}
 
-Kết quả của \textbf{timing.rpt} như sau:
-
-\begin{minipage}{.5\linewidth}
-	\begin{lstlisting}[style=StyleResult, language=TCL, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
-		Path 1: MET (0 ps) Path Delay Check
-		Startpoint: (R) i_32_b[29]
-		Endpoint: (R) o_32_s[19]
-		
-		Capture   		 Launch  
-		Path Delay 		:+    2000	-  
-		Arrival				:=    2000            
-		
-		Required Time :=    2000            
-		Data Path			:-    2000            
-		Slack					:=       0   
-	\end{lstlisting}
-\end{minipage}
-\begin{minipage}{.5\linewidth}
-	\begin{lstlisting}[style=StyleResult, language=TCL, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
-		Path 2: MET (0 ps) Path Delay Check
-		Startpoint: (R) i_32_b[29]
-		Endpoint: (F) o_32_s[20]
-		
-		Capture   		 Launch  
-		Path Delay 		:+    2000	-  
-		Arrival				:=    2000            
-		
-		Required Time :=    2000            
-		Data Path			:-    2000            
-		Slack					:=       0   
-	\end{lstlisting}
-\end{minipage}
-
-\begin{minipage}{.5\linewidth}
-	\begin{lstlisting}[style=StyleResult, language=TCL, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
-		Path 3: MET (0 ps) Path Delay Check
-		Startpoint: (R) i_32_b[29]
-		Endpoint: (F) o_32_s[17]
-		
-		Capture   		 Launch  
-		Path Delay 		:+    2000	-  
-		Arrival				:=    2000            
-		
-		Required Time :=    2000            
-		Data Path			:-    2000            
-		Slack					:=       0   
-	\end{lstlisting}
-\end{minipage}
-\begin{minipage}{.5\linewidth}
-	\begin{lstlisting}[style=StyleResult, language=TCL, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
-		Path 4: MET (0 ps) Path Delay Check
-		Startpoint: (R) i_32_a[27]
-		Endpoint: (R) o_32_s[25]
-		
-		Capture   		 Launch  
-		Path Delay 		:+    2000	-  
-		Arrival				:=    2000            
-		
-		Required Time :=    2000            
-		Data Path			:-    2000            
-		Slack					:=       0   
-	\end{lstlisting}
-\end{minipage}
-
-\begin{minipage}{.5\linewidth}
-	\begin{lstlisting}[style=StyleResult, language=TCL, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
-		Path 5: MET (0 ps) Path Delay Check
-		Startpoint: (R) i_32_b[29]
-		Endpoint: (R) o_32_s[29]
-		
-		Capture   		 Launch  
-		Path Delay 		:+    2000	-  
-		Arrival				:=    2000            
-		
-		Required Time :=    2000            
-		Data Path			:-    2000            
-		Slack					:=       0            
-	\end{lstlisting}
-\end{minipage}
-\begin{minipage}{.5\linewidth}
-	\begin{lstlisting}[style=StyleResult, language=TCL, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
-		Path 6: MET (1 ps) Path Delay Check
-		Startpoint: (R) i_32_b[29]
-		Endpoint: (R) o_32_s[28]
-		
-		Capture   		 Launch  
-		Path Delay		:+    2000 	-  
-		Arrival				:=    2000            
-		
-		Required Time :=    2000            
-		Data Path 		:-    1999            
-		Slack  				:=       1            
-	\end{lstlisting}
-\end{minipage}
-
-\begin{minipage}{.5\linewidth}
-	\begin{lstlisting}[style=StyleResult, language=TCL, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
-		Path 7: MET (1 ps) Path Delay Check
-		Startpoint: (R) i_32_a[27]
-		Endpoint: (R) o_32_s[30]
-		
-		Capture    Launch  
-		Path Delay 		:+    2000 	-  
-		Arrival 			:=    2000            
-		
-		Required Time :=    2000            
-		Data Path			:-    1999            
-		Slack 				:=       1            
-	\end{lstlisting}
-\end{minipage}
-\begin{minipage}{.5\linewidth}
-	\begin{lstlisting}[style=StyleResult, language=TCL, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
-		Path 8: MET (5 ps) Path Delay Check
-		Startpoint: (R) i_32_b[29]
-		Endpoint: (R) o_32_s[21]
-		
-		Capture    		 Launch  
-		Path Delay 		:+    2000	-  
-		Arrival 			:=    2000            
-		
-		Required Time :=    2000            
-		Data Path 		:-    1995            
-		Slack 				:=       5            
-	\end{lstlisting}
-\end{minipage}
-
-
-\begin{minipage}{.5\linewidth}
-	\begin{lstlisting}[style=StyleResult, language=TCL, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
-		Path 9: MET (8 ps) Path Delay Check
-		Startpoint: (R) i_32_b[29]
-		Endpoint: (R) o_32_s[14]
-		
-		Capture   		 Launch  
-		Path Delay		:+    2000	-  
-		Arrival				:=    2000            
-		
-		Required Time	:=    2000            
-		Data Path 		:-    1992            
-		Slack					:=      8            
-	\end{lstlisting}
-\end{minipage}
-\begin{minipage}{.5\linewidth}
-	\begin{lstlisting}[style=StyleResult, language=TCL, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
-		Path 10: MET (10 ps) Path Delay Check
-		Startpoint: (R) i_32_b[29]
-		Endpoint: (R) o_32_s[16]
-		
-		Capture   		 Launch  
-		Path Delay		:+    2000	-  
-		Arrival				:=    2000            
-		
-		Required Time	:=    2000            
-		Data Path 		:-    1990            
-		Slack					:=      10            
-	\end{lstlisting}
-\end{minipage}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{./my-chapters/my-images/imple/schematic_version2.png}
-\end{figure}
+\begin{enumerate}[label=\arabic*.]
+	\item Kết quả của \textbf{timing.rpt} như sau:
+		\begin{itemize}
+			\item \textbf{slow\_vdd1v2\_basicCells\_lvt.lib}:
+			\begin{lstlisting}[style=StyleResult, language=TCL, caption={Timing Roport Using slow\_vdd1v2\_basicCells\_lvt.lib (Worst-Case Corner).}]
+				Path 1: MET (0 ps) Path Delay Check
+				Startpoint: (F) i_32_b[27]
+				Endpoint: (R) o_32_s[19]
+				
+				Capture   			 Launch  
+				Path Delay			:+    2500 	-  
+				Arrival					:=    2500            
+				
+				Required Time		:=    2500            
+				Data Path 			:-    2500            
+				Slack						:=       0            
+			\end{lstlisting}
+			
+			\item \textbf{slow\_vdd1v2\_basicCells\_hvt.lib}:
+			\begin{lstlisting}[style=StyleResult, language=TCL, caption={Timing Roport Using slow\_vdd1v2\_basicCells\_hvt.lib (Worst-Case Corner).}]
+				Path 1: MET (1 ps) Path Delay Check
+				Startpoint: (R) i_32_a[26]
+				Endpoint: (F) o_32_s[25]
+				
+				Capture   			 Launch  
+				Path Delay			:+    4500 	-  
+				Arrival					:=    4500            
+				
+				Required Time		:=    4500            
+				Data Path				:-    4499            
+				Slack						:=       1            
+			\end{lstlisting}
+			
+			\item \textbf{slow\_vdd1v0\_basicCells\_lvt.lib}:
+			\begin{lstlisting}[style=StyleResult, language=TCL, caption={Timing Report Using slow\_vdd1v0\_basicCells\_lvt.lib (Worst-Case Corner).}]
+				Path 1: MET (0 ps) Path Delay Check
+				Startpoint: (R) i_32_a[26]
+				Endpoint: (F) o_32_s[22]
+				
+				Capture   			 Launch  
+				Path Delay			:+    4500	-  
+				Arrival					:=    4500            
+				
+				Required Time		:=    4500            
+				Data Path				:-    4500            
+				Slack						:=       0             
+			\end{lstlisting}
+			
+			\item \textbf{slow\_vdd1v0\_basicCells\_hvt.lib}:
+			\begin{lstlisting}[style=StyleResult, language=TCL, caption={Timing Report Using slow\_vdd1v0\_basicCells\_hvt.lib (Worst-Case Corner).}]
+				Path 1: MET (0 ps) Path Delay Check
+				Startpoint: (R) i_32_b[27]
+				Endpoint: (F) o_32_s[27]
+				
+				Capture   			 Launch  
+				Path Delay			:+   10000	-  
+				Arrival					:=   10000            
+				
+				Required Time		:=   10000            
+				Data Path				:-   10000            
+				Slack						:=       0            
+			\end{lstlisting}
+			
+			\item \textbf{fast\_vdd1v2\_basicCells\_lvt.lib}:
+			\begin{lstlisting}[style=StyleResult, language=TCL, caption={Timing Report Using fast\_vdd1v2\_basicCells\_lvt.lib (Worst-Case Corner).}]
+				Path 1: MET (7677 ps) Path Delay Check
+				Startpoint: (R) i_32_b[28]
+				Endpoint: (F) o_32_s[30]
+				
+				Capture   			 Launch  
+				Path Delay			:+   10000	-  
+				Arrival					:=   10000            
+				
+				Required Time		:=   10000            
+				Data Path				:-    2323            
+				Slack						:=    7677            
+			\end{lstlisting}
+			
+			\item \textbf{fast\_vdd1v2\_basicCells\_hvt.lib}:
+			\begin{lstlisting}[style=StyleResult, language=TCL, caption={Timing Report Using fast\_vdd1v2\_basicCells\_hvt.lib (Worst-Case Corner).}]
+				Path 1: MET (6559 ps) Path Delay Check
+				Startpoint: (R) i_32_b[28]
+				Endpoint: (F) o_32_s[30]
+				
+				Capture   			 Launch  
+				Path Delay			:+   10000	-  
+				Arrival					:=   10000            
+				
+				Required Time		:=   10000            
+				Data Path				:-    3441            
+				Slack						:=    6559            
+			\end{lstlisting}
+			
+			\item \textbf{fast\_vdd1v0\_basicCells\_lvt.lib}:
+			\begin{lstlisting}[style=StyleResult, language=TCL, caption={Timing Report Using fast\_vdd1v0\_basicCells\_lvt.lib (Worst-Case Corner).}]
+				Path 1: MET (7153 ps) Path Delay Check
+				Startpoint: (R) i_32_b[28]
+				Endpoint: (F) o_32_s[30]
+				
+				Capture   			 Launch  
+				Path Delay			:+   10000	-  
+				Arrival					:=   10000            
+				
+				Required Time		:=   10000            
+				Data Path				:-    2847            
+				Slack						:=    7153               
+			\end{lstlisting}
+			
+			\item \textbf{fast\_vdd1v0\_basicCells\_hvt.lib}:
+			\begin{lstlisting}[style=StyleResult, language=TCL, caption={Timing Report Using fast\_vdd1v0\_basicCells\_hvt.lib (Worst-Case Corner).}]
+				Path 1: MET (4808 ps) Path Delay Check
+				Startpoint: (F) i_32_b[28]
+				Endpoint: (F) o_32_s[30]
+				
+				Capture   			 Launch  
+				Path Delay			:+   10000	-  
+				Arrival					:=   10000            
+				
+				Required Time		:=   10000            
+				Data Path				:-    5192            
+				Slack						:=    4808                  
+			\end{lstlisting}
+		\end{itemize}
+	\item Kết quả của Synthesis:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\linewidth]{./my-chapters/my-images/synthesis/block_diagram_synthesis.png}
+		\end{figure}
+\end{enumerate}

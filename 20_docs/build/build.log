@@ -4,26 +4,227 @@ entering extended mode
 (main.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
+(my-article.cls
+Document Class: my-article 2025/08/11 HCMUT Report Class - Layout Only
 (/home/noname/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (/home/noname/.miktex/texmfs/install/tex/latex/base/size12.clo))
-(my-coverpage.sty
-(/home/noname/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/anyfontsize/anyfontsize.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/home/noname/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty))
+(/home/noname/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty))
+(/home/noname/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty))
+(/home/noname/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
 (/home/noname/.miktex/texmfs/install/tex/latex/graphics/keyval.sty)
+(/home/noname/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+(/home/noname/.miktex/texmfs/install/tex/generic/iftex/iftex.sty))
+(/home/noname/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
+(/home/noname/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/home/noname/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+ (/home/noname/.miktex/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+(/home/noname/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty)
+(/home/noname/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+(/home/noname/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty)))
+(/home/noname/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/refcount/refcount.sty)
+(/home/noname/.miktex/texmfs/install/tex/generic/gettitlestring/gettitlestring.
+sty (/home/noname/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty)))
+(/home/noname/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty)
+(/home/noname/.miktex/texmfs/install/tex/generic/stringenc/stringenc.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def)
+(/home/noname/.miktex/texmfs/install/tex/generic/intcalc/intcalc.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/hyperref/puenc.def)
+(/home/noname/.miktex/texmfs/install/tex/latex/url/url.sty)
+(/home/noname/.miktex/texmfs/install/tex/generic/bitset/bitset.sty
+(/home/noname/.miktex/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty)))
+(/home/noname/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
+(/home/noname/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.st
+y
+(/home/noname/.miktex/texmfs/install/tex/generic/uniquecounter/uniquecounter.st
+y))) (/home/noname/.miktex/texmfs/install/tex/latex/tools/indentfirst.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/setspace/setspace.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/titlesec/titlesec.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
 (/home/noname/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
 (/home/noname/.miktex/texmfs/install/tex/latex/graphics/trig.sty)
 (/home/noname/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg)
 (/home/noname/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def)))
+(/home/noname/.miktex/texmfs/install/tex/latex/tools/array.sty)
 (/home/noname/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/tools/tabularx.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/tabulary/tabulary.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/tools/longtable.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/multirow/multirow.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/tools/multicol.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/caption/caption.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/caption/caption3.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/caption/ltcaption.sty))
+(/home/noname/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/natbib/natbib.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/lastpage/lastpage.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/lastpage/lastpage2e.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/lastpage/lastpagemodern.sty) 
+)) (/home/noname/.miktex/texmfs/install/tex/latex/base/ifthen.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/tools/enumerate.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/enumitem/enumitem.sty)
+
+Package hyperref Warning: Option `bookmarks' has already been used,
+(hyperref)                setting the option has no effect on input line 107.
+
+) (my-coverpage.sty
 (/home/noname/.miktex/texmfs/install/tex/latex/eso-pic/eso-pic.sty
 (/home/noname/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
 (/home/noname/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg)
 (/home/noname/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)))
-(/home/noname/.miktex/texmfs/install/tex/latex/tools/array.sty)
-(/home/noname/.miktex/texmfs/install/tex/latex/float/float.sty)
-(/home/noname/.miktex/texmfs/install/tex/latex/tools/tabularx.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/float/float.sty))
+(my-codespace.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common.t
+ex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex.de
+f)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)))
+(/home/noname/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code.te
+x
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
+
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeyslibraryfi
+ltered.code.tex))
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-pdftex.
+def
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-common-
+pdf.def)))
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftpath
+.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotocol
+.code.tex))
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code.te
+x (/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.tex)
+
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code.te
+x)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.code
+.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.basi
+c.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.trig
+onometric.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.rand
+om.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.comp
+arison.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.base
+.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.roun
+d.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.misc
+.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.inte
+gerarithmetics.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.tex)
+
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.tex
+)) (/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfint.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoints.c
+ode.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathcons
+truct.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathusag
+e.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescopes.c
+ode.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraphics
+tate.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransfor
+mations.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick.co
+de.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjects.
+code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathproc
+essing.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrows.c
+ode.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade.co
+de.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage.co
+de.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexternal
+.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayers.c
+ode.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretranspar
+ency.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepatterns
+.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.code
+.tex)))
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes.co
+de.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.code
+.tex)
+(/home/noname/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-versio
+n-0-65.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-versio
+n-1-18.sty))
+(/home/noname/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
+)) (/home/noname/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex))
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex)
+)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.co
+de.tex
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplotha
+ndlers.code.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.co
+de.tex)
+(/home/noname/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librari
+es/tikzlibrarytopaths.code.tex)))
+(/home/noname/.miktex/texmfs/install/tex/latex/mdframed/mdframed.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/l3packages/xparse/xparse.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/l3kernel/expl3.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def))
+) (/home/noname/.miktex/texmfs/install/tex/latex/zref/zref-abspage.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/zref/zref-base.sty
+(/home/noname/.miktex/texmfs/install/tex/generic/etexcmds/etexcmds.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/auxhook/auxhook.sty)))
+(/home/noname/.miktex/texmfs/install/tex/latex/needspace/needspace.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/mdframed/md-frame-1.mdf))
+(/home/noname/.miktex/texmfs/install/tex/latex/listings/listings.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/listings/lstpatch.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/listings/listings.cfg))
+(/home/noname/.miktex/texmfs/install/tex/latex/lstaddons/lstautogobble.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/minted/minted.sty
+(/home/noname/.miktex/texmfs/install/tex/generic/catchfile/catchfile.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/fvextra/fvextra.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/fancyvrb/fancyvrb.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/upquote/upquote.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/lineno/lineno.sty))
+(/home/noname/.miktex/texmfs/install/tex/latex/latex2pydata/latex2pydata.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/pgfopts/pgfopts.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/tools/shellesc.sty))
+(/home/noname/.miktex/texmfs/install/tex/latex/tools/verbatim.sty))
 (/home/noname/.miktex/texmfs/install/tex/latex/base/inputenc.sty)
-(/home/noname/.miktex/texmfs/install/tex/latex/base/fontenc.sty)
+(/home/noname/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5enc.def
+(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5enc.dfu))
+(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5cmr.fd))
 (/home/noname/.miktex/texmfs/install/tex/generic/babel/babel.sty
 (/home/noname/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
 *************************************
@@ -41,31 +242,128 @@ Package babel Warning: No hyphenation patterns were preloaded for
 (babel)                preloaded for \language=0 instead on input line 36.
 
 Loading definitions for the Vietnamese font encoding
-(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5enc.def
-(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5enc.dfu)))))
-(/home/noname/.miktex/texmfs/install/tex/latex/base/fontenc.sty
-(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5cmr.fd))
-(/home/noname/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def)
-(/home/noname/Documents/project_tiny/FPGA/LAB1/20_docs/build/main.aux)
+(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5enc.def))
+(/home/noname/.miktex/texmfs/install/tex/latex/babel-english/english.ldf
+(/home/noname/.miktex/texmfs/install/tex/generic/babel/locale/en/babel-english.
+tex))) (/home/noname/.miktex/texmfs/install/tex/latex/base/textcomp.sty)
+(main.aux (my-chapters/introduction.aux) (my-chapters/Design_FPU.aux)
+(my-chapters/verif.aux) (my-chapters/imple.aux) (my-chapters/synthesis.aux))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(main.out) (main.out)
 (/home/noname/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/home/noname/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
-(/home/noname/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty)
-(/home/noname/.miktex/texmfs/install/tex/latex/grfext/grfext.sty
-(/home/noname/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty)
-) (/home/noname/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
-(/home/noname/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty)
-(/home/noname/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty))
-(/home/noname/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
-(/home/noname/.miktex/texmfs/install/tex/generic/iftex/iftex.sty))
 (/home/noname/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg))
+(/home/noname/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd)
+(/home/noname/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd)
+Overfull \hbox (2.19716pt too wide) in paragraph at lines 48--48
+ []|\T5/cmr/bx/n/14 STT| 
+
 [1{/home/noname/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map} <./my-chapters
-/my-images/bia.jpg> <./my-chapters/my-images/01_logobachkhoatoi.png>]
-[2] (/home/noname/Documents/project_tiny/FPGA/LAB1/20_docs/build/main.aux) )</h
-ome/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnbx12.pfb></home/nonam
-e/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr12.pfb></home/noname/.miktex/
-texmfs/install/fonts/type1/vntex/vnr/vnr17.pfb>
-Output written on /home/noname/Documents/project_tiny/FPGA/LAB1/20_docs/build/m
-ain.pdf (2 pages, 92778 bytes).
-Transcript written on /home/noname/Documents/project_tiny/FPGA/LAB1/20_docs/bui
-ld/main.log.
+/my-images/bia.jpg> <./my-chapters/my-images/01_logobachkhoatoi.png>] (main.toc
+) (main.lof (/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5cmss.fd)
+[2]) (main.lot) (main.lol)
+[3] (my-chapters/introduction.tex
+Overfull \hbox (1.24274pt too wide) in paragraph at lines 46--46
+ []|\T5/cmr/m/n/12 i_add_sub| 
+
+Overfull \hbox (4.76689pt too wide) in paragraph at lines 52--52
+ []|\T5/cmr/m/n/12 o_un_flaag| 
+)
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63 \include{./my-chapters/introduction.tex}
+                                              [1 <./my-chapters/my-images/logo_
+DEE.png>] (my-chapters/Design_FPU.tex
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.18 
+      [2 <./my-chapters/my-diagrams/BlockDiagram_Overview.png>]
+(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd)
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.56 \end{itemize}
+                   [3 <./my-chapters/my-diagrams/Exponent_Block_1.png>]
+[4 <./my-chapters/my-images/K_maps/comp_4bit.png>]
+[5 <./my-chapters/my-diagrams/man_swap.png>]
+[6 <./my-chapters/my-diagrams/comp_28bit.png> <./my-chapters/my-diagrams/COM_28
+bit_1.png>]
+Overfull \hbox (32.12076pt too wide) in paragraph at lines 103--137
+ [][] 
+
+[7 <./my-chapters/my-diagrams/COM_28bit_1_unit.png> <./my-chapters/my-diagrams/
+Final_sign.png>]
+[8 <./my-chapters/my-images/K_maps/SIgn_unit.png>] [9 <./my-chapters/my-diagram
+s/PSC.png>]
+[10]
+Overfull \hbox (7.02277pt too wide) in alignment at lines 274--277
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+
+Overfull \hbox (7.02277pt too wide) in alignment at lines 277--279
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+
+Overfull \hbox (7.02277pt too wide) in alignment at lines 279--282
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+
+Overfull \hbox (7.02277pt too wide) in alignment at lines 282--284
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+
+Overfull \hbox (7.02277pt too wide) in alignment at lines 284--326
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+[11]
+[12 <./my-chapters/my-diagrams/EXP_adjust.png>]
+[13 <./my-chapters/my-diagrams/ALU_MAN.png> <./my-chapters/my-diagrams/cla_28bi
+t.png>]
+[14 <./my-chapters/my-diagrams/Normalization.png>]
+[15 <./my-chapters/my-diagrams/LODP_24bit.png> <./my-chapters/my-diagrams/round
+ing.png>])
+[16] (my-chapters/verif.tex
+[17]
+Overfull \hbox (4.75403pt too wide) in paragraph at lines 67--68
+[]\T5/cmr/m/n/12 Cán n¸u mët k¸t qu£ l  NaN cán k¸t qu£ cán l¤i khæng ph£i l  N
+aN th¼ $[] \OT1/cmr/m/n/12 =
+
+[18]
+[19])
+[20] (my-chapters/imple.tex)
+[21 <./my-chapters/my-images/imple/FPU_top.png>]
+[22 <./my-chapters/my-images/imple/imple_on_fpga.jpg>]
+(my-chapters/synthesis.tex
+[23])
+[24]
+[25 <./my-chapters/my-images/imple/schematic_version2.png>]
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(main.aux (my-chapters/introduction.aux) (my-chapters/Design_FPU.aux)
+(my-chapters/verif.aux) (my-chapters/imple.aux) (my-chapters/synthesis.aux)) )
+(see the transcript file for additional information) </home/noname/.miktex/texm
+fs/data/fonts/pk/ljfour/jknappen/ec/dpi525/tctt0800.pk> </home/noname/.miktex/t
+exmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk></home/noname/.miktex
+/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/noname/.miktex
+/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/noname/.miktex/
+texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/noname/.miktex/te
+xmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/noname/.miktex/te
+xmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/noname/.miktex/tex
+mfs/install/fonts/type1/vntex/vnr/vnbx10.pfb></home/noname/.miktex/texmfs/insta
+ll/fonts/type1/vntex/vnr/vnbx12.pfb></home/noname/.miktex/texmfs/install/fonts/
+type1/vntex/vnr/vnr10.pfb></home/noname/.miktex/texmfs/install/fonts/type1/vnte
+x/vnr/vnr12.pfb></home/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr1
+7.pfb></home/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr6.pfb></hom
+e/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnss12.pfb></home/noname/
+.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt10.pfb></home/noname/.miktex/t
+exmfs/install/fonts/type1/vntex/vnr/vntt12.pfb></home/noname/.miktex/texmfs/ins
+tall/fonts/type1/vntex/vnr/vntt8.pfb>
+Output written on /home/noname/Documents/project_tiny/Floating_point/20_docs/bu
+ild/main.pdf (28 pages, 1884463 bytes).
+Transcript written on /home/noname/Documents/project_tiny/Floating_point/20_doc
+s/build/main.log.

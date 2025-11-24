@@ -3003,4 +3003,3 @@ module FPU_unit(i_add_sub, i_32_a, i_32_b, o_32_s, o_ov_flag,
   NAND2BX1LVT g60368(.AN (n_195), .B (n_1609), .Y (n_1610));
   MXI2XLLVT g60369(.A (n_571), .B (n_572), .S0 (n_154), .Y (n_1609));
 endmodule
-

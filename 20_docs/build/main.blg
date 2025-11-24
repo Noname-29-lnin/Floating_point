@@ -1,12 +1,22 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 31 items.
+A level-1 auxiliary file: ./my-chapters/introduction.aux
+Reallocating 'name_of_file' (item size: 1) to 29 items.
+A level-1 auxiliary file: ./my-chapters/Design_FPU.aux
+Reallocating 'name_of_file' (item size: 1) to 24 items.
+A level-1 auxiliary file: ./my-chapters/verif.aux
+Reallocating 'name_of_file' (item size: 1) to 24 items.
+A level-1 auxiliary file: ./my-chapters/imple.aux
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+A level-1 auxiliary file: ./my-chapters/synthesis.aux
 I found no \citation commands---while reading file main.aux
 I found no \bibdata command---while reading file main.aux
 I found no \bibstyle command---while reading file main.aux
 You've used 0 entries,
             0 wiz_defined-function locations,
-            83 strings with 482 characters,
+            88 strings with 613 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0

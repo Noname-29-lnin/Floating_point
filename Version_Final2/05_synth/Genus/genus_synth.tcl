@@ -4,7 +4,7 @@
 ##################################################
 set Top_module  FPU_unit
 set LIB_DIR     "./../PDK45nm/gpdk045_lib"
-set LIB_NAME    "slow_vdd1v0_basicCells_hvt"
+set LIB_NAME    "fast_vdd1v0_basicCells_hvt"
 set LIB_FILE    "${LIB_DIR}/${LIB_NAME}.lib"
 set SDC_FILE    "./constraint.sdc"
 set SRC_FILE    "./../../02_rtl/"
@@ -51,7 +51,6 @@ write_hdl > ${netlist_v}
 
 set sdf_out "./${LIB_NAME}/${Top_module}.sdf"
 write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge -setuphold split  > $sdf_out
-# write_sdf -edges check_edge -setuphold "split" -recrem split > $sdf_out
 
 report_timing -max_paths 1 > ./${LIB_NAME}/report/${Top_module}_timing.rpt
 report hierarchy > ./${LIB_NAME}/report/${Top_module}_hier.rpt
