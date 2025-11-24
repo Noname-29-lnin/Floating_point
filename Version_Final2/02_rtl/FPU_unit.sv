@@ -266,4 +266,19 @@ always_comb begin : proc_mux_4_to_1
 end
 assign o_data = w_o_data;
 
+// genvar i;
+// generate
+//     for(i = 0; i < SIZE_DATA; i ++) begin : proc_mux_4_to_1
+//         MX4X2HVT mux_4_to_1 (
+//             .Y  (o_data[i]), 
+//             .A  (i_data_00[i]), 
+//             .B  (i_data_01[i]), 
+//             .C  (i_data_10[i]), 
+//             .D  (i_data_11[i]), 
+//             .S0 (i_sel[0]), 
+//             .S1 (i_sel[1])
+//         );
+//     end
+// endgenerate
+
 endmodule
