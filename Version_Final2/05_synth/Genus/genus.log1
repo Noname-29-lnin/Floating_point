@@ -4,8 +4,8 @@ Cadence and the Cadence logo are registered trademarks and Genus is a trademark
 of Cadence Design Systems, Inc. in the United States and other countries.
 
 Version: GENUS15.20 - 15.20-p004_1, built Sat Nov 14 2015
-Options: 
-Date:    Sat Nov 22 06:10:46 2025
+Options: -files genus_synth.tcl 
+Date:    Sun Nov 23 21:05:28 2025
 Host:    centos7 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (2*Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz 8192KB)
 OS:      CentOS Linux release 7.9.2009 (Core)
 
@@ -13,11 +13,950 @@ Checking out license: Genus_Synthesis
 
 Loading tool scripts...
 Sourcing GUI preferences file /home/admin/.cadence/genus/gui.tcl...
-Finished loading tool scripts (5 seconds elapsed).
+Finished loading tool scripts (4 seconds elapsed).
 
-WARNING: This version of the tool is 3661 days old.
-genus@root:> gui_show
-Error   : No designs are available. A design must first be read in and elaborated. [TUI-10] [check_design]
-        : There is no design here.
-        : A design must first be read in with 'read_hdl' command and elaborated with 'elaborate' command.
+Sourcing genus_synth.tcl ...
+TOP_MODULE = FPU_unit
+LIB_DIR = ./../PDK45nm/gpdk045_lib
+LIB_NAME = slow_vdd1v2_basicCells_lvt
+LIB_FILE = ./../PDK45nm/gpdk045_lib/slow_vdd1v2_basicCells_lvt.lib
+SDC_FILE = ./constraint.sdc
+SRD_FILE = ./../../02_rtl/
+
+  Message Summary for Library ./../PDK45nm/gpdk045_lib/slow_vdd1v2_basicCells_lvt.lib:
+  ************************************************************************************
+  Could not find an attribute in the library. [LBR-436]: 574
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  ************************************************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'slow_vdd1v2_basicCells_lvt.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNALVT' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Otherwise, the library cell will be marked as unusable and as timing model.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNALVT' must have an output pin.
+  Setting attribute of root '/': 'library' = ./../PDK45nm/gpdk045_lib/slow_vdd1v2_basicCells_lvt.lib
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'CKSA_28bit' from file './../../02_rtl/CSKA_28bit.sv'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'CKSA_28bit'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'COMP_2bit' from file './../../02_rtl/COMP_2bit.sv'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'COMP_2bit'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'FPU_unit' from file './../../02_rtl/FPU_unit.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'FPU_unit' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'EXP_swap' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'COMP_8bit' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'EXP_sub' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'MAN_swap' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'SHF_right_28bit' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'COMP_28bit' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'MAN_ALU' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'LOPD_24bit' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'EXP_adjust' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'NORMALIZATION_unit' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'SHF_left_28bit' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'ROUNDING_unit' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'RND_add' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'EXP_rounding' with default parameters value.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'Mux_4_to_1_SIZE_DATA24' in file './../../02_rtl/FPU_unit.sv' on line 254.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'FPU_unit'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'CLA_24bit' from file './../../02_rtl/CLA_24bit.sv'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'CLA_24bit'.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'LOPD_4bit' from file './../../02_rtl/LOPD_4bit.sv'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'LOPD_4bit'.
+  Checking the design.
+
+ 	 Check Design Report
+	 -------------------- 
+
+ Long Module Names
+----------------------
+No subdesign's name is greater than 1.5k in length.
+
+  Unresolved References & Empty Modules
+  ------------------------------------- 
+No unresolved references in design 'FPU_unit'
+
+No empty modules in design 'FPU_unit'
+
+ Unloaded Pin(s), Port(s)
+ -------------------------
+No unloaded sequential element in 'FPU_unit'
+
+No unloaded port in 'FPU_unit'
+
+ Unloaded Combinational Pin(s)
+ -------------------------------
+No unloaded combinational element in 'FPU_unit'
+
+ Assigns
+ ------- 
+Total number of assign statements in design 'FPU_unit' : 0
+
+ Undriven Port(s)/Pin(s)
+ ------------------------
+No undriven combinational pin in 'FPU_unit'
+
+No undriven sequential pin in 'FPU_unit'
+
+No undriven hierarchical pin in 'FPU_unit'
+
+No undriven port in 'FPU_unit'
+
+ Multidriven Port(s)/Pin(s)
+--------------------------
+
+No multidriven combinational pin in 'FPU_unit'
+
+No multidriven sequential pin in 'FPU_unit'
+
+No multidriven hierarchical pin in 'FPU_unit'
+
+No multidriven ports in 'FPU_unit'
+
+No multidriven unloaded nets in 'FPU_unit'
+
+  Constant Pin(s)
+  ----------------
+No constant combinational pin(s) in design 'FPU_unit'
+
+No constant sequential pin(s) in design 'FPU_unit'
+
+design 'FPU_unit' has the following constant input hierarchical pin(s)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/i_data[1] 	 (fanout : 2)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/i_data[2] 	 (fanout : 2)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/i_data[3] 	 (fanout : 2)
+hpin:FPU_unit/MAN_PRE_SWAP_BY_EXPONENT_UNIT/i_man_a[23] 	 (fanout : 2)
+hpin:FPU_unit/MAN_PRE_SWAP_BY_EXPONENT_UNIT/i_man_b[23] 	 (fanout : 2)
+hpin:FPU_unit/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_a[0] 	 (fanout : 2)
+hpin:FPU_unit/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_a[1] 	 (fanout : 2)
+hpin:FPU_unit/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_a[2] 	 (fanout : 2)
+hpin:FPU_unit/MAN_PRE_SWAP_BY_MAN_UNIT/i_man_a[3] 	 (fanout : 2)
+hpin:FPU_unit/EXP_SUB_UNIT/CLA_8BIT_UNIT/i_carry 	 (fanout : 2)
+hpin:FPU_unit/mux_222_28/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/mux_222_28/in_1[1] 	 (fanout : 1)
+hpin:FPU_unit/mux_222_28/in_1[2] 	 (fanout : 1)
+hpin:FPU_unit/mux_222_28/in_1[3] 	 (fanout : 1)
+hpin:FPU_unit/mux_222_28/in_1[4] 	 (fanout : 1)
+hpin:FPU_unit/mux_222_28/in_1[5] 	 (fanout : 1)
+hpin:FPU_unit/mux_222_28/in_1[6] 	 (fanout : 1)
+hpin:FPU_unit/mux_222_28/in_1[7] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/i_data[0] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/i_lopd_value[5] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/i_lopd_value[6] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/i_lopd_value[7] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[0] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[1] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[2] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[3] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[4] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[5] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[6] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[7] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[8] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[9] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[10] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[11] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[12] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[13] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[14] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[15] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[16] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[17] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[18] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[19] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[20] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[21] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[22] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_10[23] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[0] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[1] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[2] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[3] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[4] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[5] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[6] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[7] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[8] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[9] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[10] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[11] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[12] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[13] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[14] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[15] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[16] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[17] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[18] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[19] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[20] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[21] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[22] 	 (fanout : 1)
+hpin:FPU_unit/SEL_MANTISSA_FOR_RESULT/i_data_11[23] 	 (fanout : 1)
+hpin:FPU_unit/MAN_COMP_28BIT_UNIT/i_data_a[0] 	 (fanout : 1)
+hpin:FPU_unit/MAN_COMP_28BIT_UNIT/i_data_a[1] 	 (fanout : 1)
+hpin:FPU_unit/MAN_COMP_28BIT_UNIT/i_data_a[2] 	 (fanout : 1)
+hpin:FPU_unit/MAN_COMP_28BIT_UNIT/i_data_a[3] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[1]_18_21/in_1[27] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[2]_18_21/in_1[26] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[2]_18_21/in_1[27] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[3]_18_21/in_1[24] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[3]_18_21/in_1[25] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[3]_18_21/in_1[26] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[3]_18_21/in_1[27] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[4]_18_21/in_1[20] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[4]_18_21/in_1[21] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[4]_18_21/in_1[22] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[4]_18_21/in_1[23] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[4]_18_21/in_1[24] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[4]_18_21/in_1[25] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[4]_18_21/in_1[26] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[4]_18_21/in_1[27] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[12] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[13] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[14] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[15] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[16] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[17] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[18] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[19] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[20] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[21] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[22] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[23] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[24] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[25] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[26] 	 (fanout : 1)
+hpin:FPU_unit/SHF_RIGHT_28BIT_UNIT/mux_stage[5]_18_21/in_1[27] 	 (fanout : 1)
+hpin:FPU_unit/MAN_ALU_UNIT/mux_33_21/in_1 	 (fanout : 1)
+hpin:FPU_unit/LOPD_24BIT_UNIT/mux_33_30/in_1 	 (fanout : 1)
+hpin:FPU_unit/LOPD_24BIT_UNIT/mux_37_25/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/LOPD_24BIT_UNIT/mux_37_25/in_1[1] 	 (fanout : 1)
+hpin:FPU_unit/LOPD_24BIT_UNIT/mux_37_25/in_1[2] 	 (fanout : 1)
+hpin:FPU_unit/LOPD_24BIT_UNIT/mux_37_25/in_1[3] 	 (fanout : 1)
+hpin:FPU_unit/LOPD_24BIT_UNIT/mux_37_25/in_1[4] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_48/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_48/in_1[1] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_48/in_1[2] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_48/in_1[3] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_48/in_1[4] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_48/in_1[5] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_48/in_1[6] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_48/in_1[7] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_19/in_1[1] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_19/in_1[2] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_19/in_1[3] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_19/in_1[4] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_19/in_1[5] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_19/in_1[6] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_19/in_1[7] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_33_23/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_33_23/in_1[1] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_33_23/in_1[2] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_33_23/in_1[3] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_33_23/in_1[4] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_33_23/in_1[5] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_33_23/in_1[6] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_33_23/in_1[7] 	 (fanout : 1)
+hpin:FPU_unit/EXP_ADJUST_UNIT/mux_21_19/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[1]_18_21/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[2]_18_21/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[2]_18_21/in_1[1] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[3]_18_21/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[3]_18_21/in_1[1] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[3]_18_21/in_1[2] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[3]_18_21/in_1[3] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[4]_18_21/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[4]_18_21/in_1[1] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[4]_18_21/in_1[2] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[4]_18_21/in_1[3] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[4]_18_21/in_1[4] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[4]_18_21/in_1[5] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[4]_18_21/in_1[6] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[4]_18_21/in_1[7] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[1] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[2] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[3] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[4] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[5] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[6] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[7] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[8] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[9] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[10] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[11] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[12] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[13] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[14] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/SHF_left_28bit_unit/mux_stage[5]_18_21/in_1[15] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[0] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[1] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[2] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[3] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[4] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[5] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[6] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[7] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[8] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[9] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[10] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[11] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[12] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[13] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[14] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[15] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[16] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[17] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[18] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[19] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[20] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[21] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[22] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[23] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[24] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[25] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[26] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_21/in_1[27] 	 (fanout : 1)
+hpin:FPU_unit/NORMALIZATION_UNIT/mux_23_41/in_1[27] 	 (fanout : 1)
+hpin:FPU_unit/PSC_UNIT/i_man_a[23] 	 (fanout : 0)
+hpin:FPU_unit/PSC_UNIT/i_man_b[23] 	 (fanout : 0)
+Total number of constant hierarchical pins in design 'FPU_unit' : 198
+
+No constant connected ports in design 'FPU_unit'
+
+  Preserved instances(s)
+  ----------------
+No preserved combinational instance(s) in design 'FPU_unit'
+No preserved sequential instance(s) in design 'FPU_unit'
+No preserved hierarchical instance(s) in design 'FPU_unit'
+
+  Physical only instances(s)
+  ----------------
+No physical only instance(s) in design 'FPU_unit'
+
+Libcells with no corresponding LEF
+----------------------------------
+No libcell(s) found.
+
+LEF cells with no corresponding libcell
+---------------------------------------
+
+No physical (LEF) cells found.
+
+ Summary
+ ------- 
+
+                Name                 Total 
+-------------------------------------------
+Unresolved References                    0 
+Empty Modules                            0 
+Unloaded Port(s)                         0 
+Unloaded Sequential Pin(s)               0 
+Unloaded Combinational Pin(s)            0 
+Assigns                                  0 
+Undriven Port(s)                         0 
+Undriven Leaf Pin(s)                     0 
+Undriven hierarchical pin(s)             0 
+Multidriven Port(s)                      0 
+Multidriven Leaf Pin(s)                  0 
+Multidriven hierarchical Pin(s)          0 
+Multidriven unloaded net(s)              0 
+Constant Port(s)                         0 
+Constant Leaf Pin(s)                     0 
+Constant hierarchical Pin(s)           198 
+Preserved leaf instance(s)               0 
+Preserved hierarchical instance(s)       0 
+Libcells with no LEF cell                0 
+Physical (LEF) cells with no libcell     0 
+Subdesigns with long module name         0 
+Physical only instance(s)                0 
+
+  Done Checking the design.
+Warning : Could not find requested search value. [SDC-208] [get_clocks]
+        : The 'get_clocks' command on line '2' of the SDC file './constraint.sdc' cannot find any clocks named '*'.
+        : Use the 'cd' and 'ls' commands to browse the virtual directories to find the object because the specified name and/or location does not exist.
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'clock' named '' could not be found.
+        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
+
+Usage: set_input_delay [-clock <clock>] [-clock_rise] [-clock_fall] [-level_sensitive] [-network_latency_included] [-source_latency_included] [-max] [-min] [-rise] [-fall]
+           [-reference_pin <pin|port>] [-add_delay] [-name <string>] <float> <port|pin|hpin|port_bus>+
+
+    [-clock <clock>]:
+        the clock waveform 
+    [-clock_rise]:
+        rise clock edge 
+    [-clock_fall]:
+        fall clock edge 
+    [-level_sensitive]:
+        clocked obj is a latch 
+    [-network_latency_included]:
+        value includes clock latency 
+    [-source_latency_included]:
+        value includes clock latency 
+    [-max]:
+        maximum delays 
+    [-min]:
+        minimum delays 
+    [-rise]:
+        rise delays 
+    [-fall]:
+        fall delays 
+    [-reference_pin <pin|port>]:
+        reference pin for this external delay 
+    [-add_delay]:
+        don't remove existing delays 
+    [-name <string>]:
+        a name for the external delay object 
+    <float>:
+        delay value 
+    <port|pin|hpin|port_bus>+:
+        ports to receive the external delay 
+errorInfo: 
+    while executing
+"set_io_delay 1 $args"
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '2' of the SDC file './constraint.sdc': set_input_delay 0.1 -clock [get_clocks *] [all_inputs].
+        : The 'read_sdc' command encountered a problem while trying to evaluate an SDC command. This SDC command will be added to the Tcl variable $::dc::sdc_failed_commands.
+Warning : Could not find requested search value. [SDC-208] [get_clocks]
+        : The 'get_clocks' command on line '3' of the SDC file './constraint.sdc' cannot find any clocks named '*'.
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'clock' named '' could not be found.
+
+Usage: set_output_delay [-clock <clock>] [-clock_rise] [-clock_fall] [-level_sensitive] [-network_latency_included] [-source_latency_included] [-max] [-min] [-rise] [-fall]
+           [-reference_pin <pin|port>] [-add_delay] [-name <string>] <float> <port|pin|hpin|port_bus>+
+
+    [-clock <clock>]:
+        the clock waveform 
+    [-clock_rise]:
+        rise clock edge 
+    [-clock_fall]:
+        fall clock edge 
+    [-level_sensitive]:
+        clocked obj is a latch 
+    [-network_latency_included]:
+        value includes clock latency 
+    [-source_latency_included]:
+        value includes clock latency 
+    [-max]:
+        maximum delays 
+    [-min]:
+        minimum delays 
+    [-rise]:
+        rise delays 
+    [-fall]:
+        fall delays 
+    [-reference_pin <pin|port>]:
+        reference pin for this external delay 
+    [-add_delay]:
+        don't remove existing delays 
+    [-name <string>]:
+        a name for the external delay object 
+    <float>:
+        delay value 
+    <port|pin|hpin|port_bus>+:
+        ports to receive the external delay 
+errorInfo: 
+    while executing
+"set_io_delay 0 $args"
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '3' of the SDC file './constraint.sdc': set_output_delay 0.1 -clock [get_clocks *] [all_outputs].
+Statistics for commands executed by read_sdc:
+ "all_inputs"               - successful      2 , failed      0 (runtime  0.00)
+ "all_outputs"              - successful      2 , failed      0 (runtime  0.00)
+ "get_clocks"               - successful      0 , failed      2 (runtime  0.00)
+ "set_input_delay"          - successful      0 , failed      1 (runtime  0.00)
+ "set_max_delay"            - successful      1 , failed      0 (runtime  0.00)
+ "set_output_delay"         - successful      0 , failed      1 (runtime  0.00)
+Warning : Total failed commands during read_sdc are 4
+Warning : One or more commands failed when these constraints were applied. [SDC-209]
+        : The 'read_sdc' command encountered a problem while processing commands.
+        : You can examine the failed commands or save them to a file by querying the Tcl variable $::dc::sdc_failed_commands.
+Total runtime 0
+  Setting attribute of root '/': 'syn_generic_effort' = medium
+  Setting attribute of root '/': 'syn_map_effort' = medium
+  Setting attribute of root '/': 'syn_opt_effort' = medium
+Remove 0 fopt buffers added by long-wire annotation.
+Info    : Synthesizing. [SYNTH-1]
+        : Synthesizing 'FPU_unit' to generic gates using 'medium' effort.
+Info    : Optimizing RTL. [RTLOPT-1]
+        : Optimizing RTL in 'FPU_unit' using 'medium' effort.
+Info    : Done optimizing RTL. [RTLOPT-2]
+        : Done optimizing RTL in 'FPU_unit'.
+  Setting attribute of root '/': 'super_thread_servers' = localhost localhost localhost localhost localhost localhost localhost localhost   
+Info    : Done synthesizing. [SYNTH-2]
+        : Done synthesizing 'FPU_unit' to generic gates.
+Info    : Mapping. [SYNTH-4]
+        : Mapping 'FPU_unit' using 'medium' effort.
+Multi-threaded constant propagation [1|0] ...
+  Setting attribute of root '/': 'super_thread_servers' = localhost localhost localhost localhost localhost localhost localhost localhost   
+Multi-threaded Virtual Mapping    (8 threads per ST process, 8 of 8 CPUs usable)
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack:  -187 ps
+Target path end-point (Port: FPU_unit/o_32_s[24])
+
+Multi-threaded Technology Mapping (8 threads per ST process, 8 of 8 CPUs usable)
+ 
+Global mapping status
+=====================
+                                    Worst 
+                           Total  Weighted
+Operation                   Area  Neg Slk Worst Path
+-------------------------------------------------------------------------------
+ global_map                 3545     -350  i_32_b[27] --> o_32_s[30]
+
+    Cost Group            Target    Slack    Clock
+--------------------------------------------------
+       default              -187     -350     N.A. 
+
+ 
+Global incremental target info
+==============================
+Cost Group 'default' target slack:  -350 ps
+Target path end-point (Port: FPU_unit/o_32_s[30])
+
+ 
+Global incremental optimization status
+======================================
+                                    Worst 
+                           Total  Weighted
+Operation                   Area  Neg Slk Worst Path
+-------------------------------------------------------------------------------
+ global_incr                2855     -395  i_32_b[26] --> o_32_s[19]
+
+    Cost Group            Target    Slack    Clock
+--------------------------------------------------
+       default              -350     -396     N.A. 
+
+Info    : Done mapping. [SYNTH-5]
+        : Done mapping 'FPU_unit'.
+Info    : Incrementally optimizing. [SYNTH-7]
+        : Incrementally optimizing 'FPU_unit' using 'medium' effort.
+Warning : The Parallel Incremental Optimization failed. [MAP-136]
+        : Cannot run parallel IOPT, design size less than 130000
+        : Switching to Normal Incremental Optimization flow.
+ 
+Incremental optimization status
+===============================
+                                    Worst     Total - - DRC Totals - -
+                           Total  Weighted     Neg      Max       Max 
+Operation                   Area  Neg Slk     Slack    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_iopt                  2855     -395    -10778         0        0
+            Path: i_32_b[26] --> o_32_s[19]
+ const_prop                 2848     -395    -10778         0        0
+            Path: i_32_b[26] --> o_32_s[19]
+ simp_cc_inputs             2785     -389    -10645         0        0
+            Path: i_32_b[26] --> o_32_s[18]
+ 
+Incremental optimization status
+===============================
+                                    Worst     Total - - DRC Totals - -
+                           Total  Weighted     Neg      Max       Max 
+Operation                   Area  Neg Slk     Slack    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay                 2785     -389    -10645         0        0
+            Path: i_32_b[26] --> o_32_s[18]
+ incr_delay                 3030     -237     -6130         0        0
+            Path: i_32_b[30] --> o_32_s[24]
+ incr_delay                 3079     -208     -5287         0        0
+            Path: i_32_b[30] --> o_32_s[19]
+ incr_delay                 3162     -193     -4818         0        0
+            Path: i_32_b[30] --> o_32_s[24]
+ incr_delay                 3177     -188     -4704         0        0
+            Path: i_32_b[26] --> o_32_s[30]
+ incr_delay                 3184     -181     -4492         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ incr_delay                 3199     -178     -4414         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ incr_delay                 3209     -177     -4372         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ incr_delay                 3213     -176     -4344         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ incr_delay                 3214     -175     -4340         0        0
+            Path: i_32_b[26] --> o_32_s[30]
+ incr_delay                 3232     -173     -4305         0        0
+            Path: i_32_b[26] --> o_32_s[30]
+ incr_delay                 3237     -173     -4297         0        0
+            Path: i_32_b[26] --> o_32_s[30]
+ incr_delay                 3253     -171     -4252         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ incr_delay                 3285     -169     -4228         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ incr_delay                 3296     -168     -4185         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+ incr_delay                 3297     -167     -4170         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ incr_delay                 3300     -166     -4150         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ incr_delay                 3312     -166     -4114         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ incr_delay                 3318     -165     -4106         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       crit_upsz      2518  (      308 /      319 )  2.35
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st      1574  (        0 /        0 )  0.00
+          plc_st      1574  (        0 /        0 )  0.00
+        plc_star      1574  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st      1574  (        0 /        0 )  0.00
+            fopt      1574  (        0 /        0 )  0.03
+       crit_dnsz      4081  (       59 /       59 )  2.15
+             dup      1629  (        7 /        7 )  0.06
+            fopt      1773  (       57 /      644 )  3.24
+        setup_dn      1561  (        0 /        0 )  0.00
+         buf2inv      1561  (        0 /        0 )  0.00
+             exp       110  (       18 /       79 )  0.70
+       gate_deco       524  (        3 /        3 )  4.52
+       gcomp_tim      1459  (       25 /       40 )  2.48
+  inv_pair_2_buf      1901  (        0 /        0 )  0.01
+
+ init_drc                   3318     -165     -4106         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      drc_buf_sp         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      drc_buf_sp         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+ init_tns                   3318     -165     -4106         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+ incr_tns                   3305     -164     -3998         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+ incr_tns                   3305     -164     -3998         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       crit_upsz       370  (        8 /       19 )  0.24
+       plc_lo_st       362  (        0 /        0 )  0.00
+            fopt       362  (        0 /        0 )  0.01
+       crit_dnsz       476  (       27 /       46 )  0.28
+             dup       335  (        0 /        1 )  0.01
+        setup_dn       335  (        0 /        0 )  0.00
+         buf2inv       335  (        0 /        0 )  0.00
+
+ init_area                  3305     -164     -3998         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+ undup                      3294     -164     -3981         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ rem_buf                    3247     -164     -3981         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ rem_inv                    3203     -164     -3981         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ merge_bi                   3170     -164     -3975         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ io_phase                   3165     -164     -3973         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ gate_comp                  3158     -164     -3936         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ glob_area                  3108     -163     -3928         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ area_down                  3057     -160     -3838         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+ rem_buf                    3049     -160     -3838         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+ rem_inv                    3046     -160     -3838         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+ merge_bi                   3042     -160     -3838         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+ merge_bi                   3041     -160     -3838         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+           undup        12  (        5 /        5 )  0.03
+         rem_buf        63  (       25 /       27 )  0.08
+         rem_inv        92  (       40 /       46 )  0.13
+        merge_bi        61  (       35 /       39 )  0.12
+      rem_inv_qb         0  (        0 /        0 )  0.00
+        io_phase        90  (       11 /       13 )  0.11
+       gate_comp       490  (       27 /       34 )  0.74
+       gcomp_mog        27  (        0 /        0 )  0.11
+       glob_area        93  (       42 /       93 )  0.47
+       area_down       239  (       56 /       74 )  0.37
+  gate_deco_area         0  (        0 /        0 )  0.00
+         rem_buf        38  (        4 /        6 )  0.04
+         rem_inv        37  (        4 /       11 )  0.06
+        merge_bi        26  (        8 /        8 )  0.05
+      rem_inv_qb         0  (        0 /        0 )  0.00
+
+ 
+Incremental optimization status
+===============================
+                                    Worst     Total - - DRC Totals - -
+                           Total  Weighted     Neg      Max       Max 
+Operation                   Area  Neg Slk     Slack    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay                 3041     -160     -3838         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+ incr_delay                 3043     -159     -3809         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       crit_upsz       192  (        6 /        8 )  0.17
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st       166  (        0 /        0 )  0.00
+          plc_st       166  (        0 /        0 )  0.00
+        plc_star       166  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st       166  (        0 /        0 )  0.00
+            fopt       166  (        0 /        0 )  0.00
+       crit_dnsz       372  (        0 /        0 )  0.19
+             dup       166  (        0 /        0 )  0.00
+            fopt       166  (        0 /       30 )  0.15
+        setup_dn       166  (        0 /        0 )  0.00
+         buf2inv       166  (        0 /        0 )  0.00
+             exp         6  (        0 /        5 )  0.02
+       gate_deco        42  (        0 /        0 )  0.34
+       gcomp_tim       164  (        0 /        0 )  0.28
+  inv_pair_2_buf       172  (        0 /        0 )  0.00
+
+ init_drc                   3043     -159     -3809         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+ init_area                  3043     -159     -3809         0        0
+            Path: i_32_b[30] --> o_32_s[28]
+ undup                      3037     -159     -3809         0        0
+            Path: i_32_a[30] --> o_32_s[28]
+ rem_buf                    3035     -159     -3809         0        0
+            Path: i_32_a[30] --> o_32_s[30]
+ gate_comp                  3031     -159     -3808         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ glob_area                  3021     -159     -3796         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+ area_down                  3013     -158     -3790         0        0
+            Path: i_32_b[30] --> o_32_s[30]
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+           undup         9  (        4 /        4 )  0.02
+         rem_buf        33  (        1 /        1 )  0.03
+         rem_inv        32  (        0 /        5 )  0.03
+        merge_bi        18  (        0 /        0 )  0.02
+      rem_inv_qb         0  (        0 /        0 )  0.00
+        io_phase        78  (        0 /        2 )  0.08
+       gate_comp       424  (        8 /       10 )  0.63
+       gcomp_mog        27  (        0 /        0 )  0.10
+       glob_area        93  (       10 /       93 )  0.48
+       area_down       217  (       12 /       32 )  0.31
+  gate_deco_area         0  (        0 /        0 )  0.00
+
+Info    : Done incrementally optimizing. [SYNTH-8]
+        : Done incrementally optimizing 'FPU_unit'.
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution GENUS15.20 - 15.20-p004_1
+  Generated on:           Nov 23 2025  09:06:08 pm
+  Module:                 FPU_unit
+  Technology libraries:   slow_vdd1v2 1.0
+                          abstract_models 
+  Operating conditions:   PVT_1P08V_125C (balanced_tree)
+  Wireload mode:          enclosed
+  Area mode:              timing library
+============================================================
+
+-------------------------------------------------------------------------------
+Inputs without clocked external delays
+
+The following primary inputs have no clocked external delays.  As a result the  
+timing paths leading from the ports have no timing constraints derived from     
+clock waveforms.  The'external_delay' command is used to create new external    
+delays.                                                                         
+
+port:FPU_unit/i_32_a[0]
+port:FPU_unit/i_32_a[10]
+port:FPU_unit/i_32_a[11]
+  ... 62 other warnings in this category.
+ Use the -verbose option for more details.
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Outputs without clocked external delays
+
+The following primary outputs have no clocked external delays.  As a result the 
+timing paths leading to the ports have no timing constraints derived from clock 
+waveforms.  The'external_delay' command is used to create new external delays.  
+
+port:FPU_unit/o_32_s[0]
+port:FPU_unit/o_32_s[10]
+port:FPU_unit/o_32_s[11]
+  ... 31 other warnings in this category.
+ Use the -verbose option for more details.
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Inputs without external driver/transition
+
+The following primary inputs have no external driver or input transition set.   
+As a result the transition on the ports will be assumed as zero. The            
+'external_driver' attribute is used to add and external driver or the           
+'fixed_slew' attribute to add an external transition.                           
+
+port:FPU_unit/i_32_a[0]
+port:FPU_unit/i_32_a[10]
+port:FPU_unit/i_32_a[11]
+  ... 62 other warnings in this category.
+ Use the -verbose option for more details.
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Outputs without external load
+
+The following primary outputs have no external load set. As a result the load   
+on the ports will be assumed as zero. The 'external_pin_cap' attribute is used  
+to add and external pin cap.                                                    
+
+port:FPU_unit/o_32_s[0]
+port:FPU_unit/o_32_s[10]
+port:FPU_unit/o_32_s[11]
+  ... 31 other warnings in this category.
+ Use the -verbose option for more details.
+-------------------------------------------------------------------------------
+
+
+Lint summary
+ Generated clocks without clock waveform                          0
+ Generated clocks with incompatible options                       0
+ Generated clocks with multi-master clock                         0
+ Paths constrained with different clocks                          0
+ Loop-breaking cells for combinational feedback                   0
+ Nets with multiple drivers                                       0
+ Timing exceptions with no effect                                 0
+ Suspicious multi_cycle exceptions                                0
+ Pins/ports with conflicting case constants                       0
+ Inputs without clocked external delays                          65
+ Outputs without clocked external delays                         34
+ Inputs without external driver/transition                       65
+ Outputs without external load                                   34
+ Exceptions with invalid timing start-/endpoints                  0
+
+                                                  Total:        198
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'FPU_unit'.
+        : Use 'report timing -lint' for more information.
+Beginning report datapath command
+Warning : The filename, column and line number information will not be available in the report. [RPT_DP-100]
+        : The attribute for getting HDL filename and line number is not set.
+        : You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate) to enable filename, column, and line number tracking in the datapath report.
+Warning : No clock. [RPT-10]
+        : There are no clocks in the design.
+        : Clock is not defined.
+Done. Using library: ./../PDK45nm/gpdk045_lib/slow_vdd1v2_basicCells_lvt.lib
+Elaborated    -> ./slow_vdd1v2_basicCells_lvt/FPU_unit_elab.v
+Generic       -> ./slow_vdd1v2_basicCells_lvt/FPU_unit_generic.v
+Tech-mapped   -> ./slow_vdd1v2_basicCells_lvt/FPU_unit_tech_map.v
+Netlist       -> ./slow_vdd1v2_basicCells_lvt/FPU_unit_netlist.v
+SDF           -> ./slow_vdd1v2_basicCells_lvt/FPU_unit.sdf
+Reports       -> ./slow_vdd1v2_basicCells_lvt/report/
+WARNING: This version of the tool is 3662 days old.
 Normal exit.
