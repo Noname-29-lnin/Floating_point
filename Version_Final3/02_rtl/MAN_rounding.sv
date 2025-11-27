@@ -1,6 +1,6 @@
 module MAN_rounding #(
     parameter SIZE_MAN          = 32,
-    parameter SIZE_MAN_RESULT   = 24
+    parameter SIZE_MAN_RESULT   = 23
 )(
     input logic [SIZE_MAN-1:0]          i_man           ,
     output logic [SIZE_MAN_RESULT-1:0]  o_man_result    ,

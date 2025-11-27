@@ -25,7 +25,7 @@ assign w_mantissa_b = {1'b1, i_32_b[22:0]};
 
 logic w_sign_result;
 logic [7:0] w_exponent_result;
-logic [23:0] w_mantissa_result;
+logic [22:0] w_mantissa_result;
 ////////////////////////////////////////////////////////////////
 // Internal Signals
 ////////////////////////////////////////////////////////////////
@@ -213,9 +213,9 @@ EXP_rounding #(
 );
 
 assign w_exponent_result = PSC_sel_exp ? 8'hFF : EXP_RND_exp;
-assign w_mantissa_result = PSC_sel_man[1] ? (PSC_sel_man[0] ? 24'b110000000000000000000000 : 24'h000000) : MAN_RND_man;
+assign w_mantissa_result = PSC_sel_man[1] ? (PSC_sel_man[0] ? 23'b10000000000000000000000 : 23'h000000) : MAN_RND_man[22:0];
 
-assign o_32_s = {w_sign_result, w_exponent_result, w_mantissa_result[22:0]};
+assign o_32_s = {w_sign_result, w_exponent_result, w_mantissa_result};
 assign o_ov_flag = MAN_ALU_ov_flag | MAN_RND_ov_flag;
 assign o_un_flag = ~MAN_ALU_man_alu[23];
 endmodule

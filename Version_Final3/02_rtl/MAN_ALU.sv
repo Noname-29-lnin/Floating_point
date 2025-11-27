@@ -33,6 +33,7 @@ CLA_24bit ALU_SUB_UNIT (
     .o_sum          (o_man_alu),
     .o_carry        (w_overflow)
 );
+// assign {w_overflow, o_man_alu} = {1'b0, i_man_max} + {1'b0, w_i_man_b} + w_i_carry_alu;
 
 // assign o_overflow = w_i_fpu_op ? 1'b0 : w_overflow;
 assign o_overflow = w_i_fpu_op ? w_overflow : 1'b0;

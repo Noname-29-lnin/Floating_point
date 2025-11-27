@@ -14,7 +14,7 @@
 1764208483 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/COMP_8bit.sv
 1764208475 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/CLA_4bit.sv
 1764209394 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/PSC_unit.sv
-1764229652 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/FPU_unit.sv
+1764231290 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/FPU_unit.sv
 1764217699 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/SHF_left.sv
 1764208805 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/COMP_24bit.sv
 1764214707 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/COMP_4bit.sv
@@ -23,4 +23,4 @@
 1764208968 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/EXP_rounding.sv
 1764229492 /home/admin/shared/My_project/Floating_point/Version_Final3/03_verif/Topmodule/tb_FPU_unit.sv
 1764209366 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/MAN_swap.sv
-1764216131 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/MAN_rounding.sv
+1764231304 /home/admin/shared/My_project/Floating_point/Version_Final3/02_rtl/MAN_rounding.sv

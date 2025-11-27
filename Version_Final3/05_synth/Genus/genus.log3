@@ -5,7 +5,7 @@ of Cadence Design Systems, Inc. in the United States and other countries.
 
 Version: GENUS15.20 - 15.20-p004_1, built Sat Nov 14 2015
 Options: -files genus_synth.tcl 
-Date:    Thu Nov 27 02:57:56 2025
+Date:    Thu Nov 27 03:01:47 2025
 Host:    centos7 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (2*Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz 8192KB)
 OS:      CentOS Linux release 7.9.2009 (Core)
 
@@ -13,7 +13,7 @@ Checking out license: Genus_Synthesis
 
 Loading tool scripts...
 Sourcing GUI preferences file /home/admin/.cadence/genus/gui.tcl...
-Finished loading tool scripts (4 seconds elapsed).
+Finished loading tool scripts (6 seconds elapsed).
 
 Sourcing genus_synth.tcl ...
 TOP_MODULE = FPU_unit
@@ -405,7 +405,7 @@ Usage: create_clock [-add] [-name <string>] [-comment <string>] [-domain <string
     [<port|pin|hpin>+]:
         sources that are not inverted 
 Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
-        : The 'read_sdc' command encountered an error while processing this command on line '6' of the SDC file './constraint.sdc': create_clock -name clk -period 6.0 [get_ports clk].
+        : The 'read_sdc' command encountered an error while processing this command on line '6' of the SDC file './constraint.sdc': create_clock -name clk -period 9.1 [get_ports clk].
         : The 'read_sdc' command encountered a problem while trying to evaluate an SDC command. This SDC command will be added to the Tcl variable $::dc::sdc_failed_commands.
 Error   : A required object parameter could not be found. [TUI-61] [parse_options]
         : An object of type 'clock' named 'clk' could not be found.
@@ -607,7 +607,7 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-       crit_upsz      1075  (      191 /      198 )  1.43
+       crit_upsz      1075  (      191 /      198 )  2.32
     plc_bal_star         0  (        0 /        0 )  0.00
      drc_buftimb         0  (        0 /        0 )  0.00
           plc_st       560  (        0 /        0 )  0.00
@@ -616,14 +616,14 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
      drc_buftims         0  (        0 /        0 )  0.00
        plc_lo_st       560  (        0 /        0 )  0.00
             fopt       560  (        0 /        0 )  0.01
-       crit_dnsz      1795  (      126 /      129 )  1.50
-             dup       563  (        3 /        3 )  0.02
-            fopt       644  (       41 /      227 )  1.25
+       crit_dnsz      1795  (      126 /      129 )  1.96
+             dup       563  (        3 /        3 )  0.05
+            fopt       644  (       41 /      227 )  1.61
         setup_dn       546  (        0 /        0 )  0.00
          buf2inv       546  (        0 /        0 )  0.00
-             exp        67  (        5 /       50 )  0.40
-       gate_deco       256  (        2 /        2 )  2.22
-       gcomp_tim      1122  (       32 /       42 )  2.05
+             exp        67  (        5 /       50 )  0.53
+       gate_deco       256  (        2 /        2 )  2.66
+       gcomp_tim      1122  (       32 /       42 )  2.85
   inv_pair_2_buf       572  (        0 /        0 )  0.01
 
  init_drc                   3407    -3155    -96324      4413        0
@@ -635,10 +635,10 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
 -----------------------------------------------------------
           plc_st        37  (        0 /        0 )  0.00
         plc_star        37  (        0 /        0 )  0.00
-        drc_bufs        76  (        2 /       39 )  0.01
+        drc_bufs        76  (        2 /       39 )  0.02
         drc_fopt        35  (        0 /        2 )  0.00
         drc_bufb        35  (        0 /        0 )  0.00
-      simple_buf        35  (        0 /        0 )  0.06
+      simple_buf        35  (        0 /        0 )  0.07
              dup        35  (        0 /        0 )  0.00
        crit_dnsz         1  (        0 /        0 )  0.00
        crit_upsz        35  (        0 /        0 )  0.00
@@ -682,11 +682,11 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
     plc_bal_star         0  (        0 /        0 )  0.00
      drc_buftimb         0  (        0 /        0 )  0.00
      drc_buftims         0  (        0 /        0 )  0.00
-       crit_upsz       428  (       17 /       31 )  0.26
+       crit_upsz       428  (       17 /       31 )  0.34
        plc_lo_st       411  (        0 /        0 )  0.00
-            fopt       411  (        0 /        0 )  0.01
-       crit_dnsz       616  (       66 /      131 )  0.41
-             dup       345  (        0 /        1 )  0.02
+            fopt       411  (        0 /        0 )  0.02
+       crit_dnsz       616  (       66 /      131 )  0.56
+             dup       345  (        0 /        1 )  0.03
         setup_dn       345  (        0 /        0 )  0.00
          buf2inv       345  (        0 /        0 )  0.00
 
@@ -719,20 +719,20 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-           undup        12  (        8 /        8 )  0.03
-         rem_buf        64  (       24 /       31 )  0.10
-         rem_inv        81  (       34 /       37 )  0.13
-        merge_bi        61  (       31 /       42 )  0.13
+           undup        12  (        8 /        8 )  0.04
+         rem_buf        64  (       24 /       31 )  0.14
+         rem_inv        81  (       34 /       37 )  0.16
+        merge_bi        61  (       31 /       42 )  0.21
       rem_inv_qb         0  (        0 /        0 )  0.00
-        io_phase        95  (       24 /       37 )  0.16
-       gate_comp       492  (       70 /       78 )  0.80
-       gcomp_mog        58  (        0 /        0 )  0.16
-       glob_area        91  (       46 /       91 )  0.43
-       area_down       196  (       43 /       64 )  0.38
+        io_phase        95  (       24 /       37 )  0.21
+       gate_comp       492  (       70 /       78 )  1.09
+       gcomp_mog        58  (        0 /        0 )  0.21
+       glob_area        91  (       46 /       91 )  0.62
+       area_down       196  (       43 /       64 )  0.50
   gate_deco_area         0  (        0 /        0 )  0.00
-         rem_buf        40  (        5 /        9 )  0.05
-         rem_inv        28  (        4 /        5 )  0.04
-        merge_bi        25  (        3 /       10 )  0.06
+         rem_buf        40  (        5 /        9 )  0.07
+         rem_inv        28  (        4 /        5 )  0.05
+        merge_bi        25  (        3 /       10 )  0.08
       rem_inv_qb         0  (        0 /        0 )  0.00
 
  
@@ -763,7 +763,7 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-       crit_upsz       802  (       24 /       25 )  0.78
+       crit_upsz       802  (       24 /       25 )  0.96
     plc_bal_star         0  (        0 /        0 )  0.00
      drc_buftimb         0  (        0 /        0 )  0.00
           plc_st       712  (        0 /        0 )  0.00
@@ -772,14 +772,14 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
      drc_buftims         0  (        0 /        0 )  0.00
        plc_lo_st       712  (        0 /        0 )  0.00
             fopt       712  (        0 /        0 )  0.01
-       crit_dnsz      1560  (       23 /       26 )  0.95
+       crit_dnsz      1560  (       23 /       26 )  1.22
              dup       723  (        1 /        1 )  0.02
-            fopt       722  (        6 /      203 )  1.17
+            fopt       722  (        6 /      203 )  1.45
         setup_dn       707  (        0 /        0 )  0.00
          buf2inv       707  (        0 /        0 )  0.00
-             exp        26  (        2 /       21 )  0.09
-       gate_deco       272  (        0 /        0 )  2.43
-       gcomp_tim       524  (        3 /        3 )  0.87
+             exp        26  (        2 /       21 )  0.14
+       gate_deco       272  (        0 /        0 )  2.76
+       gcomp_tim       524  (        3 /        3 )  1.13
   inv_pair_2_buf       781  (        0 /        0 )  0.00
 
  init_drc                   3114    -3100    -94926      3985        0
@@ -791,10 +791,10 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
 -----------------------------------------------------------
           plc_st        36  (        0 /        0 )  0.00
         plc_star        36  (        0 /        0 )  0.00
-        drc_bufs        74  (        1 /       38 )  0.01
+        drc_bufs        74  (        1 /       38 )  0.02
         drc_fopt        35  (        0 /        2 )  0.00
         drc_bufb        35  (        0 /        0 )  0.00
-      simple_buf        35  (        0 /        0 )  0.06
+      simple_buf        35  (        0 /        0 )  0.07
              dup        35  (        0 /        0 )  0.00
        crit_dnsz         1  (        0 /        0 )  0.00
        crit_upsz        35  (        0 /        1 )  0.05
@@ -845,23 +845,23 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-           undup         6  (        4 /        5 )  0.02
-         rem_buf        43  (        9 /       12 )  0.06
-         rem_inv        36  (       13 /       16 )  0.05
-        merge_bi        30  (        6 /       14 )  0.07
+           undup         6  (        4 /        5 )  0.03
+         rem_buf        43  (        9 /       12 )  0.07
+         rem_inv        36  (       13 /       16 )  0.08
+        merge_bi        30  (        6 /       14 )  0.09
       rem_inv_qb         0  (        0 /        0 )  0.00
-        io_phase        72  (        2 /        7 )  0.09
-       gate_comp       392  (        8 /       12 )  0.63
-       gcomp_mog        58  (        0 /        0 )  0.16
-       glob_area        90  (        7 /       90 )  0.41
-       area_down       176  (       28 /       38 )  0.30
+        io_phase        72  (        2 /        7 )  0.13
+       gate_comp       392  (        8 /       12 )  0.85
+       gcomp_mog        58  (        0 /        0 )  0.20
+       glob_area        90  (        7 /       90 )  0.55
+       area_down       176  (       28 /       38 )  0.39
   gate_deco_area         0  (        0 /        0 )  0.00
 
 Info    : Done incrementally optimizing. [SYNTH-8]
         : Done incrementally optimizing 'FPU_unit'.
 ============================================================
   Generated by:           Genus(TM) Synthesis Solution GENUS15.20 - 15.20-p004_1
-  Generated on:           Nov 27 2025  02:58:38 am
+  Generated on:           Nov 27 2025  03:02:41 am
   Module:                 FPU_unit
   Technology libraries:   slow_vdd1v0 1.0
                           abstract_models 

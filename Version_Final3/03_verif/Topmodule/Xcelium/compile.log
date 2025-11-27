@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Nov 27, 2025 at 02:53:52 EST
+TOOL:	xrun(64)	20.09-s001: Started on Nov 27, 2025 at 03:15:13 EST
 xrun
 	+xm64bit
 	-sv
@@ -173,7 +173,7 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 		worklib.EXP_comp:sv <0x21562dd0>
 			streams:   1, words:   393
 		worklib.FPU_unit:sv <0x1ebee2ab>
-			streams:  69, words: 18919
+			streams:  69, words: 18925
 		worklib.tb_FPU_unit:sv <0x00edd91c>
 			streams:  17, words: 42995
 		worklib.SHF_right:sv <0x0361d42a>
@@ -18895,4 +18895,4 @@ Pass rate       : 100.00%
 Simulation complete via $finish(1) at time 207451 NS + 0
 ../Topmodule/tb_FPU_unit.sv:260     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Nov 27, 2025 at 02:53:56 EST  (total: 00:00:04)
+TOOL:	xrun(64)	20.09-s001: Exiting on Nov 27, 2025 at 03:15:16 EST  (total: 00:00:03)
