@@ -69,5 +69,4 @@ puts "SDF           -> $sdf_out"
 puts "Reports       -> ./${LIB_NAME}/report/"
 
 ##################################################
-# Open genus GUI (tuỳ chọn)
 gui_show
