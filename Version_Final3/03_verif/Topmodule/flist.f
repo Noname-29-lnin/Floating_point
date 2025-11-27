@@ -16,6 +16,7 @@
 ./../../02_rtl/LOPD_8bit.sv
 ./../../02_rtl/LOPD_16bit.sv
 ./../../02_rtl/LOPD_24bit.sv
+./../../02_rtl/CLS_4bit.sv
 ./../../02_rtl/MAN_ALU.sv
 ./../../02_rtl/MAN_rounding.sv
 ./../../02_rtl/MAN_swap.sv

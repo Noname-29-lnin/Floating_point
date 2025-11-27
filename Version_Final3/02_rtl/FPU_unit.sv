@@ -41,6 +41,10 @@ logic [7:0] SHF_RIGHT_NOR_rounding;
 logic MAN_COM_o_compare;
 logic [23:0] MAN_SWAP_max;
 logic [23:0] MAN_SWAP_min;
+
+logic [3:0]  CLS_MAN_ALU_i_data;
+logic [3:0]  CLS_MAN_ALU_o_data;
+logic        CLS_MAN_ALU_bout;
 logic [23:0] MAN_ALU_man_alu;
 logic MAN_ALU_ov_flag;
 logic [1:0] PSC_sel_man;
@@ -102,7 +106,7 @@ SHF_right #(
     .o_data             (SHF_RIGHT_MAN_o_data)
 );
 assign MAN_SWAP_PRE_SHF_man_min = SHF_RIGHT_MAN_o_data[31:8];
-assign SHF_RIGHT_NOR_rounding   = SHF_RIGHT_MAN_o_data[7:0];
+assign SHF_RIGHT_NOR_rounding   = {SHF_RIGHT_MAN_o_data[7:0]};
 
 COMP_24bit #(
     .SIZE_DATA          (24)
@@ -138,6 +142,16 @@ MAN_swap #(
     .o_man_max          (MAN_SWAP_max),
     .o_man_min          (MAN_SWAP_min) 
 );
+
+assign CLS_MAN_ALU_i_data = {SHF_RIGHT_NOR_rounding[7], SHF_RIGHT_NOR_rounding[6], SHF_RIGHT_NOR_rounding[5], SHF_RIGHT_NOR_rounding[4]};
+CLS_4bit MAN_ALU_PROC_RND (
+    .A                  (4'b0),
+    .B                  (CLS_MAN_ALU_i_data),
+    .Bin                (1'b0),
+    .SUB                (CLS_MAN_ALU_o_data),
+    .Bout               (CLS_MAN_ALU_bout) 
+);
+
 MAN_ALU #(
     .NUM_OP             (NUM_OP),
     .SIZE_MAN           (24)
@@ -145,6 +159,7 @@ MAN_ALU #(
     .i_fpu_op           (i_add_sub),
     .i_sign_a           (w_sign_a),
     .i_sign_b           (w_sign_b),
+    .i_carry            (CLS_MAN_ALU_bout),
     .i_man_max          (MAN_SWAP_max),
     .i_man_min          (MAN_SWAP_min),
     .o_man_alu          (MAN_ALU_man_alu),
@@ -177,7 +192,7 @@ NOR_unit #(
     .i_overflow         (MAN_ALU_ov_flag),
     .i_zero_flag        (LOPD_o_zero_flag),
     .i_one_position     (LOPD_o_one_position),
-    .i_mantissa         ({MAN_ALU_man_alu, SHF_RIGHT_NOR_rounding}),
+    .i_mantissa         ({MAN_ALU_man_alu, CLS_MAN_ALU_o_data, 4'b0}),
     .o_mantissa         (NOR_o_man) 
 );
 

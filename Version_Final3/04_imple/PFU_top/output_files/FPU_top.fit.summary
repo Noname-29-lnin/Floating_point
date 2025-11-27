@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Nov 27 10:41:18 2025
+Fitter Status : Successful - Thu Nov 27 14:55:18 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : FPU_top
 Top-level Entity Name : FPU_top
 Family : Cyclone V
 Device : 5CSXFC5D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 232 / 32,070 ( < 1 % )
+Logic utilization (in ALMs) : 340 / 32,070 ( 1 % )
 Total registers : 99
 Total pins : 101 / 499 ( 20 % )
 Total virtual pins : 0

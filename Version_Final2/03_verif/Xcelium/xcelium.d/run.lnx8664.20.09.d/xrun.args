@@ -4,10 +4,6 @@
 //
 +xm64bit
 -sv
--define
-GATELEVEL
--define
-ANNOTATION
 -f
 ./../Topmodule/flist.f
 -top
@@ -16,7 +12,7 @@ tb_FPU_unit
 +rwc
 -clean
 -log
-./../Topmodule/Xcelium/compile_annotation.log
+./../Topmodule/Xcelium/compile.log
 +nctimescale+1ns/1ps
 +ntb_random_seed=automatic
 -allowredefinition

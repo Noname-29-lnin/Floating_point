@@ -1,4 +1,4 @@
-1763818243 /home/admin/shared/My_project/Floating_point/Version_Final2/03_verif/Topmodule/tb_FPU_unit.sv
+1764219077 /home/admin/shared/My_project/Floating_point/Version_Final2/03_verif/Topmodule/tb_FPU_unit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/CLA_4bit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/CLA_8bit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/CLA_24bit.sv
@@ -11,13 +11,14 @@
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/EXP_rounding.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/EXP_sub.sv
 1763476176 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/EXP_swap.sv
+1763968814 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/FPU_unit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/LOPD_4bit.sv
 1763476176 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/LOPD_8bit.sv
 1763476176 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/LOPD_16bit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/LOPD_24bit.sv
 1763476176 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/MAN_ALU.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/MAN_swap.sv
-1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/NORMALIZATION_unit.sv
+1764217565 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/NORMALIZATION_unit.sv
 1763635290 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/PSC_unit.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/RND_add.sv
 1763383287 /home/admin/shared/My_project/Floating_point/Version_Final2/02_rtl/ROUNDING_unit.sv

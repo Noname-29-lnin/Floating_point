@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPU_top
-Thu Nov 27 10:40:41 2025
+Thu Nov 27 14:54:26 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -33,16 +33,19 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
  25. Parameter Settings for User Entity Instance: FPU_unit:FPU_UNIT|MAN_rounding:MAN_RND
  26. Parameter Settings for User Entity Instance: FPU_unit:FPU_UNIT|EXP_rounding:EXP_RND
  27. Port Connectivity Checks: "FPU_unit:FPU_UNIT|MAN_rounding:MAN_RND"
- 28. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|CLA_8bit:CLA_8BIT_UNIT"
- 29. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST"
- 30. Port Connectivity Checks: "FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT|COMP_4bit:u_i_data_0"
- 31. Port Connectivity Checks: "FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN"
- 32. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB|CLA_8bit:CLA_8BIT_UNIT"
- 33. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB"
- 34. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_comp:EXP_COM_8BIT|COMP_8bit:COMP_LESS_UNIT|COMP_4bit:u_low"
- 35. Post-Synthesis Netlist Statistics for Top Partition
- 36. Elapsed Time Per Partition
- 37. Analysis & Synthesis Messages
+ 28. Port Connectivity Checks: "FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT"
+ 29. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|CLA_8bit:CLA_8BIT_UNIT"
+ 30. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST"
+ 31. Port Connectivity Checks: "FPU_unit:FPU_UNIT|CLS_4bit:MAN_ALU_PROC_RND"
+ 32. Port Connectivity Checks: "FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT|COMP_4bit:u_i_data_0"
+ 33. Port Connectivity Checks: "FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN"
+ 34. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB|CLA_8bit:CLA_8BIT_UNIT"
+ 35. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB"
+ 36. Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_comp:EXP_COM_8BIT|COMP_8bit:COMP_LESS_UNIT|COMP_4bit:u_low"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
+ 40. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -69,7 +72,7 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 27 10:40:41 2025           ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 27 14:54:26 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; FPU_top                                         ;
 ; Top-level Entity Name           ; FPU_top                                         ;
@@ -190,7 +193,8 @@ on the Quartus Prime software download page.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -199,6 +203,7 @@ on the Quartus Prime software download page.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                  ; Library ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; ../../02_rtl/CLS_4bit.sv         ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/CLS_4bit.sv          ;         ;
 ; ../../02_rtl/SIGN_unit.sv        ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/SIGN_unit.sv         ;         ;
 ; ../../02_rtl/SHF_right.sv        ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/SHF_right.sv         ;         ;
 ; ../../02_rtl/SHF_left.sv         ; yes             ; User SystemVerilog HDL File  ; /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/SHF_left.sv          ;         ;
@@ -231,14 +236,14 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 230         ;
+; Estimate of Logic utilization (ALMs needed) ; 343         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 333         ;
-;     -- 7 input functions                    ; 21          ;
-;     -- 6 input functions                    ; 98          ;
-;     -- 5 input functions                    ; 62          ;
-;     -- 4 input functions                    ; 79          ;
-;     -- <=3 input functions                  ; 73          ;
+; Combinational ALUT usage for logic          ; 497         ;
+;     -- 7 input functions                    ; 23          ;
+;     -- 6 input functions                    ; 158         ;
+;     -- 5 input functions                    ; 113         ;
+;     -- 4 input functions                    ; 106         ;
+;     -- <=3 input functions                  ; 97          ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 99          ;
 ;                                             ;             ;
@@ -248,8 +253,8 @@ on the Quartus Prime software download page.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_clk~input ;
 ; Maximum fan-out                             ; 99          ;
-; Total fan-out                               ; 2011        ;
-; Average fan-out                             ; 3.17        ;
+; Total fan-out                               ; 2813        ;
+; Average fan-out                             ; 3.53        ;
 +---------------------------------------------+-------------+
 
 
@@ -258,12 +263,19 @@ on the Quartus Prime software download page.
 +-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name  ; Library Name ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+--------------+
-; |FPU_top                                              ; 333 (0)             ; 99 (99)                   ; 0                 ; 0          ; 101  ; 0            ; |FPU_top                                                                                                   ; FPU_top      ; work         ;
-;    |FPU_unit:FPU_UNIT|                                ; 333 (11)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT                                                                                 ; FPU_unit     ; work         ;
-;       |EXP_adjust:EXP_ADJUST|                         ; 19 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST                                                           ; EXP_adjust   ; work         ;
-;          |CLA_8bit:CLA_8BIT_UNIT|                     ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|CLA_8bit:CLA_8BIT_UNIT                                    ; CLA_8bit     ; work         ;
-;             |CLA_4bit:CLA_4BIT_UNIT_0|                ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_0           ; CLA_4bit     ; work         ;
-;             |CLA_4bit:CLA_4BIT_UNIT_1|                ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_1           ; CLA_4bit     ; work         ;
+; |FPU_top                                              ; 497 (0)             ; 99 (99)                   ; 0                 ; 0          ; 101  ; 0            ; |FPU_top                                                                                                   ; FPU_top      ; work         ;
+;    |FPU_unit:FPU_UNIT|                                ; 497 (10)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT                                                                                 ; FPU_unit     ; work         ;
+;       |CLS_4bit:MAN_ALU_PROC_RND|                     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|CLS_4bit:MAN_ALU_PROC_RND                                                       ; CLS_4bit     ; work         ;
+;       |COMP_24bit:MAN_COMP_24BIT|                     ; 39 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT                                                       ; COMP_24bit   ; work         ;
+;          |COMP_4bit:u_i_data_0|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT|COMP_4bit:u_i_data_0                                  ; COMP_4bit    ; work         ;
+;          |COMP_4bit:u_i_data_1|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT|COMP_4bit:u_i_data_1                                  ; COMP_4bit    ; work         ;
+;          |COMP_4bit:u_i_data_2|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT|COMP_4bit:u_i_data_2                                  ; COMP_4bit    ; work         ;
+;          |COMP_4bit:u_i_data_3|                       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT|COMP_4bit:u_i_data_3                                  ; COMP_4bit    ; work         ;
+;          |COMP_4bit:u_i_data_5|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT|COMP_4bit:u_i_data_5                                  ; COMP_4bit    ; work         ;
+;       |EXP_adjust:EXP_ADJUST|                         ; 17 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST                                                           ; EXP_adjust   ; work         ;
+;          |CLA_8bit:CLA_8BIT_UNIT|                     ; 9 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|CLA_8bit:CLA_8BIT_UNIT                                    ; CLA_8bit     ; work         ;
+;             |CLA_4bit:CLA_4BIT_UNIT_0|                ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_0           ; CLA_4bit     ; work         ;
+;             |CLA_4bit:CLA_4BIT_UNIT_1|                ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_1           ; CLA_4bit     ; work         ;
 ;       |EXP_comp:EXP_COM_8BIT|                         ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_comp:EXP_COM_8BIT                                                           ; EXP_comp     ; work         ;
 ;          |COMP_8bit:COMP_LESS_UNIT|                   ; 10 (6)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_comp:EXP_COM_8BIT|COMP_8bit:COMP_LESS_UNIT                                  ; COMP_8bit    ; work         ;
 ;             |COMP_4bit:u_high|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_comp:EXP_COM_8BIT|COMP_8bit:COMP_LESS_UNIT|COMP_4bit:u_high                 ; COMP_4bit    ; work         ;
@@ -274,24 +286,25 @@ on the Quartus Prime software download page.
 ;             |CLA_4bit:CLA_4BIT_UNIT_0|                ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_0                 ; CLA_4bit     ; work         ;
 ;             |CLA_4bit:CLA_4BIT_UNIT_1|                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_1                 ; CLA_4bit     ; work         ;
 ;       |EXP_swap:EXP_SWAP|                             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP                                                               ; EXP_swap     ; work         ;
-;       |LOPD_24bit:LOPD_24BIT|                         ; 28 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT                                                           ; LOPD_24bit   ; work         ;
-;          |LOPD_16bit:LOPD_16bit_UNIT_MSB|             ; 4 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|LOPD_16bit:LOPD_16bit_UNIT_MSB                            ; LOPD_16bit   ; work         ;
+;       |LOPD_24bit:LOPD_24BIT|                         ; 29 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT                                                           ; LOPD_24bit   ; work         ;
+;          |LOPD_16bit:LOPD_16bit_UNIT_MSB|             ; 7 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|LOPD_16bit:LOPD_16bit_UNIT_MSB                            ; LOPD_16bit   ; work         ;
 ;             |LOPD_8bit:LOPD_8bit_unit_0|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_0 ; LOPD_8bit    ; work         ;
-;             |LOPD_8bit:LOPD_8bit_unit_1|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_1 ; LOPD_8bit    ; work         ;
-;          |LOPD_8bit:LOPD_8bit_UNIT_LSB|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|LOPD_8bit:LOPD_8bit_UNIT_LSB                              ; LOPD_8bit    ; work         ;
-;       |MAN_ALU:MAN_ALU|                               ; 78 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU                                                                 ; MAN_ALU      ; work         ;
-;          |CLA_24bit:ALU_SUB_UNIT|                     ; 56 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT                                          ; CLA_24bit    ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[0].CLA_4BIT_UNIT| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[0].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[1].CLA_4BIT_UNIT| ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[1].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[2].CLA_4BIT_UNIT| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[2].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[4].CLA_4BIT_UNIT| ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[4].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
-;             |CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
-;       |MAN_rounding:MAN_RND|                          ; 39 (39)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_rounding:MAN_RND                                                            ; MAN_rounding ; work         ;
-;       |MAN_swap:MAN_SWAP_PRE|                         ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_swap:MAN_SWAP_PRE                                                           ; MAN_swap     ; work         ;
-;       |NOR_unit:NOR_UNIT|                             ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT                                                               ; NOR_unit     ; work         ;
+;             |LOPD_8bit:LOPD_8bit_unit_1|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_1 ; LOPD_8bit    ; work         ;
+;          |LOPD_8bit:LOPD_8bit_UNIT_LSB|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|LOPD_8bit:LOPD_8bit_UNIT_LSB                              ; LOPD_8bit    ; work         ;
+;       |MAN_ALU:MAN_ALU|                               ; 106 (9)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU                                                                 ; MAN_ALU      ; work         ;
+;          |CLA_24bit:ALU_SUB_UNIT|                     ; 97 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT                                          ; CLA_24bit    ; work         ;
+;             |CLA_4bit:CLA_BLOCK_GEN[0].CLA_4BIT_UNIT| ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[0].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
+;             |CLA_4bit:CLA_BLOCK_GEN[1].CLA_4BIT_UNIT| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[1].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
+;             |CLA_4bit:CLA_BLOCK_GEN[2].CLA_4BIT_UNIT| ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[2].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
+;             |CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT| ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[3].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
+;             |CLA_4bit:CLA_BLOCK_GEN[4].CLA_4BIT_UNIT| ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[4].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
+;             |CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT| ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT|CLA_4bit:CLA_BLOCK_GEN[5].CLA_4BIT_UNIT  ; CLA_4bit     ; work         ;
+;       |MAN_rounding:MAN_RND|                          ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_rounding:MAN_RND                                                            ; MAN_rounding ; work         ;
+;       |MAN_swap:MAN_SWAP_PRE|                         ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|MAN_swap:MAN_SWAP_PRE                                                           ; MAN_swap     ; work         ;
+;       |NOR_unit:NOR_UNIT|                             ; 105 (73)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT                                                               ; NOR_unit     ; work         ;
+;          |SHF_left:SHF_left_unit|                     ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|SHF_left:SHF_left_unit                                        ; SHF_left     ; work         ;
 ;       |PSC_unit:PSC_UNIT|                             ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|PSC_unit:PSC_UNIT                                                               ; PSC_unit     ; work         ;
-;       |SHF_right:SHF_RIGHT_MAN|                       ; 59 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN                                                         ; SHF_right    ; work         ;
+;       |SHF_right:SHF_RIGHT_MAN|                       ; 80 (80)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN                                                         ; SHF_right    ; work         ;
 ;       |SIGN_unit:SIGN_UNIT|                           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FPU_top|FPU_unit:FPU_UNIT|SIGN_unit:SIGN_UNIT                                                             ; SIGN_unit    ; work         ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -312,28 +325,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|stage[1][5]     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|stage[3][23]    ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|stage[3][16]    ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|o_mantissa[26]        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|stage[3][27]    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|stage[3][25]    ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|w_data_b[0]       ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|o_mantissa[14]        ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|o_one_position[0] ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|o_data[1]       ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|o_data[4]       ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|w_i_man_b[14]           ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|w_i_man_b[7]            ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|w_i_man_b[3]            ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|o_mantissa[6]         ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|o_mantissa[3]         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|stage[1][10]                  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|stage[3][27]                  ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|stage[3][24]                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|o_data[12]                    ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|w_i_man_b[9]                          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|w_data_b[0]                     ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|SHF_left:SHF_left_unit|stage[2][17] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|SHF_left:SHF_left_unit|stage[4][4]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|SHF_left:SHF_left_unit|stage[4][10] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|SHF_left:SHF_left_unit|stage[4][12] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|stage[3][30]                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|stage[3][29]                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|o_data[26]                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|o_data[16]                    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|o_one_position[1]               ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|o_data[6]                     ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN|o_data[9]                     ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|o_mantissa[4]                       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|o_mantissa[16]                      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|o_mantissa[20]                      ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 18 LEs               ; 3 LEs                  ; No         ; |FPU_top|FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|o_mantissa[28]                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -522,6 +540,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT" ;
++------------------+-------+----------+---------------------------+
+; Port             ; Type  ; Severity ; Details                   ;
++------------------+-------+----------+---------------------------+
+; i_mantissa[3..0] ; Input ; Info     ; Stuck at GND              ;
++------------------+-------+----------+---------------------------+
+
+
 +--------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST|CLA_8bit:CLA_8BIT_UNIT" ;
 +---------+--------+----------+--------------------------------------------------------------+
@@ -540,6 +567,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+-------+----------+-----------------------------+
 
 
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "FPU_unit:FPU_UNIT|CLS_4bit:MAN_ALU_PROC_RND" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; A    ; Input ; Info     ; Stuck at GND                                  ;
+; Bin  ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT|COMP_4bit:u_i_data_0"                      ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -549,14 +586,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN"                                                                                                                ;
-+--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                                                                                                                            ;
-+--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; i_data       ; Input ; Warning  ; Input port expression (28 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "i_data[31..28]" will be connected to GND. ;
-; i_data[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                       ;
-+--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN"                                                  ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; i_data[7..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; o_data[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------+
@@ -595,19 +632,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_ff             ; 99                          ;
 ;     CLR               ; 77                          ;
 ;     CLR SCLR          ; 22                          ;
-; arriav_lcell_comb     ; 333                         ;
-;     extend            ; 21                          ;
-;         7 data inputs ; 21                          ;
-;     normal            ; 312                         ;
-;         2 data inputs ; 23                          ;
-;         3 data inputs ; 50                          ;
-;         4 data inputs ; 79                          ;
-;         5 data inputs ; 62                          ;
-;         6 data inputs ; 98                          ;
+; arriav_lcell_comb     ; 497                         ;
+;     extend            ; 23                          ;
+;         7 data inputs ; 23                          ;
+;     normal            ; 474                         ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 67                          ;
+;         4 data inputs ; 106                         ;
+;         5 data inputs ; 113                         ;
+;         6 data inputs ; 158                         ;
 ; boundary_port         ; 101                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 21.00                       ;
-; Average LUT depth     ; 14.18                       ;
+; Max LUT depth         ; 29.00                       ;
+; Average LUT depth     ; 21.97                       ;
 +-----------------------+-----------------------------+
 
 
@@ -616,7 +653,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -626,10 +663,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Thu Nov 27 10:40:31 2025
+    Info: Processing started: Thu Nov 27 14:54:09 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPU_top -c FPU_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/CLS_4bit.sv
+    Info (12023): Found entity 1: CLS_4bit File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/CLS_4bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/SIGN_unit.sv
     Info (12023): Found entity 1: SIGN_unit File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/SIGN_unit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/SHF_right.sv
@@ -670,8 +709,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file /home/n
     Info (12023): Found entity 1: COMP_8bit File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/COMP_8bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/COMP_4bit.sv
     Info (12023): Found entity 1: COMP_4bit File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/COMP_4bit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/COMP_2bit copy.sv
-    Info (12023): Found entity 1: COMP_2bit File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/COMP_2bit copy.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/COMP_24bit.sv
     Info (12023): Found entity 1: COMP_24bit File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/COMP_24bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/CLA_8bit.sv
@@ -684,40 +721,47 @@ Info (12021): Found 1 design units, including 1 entities, in source file FPU_top
     Info (12023): Found entity 1: FPU_top File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/04_imple/PFU_top/FPU_top.sv Line: 1
 Info (12127): Elaborating entity "FPU_top" for the top level hierarchy
 Info (12128): Elaborating entity "FPU_unit" for hierarchy "FPU_unit:FPU_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/04_imple/PFU_top/FPU_top.sv Line: 48
-Info (12128): Elaborating entity "EXP_comp" for hierarchy "FPU_unit:FPU_UNIT|EXP_comp:EXP_COM_8BIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 70
+Info (12128): Elaborating entity "EXP_comp" for hierarchy "FPU_unit:FPU_UNIT|EXP_comp:EXP_COM_8BIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 74
 Info (12128): Elaborating entity "COMP_8bit" for hierarchy "FPU_unit:FPU_UNIT|EXP_comp:EXP_COM_8BIT|COMP_8bit:COMP_LESS_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/EXP_comp.sv Line: 15
 Info (12128): Elaborating entity "COMP_4bit" for hierarchy "FPU_unit:FPU_UNIT|EXP_comp:EXP_COM_8BIT|COMP_8bit:COMP_LESS_UNIT|COMP_4bit:u_low" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/COMP_8bit.sv Line: 16
-Info (12128): Elaborating entity "EXP_swap" for hierarchy "FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 79
-Info (12128): Elaborating entity "EXP_sub" for hierarchy "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 86
+Info (12128): Elaborating entity "EXP_swap" for hierarchy "FPU_unit:FPU_UNIT|EXP_swap:EXP_SWAP" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 83
+Info (12128): Elaborating entity "EXP_sub" for hierarchy "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 90
 Info (12128): Elaborating entity "CLA_8bit" for hierarchy "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB|CLA_8bit:CLA_8BIT_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/EXP_sub.sv Line: 18
 Info (12128): Elaborating entity "CLA_4bit" for hierarchy "FPU_unit:FPU_UNIT|EXP_sub:EXP_SUB|CLA_8bit:CLA_8BIT_UNIT|CLA_4bit:CLA_4BIT_UNIT_0" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/CLA_8bit.sv Line: 20
-Info (12128): Elaborating entity "MAN_swap" for hierarchy "FPU_unit:FPU_UNIT|MAN_swap:MAN_SWAP_PRE" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 95
-Info (12128): Elaborating entity "SHF_right" for hierarchy "FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 103
-Info (12128): Elaborating entity "COMP_24bit" for hierarchy "FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 113
-Info (12128): Elaborating entity "SIGN_unit" for hierarchy "FPU_unit:FPU_UNIT|SIGN_unit:SIGN_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 120
-Info (12128): Elaborating entity "PSC_unit" for hierarchy "FPU_unit:FPU_UNIT|PSC_unit:PSC_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 131
-Info (12128): Elaborating entity "MAN_ALU" for hierarchy "FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 152
-Info (12128): Elaborating entity "CLA_24bit" for hierarchy "FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/MAN_ALU.sv Line: 29
-Info (12128): Elaborating entity "LOPD_24bit" for hierarchy "FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 160
+Info (12128): Elaborating entity "MAN_swap" for hierarchy "FPU_unit:FPU_UNIT|MAN_swap:MAN_SWAP_PRE" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 99
+Info (12128): Elaborating entity "SHF_right" for hierarchy "FPU_unit:FPU_UNIT|SHF_right:SHF_RIGHT_MAN" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 107
+Info (12128): Elaborating entity "COMP_24bit" for hierarchy "FPU_unit:FPU_UNIT|COMP_24bit:MAN_COMP_24BIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 117
+Info (12128): Elaborating entity "SIGN_unit" for hierarchy "FPU_unit:FPU_UNIT|SIGN_unit:SIGN_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 124
+Info (12128): Elaborating entity "PSC_unit" for hierarchy "FPU_unit:FPU_UNIT|PSC_unit:PSC_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 135
+Info (12128): Elaborating entity "CLS_4bit" for hierarchy "FPU_unit:FPU_UNIT|CLS_4bit:MAN_ALU_PROC_RND" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 153
+Info (12128): Elaborating entity "MAN_ALU" for hierarchy "FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 167
+Info (12128): Elaborating entity "CLA_24bit" for hierarchy "FPU_unit:FPU_UNIT|MAN_ALU:MAN_ALU|CLA_24bit:ALU_SUB_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/MAN_ALU.sv Line: 35
+Info (12128): Elaborating entity "LOPD_24bit" for hierarchy "FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 175
 Info (12128): Elaborating entity "LOPD_16bit" for hierarchy "FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|LOPD_16bit:LOPD_16bit_UNIT_MSB" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/LOPD_24bit.sv Line: 18
 Info (12128): Elaborating entity "LOPD_8bit" for hierarchy "FPU_unit:FPU_UNIT|LOPD_24bit:LOPD_24BIT|LOPD_16bit:LOPD_16bit_UNIT_MSB|LOPD_8bit:LOPD_8bit_unit_0" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/LOPD_16bit.sv Line: 16
-Info (12128): Elaborating entity "EXP_adjust" for hierarchy "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 171
-Info (12128): Elaborating entity "NOR_unit" for hierarchy "FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 182
+Info (12128): Elaborating entity "EXP_adjust" for hierarchy "FPU_unit:FPU_UNIT|EXP_adjust:EXP_ADJUST" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 186
+Info (12128): Elaborating entity "NOR_unit" for hierarchy "FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 197
 Info (12128): Elaborating entity "SHF_left" for hierarchy "FPU_unit:FPU_UNIT|NOR_unit:NOR_UNIT|SHF_left:SHF_left_unit" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/NOR_unit.sv Line: 21
-Info (12128): Elaborating entity "MAN_rounding" for hierarchy "FPU_unit:FPU_UNIT|MAN_rounding:MAN_RND" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 191
-Info (12128): Elaborating entity "EXP_rounding" for hierarchy "FPU_unit:FPU_UNIT|EXP_rounding:EXP_RND" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 198
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "MAN_rounding" for hierarchy "FPU_unit:FPU_UNIT|MAN_rounding:MAN_RND" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 206
+Info (12128): Elaborating entity "EXP_rounding" for hierarchy "FPU_unit:FPU_UNIT|EXP_rounding:EXP_RND" File: /home/noname/Documents/project_tiny/Floating_point/Version_Final3/02_rtl/FPU_unit.sv Line: 213
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file /home/noname/Documents/project_tiny/Floating_point/Version_Final3/04_imple/PFU_top/output_files/FPU_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 500 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 664 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 399 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 483 megabytes
-    Info: Processing ended: Thu Nov 27 10:40:41 2025
-    Info: Elapsed time: 00:00:10
+    Info (21061): Implemented 563 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 470 megabytes
+    Info: Processing ended: Thu Nov 27 14:54:26 2025
+    Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:19
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/noname/Documents/project_tiny/Floating_point/Version_Final3/04_imple/PFU_top/output_files/FPU_top.map.smsg.
 
 

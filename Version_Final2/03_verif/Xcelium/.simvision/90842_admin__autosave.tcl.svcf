@@ -1,0 +1,100 @@
+
+#
+# Preferences
+#
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set plugin-enable-groupscope 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+
+#
+# Databases
+#
+database require tb_FPU_unit -search {
+	./tb_FPU_unit.shm/tb_FPU_unit.trn
+	/home/admin/shared/My_project/Floating_point/Version_Final2/03_verif/Xcelium/tb_FPU_unit.shm/tb_FPU_unit.trn
+}
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1904x795+0+31}] != ""} {
+    window geometry "Waveform 1" 1904x795+0+31
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar select designbrowser
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 75
+waveform baseline set -time 0
+
+set id [waveform add -signals  {
+	tb_FPU_unit::tb_FPU_unit.DUT.NORMALIZATION_UNIT.i_overflow
+	} ]
+set id [waveform add -signals  {
+	tb_FPU_unit::tb_FPU_unit.DUT.NORMALIZATION_UNIT.i_zero_flag
+	} ]
+set id [waveform add -signals  {
+	{tb_FPU_unit::tb_FPU_unit.DUT.NORMALIZATION_UNIT.i_one_position[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{tb_FPU_unit::tb_FPU_unit.DUT.NORMALIZATION_UNIT.i_mantissa[27:0]}
+	} ]
+set id [waveform add -signals  {
+	{tb_FPU_unit::tb_FPU_unit.DUT.NORMALIZATION_UNIT.o_mantissa[27:0]}
+	} ]
+set id [waveform add -signals  {
+	{tb_FPU_unit::tb_FPU_unit.DUT.MAN_ALU_UNIT.o_man_alu[27:0]}
+	} ]
+waveform format $id -radix %b
+set id [waveform add -signals  {
+	{tb_FPU_unit::tb_FPU_unit.DUT.SHF_RIGHT_28BIT_UNIT.i_shift_number[4:0]}
+	} ]
+waveform format $id -radix %d
+set id [waveform add -signals  {
+	{tb_FPU_unit::tb_FPU_unit.DUT.SHF_RIGHT_28BIT_UNIT.i_data[27:0]}
+	} ]
+waveform format $id -radix %b
+set id [waveform add -signals  {
+	{tb_FPU_unit::tb_FPU_unit.DUT.SHF_RIGHT_28BIT_UNIT.o_data[27:0]}
+	} ]
+waveform format $id -radix %b
+set id [waveform add -signals  {
+	{tb_FPU_unit::tb_FPU_unit.DUT.MAN_ALU_UNIT.i_man_max[27:0]}
+	} ]
+waveform format $id -radix %b
+set id [waveform add -signals  {
+	{tb_FPU_unit::tb_FPU_unit.DUT.MAN_ALU_UNIT.i_man_min[27:0]}
+	} ]
+waveform format $id -radix %b
+set id [waveform add -signals  {
+	{tb_FPU_unit::tb_FPU_unit.DUT.MAN_ALU_UNIT.o_man_alu[27:0]}
+	} ]
+waveform format $id -radix %b
+
+waveform xview limits 0 581ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 600x250+0+0

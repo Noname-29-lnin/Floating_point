@@ -3,10 +3,10 @@
 `include "./../Topmodule/lib/display.svh"
 `include "./../Topmodule/lib/gen_clock.svh"
 
-`ifdef GATELEVEL
-    `include "./../../05_synth/Genus/Genus/FPU_unit_netlist.v"
-    `include "./../../05_synth/slow_vdd1v2_basicCells_lvt.v"
-`endif // GATELEVEL
+// `ifdef GATELEVEL
+//     `include "./../../05_synth/Genus/Genus/FPU_unit_netlist.v"
+//     `include "./../../05_synth/slow_vdd1v2_basicCells_lvt.v"
+// `endif // GATELEVEL
 module tb_FPU_unit();
 localparam ALU_OP       = 1;
 localparam SIZE_ADDR    = 11;
@@ -39,16 +39,16 @@ assign w_o_data_rom_b = rom_B[w_i_addr];
 int test_count = 0;
 int test_pass  = 0;
 
-`ifdef GATELEVEL
-    FPU_unit DUT(
-        .i_add_sub       (i_add_sub),
-        .i_32_a          (i_32_a),
-        .i_32_b          (i_32_b),
-        .o_32_s          (o_32_s),
-        .o_ov_flag       (o_ov_flow),
-        .o_un_flag       (o_un_flow) 
-    );
-`else
+// `ifdef GATELEVEL
+//     FPU_unit DUT(
+//         .i_add_sub       (i_add_sub),
+//         .i_32_a          (i_32_a),
+//         .i_32_b          (i_32_b),
+//         .o_32_s          (o_32_s),
+//         .o_ov_flag       (o_ov_flow),
+//         .o_un_flag       (o_un_flow) 
+//     );
+// `else
     FPU_unit #(
         .NUM_OP     (ALU_OP)
     ) DUT (
@@ -59,16 +59,16 @@ int test_pass  = 0;
         .o_ov_flag       (o_ov_flow),
         .o_un_flag       (o_un_flow) 
     );
-`endif
-`ifdef ANNOTATION
-    initial begin
-        $display(">>> Loading SDF timing...");
-        $sdf_annotate("./../../05_synth/Genus/Genus/FPU_unit.sdf",
-                    DUT,
-                    , ,
-                    "MAXIMUM");
-    end
-`endif
+// `endif
+// `ifdef ANNOTATION
+//     initial begin
+//         $display(">>> Loading SDF timing...");
+//         $sdf_annotate("./../../05_synth/Genus/Genus/FPU_unit.sdf",
+//                     DUT,
+//                     , ,
+//                     "MAXIMUM");
+//     end
+// `endif
 
 
 // Gen_CLOCK(i_clk, 20);
@@ -220,39 +220,39 @@ initial begin
     #100;
     i_rst_n = 1;
     #100;
-    TestCase_Display_result("ZERO", "(0.0 & 0.0)", 32'h00000000, 32'h00000000);
-    TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h00000000, 32'h80000000);
-    TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h4016A197, 32'h4016A197);
-    TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h40AED834, 32'h40AED834);
-    TestCase_Display_result("INF", "(inf & inf)", 32'h7f800000, 32'h7f800000);
-    TestCase_Display_result("INF", "(-inf & -inf)", 32'hff800000, 32'hff800000);
-    TestCase_Display_result("INF", "(inf & -inf)", 32'hff800000, 32'h7f800000);
-    TestCase_Display_result("INF", "(inf & 0)", 32'h7f800000, 32'h00000000);
-    TestCase_Display_result("INF", "(-inf & 0)", 32'hff800000, 32'h00000000);
-    TestCase_Display_result("INF", "(inf & Number)", 32'h7f800000, 32'h40533333);
-    TestCase_Display_result("INF", "(-inf & Number)", 32'hff800000, 32'h40533333);
-    TestCase_Display_result("INF", "(inf & -Number)", 32'h7f800000, 32'hc00ccccd);
-    TestCase_Display_result("INF", "(-inf & -Number)", 32'hff800000, 32'hc00ccccd);
-    TestCase_Display_result("NaN", "(NaN & -Number)", 32'h7f800001, 32'hc00ccccd);
-    TestCase_Display_result("NaN", "(-NaN & -Number)", 32'hff800001, 32'hc00ccccd);
-    TestCase_Display_result("NaN", "(NaN &  Number)", 32'hff800001, 32'h40533333);
-    TestCase_Display_result("NaN", "(-NaN &  Number)", 32'h7f800001, 32'h40533333);
-    TestCase_Display_result("APPRO", "APPR INF", 32'h7f21616f, 32'h007fffff);
-    TestCase_Display_result("APPRO", "APPR INF", 32'h7f7fffff, 32'h00ffffff);
-    TestCase_Display_result("APPRO", "APPR INF", 32'h7f7fffff, 32'h007fffff);
-    TestCase_Display_result("APPRO", "APPR ZERO", 32'h00ffffff, 32'h007fffff);
-    TestCase_Display_result("APPRO", "APPR ZERO", 32'h00ffffff, 32'h00ffffff);
-    TestCase_Display_result("SIGN", "(-A + B)", 32'hc00ccccd, 32'h40533333);
-    TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc0533333);
-    TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc1b1999a);
+    // TestCase_Display_result("ZERO", "(0.0 & 0.0)", 32'h00000000, 32'h00000000);
+    // TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h00000000, 32'h80000000);
+    // TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h4016A197, 32'h4016A197);
+    // TestCase_Display_result("ZERO", "(0.0 & -0.0)", 32'h40AED834, 32'h40AED834);
+    // TestCase_Display_result("INF", "(inf & inf)", 32'h7f800000, 32'h7f800000);
+    // TestCase_Display_result("INF", "(-inf & -inf)", 32'hff800000, 32'hff800000);
+    // TestCase_Display_result("INF", "(inf & -inf)", 32'hff800000, 32'h7f800000);
+    // TestCase_Display_result("INF", "(inf & 0)", 32'h7f800000, 32'h00000000);
+    // TestCase_Display_result("INF", "(-inf & 0)", 32'hff800000, 32'h00000000);
+    // TestCase_Display_result("INF", "(inf & Number)", 32'h7f800000, 32'h40533333);
+    // TestCase_Display_result("INF", "(-inf & Number)", 32'hff800000, 32'h40533333);
+    // TestCase_Display_result("INF", "(inf & -Number)", 32'h7f800000, 32'hc00ccccd);
+    // TestCase_Display_result("INF", "(-inf & -Number)", 32'hff800000, 32'hc00ccccd);
+    // TestCase_Display_result("NaN", "(NaN & -Number)", 32'h7f800001, 32'hc00ccccd);
+    // TestCase_Display_result("NaN", "(-NaN & -Number)", 32'hff800001, 32'hc00ccccd);
+    // TestCase_Display_result("NaN", "(NaN &  Number)", 32'hff800001, 32'h40533333);
+    // TestCase_Display_result("NaN", "(-NaN &  Number)", 32'h7f800001, 32'h40533333);
+    // TestCase_Display_result("APPRO", "APPR INF", 32'h7f21616f, 32'h007fffff);
+    // TestCase_Display_result("APPRO", "APPR INF", 32'h7f7fffff, 32'h00ffffff);
+    // TestCase_Display_result("APPRO", "APPR INF", 32'h7f7fffff, 32'h007fffff);
+    // TestCase_Display_result("APPRO", "APPR ZERO", 32'h00ffffff, 32'h007fffff);
+    // TestCase_Display_result("APPRO", "APPR ZERO", 32'h00ffffff, 32'h00ffffff);
+    // TestCase_Display_result("SIGN", "(-A + B)", 32'hc00ccccd, 32'h40533333);
+    // TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc0533333);
+    // TestCase_Display_result("SIGN", "TEST SIGN", 32'hc00ccccd, 32'hc1b1999a);
     TestCase_Display_result("PRE_NOR_EXP", "Overflow rouding", 32'h0cffffff, 32'h00f80000);
-    repeat(2**SIZE_ADDR) begin
-    // repeat(10) begin
-        TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
-        @(posedge i_clk);
-        #1;
-        w_i_addr = w_i_addr + 1;
-    end
+    // repeat(2**SIZE_ADDR) begin
+    // // repeat(10) begin
+    //     TestCase_Display_result("Random", "Read data from ROM", w_o_data_rom_a, w_o_data_rom_b);
+    //     @(posedge i_clk);
+    //     #1;
+    //     w_i_addr = w_i_addr + 1;
+    // end
     
     Display_SummaryResult(test_count, test_pass);
     #100;

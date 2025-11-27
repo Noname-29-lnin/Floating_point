@@ -12,7 +12,7 @@
 ./../../02_rtl/EXP_rounding.sv
 ./../../02_rtl/EXP_sub.sv
 ./../../02_rtl/EXP_swap.sv
-// ./../../02_rtl/FPU_unit.sv
+./../../02_rtl/FPU_unit.sv
 ./../../02_rtl/LOPD_4bit.sv
 ./../../02_rtl/LOPD_8bit.sv
 ./../../02_rtl/LOPD_16bit.sv
