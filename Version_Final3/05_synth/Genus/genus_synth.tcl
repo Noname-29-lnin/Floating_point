@@ -47,7 +47,7 @@ syn_opt
 
 report timing -lint
 set netlist_v "./${LIB_NAME}/${Top_module}_netlist.v"
-write_hdl > ${netlist_v}
+write_hdl -mapped > ${netlist_v}
 
 set sdf_out "./${LIB_NAME}/${Top_module}.sdf"
 write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge -setuphold split  > $sdf_out
