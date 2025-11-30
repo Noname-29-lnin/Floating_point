@@ -1,5 +1,5 @@
 TOPMODULE=FPU_unit
-INC_DIR=./../Topmodule
-LIB_DIR=./../Topmodule/lib
+INC_DIR=./../Sim_Nonideal
+LIB_DIR=./../Sim_Nonideal/lib
 DEF_GATELEVEL=GATELEVEL
 DEF_ANNOTATION=ANNOTATION

@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
-`include "./../Topmodule/lib/Cal_funs.svh"
-`include "./../Topmodule/lib/display.svh"
-`include "./../Topmodule/lib/gen_clock.svh"
+`include "./../Sim_Nonideal/lib/Cal_funs.svh"
+`include "./../Sim_Nonideal/lib/display.svh"
+`include "./../Sim_Nonideal/lib/gen_clock.svh"
 
 // `ifdef GATELEVEL
 //     `include "./../../05_synth/Genus/Genus/FPU_unit_netlist.v"
@@ -12,8 +12,8 @@ localparam ALU_OP       = 1;
 localparam SIZE_ADDR    = 11;
 localparam SIZE_DATA    = 32;
 localparam SIZE_ROM     = 1 << SIZE_ADDR;
-localparam FILE_TEST_A  = "./../Topmodule/FPU_list_B.txt";
-localparam FILE_TEST_B  = "./../Topmodule/FPU_list_A.txt";
+localparam FILE_TEST_A  = "./../Sim_Nonideal/FPU_list_B.txt";
+localparam FILE_TEST_B  = "./../Sim_Nonideal/FPU_list_A.txt";
 
 logic                   i_clk;
 logic                   i_rst_n;
@@ -39,7 +39,7 @@ assign w_o_data_rom_b = rom_B[w_i_addr];
 int test_count = 0;
 int test_pass  = 0;
 
-`ifdef GATELEVEL
+// `ifdef GATELEVEL
     FPU_unit DUT(
         .i_add_sub       (i_add_sub),
         .i_32_a          (i_32_a),
@@ -48,20 +48,20 @@ int test_pass  = 0;
         .o_ov_flag       (o_ov_flow),
         .o_un_flag       (o_un_flow) 
     );
-`else
-    FPU_unit #(
-        .NUM_OP     (ALU_OP)
-    ) DUT (
-        .i_add_sub       (i_add_sub),
-        .i_32_a          (i_32_a),
-        .i_32_b          (i_32_b),
-        .o_32_s          (o_32_s),
-        .o_ov_flag       (o_ov_flow),
-        .o_un_flag       (o_un_flow) 
-    );
-`endif
+// `else
+//     FPU_unit #(
+//         .NUM_OP     (ALU_OP)
+//     ) DUT (
+//         .i_add_sub       (i_add_sub),
+//         .i_32_a          (i_32_a),
+//         .i_32_b          (i_32_b),
+//         .o_32_s          (o_32_s),
+//         .o_ov_flag       (o_ov_flow),
+//         .o_un_flag       (o_un_flow) 
+//     );
+// `endif
 
-`ifdef ANNOTATION
+// `ifdef ANNOTATION
     initial begin
         $display(">>> Loading SDF timing...");
         $sdf_annotate("./../Sim_Nonideal/FPU_unit.sdf",
@@ -69,12 +69,12 @@ int test_pass  = 0;
                     , ,
                     "MAXIMUM");
     end
-`endif
+// `endif
 
 initial begin
     i_clk = 1'b0;
     forever begin
-        #0.8 i_clk = ~i_clk;
+        #8 i_clk = ~i_clk;
     end
 end
 
