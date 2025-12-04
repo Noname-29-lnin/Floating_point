@@ -22,12 +22,12 @@ generate
                 4'h7: o_hex = 7'b1111000;
                 4'h8: o_hex = 7'b0000000;
                 4'h9: o_hex = 7'b0010000;
-                4'hA: o_hex = 7'b0001000;
-                4'hB: o_hex = 7'b0000011;
-                4'hC: o_hex = 7'b1000110;
-                4'hD: o_hex = 7'b0100001;
-                4'hE: o_hex = 7'b0000110;
-                4'hF: o_hex = 7'b0001110;
+                // 4'hA: o_hex = 7'b0001000;
+                // 4'hB: o_hex = 7'b0000011;
+                // 4'hC: o_hex = 7'b1000110;
+                // 4'hD: o_hex = 7'b0100001;
+                // 4'hE: o_hex = 7'b0000110;
+                // 4'hF: o_hex = 7'b0001110;
                 default: o_hex = 7'b1111111;
             endcase
         end
@@ -49,12 +49,12 @@ generate
                 4'h7: o_hex = 7'b0000111;
                 4'h8: o_hex = 7'b1111111;
                 4'h9: o_hex = 7'b1101111;
-                4'hA: o_hex = 7'b1110111;
-                4'hB: o_hex = 7'b1111100;
-                4'hC: o_hex = 7'b0111001;
-                4'hD: o_hex = 7'b1011110;
-                4'hE: o_hex = 7'b1111001;
-                4'hF: o_hex = 7'b1110001;
+                // 4'hA: o_hex = 7'b1110111;
+                // 4'hB: o_hex = 7'b1111100;
+                // 4'hC: o_hex = 7'b0111001;
+                // 4'hD: o_hex = 7'b1011110;
+                // 4'hE: o_hex = 7'b1111001;
+                // 4'hF: o_hex = 7'b1110001;
                 default: o_hex = 7'b0000000;
             endcase
         end
