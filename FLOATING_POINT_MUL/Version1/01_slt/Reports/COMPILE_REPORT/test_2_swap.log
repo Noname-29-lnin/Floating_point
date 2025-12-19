@@ -1,0 +1,74 @@
+===== TEST IEEE-754 SPECIAL CASES =====
+
+[+0 * +0]
+a = 0 | 0x00000000
+b = 0 | 0x00000000
+FPU = 0 | 0x00000000
+REF = 0 | 0x00000000
+RESULT: PASS
+
+[-0 * +0]
+a = -0 | 0x80000000
+b = 0 | 0x00000000
+FPU = -0 | 0x80000000
+REF = -0 | 0x80000000
+RESULT: PASS
+
+[+0 * -0]
+a = 0 | 0x00000000
+b = -0 | 0x80000000
+FPU = -0 | 0x80000000
+REF = -0 | 0x80000000
+RESULT: PASS
+
+[+0 * +INF]
+a = 0 | 0x00000000
+b = inf | 0x7f800000
+FPU = nan | 0x7fc00000
+REF = -nan | 0xffc00000
+RESULT: FAIL
+
+[+INF * +0]
+a = inf | 0x7f800000
+b = 0 | 0x00000000
+FPU = nan | 0x7fc00000
+REF = -nan | 0xffc00000
+RESULT: FAIL
+
+[+INF * +INF]
+a = inf | 0x7f800000
+b = inf | 0x7f800000
+FPU = inf | 0x7f800000
+REF = inf | 0x7f800000
+RESULT: PASS
+
+[+INF * -INF]
+a = inf | 0x7f800000
+b = -inf | 0xff800000
+FPU = -inf | 0xff800000
+REF = -inf | 0xff800000
+RESULT: PASS
+
+[NaN * 1.0]
+a = nan | 0x7fc00000
+b = 1 | 0x3f800000
+FPU = -nan | 0xffc00000
+REF = nan | 0x7fc00000
+RESULT: FAIL
+
+[1.0 * NaN]
+a = 1 | 0x3f800000
+b = nan | 0x7fc00000
+FPU = -nan | 0xffc00000
+REF = nan | 0x7fc00000
+RESULT: FAIL
+
+===== USER INPUT TEST =====
+(Co the nhap: nan, inf, -inf)
+Nhap so a (float): Nhap so b (float): 
+===== RESULT =====
+a = 1.4013e-45 | 0x00000001
+b = 2 | 0x40000000
+FPU = 2.35099e-38 | 0x01000000
+REF = 2.8026e-45 | 0x00000002
+FINAL RESULT: FAIL
