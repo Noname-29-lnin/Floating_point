@@ -24,23 +24,23 @@ RESULT: PASS
 [+0 * +INF]
 a = 0 | 0x00000000
 b = inf | 0x7f800000
-FPU = nan | 0x7fc00000
+FPU = -nan | 0xffc00000
 REF = -nan | 0xffc00000
-RESULT: FAIL
+RESULT: PASS
 
 [+INF * +0]
 a = inf | 0x7f800000
 b = 0 | 0x00000000
-FPU = nan | 0x7fc00000
+FPU = -nan | 0xffc00000
 REF = -nan | 0xffc00000
-RESULT: FAIL
+RESULT: PASS
 
 [+INF * +INF]
 a = inf | 0x7f800000
 b = inf | 0x7f800000
-FPU = inf | 0x7f800000
+FPU = -inf | 0xff800000
 REF = inf | 0x7f800000
-RESULT: PASS
+RESULT: FAIL
 
 [+INF * -INF]
 a = inf | 0x7f800000

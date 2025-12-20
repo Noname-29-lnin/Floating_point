@@ -11,6 +11,11 @@
 #define ZERO_POS    0x00000000
 #define ZERO_NEG    0x80000000
 
+#define ZERO_EXP    0x0000
+#define INF_EXP     0xFFFF
+#define ZERO_MAN    0x00000000
+#define NAN_MAN     0x00C00000
+
 // Prototype
 uint32_t fpu_mul(uint32_t a, uint32_t b);
 
@@ -137,35 +142,31 @@ uint32_t fpu_mul(uint32_t a, uint32_t b){
 
     uint32_t sign_res = (sign_a ^ sign_b) << 31;
 
-    // ===== Special cases =====
-    if (a_nan || b_nan){
-        if(sign_a ^ sign_b){
-            return NAN_NEG;
-        } else {
-            return NAN_NEG;
-        }
-    }
-    else if ((a_zero && b_inf) || (a_inf && b_zero)){
-        if(sign_a ^ sign_b){
-            return NAN_NEG;
-        } else {
-            return NAN_POS;
-        }
-    }
-    else if(a_zero || b_zero) {
-        if((sign_a ^ sign_b)) return ZERO_NEG;
-        else                  return ZERO_POS;
-    }
-    else if (a_inf || b_inf) return sign_res ? INF_NEG : INF_POS;
-    else if (a_zero || b_zero) return sign_res;
-    else {
-        // ===== Normalize mantissa =====
+    // ===== Normalize mantissa =====
         uint32_t man_a = exp_a ? frac_a : frac_a | 0x800000;
         uint32_t man_b = exp_b ? frac_b : frac_b | 0x800000;
 
-        int32_t exp_res = (exp_a ? exp_a : 1) + (exp_b ? exp_b : 1) - 127;
+        int32_t exp_res;
+
+        uint32_t mantissa;
+        uint32_t frac_res;
+
+    // ===== Special cases =====
+    if (a_nan || b_nan){
+        // return NAN_VALU;
+        return sign_res | ((uint32_t)INF_EXP << 23) | NAN_MAN;
+    }
+    else if ((a_zero && b_inf) || (a_inf && b_zero)){
+        return sign_res | ((uint32_t)INF_EXP << 23) | NAN_MAN;
+    }
+    else if(a_zero || b_zero) {
+        return sign_res | ((uint32_t)ZERO_EXP << 23) | ZERO_MAN;
+    }
+    else if (a_inf || b_inf) return sign_res | ((uint32_t)INF_EXP << 23) | ZERO_MAN;
+    else if (a_zero || b_zero) return sign_res | ((uint32_t)ZERO_EXP << 23) | ZERO_MAN;
+    else {
         // int32_t exp_res = (exp_a) + (exp_b) - 127;
-    
+        exp_res = (exp_a ? exp_a : 1) + (exp_b ? exp_b : 1) - 127;
         // ===== Mantissa multiply =====
         uint64_t man_mul = (uint64_t)man_a * man_b;
     
@@ -191,7 +192,7 @@ uint32_t fpu_mul(uint32_t a, uint32_t b){
         }
 
         // mantissa 24-bit (hidden + frac)
-        uint32_t mantissa = man_norm & 0xFFFFFF;
+        mantissa = man_norm & 0xFFFFFF;
 
         // ===== Rounding: Round to Nearest Even =====
         bool lsb = mantissa & 1;
@@ -208,7 +209,7 @@ uint32_t fpu_mul(uint32_t a, uint32_t b){
         }
 
         // ===== Extract fraction =====
-        uint32_t frac_res = mantissa & 0x7FFFFF;
+        frac_res = mantissa & 0x7FFFFF;
 
         // ===== Overflow / Underflow =====
         if (exp_res >= 255)
