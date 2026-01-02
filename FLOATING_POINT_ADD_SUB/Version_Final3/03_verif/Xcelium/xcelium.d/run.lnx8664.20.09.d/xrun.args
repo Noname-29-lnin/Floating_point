@@ -5,14 +5,14 @@
 +xm64bit
 -sv
 -f
-./../Sim_Nonideal/flist.f
+./../Topmodule/flist.f
 -top
 tb_FPU_unit
 -access
 +rwc
 -clean
 -log
-./../Sim_Nonideal/Xcelium/compile.log
+./../Topmodule/Xcelium/compile.log
 +nctimescale+1ns/1ps
 +ntb_random_seed=automatic
 -allowredefinition

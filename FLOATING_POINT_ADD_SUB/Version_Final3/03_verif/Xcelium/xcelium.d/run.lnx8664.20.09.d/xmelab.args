@@ -4,7 +4,7 @@
 //
 +ntb_random_seed=automatic
 +xm64bit
-+incdir+./../Sim_Nonideal/lib/
++incdir+./../Topmodule/lib/
 +nctimescale+1ns/1ps
 -ACCESS
 +rwc

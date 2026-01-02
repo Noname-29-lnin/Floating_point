@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Nov 29, 2025 at 21:11:27 EST
+TOOL:	xrun(64)	20.09-s001: Started on Jan 02, 2026 at 00:17:30 EST
 xrun
 	+xm64bit
 	-sv
@@ -1113,7 +1113,7 @@ xmvlog: *W,SPDUSD: Include directory ./../Sim_Nonideal/lib/ given but not used.
 	Elaborating the design hierarchy:
 		Caching library 'worklib' ....... Done
 	Top level design units:
-		$unit_0x1c71bed8
+		$unit_0x7775c07f
 		tb_FPU_unit
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Reading SDF file from location "./../Sim_Nonideal/FPU_unit.sdf"
@@ -1134,23 +1134,23 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 		 No. of Tchecks    = 0       	 No. of Disabled Tchecks    = 0        Annotated = 0.00% (0/0) 
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.ROUNDING_unit_SIZE_MAN28_SIZE_MAN_RESULT24:v <0x40b51ff4>
+		worklib.ROUNDING_unit_SIZE_MAN28_SIZE_MAN_RESULT24:v <0x519b8f27>
 			streams:   0, words:     0
-		worklib.COMP_28bit_SIZE_DATA28:v <0x4fc0fa48>
+		worklib.COMP_28bit_SIZE_DATA28:v <0x7d527a60>
 			streams:   0, words:     0
-		worklib.CLA_8bit:v <0x412faaa4>
+		worklib.CLA_8bit:v <0x0b218a3c>
 			streams:   0, words:     0
-		worklib.EXP_sub_SIZE_EXP_SUB8:v <0x39eb231b>
+		worklib.EXP_sub_SIZE_EXP_SUB8:v <0x09b4a797>
 			streams:   0, words:     0
-		worklib.CLA_8bit_1:v <0x6845143d>
+		worklib.CLA_8bit_1:v <0x43a1ee0c>
 			streams:   0, words:     0
-		worklib.EXP_adjust_SIZE_EXP8_SIZE_LOPD8:v <0x209f38f7>
+		worklib.EXP_adjust_SIZE_EXP8_SIZE_LOPD8:v <0x5fdddcf1>
 			streams:   0, words:     0
-		worklib.FPU_unit:v <0x0c91420f>
+		worklib.FPU_unit:v <0x12200a53>
 			streams:   0, words:     0
-		worklib.tb_FPU_unit:sv <0x3cfd067d>
+		worklib.tb_FPU_unit:sv <0x26beb8ce>
 			streams:  18, words: 44020
-		worklib.\$unit_0x1c71bed8 :compilation_unit <0x354394b1>
+		worklib.\$unit_0x7775c07f :compilation_unit <0x286244a6>
 			streams:  11, words: 10429
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
@@ -19863,4 +19863,4 @@ Pass rate       : 100.00%
 Simulation complete via $finish(1) at time 166053 NS + 0
 ../Sim_Nonideal/tb_FPU_unit.sv:254     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Nov 29, 2025 at 21:11:35 EST  (total: 00:00:08)
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 02, 2026 at 00:17:35 EST  (total: 00:00:05)

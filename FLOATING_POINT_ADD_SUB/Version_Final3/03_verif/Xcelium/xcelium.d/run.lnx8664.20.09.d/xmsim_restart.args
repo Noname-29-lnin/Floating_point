@@ -4,13 +4,13 @@
 //
 +ntb_random_seed=automatic
 +xm64bit
-+incdir+./../Sim_Nonideal/lib/
++incdir+./../Topmodule/lib/
 +nctimescale+1ns/1ps
 -MESSAGES
 +EMGRLOG
-./../Sim_Nonideal/Xcelium/compile.log
+./../Topmodule/Xcelium/compile.log
 -XLSTIME
-1764468687
+1767335999
 -XLKEEP
 -XLMODE
 ./xcelium.d/run.lnx8664.20.09.d
@@ -24,4 +24,4 @@ xrun
 -XLVERSION
 "TOOL:	xrun(64)	20.09-s001"
 -XLNAME
-./xcelium.d/run.lnx8664.20.09.d/centos7_104411
+./xcelium.d/run.lnx8664.20.09.d/centos7_65510
