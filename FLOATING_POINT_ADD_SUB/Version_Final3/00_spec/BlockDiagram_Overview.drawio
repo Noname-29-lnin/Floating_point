@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="16yQZHv2zrs1gRWZ2AGC" name="Page-1">
-        <mxGraphModel dx="1777" dy="1059" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1473" dy="913" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -553,7 +553,7 @@
                         <mxPoint x="15" y="12" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="191" value="&lt;font style=&quot;font-size: 5px;&quot;&gt;28&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="189" vertex="1">
+                <mxCell id="191" value="&lt;font style=&quot;font-size: 5px;&quot;&gt;24&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="189" vertex="1">
                     <mxGeometry width="30" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="192" value="&lt;b&gt;M_Max&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-90;" parent="189" vertex="1">
@@ -1458,7 +1458,7 @@
                         <mxPoint x="675" y="702" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="195" value="&lt;font style=&quot;font-size: 5px;&quot;&gt;28&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" vertex="1">
+                <mxCell id="195" value="&lt;font style=&quot;font-size: 5px;&quot;&gt;24&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" vertex="1">
                     <mxGeometry x="660" y="690" width="30" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="196" value="&lt;b&gt;M_Min&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-90;" parent="1" vertex="1">
